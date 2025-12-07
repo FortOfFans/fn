@@ -1,0 +1,78 @@
+[
+  {
+    "Type": "FortHeroGameplayDefinition",
+    "Name": "HGD_Outlander_039_Female_Gumshoe",
+    "Class": "UScriptClass'FortHeroGameplayDefinition'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HeroClassGameplayDefinition": {
+        "ObjectName": "FortHeroClassGameplayDefinition'HCGD_Outlander'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Outlander/HCGD_Outlander.0"
+      },
+      "HeroBaseStatlineTags": [
+        "Hero.Statline.Balanced"
+      ],
+      "TierAbilityKits": [
+        {
+          "GrantedAbilityKit": {
+            "AssetPathName": "/SaveTheWorld/Abilities/Player/Outlander/Actives/Fragment/ShockTower/Kit_Outlander_ShockTowerFragment.Kit_Outlander_ShockTowerFragment",
+            "SubPathString": ""
+          },
+          "MinimumHeroRarity": "EFortRarity::Uncommon"
+        },
+        {
+          "GrantedAbilityKit": {
+            "AssetPathName": "/SaveTheWorld/Abilities/Player/Outlander/Actives/Fragment/Bear/Kit_Outlander_BearFragment.Kit_Outlander_BearFragment",
+            "SubPathString": ""
+          },
+          "MinimumHeroRarity": "EFortRarity::Uncommon"
+        },
+        {
+          "GrantedAbilityKit": {
+            "AssetPathName": "/SaveTheWorld/Abilities/Player/Outlander/Actives/PhaseShift/Kit_Outlander_PhaseShift.Kit_Outlander_PhaseShift",
+            "SubPathString": ""
+          },
+          "MinimumHeroRarity": "EFortRarity::Uncommon"
+        }
+      ],
+      "HeroPerk": {
+        "GrantedAbilityKit": {
+          "AssetPathName": "/SaveTheWorld/Abilities/Player/Perks/Hero/PressingCharges/Kit_Perk_H_PressingCharges_T01.Kit_Perk_H_PressingCharges_T01",
+          "SubPathString": ""
+        },
+        "RequiredCommanderTagQuery": {
+          "TagDictionary": [
+            {
+              "TagName": "Granted.Ability.Outlander.ShockTower"
+            },
+            {
+              "TagName": "Granted.Ability.Outlander.Bear"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            1,
+            2,
+            0,
+            1
+          ],
+          "UserDescription": "Requires fragment abilities",
+          "AutoDescription": " ANY( Granted.Ability.Outlander.ShockTower, Granted.Ability.Outlander.Bear )"
+        },
+        "CommanderRequirementsText": {
+          "Namespace": "",
+          "Key": "E79321114C1AC571857143AAA53E6A3F",
+          "SourceString": "Requires Commander with a Fragment ability.",
+          "LocalizedString": "Requires Commander with a Fragment ability."
+        }
+      },
+      "CommanderPerk": {
+        "GrantedAbilityKit": {
+          "AssetPathName": "/SaveTheWorld/Abilities/Player/Perks/Hero/PressingCharges/Kit_Perk_H_PressingCharges_T02.Kit_Perk_H_PressingCharges_T02",
+          "SubPathString": ""
+        }
+      }
+    }
+  }
+]

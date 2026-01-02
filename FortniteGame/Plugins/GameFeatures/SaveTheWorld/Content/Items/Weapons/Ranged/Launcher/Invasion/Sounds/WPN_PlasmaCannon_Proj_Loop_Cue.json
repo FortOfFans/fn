@@ -1,0 +1,85 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "WPN_PlasmaCannon_Proj_Loop_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'WPN_PlasmaCannon_Proj_Loop_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Proj_Loop_Cue.1"
+      },
+      "VolumeMultiplier": 0.7,
+      "AttenuationOverrides": {
+        "bEnableListenerFocus": true,
+        "OcclusionTraceChannel": "ECollisionChannel::ECC_GameTraceChannel11",
+        "StereoSpread": 1000.0,
+        "FocusAzimuth": 60.0,
+        "NonFocusAzimuth": 90.0,
+        "NonFocusDistanceScale": 0.7,
+        "NonFocusVolumeAttenuation": 0.5,
+        "FocusAttackInterpSpeed": 0.1,
+        "FocusReleaseInterpSpeed": 0.5,
+        "OcclusionVolumeAttenuation": 0.0,
+        "OcclusionInterpolationTime": 2.0,
+        "AttenuationShapeExtents": {
+          "X": 4000.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 500.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'STW_WeaponRanged'",
+        "ObjectPath": "/STW_Sounds/Sounds/FortSoundClassesAndModes/STW_WeaponRanged.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 1,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopFarthestThenPreventNew",
+        "VolumeScale": 0.75
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 12750.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Fort_Weapon_Launcher_Proj_InAir_Default_Att'",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Launcher_Proj_InAir_Default_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "WPN_PlasmaCannon_Proj_Loop_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'WPN_PlasmaCannon_Proj_Loop_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Proj_Loop_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "WPN_PlasmaCannon_Proj_Loop_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Proj_Loop_01.WPN_PlasmaCannon_Proj_Loop_01",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WPN_PlasmaCannon_Proj_Loop_01'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Proj_Loop_01.0"
+    }
+  }
+]

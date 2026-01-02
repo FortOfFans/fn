@@ -1,0 +1,937 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_Alteration_G_OnReload_SpawnSparkBurst_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GAT_PassiveAbility_C'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_PassiveAbility.0"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'GA_Alteration_G_OnReload_SpawnSparkBurst_C:ExecuteUbergraph_GA_Alteration_G_OnReload_SpawnSparkBurst'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.5"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'GA_Alteration_G_OnReload_SpawnSparkBurst_C:Determine & Apply Correct VFX & Tags'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.3"
+      },
+      {
+        "ObjectName": "Function'GA_Alteration_G_OnReload_SpawnSparkBurst_C:Calculate & Apply Player Damage'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.2"
+      },
+      {
+        "ObjectName": "Function'GA_Alteration_G_OnReload_SpawnSparkBurst_C:EventReceived_EAB03FA24B0466E19541309270BD9AA8'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.4"
+      },
+      {
+        "ObjectName": "Function'GA_Alteration_G_OnReload_SpawnSparkBurst_C:Added_A3C7C0714DCBEED5715803A40C201979'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.1"
+      },
+      {
+        "ObjectName": "Function'GA_Alteration_G_OnReload_SpawnSparkBurst_C:Removed_F9EAE16C426C21D83BAA06AAE2B71799'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.9"
+      },
+      {
+        "ObjectName": "Function'GA_Alteration_G_OnReload_SpawnSparkBurst_C:K2_ActivateAbility'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.7"
+      },
+      {
+        "ObjectName": "Function'GA_Alteration_G_OnReload_SpawnSparkBurst_C:K2_OnEndAbility'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.8"
+      },
+      {
+        "ObjectName": "Function'GA_Alteration_G_OnReload_SpawnSparkBurst_C:FailedToActivatePassiveAbility'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.6"
+      },
+      {
+        "ObjectName": "Function'GA_Alteration_G_OnReload_SpawnSparkBurst_C:ExecuteUbergraph_GA_Alteration_G_OnReload_SpawnSparkBurst'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.5"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Activating Player",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "GE_Alteration_G_OnReload_SpawnSparkBurst_DamagePlayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "Player Max Health",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "Player Current Health",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Player Damage %",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'ScalableFloat'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Event_Weapons_Reload",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "GameplayCue_Alteration_OnReload_SpawnSparkBurst_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Spark Burst Active",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "DBNO",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "Assault VFX GE",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Emote Tag",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Sparkburst Active Tag",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Charged Shot VFX GE",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'ActiveGameplayEffectHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "GE to Apply to Player",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "Sniper VFX GE",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "Shotgun VFX GE",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "SMG VFX GE",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_Alteration_G_OnReload_SpawnSparkBurst": {
+        "ObjectName": "Function'GA_Alteration_G_OnReload_SpawnSparkBurst_C:ExecuteUbergraph_GA_Alteration_G_OnReload_SpawnSparkBurst'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.5"
+      },
+      "FailedToActivatePassiveAbility": {
+        "ObjectName": "Function'GA_Alteration_G_OnReload_SpawnSparkBurst_C:FailedToActivatePassiveAbility'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.6"
+      },
+      "K2_OnEndAbility": {
+        "ObjectName": "Function'GA_Alteration_G_OnReload_SpawnSparkBurst_C:K2_OnEndAbility'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.8"
+      },
+      "K2_ActivateAbility": {
+        "ObjectName": "Function'GA_Alteration_G_OnReload_SpawnSparkBurst_C:K2_ActivateAbility'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.7"
+      },
+      "Removed_F9EAE16C426C21D83BAA06AAE2B71799": {
+        "ObjectName": "Function'GA_Alteration_G_OnReload_SpawnSparkBurst_C:Removed_F9EAE16C426C21D83BAA06AAE2B71799'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.9"
+      },
+      "Added_A3C7C0714DCBEED5715803A40C201979": {
+        "ObjectName": "Function'GA_Alteration_G_OnReload_SpawnSparkBurst_C:Added_A3C7C0714DCBEED5715803A40C201979'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.1"
+      },
+      "EventReceived_EAB03FA24B0466E19541309270BD9AA8": {
+        "ObjectName": "Function'GA_Alteration_G_OnReload_SpawnSparkBurst_C:EventReceived_EAB03FA24B0466E19541309270BD9AA8'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.4"
+      },
+      "Calculate & Apply Player Damage": {
+        "ObjectName": "Function'GA_Alteration_G_OnReload_SpawnSparkBurst_C:Calculate & Apply Player Damage'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.2"
+      },
+      "Determine & Apply Correct VFX & Tags": {
+        "ObjectName": "Function'GA_Alteration_G_OnReload_SpawnSparkBurst_C:Determine & Apply Correct VFX & Tags'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.3"
+      }
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GA_Alteration_G_OnReload_SpawnSparkBurst_C'Default__GA_Alteration_G_OnReload_SpawnSparkBurst_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.10"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Added_A3C7C0714DCBEED5715803A40C201979",
+    "Outer": "GA_Alteration_G_OnReload_SpawnSparkBurst_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Calculate & Apply Player Damage",
+    "Outer": "GA_Alteration_G_OnReload_SpawnSparkBurst_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "Temp_real_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetMaxHealth_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetHealth_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetAbilityLevel_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Conv_IntToDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeOutgoingGameplayEffectSpec_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectSpecHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_AssignTagSetByCallerMagnitude_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectSpecHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_AbilityTargetDataFromActor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_K2_ApplyGameplayEffectSpecToTarget_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "CallFunc_K2_ApplyGameplayEffectSpecToTarget_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "Struct": {
+            "ObjectName": "Class'ActiveGameplayEffectHandle'",
+            "ObjectPath": "/Script/GameplayAbilities"
+          }
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "K2Node_VariableSet_Player_Max_Health_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "K2Node_VariableSet_Player_Current_Health_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_Level_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_B_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_AssignTagSetByCallerMagnitude_Magnitude_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Determine & Apply Correct VFX & Tags",
+    "Outer": "GA_Alteration_G_OnReload_SpawnSparkBurst_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BP_ApplyGameplayEffectToOwner_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'ActiveGameplayEffectHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetWeaponDataGameplayTags_GameplayTags",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "GameplayTagsK2Node_SwitchGameplayTagContainer_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EventReceived_EAB03FA24B0466E19541309270BD9AA8",
+    "Outer": "GA_Alteration_G_OnReload_SpawnSparkBurst_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "Payload",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_Alteration_G_OnReload_SpawnSparkBurst",
+    "Outer": "GA_Alteration_G_OnReload_SpawnSparkBurst_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitGameplayTagDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitGameplayTagDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitGameplayEvent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AbilityTask_WaitGameplayEvent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAbilitySystemComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "Struct": {
+          "ObjectName": "Class'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActivatingPawn_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitGameplayTagAdd_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AbilityTask_WaitGameplayTagAdded'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitGameplayTagRemove_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AbilityTask_WaitGameplayTagRemoved'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_Payload",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "Struct": {
+          "ObjectName": "Class'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bWasCancelled",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BP_ApplyGameplayEffectToOwner_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'ActiveGameplayEffectHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitGameplayEventDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_ActorInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityActorInfo'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "FailedToActivatePassiveAbility",
+    "Outer": "GA_Alteration_G_OnReload_SpawnSparkBurst_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'FortGameplayAbility:FailedToActivatePassiveAbility'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ActorInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityActorInfo'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbility",
+    "Outer": "GA_Alteration_G_OnReload_SpawnSparkBurst_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayAbility:K2_ActivateAbility'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_OnEndAbility",
+    "Outer": "GA_Alteration_G_OnReload_SpawnSparkBurst_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayAbility:K2_OnEndAbility'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bWasCancelled",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Removed_F9EAE16C426C21D83BAA06AAE2B71799",
+    "Outer": "GA_Alteration_G_OnReload_SpawnSparkBurst_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GA_Alteration_G_OnReload_SpawnSparkBurst_C",
+    "Name": "Default__GA_Alteration_G_OnReload_SpawnSparkBurst_C",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GA_Alteration_G_OnReload_SpawnSparkBurst.GA_Alteration_G_OnReload_SpawnSparkBurst_C'",
+    "Template": {
+      "ObjectName": "GAT_PassiveAbility_C'Default__GAT_PassiveAbility_C'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_PassiveAbility.1"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "GE_Alteration_G_OnReload_SpawnSparkBurst_DamagePlayer": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Alteration_G_OnReload_SpawnSparkBurst_DamagePlayer_C'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GE_Alteration_G_OnReload_SpawnSparkBurst_DamagePlayer.1"
+      },
+      "Player Damage %": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CombatEffects_Alteration'",
+            "ObjectPath": "/Game/Balance/DataTables/CombatEffects_Alteration.0"
+          },
+          "RowName": "Alteration.Weapon.Ranged.OnReloadSpawnSparkBurst.PlayerDmgPctCurrentHP"
+        },
+        "RegistryType": {
+          "Name": "None"
+        }
+      },
+      "Event_Weapons_Reload": {
+        "TagName": "Event.Weapons.Reload"
+      },
+      "GameplayCue_Alteration_OnReload_SpawnSparkBurst_0": [
+        "GameplayCue.Alteration.OnReload.SpawnSparkBurst"
+      ],
+      "Spark Burst Active": {
+        "TagName": "GameplayCue.Alteration.OnReload.SpawnSparkBurst.Default"
+      },
+      "DBNO": {
+        "TagName": "Gameplay.Status.DBNO"
+      },
+      "Assault VFX GE": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Alteration_G_OnReload_SpawnSparkBurst_VFX_Assault_C'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GE_Alteration_G_OnReload_SpawnSparkBurst_VFX_Assault.0"
+      },
+      "Emote Tag": {
+        "TagName": "Gameplay.Action.Player.Emote"
+      },
+      "Sparkburst Active Tag": [
+        "GameplayCue.Alteration.OnReload.SpawnSparkBurst.Default"
+      ],
+      "Charged Shot VFX GE": {
+        "Handle": -1,
+        "bPassedFiltersAndWasExecuted": false
+      },
+      "Sniper VFX GE": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Alteration_G_OnReload_SpawnSparkBurst_VFX_Sniper_C'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GE_Alteration_G_OnReload_SpawnSparkBurst_VFX_Sniper.0"
+      },
+      "Shotgun VFX GE": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Alteration_G_OnReload_SpawnSparkBurst_VFX_Shotgun_C'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GE_Alteration_G_OnReload_SpawnSparkBurst_VFX_Shotgun.0"
+      },
+      "SMG VFX GE": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Alteration_G_OnReload_SpawnSparkBurst_VFX_SMG_C'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnReload_SpawnSparkBurst/GE_Alteration_G_OnReload_SpawnSparkBurst_VFX_SMG.0"
+      },
+      "DamageStatHandle": {
+        "DataTable": {
+          "ObjectName": "DataTable'GadgetScaling'",
+          "ObjectPath": "/Game/Balance/DataTables/GadgetScaling.0"
+        },
+        "RowName": "Alterations_OnReload_SpawnSparkBurst"
+      },
+      "AbilityTags": [
+        "Gameplay.DamageSource.Ability"
+      ]
+    }
+  }
+]

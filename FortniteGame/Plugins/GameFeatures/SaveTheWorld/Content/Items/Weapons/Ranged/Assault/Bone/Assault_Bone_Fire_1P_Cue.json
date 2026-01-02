@@ -1,0 +1,400 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Assault_Bone_Fire_1P_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer'Assault_Bone_Fire_1P_Cue:SoundNodeMixer_2'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_1P_Cue.3"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::NaturalSound",
+        "AttenuationShapeExtents": {
+          "X": 1000.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 5000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'STW_WeaponRanged_Fire_1P_PSM'",
+        "ObjectPath": "/STW_Sounds/Sounds/FortSoundClassesAndModes/STW_WeaponRanged_Fire_1P_PSM.0"
+      },
+      "bHasDelayNode": true,
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'Weapon_Gunfire_FirstPerson_Conc'",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Weapon_Gunfire_FirstPerson_Conc.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 3,
+        "bLimitToOwner": true,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest"
+      },
+      "Duration": 4.447708,
+      "MaxDistance": 2097152.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Fort_Weapon_Projectile_FirstPerson_Athena_Att'",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Projectile_FirstPerson_Athena_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "Assault_Bone_Fire_1P_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DelayMin": 0.1,
+      "DelayMax": 0.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'Assault_Bone_Fire_1P_Cue:SoundNodeModulator_5'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_1P_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_2",
+    "Outer": "Assault_Bone_Fire_1P_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DelayMin": 0.06,
+      "DelayMax": 0.06,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'Assault_Bone_Fire_1P_Cue:SoundNodeModulator_2'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_1P_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_2",
+    "Outer": "Assault_Bone_Fire_1P_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "InputVolume": [
+        0.65,
+        0.5,
+        0.4
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'Assault_Bone_Fire_1P_Cue:SoundNodeModulator_3'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_1P_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeDelay'Assault_Bone_Fire_1P_Cue:SoundNodeDelay_2'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_1P_Cue.2"
+        },
+        {
+          "ObjectName": "SoundNodeDelay'Assault_Bone_Fire_1P_Cue:SoundNodeDelay_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_1P_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_2",
+    "Outer": "Assault_Bone_Fire_1P_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VolumeMin": 0.15,
+      "VolumeMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'Assault_Bone_Fire_1P_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_1P_Cue.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_3",
+    "Outer": "Assault_Bone_Fire_1P_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'Assault_Bone_Fire_1P_Cue:SoundNodeRandom_1'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_1P_Cue.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_5",
+    "Outer": "Assault_Bone_Fire_1P_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PitchMin": 1.0,
+      "PitchMax": 2.0,
+      "VolumeMin": 0.0,
+      "VolumeMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'Assault_Bone_Fire_1P_Cue:SoundNodeRandom_2'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_1P_Cue.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "Assault_Bone_Fire_1P_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'Assault_Bone_Fire_1P_Cue:SoundNodeWavePlayer_6'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_1P_Cue.16"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Assault_Bone_Fire_1P_Cue:SoundNodeWavePlayer_7'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_1P_Cue.17"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Assault_Bone_Fire_1P_Cue:SoundNodeWavePlayer_8'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_1P_Cue.18"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_2",
+    "Outer": "Assault_Bone_Fire_1P_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'Assault_Bone_Fire_1P_Cue:SoundNodeWavePlayer_11'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_1P_Cue.10"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Assault_Bone_Fire_1P_Cue:SoundNodeWavePlayer_22'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_1P_Cue.11"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Assault_Bone_Fire_1P_Cue:SoundNodeWavePlayer_23'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_1P_Cue.12"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Assault_Bone_Fire_1P_Cue:SoundNodeWavePlayer_24'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_1P_Cue.13"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Assault_Bone_Fire_1P_Cue:SoundNodeWavePlayer_25'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_1P_Cue.14"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Assault_Bone_Fire_1P_Cue:SoundNodeWavePlayer_27'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_1P_Cue.15"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Assault_Bone_Fire_1P_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_Close_Chuff_01.Assault_Bone_Fire_Close_Chuff_01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Assault_Bone_Fire_Close_Chuff_01'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_Close_Chuff_01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_11",
+    "Outer": "Assault_Bone_Fire_1P_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_Close_Shell_Casing_01.Assault_Bone_Fire_Close_Shell_Casing_01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Assault_Bone_Fire_Close_Shell_Casing_01'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_Close_Shell_Casing_01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_22",
+    "Outer": "Assault_Bone_Fire_1P_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_Close_Shell_Casing_02.Assault_Bone_Fire_Close_Shell_Casing_02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Assault_Bone_Fire_Close_Shell_Casing_02'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_Close_Shell_Casing_02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_23",
+    "Outer": "Assault_Bone_Fire_1P_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_Close_Shell_Casing_03.Assault_Bone_Fire_Close_Shell_Casing_03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Assault_Bone_Fire_Close_Shell_Casing_03'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_Close_Shell_Casing_03.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_24",
+    "Outer": "Assault_Bone_Fire_1P_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_Close_Shell_Casing_04.Assault_Bone_Fire_Close_Shell_Casing_04",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Assault_Bone_Fire_Close_Shell_Casing_04'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_Close_Shell_Casing_04.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_25",
+    "Outer": "Assault_Bone_Fire_1P_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_Close_Shell_Casing_05.Assault_Bone_Fire_Close_Shell_Casing_05",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Assault_Bone_Fire_Close_Shell_Casing_05'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_Close_Shell_Casing_05.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_27",
+    "Outer": "Assault_Bone_Fire_1P_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_Close_Shell_Casing_06.Assault_Bone_Fire_Close_Shell_Casing_06",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Assault_Bone_Fire_Close_Shell_Casing_06'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_Close_Shell_Casing_06.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "Assault_Bone_Fire_1P_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_Close_01.Assault_Bone_Fire_Close_01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Assault_Bone_Fire_Close_01'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_Close_01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_7",
+    "Outer": "Assault_Bone_Fire_1P_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_Close_02.Assault_Bone_Fire_Close_02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Assault_Bone_Fire_Close_02'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_Close_02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_8",
+    "Outer": "Assault_Bone_Fire_1P_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_Close_03.Assault_Bone_Fire_Close_03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Assault_Bone_Fire_Close_03'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Assault/Bone/Assault_Bone_Fire_Close_03.0"
+    }
+  }
+]

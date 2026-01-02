@@ -1,0 +1,92 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Invasion_RailGun_MinimumCharge_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeSoundClass'Invasion_RailGun_MinimumCharge_Cue:SoundNodeSoundClass_5'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_MinimumCharge_Cue.2"
+      },
+      "VolumeMultiplier": 0.35,
+      "bDebug": true,
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 2,
+        "bLimitToOwner": true,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest"
+      },
+      "Duration": 1.3573333,
+      "MaxDistance": 5750.0
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_0",
+    "Outer": "Invasion_RailGun_MinimumCharge_Cue",
+    "Class": "UScriptClass'SoundNodeAttenuation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Fort_Weapon_Projectile_Close_Athena_Att'",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Projectile_Close_Athena_Att.0"
+      },
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "LPFRadiusMin": 500.0,
+        "LPFRadiusMax": 2000.0,
+        "LPFFrequencyAtMax": 800.0,
+        "AttenuationShapeExtents": {
+          "X": 750.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 5000.0
+      },
+      "bOverrideAttenuation": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'Invasion_RailGun_MinimumCharge_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_MinimumCharge_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeSoundClass",
+    "Name": "SoundNodeSoundClass_5",
+    "Outer": "Invasion_RailGun_MinimumCharge_Cue",
+    "Class": "UScriptClass'SoundNodeSoundClass'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundClassOverride": {
+        "ObjectName": "SoundClass'STW_WeaponRanged_Fire_3P_PSM'",
+        "ObjectPath": "/STW_Sounds/Sounds/FortSoundClassesAndModes/STW_WeaponRanged_Fire_3P_PSM.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeAttenuation'Invasion_RailGun_MinimumCharge_Cue:SoundNodeAttenuation_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_MinimumCharge_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "Invasion_RailGun_MinimumCharge_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_MinCharge_01.Invasion_RailGun_MinCharge_01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Invasion_RailGun_MinCharge_01'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_MinCharge_01.0"
+    }
+  }
+]

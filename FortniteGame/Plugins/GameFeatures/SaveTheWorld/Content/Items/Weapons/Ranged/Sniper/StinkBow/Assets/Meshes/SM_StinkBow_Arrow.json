@@ -1,0 +1,470 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Outer": "SM_StinkBow_Arrow",
+    "Class": "UScriptClass'BodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DefaultInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryOnly",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "FCC_Trace_WeaponCapsule",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_PawnAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponMulti",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_Weapon",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_Projectile",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileIgnoreAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileMesh",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_SpectatorDroneCamera",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+              "Response": "ECollisionResponse::ECR_Block"
+            }
+          ]
+        }
+      }
+    },
+    "BodySetupGuid": "BA26EB9248264737A76EA0873B0C81E9"
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "SM_StinkBow_Arrow",
+    "Class": "UScriptClass'StaticMesh'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinQualityLevelLOD": {
+        "bCooked": true,
+        "Default": 1,
+        "PerQuality": {
+          "0": 1,
+          "1": 1,
+          "3": 0,
+          "2": 0
+        }
+      },
+      "MinLOD": {
+        "bCooked": true,
+        "Default": 0,
+        "PerPlatform": null,
+        "Value": 0
+      },
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "MaterialInstanceConstant'MI_Stink_Bomb_Bow_Arrow'",
+            "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Assets/Materials/MI_Stink_Bomb_Bow_Arrow.0"
+          },
+          "MaterialSlotName": "_Black",
+          "ImportedMaterialSlotName": "_Black",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 42.02344,
+            "LocalUVDensities[1]": 157.63817,
+            "LocalUVDensities[2]": 160.51184,
+            "LocalUVDensities[3]": 0.0
+          },
+          "OverlayMaterialInterface": null
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "Material'M_Stink_Bomb_Bow_Glass'",
+            "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Assets/Materials/M_Stink_Bomb_Bow_Glass.0"
+          },
+          "MaterialSlotName": "_White",
+          "ImportedMaterialSlotName": "_White",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 21.682076,
+            "LocalUVDensities[1]": 154.57036,
+            "LocalUVDensities[2]": 156.30159,
+            "LocalUVDensities[3]": 0.0
+          },
+          "OverlayMaterialInterface": null
+        }
+      ],
+      "LightmapUVDensity": 157.14769,
+      "LightMapResolution": 64,
+      "LightMapCoordinateIndex": 1,
+      "ExtendedBounds": {
+        "Origin": {
+          "X": -0.015509605,
+          "Y": -1.4543533E-05,
+          "Z": 1.1921012
+        },
+        "BoxExtent": {
+          "X": 48.02183,
+          "Y": 5.3267307,
+          "Z": 4.7577477
+        },
+        "SphereRadius": 48.550042392950694
+      }
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup'SM_StinkBow_Arrow:BodySetup_0'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Assets/Meshes/SM_StinkBow_Arrow.0"
+    },
+    "NavCollision": null,
+    "LightingGuid": "AA788168-49820F89-1E159891-35A6CFEE",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 772,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 723,
+              "bEnableCollision": false,
+              "bCastShadow": false,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 2316,
+              "NumTriangles": 36,
+              "MinVertexIndex": 724,
+              "MaxVertexIndex": 763,
+              "bEnableCollision": false,
+              "bCastShadow": false,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 764
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 3,
+            "NumVertices": 764,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          },
+          "CardRepresentationData": {
+            "Bounds": {
+              "Min": {
+                "X": -49.037342,
+                "Y": -6.326745,
+                "Z": -4.565646
+              },
+              "Max": {
+                "X": 49.00632,
+                "Y": 6.3267164,
+                "Z": 6.949849
+              },
+              "IsValid": 1
+            },
+            "MaxLodLevel": 0,
+            "bMostlyTwoSided": false,
+            "CardBuildData": [
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": -1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": -0.015510559,
+                    "Y": -1.4305115E-05,
+                    "Z": 1.1921015
+                  },
+                  "Extent": {
+                    "X": 49.021835,
+                    "Y": 5.0,
+                    "Z": 10.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 2
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "Origin": {
+                    "X": -0.015510559,
+                    "Y": -1.4305115E-05,
+                    "Z": 1.1921015
+                  },
+                  "Extent": {
+                    "X": 49.021835,
+                    "Y": 5.0,
+                    "Z": 10.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 3
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": -1.0
+                  },
+                  "Origin": {
+                    "X": -0.015510559,
+                    "Y": -1.4305115E-05,
+                    "Z": 1.1921015
+                  },
+                  "Extent": {
+                    "X": 49.021835,
+                    "Y": 5.0,
+                    "Z": 10.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 4
+              },
+              {
+                "OBB": {
+                  "AxisX": {
+                    "X": 1.0,
+                    "Y": 0.0,
+                    "Z": 0.0
+                  },
+                  "AxisY": {
+                    "X": 0.0,
+                    "Y": 1.0,
+                    "Z": 0.0
+                  },
+                  "AxisZ": {
+                    "X": 0.0,
+                    "Y": 0.0,
+                    "Z": 1.0
+                  },
+                  "Origin": {
+                    "X": -0.015510559,
+                    "Y": -1.4305115E-05,
+                    "Z": 1.1921015
+                  },
+                  "Extent": {
+                    "X": 49.021835,
+                    "Y": 5.0,
+                    "Z": 10.0
+                  }
+                },
+                "LODLevel": 0,
+                "AxisAlignedDirectionIndex": 5
+              }
+            ]
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 382,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 460,
+              "bEnableCollision": false,
+              "bCastShadow": false,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 1146,
+              "NumTriangles": 22,
+              "MinVertexIndex": 461,
+              "MaxVertexIndex": 486,
+              "bEnableCollision": false,
+              "bCastShadow": false,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.96508706,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 487
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 3,
+            "NumVertices": 487,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        },
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 181,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 279,
+              "bEnableCollision": false,
+              "bCastShadow": false,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 543,
+              "NumTriangles": 20,
+              "MinVertexIndex": 280,
+              "MaxVertexIndex": 303,
+              "bEnableCollision": false,
+              "bCastShadow": false,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 2.976838,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 304
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 3,
+            "NumVertices": 304,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        }
+      ],
+      "NaniteResources": {
+        "StreamablePages": {
+          "BulkDataFlags": "BULKDATA_None",
+          "ElementCount": 0,
+          "SizeOnDisk": 0,
+          "OffsetInFile": "0x340F"
+        },
+        "AssemblyTransforms": [],
+        "AssemblyBoneAttachmentData": [],
+        "VoxelMaterialsMask": 0,
+        "MeshBounds": {
+          "Origin": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "BoxExtent": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "SphereRadius": 0.0
+        },
+        "PageRangeLookup": [],
+        "NumRootPages": 0,
+        "PositionPrecision": 0,
+        "NormalPrecision": 0,
+        "NumInputTriangles": 0,
+        "NumInputVertices": 0,
+        "NumInputMeshes": 0,
+        "NumInputTexCoords": 0,
+        "NumClusters": 0,
+        "ResourceFlags": "NONE"
+      },
+      "Bounds": {
+        "Origin": {
+          "X": -0.015509605,
+          "Y": -1.4543533E-05,
+          "Z": 1.1921012
+        },
+        "BoxExtent": {
+          "X": 48.02183,
+          "Y": 5.3267307,
+          "Z": 4.7577477
+        },
+        "SphereRadius": 48.410374
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        2.0,
+        0.524068,
+        0.2121704,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

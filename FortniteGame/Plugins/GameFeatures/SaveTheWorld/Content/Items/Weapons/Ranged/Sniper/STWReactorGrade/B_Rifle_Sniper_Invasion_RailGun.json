@@ -1,0 +1,2668 @@
+[
+  {
+    "Type": "AudioComponent",
+    "Name": "Audio_MinChargedReached_GEN_VARIABLE",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Invasion_RailGun_MinimumCharge_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_MinimumCharge_Cue.0"
+      },
+      "bAutoManageAttachment": true,
+      "AutoAttachLocationRule": "EAttachmentRule::SnapToTarget",
+      "AutoAttachRotationRule": "EAttachmentRule::SnapToTarget",
+      "AutoAttachScaleRule": "EAttachmentRule::SnapToTarget",
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Name": "Default__B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.B_Rifle_Sniper_Invasion_RailGun_C'",
+    "Template": {
+      "ObjectName": "B_Rifle_Sniper_C'Default__B_Rifle_Sniper_C'",
+      "ObjectPath": "/SaveTheWorld/Weapons/FORT_Rifles/Blueprints/B_Rifle_Sniper.0"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Charging Handle": {
+        "Handle": 0
+      },
+      "Row_TraceThroughBuildingsLimit": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'Invasion_GameData'",
+            "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Invasion_GameData.0"
+          },
+          "RowName": "Default.Mother.ReactorGrade.TraceThroughBuildingsLimit"
+        },
+        "RegistryType": {
+          "Name": "None"
+        }
+      },
+      "FF Effect Min Charge Reached": {
+        "ObjectName": "ForceFeedbackEffect'FF_Invasion_RailGun_MinChargeReached'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/FF_Invasion_RailGun_MinChargeReached.0"
+      },
+      "FF Effect Min To Max Charge": {
+        "ObjectName": "ForceFeedbackEffect'FF_Invasion_RailGun_ChargeLoop'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/FF_Invasion_RailGun_ChargeLoop.0"
+      },
+      "Montage_ChargeUp_Weapon": {
+        "ObjectName": "AnimMontage'Invasion_RailGun_Charge_Wep_M'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Animation/Invasion_RailGun_Charge_Wep_M.0"
+      },
+      "Montage_ChargeUp_Player": {
+        "ObjectName": "AnimMontage'Invasion_RailGun_Charge_M'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Animation/Invasion_RailGun_Charge_M.0"
+      },
+      "IsTargetingTag": {
+        "TagName": "Gameplay.Status.IsTargeting"
+      },
+      "Use Reload Particles": false,
+      "UseShellsOnFire?": false,
+      "UseShellsOnPump?": true,
+      "Sound_ScopeZoomIn": null,
+      "Sound_ScopeZoomOut": null,
+      "Muzzle System": {
+        "ObjectName": "NiagaraSystem'NS_Invasion_RailGun_MuzzleFire'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/VFX/NS_Invasion_RailGun_MuzzleFire.65"
+      },
+      "bShouldAimFromMuzzleAtCloseRange": true,
+      "bUseScopeTargeting": false,
+      "bUseImpactFXForProjectiles": true,
+      "DecalSignificance": {
+        "MinDistanceCinematic": 10000.0,
+        "MinDistanceEpic": 10000.0,
+        "MinDistanceHigh": 10000.0,
+        "MinDistanceMedium": 10000.0
+      },
+      "BeamParticleSystem": null,
+      "BeamNiagaraSystemAsset": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/VFX/NS_Invasion_RailGun_BeamFire.NS_Invasion_RailGun_BeamFire",
+        "SubPathString": ""
+      },
+      "DecalSizeMin": {
+        "X": 20.0,
+        "Y": 130.0,
+        "Z": 130.0
+      },
+      "DecalSizeMax": {
+        "X": 20.0,
+        "Y": 180.0,
+        "Z": 180.0
+      },
+      "DecalLifespanMin": 8.0,
+      "DecalLifespanMax": 10.0,
+      "DecalColorStart": {
+        "R": 8.0,
+        "G": 8.0,
+        "B": 8.0,
+        "A": 1.0,
+        "Hex": "FFFFFF"
+      },
+      "DecalColorEnd": {
+        "R": 8.0,
+        "G": 8.0,
+        "B": 8.0,
+        "A": 1.0,
+        "Hex": "FFFFFF"
+      },
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MI_Decal_Impact_Invasion_RailGun'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/VFX/MI_Decal_Impact_Invasion_RailGun.0"
+      },
+      "DecalTexture": {
+        "ObjectName": "Texture2D'T_Decal_Scorch_Hole'",
+        "ObjectPath": "/Game/Effects/Fort_Effects/Gameplay/SmokeDustExplosions/Textures/T_Decal_Scorch_Hole.0"
+      },
+      "FireAnimation": {
+        "ObjectName": "AnimMontage'Invasion_RailGun_Fire_M'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Animation/Invasion_RailGun_Fire_M.0"
+      },
+      "FireDownsightsAnimation": {
+        "ObjectName": "AnimMontage'Invasion_RailGun_Fire_M'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Animation/Invasion_RailGun_Fire_M.0"
+      },
+      "WeaponFireMontage": {
+        "ObjectName": "AnimMontage'Invasion_RailGun_Fire_CMM_WEP_M'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Animation/Invasion_RailGun_Fire_CMM_WEP_M.0"
+      },
+      "WeaponFireDownsightsMontage": {
+        "ObjectName": "AnimMontage'Invasion_RailGun_Fire_CMM_WEP_M'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Animation/Invasion_RailGun_Fire_CMM_WEP_M.0"
+      },
+      "SoundLibraryComponent": {
+        "ObjectName": "FortSoundLibraryComponent'Default__B_Rifle_Sniper_Invasion_RailGun_C:SoundLibraryComponent'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.6"
+      },
+      "QuartzGunfireComp": {
+        "ObjectName": "FortQuartzGunfireComponent'Default__B_Rifle_Sniper_Invasion_RailGun_C:QuartzGunfireComp'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.4"
+      },
+      "MuzzleBlockedReticleImage": null,
+      "CameraTargeting3PClass": {
+        "ObjectName": "BlueprintGeneratedClass'STW_PlayerCameraModeTargetingIronSight_C'",
+        "ObjectPath": "/Game/Blueprints/Camera/StW/STW_PlayerCameraModeTargetingIronSight.0"
+      },
+      "CameraTargeting1PClass": {
+        "ObjectName": "BlueprintGeneratedClass'STW_PlayerCameraModeTargeting_1P_C'",
+        "ObjectPath": "/SaveTheWorld/Blueprints/Camera/StW/STW_PlayerCameraModeTargeting_1P.2"
+      },
+      "ReloadSounds": {
+        "ObjectName": "SoundCue'Invasion_RailGun_ReloadStart_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_ReloadStart_Cue.0"
+      },
+      "ReloadSounds[1]": {
+        "ObjectName": "SoundCue'Invasion_RailGun_ReloadInsert_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_ReloadInsert_Cue.0"
+      },
+      "ReloadSounds[2]": {
+        "ObjectName": "SoundCue'Invasion_RailGun_ReloadEnd_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_ReloadEnd_Cue.0"
+      },
+      "PrimaryFireSound1P": {
+        "ObjectName": "SoundCue'Invasion_RailGun_Fire_Cue_1P'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Cue_1P.0"
+      },
+      "PrimaryFireSound": {
+        "ObjectName": "SoundCue'Invasion_RailGun_Fire_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Cue.0"
+      },
+      "PrimaryFireSound[1]": {
+        "ObjectName": "SoundCue'Weapon_RFL_AMR_T04_LowAmmo_Cue'",
+        "ObjectPath": "/Game/Sounds/Fort_Weapons/Rifle/Weapon_RFL_AMR_T04_LowAmmo_Cue.0"
+      },
+      "PrimaryFireStopSound1P": {
+        "ObjectName": "SoundCue'Weapon_ASLT_Auto_Stop_1P_Cue'",
+        "ObjectPath": "/Game/Sounds/Fort_Weapons/AutoRifle/Weapon_ASLT_Auto_Stop_1P_Cue.0"
+      },
+      "TargetingStartSound": {
+        "ObjectName": "SoundCue'Invasion_RailGun_TargetingStart_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_TargetingStart_Cue.0"
+      },
+      "TargetingEndSound": {
+        "ObjectName": "SoundCue'Invasion_RailGun_TargetingEnd_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_TargetingEnd_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds": {
+        "ObjectName": "SoundCue'Invasion_RailGun_Projectile_FleshImpact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Projectile_FleshImpact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[1]": {
+        "ObjectName": "SoundCue'Invasion_RailGun_Projectile_WoodImpact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Projectile_WoodImpact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[2]": {
+        "ObjectName": "SoundCue'Invasion_RailGun_Projectile_StoneImpact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Projectile_StoneImpact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[3]": {
+        "ObjectName": "SoundCue'Invasion_RailGun_Projectile_MetalImpact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Projectile_MetalImpact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[4]": {
+        "ObjectName": "SoundCue'Invasion_RailGun_Projectile_FleshImpact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Projectile_FleshImpact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[5]": {
+        "ObjectName": "SoundCue'Invasion_RailGun_Projectile_FleshImpact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Projectile_FleshImpact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[6]": {
+        "ObjectName": "SoundCue'Invasion_RailGun_Projectile_FleshImpact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Projectile_FleshImpact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[7]": {
+        "ObjectName": "SoundCue'Invasion_RailGun_Projectile_FleshImpact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Projectile_FleshImpact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[8]": {
+        "ObjectName": "SoundCue'Invasion_RailGun_Projectile_WaterImpact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Projectile_WaterImpact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[9]": {
+        "ObjectName": "SoundCue'Invasion_RailGun_Projectile_DirtImpact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Projectile_DirtImpact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[10]": {
+        "ObjectName": "SoundCue'Invasion_RailGun_Projectile_DirtImpact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Projectile_DirtImpact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[23]": {
+        "ObjectName": "SoundCue'Invasion_RailGun_Projectile_FleshImpact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Projectile_FleshImpact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[24]": {
+        "ObjectName": "SoundCue'Invasion_RailGun_Projectile_StoneImpact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Projectile_StoneImpact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[26]": {
+        "ObjectName": "SoundCue'Invasion_RailGun_Projectile_DirtImpact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Projectile_DirtImpact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceEffects": {
+        "ObjectName": "ParticleSystem'P_Impact_Default_01_Athena_Snipe'",
+        "ObjectPath": "/Game/Weapons/FORT_Generic_Effects/Impacts/Default/P_Impact_Default_01_Athena_Snipe.240"
+      },
+      "ImpactPhysicalSurfaceEffects[1]": {
+        "ObjectName": "ParticleSystem'P_Impact_Wood_Athena_Snipe'",
+        "ObjectPath": "/Game/Weapons/FORT_Generic_Effects/Impacts/Wood/P_Impact_Wood_Athena_Snipe.237"
+      },
+      "ImpactPhysicalSurfaceEffects[2]": {
+        "ObjectName": "ParticleSystem'P_Impact_Stone_Athena_Snipe'",
+        "ObjectPath": "/Game/Weapons/FORT_Generic_Effects/Impacts/Stone/P_Impact_Stone_Athena_Snipe.289"
+      },
+      "ImpactPhysicalSurfaceEffects[3]": {
+        "ObjectName": "ParticleSystem'P_Impact_Large_Metal_Athena'",
+        "ObjectPath": "/Game/Weapons/FORT_Generic_Effects/Impacts/Metal/P_Impact_Large_Metal_Athena.203"
+      },
+      "ImpactPhysicalSurfaceEffects[6]": {
+        "ObjectName": "ParticleSystem'P_Impact_Default_01_Athena'",
+        "ObjectPath": "/Game/Weapons/FORT_Generic_Effects/Impacts/Default/P_Impact_Default_01_Athena.163"
+      },
+      "ImpactPhysicalSurfaceEffects[7]": {
+        "ObjectName": "ParticleSystem'P_Impact_Default_01_Athena'",
+        "ObjectPath": "/Game/Weapons/FORT_Generic_Effects/Impacts/Default/P_Impact_Default_01_Athena.163"
+      },
+      "ImpactPhysicalSurfaceEffects[9]": {
+        "ObjectName": "ParticleSystem'P_Impact_Default_01_Athena_Snipe'",
+        "ObjectPath": "/Game/Weapons/FORT_Generic_Effects/Impacts/Default/P_Impact_Default_01_Athena_Snipe.240"
+      },
+      "ImpactPhysicalSurfaceEffects[10]": {
+        "ObjectName": "ParticleSystem'P_Impact_Default_01_Athena_Snipe'",
+        "ObjectPath": "/Game/Weapons/FORT_Generic_Effects/Impacts/Default/P_Impact_Default_01_Athena_Snipe.240"
+      },
+      "ImpactPhysicalSurfaceEffects[19]": {
+        "ObjectName": "ParticleSystem'P_Impact_Default_01_Athena'",
+        "ObjectPath": "/Game/Weapons/FORT_Generic_Effects/Impacts/Default/P_Impact_Default_01_Athena.163"
+      },
+      "ImpactNiagaraPhysicalSurfaceEffectAssets": [
+        {
+          "ObjectName": "NiagaraSystem'NS_Invasion_RailGun_Beam_Impact'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/VFX/NS_Invasion_RailGun_Beam_Impact.13"
+        },
+        {
+          "ObjectName": "NiagaraSystem'NS_Invasion_RailGun_Beam_Impact'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/VFX/NS_Invasion_RailGun_Beam_Impact.13"
+        },
+        {
+          "ObjectName": "NiagaraSystem'NS_Invasion_RailGun_Beam_Impact'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/VFX/NS_Invasion_RailGun_Beam_Impact.13"
+        },
+        {
+          "ObjectName": "NiagaraSystem'NS_Invasion_RailGun_Beam_Impact'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/VFX/NS_Invasion_RailGun_Beam_Impact.13"
+        },
+        {
+          "ObjectName": "NiagaraSystem'NS_Invasion_RailGun_Beam_Impact'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/VFX/NS_Invasion_RailGun_Beam_Impact.13"
+        },
+        {
+          "ObjectName": "NiagaraSystem'NS_Invasion_RailGun_Beam_Impact'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/VFX/NS_Invasion_RailGun_Beam_Impact.13"
+        },
+        null,
+        null,
+        {
+          "ObjectName": "NiagaraSystem'NS_Impact_Water_Beeg_Apollo'",
+          "ObjectPath": "/Game/Weapons/FORT_Generic_Effects/Impacts/Water/NS_Impact_Water_Athena/NS_Impact_Water_Beeg_Apollo.33"
+        },
+        {
+          "ObjectName": "NiagaraSystem'NS_Invasion_RailGun_Beam_Impact'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/VFX/NS_Invasion_RailGun_Beam_Impact.13"
+        },
+        {
+          "ObjectName": "NiagaraSystem'NS_Invasion_RailGun_Beam_Impact'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/VFX/NS_Invasion_RailGun_Beam_Impact.13"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "NiagaraSystem'NS_Invasion_RailGun_Beam_Impact'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/VFX/NS_Invasion_RailGun_Beam_Impact.13"
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "NiagaraSystem'NS_Invasion_RailGun_Beam_Impact'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/VFX/NS_Invasion_RailGun_Beam_Impact.13"
+        },
+        {
+          "ObjectName": "NiagaraSystem'NS_Invasion_RailGun_Beam_Impact'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/VFX/NS_Invasion_RailGun_Beam_Impact.13"
+        },
+        {
+          "ObjectName": "NiagaraSystem'NS_Invasion_RailGun_Beam_Impact'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/VFX/NS_Invasion_RailGun_Beam_Impact.13"
+        },
+        {
+          "ObjectName": "NiagaraSystem'NS_Invasion_RailGun_Beam_Impact'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/VFX/NS_Invasion_RailGun_Beam_Impact.13"
+        }
+      ],
+      "PrimaryForceFeedbackEffect": {
+        "ObjectName": "ForceFeedbackEffect'FF_Athena_Fire_Heavy_LR'",
+        "ObjectPath": "/Game/Weapons/ForceFeedback/FF_Athena_Fire_Heavy_LR.0"
+      },
+      "DataStoreManager": {
+        "ObjectName": "FortGenericDataStoreManagerComponent'Default__B_Rifle_Sniper_Invasion_RailGun_C:GeneralDataStore'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.3"
+      },
+      "SoundIndicatorComponent": {
+        "ObjectName": "FortSoundIndicatorComponent'Default__B_Rifle_Sniper_Invasion_RailGun_C:SoundIndicatorComponent'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.5"
+      },
+      "WeaponMesh": {
+        "ObjectName": "SkeletalMeshComponentBudgeted'Default__B_Rifle_Sniper_Invasion_RailGun_C:WeaponMesh0'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.47"
+      },
+      "FireFXSignificance": {
+        "MinDistanceLow": 10000.0
+      },
+      "TraceThroughLandscapeLimit": 1,
+      "StartChargeGameplayCue": {
+        "TagName": "GameplayCue.Athena.ReactorGrade.ChargeUp"
+      },
+      "MaxChargeGameplayCue": {
+        "TagName": "GameplayCue.Athena.ReactorGrade.MaxCharge"
+      },
+      "ReloadAnimation": {
+        "ObjectName": "AnimMontage'Invasion_RailGun_Reload_CMM'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Animation/Invasion_RailGun_Reload_CMM.0"
+      },
+      "PrimaryAbilityAnimation": {
+        "ObjectName": "AnimMontage'Invasion_RailGun_Charge_M'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Animation/Invasion_RailGun_Charge_M.0"
+      },
+      "WeaponReloadMontage": {
+        "ObjectName": "AnimMontage'Invasion_RailGun_Reload_WEP_M'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Animation/Invasion_RailGun_Reload_WEP_M.0"
+      },
+      "WeaponPawnAnimSet": {
+        "ObjectName": "FortWeaponAnimSet'Invasion_RailGun_AnimAsset'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Animation/Invasion_RailGun_AnimAsset.0"
+      },
+      "RootComponent": {
+        "ObjectName": "SkeletalMeshComponentBudgeted'Default__B_Rifle_Sniper_Invasion_RailGun_C:WeaponMesh0'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.47"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'B_Rifle_Sniper_C'",
+      "ObjectPath": "/SaveTheWorld/Weapons/FORT_Rifles/Blueprints/B_Rifle_Sniper.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'B_Rifle_Sniper_Invasion_RailGun_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.46"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'B_Rifle_Sniper_Invasion_RailGun_C:InheritableComponentHandler'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.40"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:ExecuteUbergraph_B_Rifle_Sniper_Invasion_RailGun'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.10"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:UpdateAimOffset'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.38"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:GetDamageStartAndDirection'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.11"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:UserConstructionScript'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.39"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnNotifyEnd_9ACAB01D4D13D518A81233A6D71C55ED'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.29"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnNotifyBegin_9ACAB01D4D13D518A81233A6D71C55ED'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.26"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnInterrupted_9ACAB01D4D13D518A81233A6D71C55ED'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.23"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnBlendOut_9ACAB01D4D13D518A81233A6D71C55ED'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.15"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnCompleted_9ACAB01D4D13D518A81233A6D71C55ED'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.19"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnNotifyEnd_2E900FBC4838A5D506F2CC8C9CCCDFBA'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.28"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnNotifyBegin_2E900FBC4838A5D506F2CC8C9CCCDFBA'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.25"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnInterrupted_2E900FBC4838A5D506F2CC8C9CCCDFBA'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.22"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnBlendOut_2E900FBC4838A5D506F2CC8C9CCCDFBA'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.14"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnCompleted_2E900FBC4838A5D506F2CC8C9CCCDFBA'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.18"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnNotifyEnd_15A5A4014D2966EAB037C3A4160F549F'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.27"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnNotifyBegin_15A5A4014D2966EAB037C3A4160F549F'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.24"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnInterrupted_15A5A4014D2966EAB037C3A4160F549F'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.21"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnBlendOut_15A5A4014D2966EAB037C3A4160F549F'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.13"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnCompleted_15A5A4014D2966EAB037C3A4160F549F'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.17"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:ReceiveBeginPlay'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.35"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnChargeUp'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.16"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:Tick Charge Aim'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.37"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnEndCharge'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.20"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:K2_OnUnEquip'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.12"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnPlayWeaponFireFX'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.30"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnReachedMinCharge'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.31"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:Play Charge Montage'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.34"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:Start Recoil'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.36"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnSetTargeting'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.33"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:EndRecoil'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.9"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnRemoteClientReachedMinCharge'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.32"
+      },
+      {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:ExecuteUbergraph_B_Rifle_Sniper_Invasion_RailGun'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.10"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Audio_MinChargedReached",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FortWeaponComponent_RecoilCurve",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'FortWeaponComponent_RecoilCurve'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FortWeaponFxComponent_ChargeAimLocation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'FortWeaponFxComponent_ChargeAimLocation'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Charging Handle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Row_TraceThroughBuildingsLimit",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'ScalableFloat'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FF Effect Min Charge Reached",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ForceFeedbackEffect'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RefFFEvent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ForceFeedbackComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FF Effect Min To Max Charge",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ForceFeedbackEffect'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Montage_ChargeUp_Weapon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'AnimMontage'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Montage_ChargeUp_Player",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'AnimMontage'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "IsTargetingTag",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_B_Rifle_Sniper_Invasion_RailGun": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:ExecuteUbergraph_B_Rifle_Sniper_Invasion_RailGun'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.10"
+      },
+      "OnRemoteClientReachedMinCharge": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnRemoteClientReachedMinCharge'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.32"
+      },
+      "EndRecoil": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:EndRecoil'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.9"
+      },
+      "OnSetTargeting": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnSetTargeting'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.33"
+      },
+      "Start Recoil": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:Start Recoil'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.36"
+      },
+      "Play Charge Montage": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:Play Charge Montage'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.34"
+      },
+      "OnReachedMinCharge": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnReachedMinCharge'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.31"
+      },
+      "OnPlayWeaponFireFX": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnPlayWeaponFireFX'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.30"
+      },
+      "K2_OnUnEquip": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:K2_OnUnEquip'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.12"
+      },
+      "OnEndCharge": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnEndCharge'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.20"
+      },
+      "Tick Charge Aim": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:Tick Charge Aim'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.37"
+      },
+      "OnChargeUp": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnChargeUp'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.16"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:ReceiveBeginPlay'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.35"
+      },
+      "OnCompleted_15A5A4014D2966EAB037C3A4160F549F": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnCompleted_15A5A4014D2966EAB037C3A4160F549F'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.17"
+      },
+      "OnBlendOut_15A5A4014D2966EAB037C3A4160F549F": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnBlendOut_15A5A4014D2966EAB037C3A4160F549F'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.13"
+      },
+      "OnInterrupted_15A5A4014D2966EAB037C3A4160F549F": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnInterrupted_15A5A4014D2966EAB037C3A4160F549F'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.21"
+      },
+      "OnNotifyBegin_15A5A4014D2966EAB037C3A4160F549F": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnNotifyBegin_15A5A4014D2966EAB037C3A4160F549F'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.24"
+      },
+      "OnNotifyEnd_15A5A4014D2966EAB037C3A4160F549F": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnNotifyEnd_15A5A4014D2966EAB037C3A4160F549F'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.27"
+      },
+      "OnCompleted_2E900FBC4838A5D506F2CC8C9CCCDFBA": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnCompleted_2E900FBC4838A5D506F2CC8C9CCCDFBA'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.18"
+      },
+      "OnBlendOut_2E900FBC4838A5D506F2CC8C9CCCDFBA": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnBlendOut_2E900FBC4838A5D506F2CC8C9CCCDFBA'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.14"
+      },
+      "OnInterrupted_2E900FBC4838A5D506F2CC8C9CCCDFBA": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnInterrupted_2E900FBC4838A5D506F2CC8C9CCCDFBA'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.22"
+      },
+      "OnNotifyBegin_2E900FBC4838A5D506F2CC8C9CCCDFBA": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnNotifyBegin_2E900FBC4838A5D506F2CC8C9CCCDFBA'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.25"
+      },
+      "OnNotifyEnd_2E900FBC4838A5D506F2CC8C9CCCDFBA": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnNotifyEnd_2E900FBC4838A5D506F2CC8C9CCCDFBA'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.28"
+      },
+      "OnCompleted_9ACAB01D4D13D518A81233A6D71C55ED": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnCompleted_9ACAB01D4D13D518A81233A6D71C55ED'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.19"
+      },
+      "OnBlendOut_9ACAB01D4D13D518A81233A6D71C55ED": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnBlendOut_9ACAB01D4D13D518A81233A6D71C55ED'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.15"
+      },
+      "OnInterrupted_9ACAB01D4D13D518A81233A6D71C55ED": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnInterrupted_9ACAB01D4D13D518A81233A6D71C55ED'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.23"
+      },
+      "OnNotifyBegin_9ACAB01D4D13D518A81233A6D71C55ED": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnNotifyBegin_9ACAB01D4D13D518A81233A6D71C55ED'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.26"
+      },
+      "OnNotifyEnd_9ACAB01D4D13D518A81233A6D71C55ED": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:OnNotifyEnd_9ACAB01D4D13D518A81233A6D71C55ED'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.29"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:UserConstructionScript'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.39"
+      },
+      "GetDamageStartAndDirection": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:GetDamageStartAndDirection'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.11"
+      },
+      "UpdateAimOffset": {
+        "ObjectName": "Function'B_Rifle_Sniper_Invasion_RailGun_C:UpdateAimOffset'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.38"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "B_Rifle_Sniper_Invasion_RailGun_C'Default__B_Rifle_Sniper_Invasion_RailGun_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "FortGenericDataStoreManagerComponent",
+    "Name": "GeneralDataStore",
+    "Outer": "Default__B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'FortGenericDataStoreManagerComponent'",
+    "Template": {
+      "ObjectName": "FortGenericDataStoreManagerComponent'Default__B_Rifle_Sniper_C:GeneralDataStore'",
+      "ObjectPath": "/SaveTheWorld/Weapons/FORT_Rifles/Blueprints/B_Rifle_Sniper.2"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FortQuartzGunfireComponent",
+    "Name": "QuartzGunfireComp",
+    "Outer": "Default__B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'FortQuartzGunfireComponent'",
+    "Template": {
+      "ObjectName": "FortQuartzGunfireComponent'Default__B_Rifle_Sniper_C:QuartzGunfireComp'",
+      "ObjectPath": "/SaveTheWorld/Weapons/FORT_Rifles/Blueprints/B_Rifle_Sniper.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FortSoundIndicatorComponent",
+    "Name": "SoundIndicatorComponent",
+    "Outer": "Default__B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'FortSoundIndicatorComponent'",
+    "Template": {
+      "ObjectName": "FortSoundIndicatorComponent'Default__B_Rifle_Sniper_C:SoundIndicatorComponent'",
+      "ObjectPath": "/SaveTheWorld/Weapons/FORT_Rifles/Blueprints/B_Rifle_Sniper.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FortSoundLibraryComponent",
+    "Name": "SoundLibraryComponent",
+    "Outer": "Default__B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'FortSoundLibraryComponent'",
+    "Template": {
+      "ObjectName": "FortSoundLibraryComponent'Default__B_Rifle_Sniper_C:SoundLibraryComponent'",
+      "ObjectPath": "/SaveTheWorld/Weapons/FORT_Rifles/Blueprints/B_Rifle_Sniper.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FortWeaponComponent_RecoilCurve",
+    "Name": "FortWeaponComponent_RecoilCurve_GEN_VARIABLE",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'FortWeaponComponent_RecoilCurve'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "InterpSpeed": {
+        "Value": 0.1
+      },
+      "CurveTimeScale": {
+        "Value": 1.0
+      },
+      "RecoilVectorCurves": [
+        {
+          "ObjectName": "CurveVector'RecoilCurve_Invasion_RailGun'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/RecoilCurve_Invasion_RailGun.0"
+        }
+      ],
+      "VertRecoilMult": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'Invasion_GameData'",
+            "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Invasion_GameData.0"
+          },
+          "RowName": "Default.Mother.ReactorGrade.VertRecoilMult"
+        }
+      },
+      "HorizRecoilMult": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'Invasion_GameData'",
+            "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Invasion_GameData.0"
+          },
+          "RowName": "Default.Mother.ReactorGrade.HorizRecoilMult"
+        }
+      },
+      "CurveLengthInSeconds": {
+        "Value": 10.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'Invasion_GameData'",
+            "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Invasion_GameData.0"
+          },
+          "RowName": "Default.Mother.ReactorGrade.RecoilCurveLength"
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortWeaponFxComponent_ChargeAimLocation",
+    "Name": "FortWeaponFxComponent_ChargeAimLocation_GEN_VARIABLE",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'FortWeaponFxComponent_ChargeAimLocation'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AimSmoothingSpeed": 5.0,
+      "bReplicates": true
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "EndRecoil",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_B_Rifle_Sniper_Invasion_RailGun",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_13",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_12",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_11",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_10",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_3",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Temp_name_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_4",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_9",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_8",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_5",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_7",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_6",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_6",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_7",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_5",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_8",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Temp_name_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_4",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_9",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_3",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_10",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_11",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_12",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_13",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Temp_name_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_14",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bPersistentFire",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bSecondaryFire",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInstigator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetFortPlayerControllerFromActor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPlayerController'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetBeamNiagaraComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetIsChargingWeapon_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnForceFeedbackAttached_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ForceFeedbackComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnForceFeedbackAttached_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ForceFeedbackComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInstigator_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Player_Pawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPlayerPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateProxyObjectForPlayMontage_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayMontageCallbackProxy'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayMontageCallbackProxy'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInstigator_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "K2Node_DynamicCast_AsGameplay_Tag_Asset_Interface",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_15",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasMatchingGameplayTag_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bNewIsTargeting",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetIsChargingWeapon_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_14",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInstigator_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetFortPlayerControllerFromActor_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPlayerController'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsEquipped_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayMontageCallbackProxy'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetDamageStartAndDirection",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "DamageStart",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Direction",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetCachedDamageStartAndAim_OutDamageStartLocation",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetCachedDamageStartAndAim_OutAimDirection",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_OnUnEquip",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'B_Ranged_Generic_C:K2_OnUnEquip'",
+      "ObjectPath": "/Game/Weapons/Blueprints/B_Ranged_Generic.39"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlendOut_15A5A4014D2966EAB037C3A4160F549F",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlendOut_2E900FBC4838A5D506F2CC8C9CCCDFBA",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlendOut_9ACAB01D4D13D518A81233A6D71C55ED",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnChargeUp",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'FortWeapon:OnChargeUp'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCompleted_15A5A4014D2966EAB037C3A4160F549F",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCompleted_2E900FBC4838A5D506F2CC8C9CCCDFBA",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCompleted_9ACAB01D4D13D518A81233A6D71C55ED",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnEndCharge",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'FortWeapon:OnEndCharge'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInterrupted_15A5A4014D2966EAB037C3A4160F549F",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInterrupted_2E900FBC4838A5D506F2CC8C9CCCDFBA",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInterrupted_9ACAB01D4D13D518A81233A6D71C55ED",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyBegin_15A5A4014D2966EAB037C3A4160F549F",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyBegin_2E900FBC4838A5D506F2CC8C9CCCDFBA",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyBegin_9ACAB01D4D13D518A81233A6D71C55ED",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyEnd_15A5A4014D2966EAB037C3A4160F549F",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyEnd_2E900FBC4838A5D506F2CC8C9CCCDFBA",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyEnd_9ACAB01D4D13D518A81233A6D71C55ED",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnPlayWeaponFireFX",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'B_Ranged_Generic_C:OnPlayWeaponFireFX'",
+      "ObjectPath": "/Game/Weapons/Blueprints/B_Ranged_Generic.59"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bPersistentFire",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bSecondaryFire",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnReachedMinCharge",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'FortWeapon:OnReachedMinCharge'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRemoteClientReachedMinCharge",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'FortWeapon:OnRemoteClientReachedMinCharge'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnSetTargeting",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'B_Ranged_Generic_C:OnSetTargeting'",
+      "ObjectPath": "/Game/Weapons/Blueprints/B_Ranged_Generic.60"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bNewIsTargeting",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Play Charge Montage",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'B_Ranged_Generic_C:ReceiveBeginPlay'",
+      "ObjectPath": "/Game/Weapons/Blueprints/B_Ranged_Generic.73"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Start Recoil",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Tick Charge Aim",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateAimOffset",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "PawnLocation",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CameraRotation",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CameraLocation",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetForwardVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Subtract_VectorVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_ProjectVectorOnToVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Subtract_VectorVector_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInstigator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetFortPlayerControllerFromActor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPlayerController'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetCameraRotation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetCameraLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'B_Ranged_Generic_C:UserConstructionScript'",
+      "ObjectPath": "/Game/Weapons/Blueprints/B_Ranged_Generic.106"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_FTrunc_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FTrunc_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'B_Rifle_Sniper_Invasion_RailGun_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.41"
+      },
+      "VariableGuid": "2E99013D-47CCB077-2692DBB1-00A1A19D",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'FortWeaponFxComponent_ChargeAimLocation'",
+        "ObjectPath": "/Script/FortniteGame"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "FortWeaponFxComponent_ChargeAimLocation'B_Rifle_Sniper_Invasion_RailGun_C:FortWeaponFxComponent_ChargeAimLocation_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.8"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "AimSmoothingSpeed",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'FortWeaponFxComponent_ChargeAimLocation'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          {
+            "PropertyName": "bReplicates",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'FortWeaponFxComponent_ChargeAimLocation'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "7AED97D1-45914341-46474184-57370B5C",
+      "InternalVariableName": "FortWeaponFxComponent_ChargeAimLocation"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'FortWeaponComponent_RecoilCurve'",
+        "ObjectPath": "/Script/FortniteGame"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "FortWeaponComponent_RecoilCurve'B_Rifle_Sniper_Invasion_RailGun_C:FortWeaponComponent_RecoilCurve_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.7"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "InterpSpeed",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'FortWeaponComponent_RecoilCurve'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          {
+            "PropertyName": "Value",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ScalableFloat'",
+              "ObjectPath": "/Script/GameplayAbilities"
+            }
+          },
+          {
+            "PropertyName": "CurveTimeScale",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'FortWeaponComponent_RecoilCurve'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          {
+            "PropertyName": "Value",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ScalableFloat'",
+              "ObjectPath": "/Script/GameplayAbilities"
+            }
+          },
+          {
+            "PropertyName": "RecoilVectorCurves",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'FortWeaponComponent_RecoilCurve'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'FortWeaponComponent_RecoilCurve'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          {
+            "PropertyName": "VertRecoilMult",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'FortWeaponComponent_RecoilCurve'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          {
+            "PropertyName": "Value",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ScalableFloat'",
+              "ObjectPath": "/Script/GameplayAbilities"
+            }
+          },
+          {
+            "PropertyName": "Curve",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ScalableFloat'",
+              "ObjectPath": "/Script/GameplayAbilities"
+            }
+          },
+          {
+            "PropertyName": "CurveTable",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'CurveTableRowHandle'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "RowName",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'CurveTableRowHandle'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "HorizRecoilMult",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'FortWeaponComponent_RecoilCurve'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          {
+            "PropertyName": "Value",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ScalableFloat'",
+              "ObjectPath": "/Script/GameplayAbilities"
+            }
+          },
+          {
+            "PropertyName": "Curve",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ScalableFloat'",
+              "ObjectPath": "/Script/GameplayAbilities"
+            }
+          },
+          {
+            "PropertyName": "CurveTable",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'CurveTableRowHandle'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "RowName",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'CurveTableRowHandle'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "CurveLengthInSeconds",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'FortWeaponComponent_RecoilCurve'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          {
+            "PropertyName": "Value",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ScalableFloat'",
+              "ObjectPath": "/Script/GameplayAbilities"
+            }
+          },
+          {
+            "PropertyName": "Curve",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ScalableFloat'",
+              "ObjectPath": "/Script/GameplayAbilities"
+            }
+          },
+          {
+            "PropertyName": "CurveTable",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'CurveTableRowHandle'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "RowName",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'CurveTableRowHandle'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "76DEAF21-464568C4-22904A92-D156AEEF",
+      "InternalVariableName": "FortWeaponComponent_RecoilCurve"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'B_Rifle_Sniper_Invasion_RailGun_C:Audio_MinChargedReached_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.0"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Sound",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bAutoManageAttachment",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "AutoAttachLocationRule",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "AutoAttachRotationRule",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "AutoAttachScaleRule",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bAutoActivate",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "WeaponMesh0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "26548A8E-436CD0AB-FAF58EAF-B31D87D6",
+      "InternalVariableName": "Audio_MinChargedReached"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'B_Rifle_Sniper_Invasion_RailGun_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.43"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Rifle_Sniper_Invasion_RailGun_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.44"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Rifle_Sniper_Invasion_RailGun_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.45"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'B_Rifle_Sniper_Invasion_RailGun_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.43"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Rifle_Sniper_Invasion_RailGun_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.44"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Rifle_Sniper_Invasion_RailGun_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.45"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'B_Rifle_Sniper_Invasion_RailGun_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/B_Rifle_Sniper_Invasion_RailGun.42"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponentBudgeted",
+    "Name": "WeaponMesh0",
+    "Outer": "Default__B_Rifle_Sniper_Invasion_RailGun_C",
+    "Class": "UScriptClass'SkeletalMeshComponentBudgeted'",
+    "Template": {
+      "ObjectName": "SkeletalMeshComponentBudgeted'Default__B_Rifle_Sniper_C:WeaponMesh0'",
+      "ObjectPath": "/SaveTheWorld/Weapons/FORT_Rifles/Blueprints/B_Rifle_Sniper.10"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'Invasion_RailGun_AnimBP_C'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Animation/Invasion_RailGun_AnimBP.0"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'Invasion_RailGun'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Meshes/Invasion_RailGun.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'Invasion_RailGun'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Meshes/Invasion_RailGun.0"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_Invasion_RailGun'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Materials/MI_Invasion_RailGun.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_Invasion_RailGun_Grade_Sight'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Materials/MI_Invasion_RailGun_Grade_Sight.0"
+        }
+      ]
+    }
+  }
+]

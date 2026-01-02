@@ -1,0 +1,52 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "WPN_PlasmaCannon_Pickup_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeWavePlayer'WPN_PlasmaCannon_Pickup_Cue:SoundNodeWavePlayer_0'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Pickup_Cue.1"
+      },
+      "VolumeMultiplier": 1.3846155,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'STW_Loot_Collect'",
+        "ObjectPath": "/STW_Sounds/Sounds/FortSoundClassesAndModes/STW_Loot_Collect.0"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'PickupMaximum_Oldest'",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/PickupMaximum_Oldest.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 1,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 1.7634584,
+      "MaxDistance": 3500.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Fort_Weapon_Pickup_Att'",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Pickup_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "WPN_PlasmaCannon_Pickup_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Pickup_01.WPN_PlasmaCannon_Pickup_01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WPN_PlasmaCannon_Pickup_01'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Pickup_01.0"
+    }
+  }
+]

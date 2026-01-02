@@ -1,0 +1,538 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer'WPN_PlasmaCannon_Fire_Cue:SoundNodeMixer_1'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.4"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "AttenuationShapeExtents": {
+          "X": 1000.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 5000.0
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'Weapon_Gunfire_Global_Conc'",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Weapon_Gunfire_Global_Conc.0"
+        },
+        {
+          "ObjectName": "SoundConcurrency'Weapon_Gunfire_Local_Conc'",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Weapon_Gunfire_Local_Conc.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 3,
+        "bLimitToOwner": true,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest"
+      },
+      "Duration": 3.2626667,
+      "MaxDistance": 27500.0
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_10",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeAttenuation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Fort_Weapon_Projectile_Medium_Mono_Athena_Att'",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Projectile_Medium_Mono_Athena_Att.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'WPN_PlasmaCannon_Fire_Cue:SoundNodeModulator_14'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_11",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeAttenuation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Fort_Weapon_Projectile_Distant_Mono_Athena_Att'",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Projectile_Distant_Mono_Athena_Att.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'WPN_PlasmaCannon_Fire_Cue:SoundNodeModulator_13'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_9",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeAttenuation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Fort_Weapon_Projectile_Close_Athena_Att'",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Projectile_Close_Athena_Att.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'WPN_PlasmaCannon_Fire_Cue:SoundNodeModulator_15'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_1",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        0.7,
+        0.6
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeSoundClass'WPN_PlasmaCannon_Fire_Cue:SoundNodeSoundClass_7'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.13"
+        },
+        {
+          "ObjectName": "SoundNodeSoundClass'WPN_PlasmaCannon_Fire_Cue:SoundNodeSoundClass_6'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.12"
+        },
+        {
+          "ObjectName": "SoundNodeSoundClass'WPN_PlasmaCannon_Fire_Cue:SoundNodeSoundClass_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_13",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PitchMax": 1.1,
+      "VolumeMin": 0.7,
+      "VolumeMax": 0.8,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'WPN_PlasmaCannon_Fire_Cue:SoundNodeRandom_6'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_14",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PitchMax": 1.1,
+      "VolumeMin": 0.7,
+      "VolumeMax": 0.8,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'WPN_PlasmaCannon_Fire_Cue:SoundNodeRandom_7'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_15",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VolumeMin": 1.0,
+      "VolumeMax": 1.2,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'WPN_PlasmaCannon_Fire_Cue:SoundNodeRandom_4'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_4",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'WPN_PlasmaCannon_Fire_Cue:SoundNodeWavePlayer_31'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.22"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WPN_PlasmaCannon_Fire_Cue:SoundNodeWavePlayer_32'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.23"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WPN_PlasmaCannon_Fire_Cue:SoundNodeWavePlayer_33'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.24"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WPN_PlasmaCannon_Fire_Cue:SoundNodeWavePlayer_34'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.25"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_6",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'WPN_PlasmaCannon_Fire_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.14"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WPN_PlasmaCannon_Fire_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.15"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WPN_PlasmaCannon_Fire_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.16"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WPN_PlasmaCannon_Fire_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.20"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_7",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'WPN_PlasmaCannon_Fire_Cue:SoundNodeWavePlayer_27'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.17"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WPN_PlasmaCannon_Fire_Cue:SoundNodeWavePlayer_28'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.18"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WPN_PlasmaCannon_Fire_Cue:SoundNodeWavePlayer_29'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.19"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'WPN_PlasmaCannon_Fire_Cue:SoundNodeWavePlayer_30'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.21"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeSoundClass",
+    "Name": "SoundNodeSoundClass_0",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeSoundClass'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundClassOverride": {
+        "ObjectName": "SoundClass'STW_WeaponRanged_Fire_Distant'",
+        "ObjectPath": "/STW_Sounds/Sounds/FortSoundClassesAndModes/STW_WeaponRanged_Fire_Distant.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeAttenuation'WPN_PlasmaCannon_Fire_Cue:SoundNodeAttenuation_11'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeSoundClass",
+    "Name": "SoundNodeSoundClass_6",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeSoundClass'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundClassOverride": {
+        "ObjectName": "SoundClass'STW_WeaponRanged_Fire_Distant'",
+        "ObjectPath": "/STW_Sounds/Sounds/FortSoundClassesAndModes/STW_WeaponRanged_Fire_Distant.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeAttenuation'WPN_PlasmaCannon_Fire_Cue:SoundNodeAttenuation_10'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeSoundClass",
+    "Name": "SoundNodeSoundClass_7",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeSoundClass'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundClassOverride": {
+        "ObjectName": "SoundClass'STW_WeaponRanged_Fire_3P_PSM'",
+        "ObjectPath": "/STW_Sounds/Sounds/FortSoundClassesAndModes/STW_WeaponRanged_Fire_3P_PSM.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeAttenuation'WPN_PlasmaCannon_Fire_Cue:SoundNodeAttenuation_9'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Dist_01.WPN_PlasmaCannon_Fire_Dist_01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WPN_PlasmaCannon_Fire_Dist_01'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Dist_01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Dist_02.WPN_PlasmaCannon_Fire_Dist_02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WPN_PlasmaCannon_Fire_Dist_02'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Dist_02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Dist_03.WPN_PlasmaCannon_Fire_Dist_03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WPN_PlasmaCannon_Fire_Dist_03'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Dist_03.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_27",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Med_01.WPN_PlasmaCannon_Fire_Med_01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WPN_PlasmaCannon_Fire_Med_01'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Med_01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_28",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Med_02.WPN_PlasmaCannon_Fire_Med_02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WPN_PlasmaCannon_Fire_Med_02'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Med_02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_29",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Med_03.WPN_PlasmaCannon_Fire_Med_03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WPN_PlasmaCannon_Fire_Med_03'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Med_03.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Dist_04.WPN_PlasmaCannon_Fire_Dist_04",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WPN_PlasmaCannon_Fire_Dist_04'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Dist_04.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_30",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Med_04.WPN_PlasmaCannon_Fire_Med_04",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WPN_PlasmaCannon_Fire_Med_04'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Med_04.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_31",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Close_01.WPN_PlasmaCannon_Fire_Close_01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WPN_PlasmaCannon_Fire_Close_01'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Close_01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_32",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Close_02.WPN_PlasmaCannon_Fire_Close_02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WPN_PlasmaCannon_Fire_Close_02'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Close_02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_33",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Close_03.WPN_PlasmaCannon_Fire_Close_03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WPN_PlasmaCannon_Fire_Close_03'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Close_03.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_34",
+    "Outer": "WPN_PlasmaCannon_Fire_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Close_04.WPN_PlasmaCannon_Fire_Close_04",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WPN_PlasmaCannon_Fire_Close_04'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Fire_Close_04.0"
+    }
+  }
+]

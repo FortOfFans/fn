@@ -1,0 +1,133 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Bow_Flame_Drop_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'Bow_Flame_Drop_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/Flamebow/Sounds/Bow_Flame_Drop_Cue.1"
+      },
+      "VolumeMultiplier": 0.8,
+      "PitchMultiplier": 0.9,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'STW_Loot_Collect'",
+        "ObjectPath": "/STW_Sounds/Sounds/FortSoundClassesAndModes/STW_Loot_Collect.0"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'Bow_Global_Conc'",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Bow_Global_Conc.0"
+        },
+        {
+          "ObjectName": "SoundConcurrency'Bow_Local_Conc'",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Bow_Local_Conc.0"
+        }
+      ],
+      "Duration": 1.4640417,
+      "MaxDistance": 3000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Fort_Weapon_Drop_Att'",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Drop_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "Bow_Flame_Drop_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PitchMin": 0.85,
+      "PitchMax": 0.95,
+      "VolumeMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'Bow_Flame_Drop_Cue:SoundNodeRandom_1'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/Flamebow/Sounds/Bow_Flame_Drop_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "Bow_Flame_Drop_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'Bow_Flame_Drop_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/Flamebow/Sounds/Bow_Flame_Drop_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Bow_Flame_Drop_Cue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/Flamebow/Sounds/Bow_Flame_Drop_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Bow_Flame_Drop_Cue:SoundNodeWavePlayer_5'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/Flamebow/Sounds/Bow_Flame_Drop_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Bow_Flame_Drop_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/FlameBow/Sounds/Bow_Flame_Drop_01.Bow_Flame_Drop_01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Bow_Flame_Drop_01'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/Flamebow/Sounds/Bow_Flame_Drop_01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "Bow_Flame_Drop_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/FlameBow/Sounds/Bow_Flame_Drop_02.Bow_Flame_Drop_02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Bow_Flame_Drop_02'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/Flamebow/Sounds/Bow_Flame_Drop_02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "Bow_Flame_Drop_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/FlameBow/Sounds/Bow_Flame_Drop_03.Bow_Flame_Drop_03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Bow_Flame_Drop_03'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/Flamebow/Sounds/Bow_Flame_Drop_03.0"
+    }
+  }
+]

@@ -1,0 +1,137 @@
+[
+  {
+    "Type": "AssetTagsGameplayEffectComponent",
+    "Name": "AssetTagsGameplayEffectComponent_0",
+    "Outer": "Default__GE_Alteration_G_OnHitStreak_FreezeStacks_C",
+    "Class": "UScriptClass'AssetTagsGameplayEffectComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "InheritableAssetTags": {
+        "CombinedTags": [
+          "Alteration.Freeze.Stack"
+        ],
+        "Added": [
+          "Alteration.Freeze.Stack"
+        ]
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Alteration_G_OnHitStreak_FreezeStacks_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayEffect'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_Alteration_G_OnHitStreak_FreezeStacks_C'Default__GE_Alteration_G_OnHitStreak_FreezeStacks_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnHitStreak_Freeze/GE_Alteration_G_OnHitStreak_FreezeStacks.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_Alteration_G_OnHitStreak_FreezeStacks_C",
+    "Name": "Default__GE_Alteration_G_OnHitStreak_FreezeStacks_C",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnHitStreak_Freeze/GE_Alteration_G_OnHitStreak_FreezeStacks.GE_Alteration_G_OnHitStreak_FreezeStacks_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DurationPolicy": "EGameplayEffectDurationType::HasDuration",
+      "DurationMagnitude": {
+        "ScalableFloatMagnitude": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'CombatEffects_Alteration'",
+              "ObjectPath": "/Game/Balance/DataTables/CombatEffects_Alteration.0"
+            },
+            "RowName": "Alteration.Weapon.Ranged.OnHitStreakDance.StackDuration"
+          }
+        }
+      },
+      "bDenyOverflowApplication": true,
+      "bClearStackOnOverflow": true,
+      "InheritableGameplayEffectTags": {
+        "CombinedTags": [
+          "Alteration.Freeze.Stack"
+        ],
+        "Added": [
+          "Alteration.Freeze.Stack"
+        ]
+      },
+      "InheritableOwnedTagsContainer": {
+        "CombinedTags": [
+          "Granted.PerkEffect.OnHitStreakHuskFreeze.Stacks"
+        ],
+        "Added": [
+          "Granted.PerkEffect.OnHitStreakHuskFreeze.Stacks"
+        ]
+      },
+      "ApplicationTagRequirements": {
+        "IgnoreTags": [
+          "Gameplay.Status.Frozen",
+          "Granted.PerkEffect.HuskFreeze.Cooldown"
+        ]
+      },
+      "StackingType": "EGameplayEffectStackingType::AggregateByTarget",
+      "StackLimitCount": -1,
+      "StackPeriodResetPolicy": "EGameplayEffectStackingPeriodPolicy::NeverReset",
+      "GEComponents": [
+        {
+          "ObjectName": "AssetTagsGameplayEffectComponent'Default__GE_Alteration_G_OnHitStreak_FreezeStacks_C:AssetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnHitStreak_Freeze/GE_Alteration_G_OnHitStreak_FreezeStacks.0"
+        },
+        {
+          "ObjectName": "TargetTagRequirementsGameplayEffectComponent'Default__GE_Alteration_G_OnHitStreak_FreezeStacks_C:TargetTagRequirementsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnHitStreak_Freeze/GE_Alteration_G_OnHitStreak_FreezeStacks.3"
+        },
+        {
+          "ObjectName": "TargetTagsGameplayEffectComponent'Default__GE_Alteration_G_OnHitStreak_FreezeStacks_C:TargetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnHitStreak_Freeze/GE_Alteration_G_OnHitStreak_FreezeStacks.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "TargetTagRequirementsGameplayEffectComponent",
+    "Name": "TargetTagRequirementsGameplayEffectComponent_0",
+    "Outer": "Default__GE_Alteration_G_OnHitStreak_FreezeStacks_C",
+    "Class": "UScriptClass'TargetTagRequirementsGameplayEffectComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ApplicationTagRequirements": {
+        "IgnoreTags": [
+          "Gameplay.Status.Frozen",
+          "Granted.PerkEffect.HuskFreeze.Cooldown"
+        ]
+      }
+    }
+  },
+  {
+    "Type": "TargetTagsGameplayEffectComponent",
+    "Name": "TargetTagsGameplayEffectComponent_0",
+    "Outer": "Default__GE_Alteration_G_OnHitStreak_FreezeStacks_C",
+    "Class": "UScriptClass'TargetTagsGameplayEffectComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "InheritableGrantedTagsContainer": {
+        "CombinedTags": [
+          "Granted.PerkEffect.OnHitStreakHuskFreeze.Stacks"
+        ],
+        "Added": [
+          "Granted.PerkEffect.OnHitStreakHuskFreeze.Stacks"
+        ]
+      }
+    }
+  }
+]

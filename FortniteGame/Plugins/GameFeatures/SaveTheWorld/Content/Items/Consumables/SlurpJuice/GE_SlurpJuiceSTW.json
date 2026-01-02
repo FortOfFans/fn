@@ -1,0 +1,131 @@
+[
+  {
+    "Type": "AbilitiesGameplayEffectComponent",
+    "Name": "AbilitiesGameplayEffectComponent_0",
+    "Outer": "Default__GE_SlurpJuiceSTW_C",
+    "Class": "UScriptClass'AbilitiesGameplayEffectComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "GrantAbilityConfigs": [
+        {
+          "Ability": {
+            "ObjectName": "BlueprintGeneratedClass'GA_SlurpJuiceSTW_Granted_C'",
+            "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/GA_SlurpJuiceSTW_Granted.0"
+          },
+          "LevelScalableFloat": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "InputID": -1,
+          "RemovalPolicy": "EGameplayEffectGrantedAbilityRemovePolicy::CancelAbilityImmediately"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_SlurpJuiceSTW_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayEffect'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_SlurpJuiceSTW_C'Default__GE_SlurpJuiceSTW_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/GE_SlurpJuiceSTW.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_SlurpJuiceSTW_C",
+    "Name": "Default__GE_SlurpJuiceSTW_C",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Items/Consumables/SlurpJuice/GE_SlurpJuiceSTW.GE_SlurpJuiceSTW_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DurationPolicy": "EGameplayEffectDurationType::HasDuration",
+      "DurationMagnitude": {
+        "ScalableFloatMagnitude": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'CombatEffectMagnitude'",
+              "ObjectPath": "/Game/Balance/DataTables/CombatEffectMagnitude.0"
+            },
+            "RowName": "Item.SlurpSTW.MaxDuration"
+          }
+        }
+      },
+      "bSuppressStackingCues": true,
+      "GameplayCues": [
+        {
+          "MagnitudeAttribute": {
+            "AttributeName": "",
+            "Attribute": {
+              "Path": [],
+              "ResolvedOwner": null
+            },
+            "AttributeOwner": null
+          },
+          "MinLevel": 0.0,
+          "MaxLevel": 0.0,
+          "GameplayCueTags": [
+            "GameplayCue.Athena.Item.Slurp.Active"
+          ]
+        }
+      ],
+      "InheritableOwnedTagsContainer": {
+        "CombinedTags": [
+          "Athena.Item.PurpleStuff"
+        ],
+        "Added": [
+          "Athena.Item.PurpleStuff"
+        ]
+      },
+      "StackingType": "EGameplayEffectStackingType::AggregateByTarget",
+      "StackLimitCount": 1,
+      "GEComponents": [
+        {
+          "ObjectName": "AbilitiesGameplayEffectComponent'Default__GE_SlurpJuiceSTW_C:AbilitiesGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/GE_SlurpJuiceSTW.0"
+        },
+        {
+          "ObjectName": "TargetTagsGameplayEffectComponent'Default__GE_SlurpJuiceSTW_C:TargetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/GE_SlurpJuiceSTW.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "TargetTagsGameplayEffectComponent",
+    "Name": "TargetTagsGameplayEffectComponent_0",
+    "Outer": "Default__GE_SlurpJuiceSTW_C",
+    "Class": "UScriptClass'TargetTagsGameplayEffectComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "InheritableGrantedTagsContainer": {
+        "CombinedTags": [
+          "Athena.Item.PurpleStuff"
+        ],
+        "Added": [
+          "Athena.Item.PurpleStuff"
+        ]
+      }
+    }
+  }
+]

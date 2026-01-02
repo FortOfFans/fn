@@ -1,0 +1,66 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "WPN_PlasmaCannon_Drop_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'WPN_PlasmaCannon_Drop_Cue:SoundNodeModulator_1'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Drop_Cue.1"
+      },
+      "VolumeMultiplier": 2.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'STW_Loot_Collect'",
+        "ObjectPath": "/STW_Sounds/Sounds/FortSoundClassesAndModes/STW_Loot_Collect.0"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'Weapon_Drop_StopOldest'",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Weapon_Drop_StopOldest.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 0.93016666,
+      "MaxDistance": 3000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Fort_Weapon_Drop_Att'",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Drop_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "WPN_PlasmaCannon_Drop_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'WPN_PlasmaCannon_Drop_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Drop_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "WPN_PlasmaCannon_Drop_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Drop_01.WPN_PlasmaCannon_Drop_01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WPN_PlasmaCannon_Drop_01'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Sounds/WPN_PlasmaCannon_Drop_01.0"
+    }
+  }
+]

@@ -1,0 +1,1543 @@
+[
+  {
+    "Type": "BGA_Alteration_FirePool_C",
+    "Name": "Default__BGA_Alteration_FirePool_C",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.BGA_Alteration_FirePool_C'",
+    "Template": {
+      "ObjectName": "BGA_GM_EffectPool_Base_C'Default__BGA_GM_EffectPool_Base_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/BGA_GM_EffectPool_Base.1"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "DecalFadeInLength": 0.5,
+      "DecalFadeOutLength": 1.0,
+      "BottomOfDamageAOECylinderShouldBeAtCenterOfActor": false,
+      "TC_TrailAbilityTag": [
+        "NPC.Ability.Attack.AoE.FirePools"
+      ],
+      "TC_AffectedByAOETag": {
+        "TagName": "NPC.Status.AOE.FirePools"
+      },
+      "GE_AOE2_StandingInAOE": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Alteration_FirePool_AOE2StandingInFirePool_C'",
+        "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GE_Alteration_FirePool_AOE2StandingInFirePool.0"
+      },
+      "GE_AOE3_DOT": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Alteration_FirePool_AOE3DOT_C'",
+        "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GE_Alteration_FirePool_AOE3DOT.1"
+      },
+      "GE_AOE4_Remove": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Alteration_FirePool_AOE4Remove_C'",
+        "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GE_Alteration_FirePool_AOE4Remove.0"
+      },
+      "GE_AOE_DisableTrail": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Alteration_FirePool_DisableTrail_C'",
+        "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GE_Alteration_FirePool_DisableTrail.0"
+      },
+      "DamageStatHandle": {
+        "DataTable": {
+          "ObjectName": "DataTable'GadgetScaling'",
+          "ObjectPath": "/Game/Balance/DataTables/GadgetScaling.0"
+        },
+        "RowName": "Alterations_FirePoolsDOT"
+      },
+      "DeliverableAbilityInfo": {
+        "DeliveryBuckets": [
+          {
+            "Tag": {
+              "TagName": "None"
+            },
+            "ProximityEffectBuckets": [
+              {
+                "EffectsToApply": [
+                  {
+                    "GameplayEffect": {
+                      "ObjectName": "BlueprintGeneratedClass'GE_Alteration_FirePool_AOE1TouchDamage_C'",
+                      "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GE_Alteration_FirePool_AOE1TouchDamage.1"
+                    },
+                    "Level": 0.0
+                  },
+                  {
+                    "GameplayEffect": {
+                      "ObjectName": "BlueprintGeneratedClass'GE_Alteration_FirePool_AOE2StandingInFirePool_C'",
+                      "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GE_Alteration_FirePool_AOE2StandingInFirePool.0"
+                    },
+                    "Level": 0.0
+                  },
+                  {
+                    "GameplayEffect": {
+                      "ObjectName": "BlueprintGeneratedClass'GE_Alteration_FirePool_AOE3DOT_C'",
+                      "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GE_Alteration_FirePool_AOE3DOT.1"
+                    },
+                    "Level": 0.0
+                  }
+                ],
+                "DeliveryRequirements": {
+                  "SourceTagRequirements": {
+                    "RequireTags": [],
+                    "IgnoreTags": [],
+                    "TagQuery": {
+                      "TokenStreamVersion": 0,
+                      "TagDictionary": [],
+                      "QueryTokenStream": [],
+                      "UserDescription": "",
+                      "AutoDescription": ""
+                    }
+                  },
+                  "TargetTagRequirements": {
+                    "RequireTags": [],
+                    "IgnoreTags": [],
+                    "TagQuery": {
+                      "TokenStreamVersion": 0,
+                      "TagDictionary": [],
+                      "QueryTokenStream": [],
+                      "UserDescription": "",
+                      "AutoDescription": ""
+                    }
+                  },
+                  "ApplicableTeamAffiliation": "EFortTeamAffiliation::Friendly",
+                  "bConsiderTeamAffiliationToInstigator": false,
+                  "ApplicableTeam": "EFortTeam::Monster",
+                  "bConsiderTeam": true,
+                  "bApplyToPlayerPawns": false,
+                  "bApplyToAIPawns": true,
+                  "bApplyToBuildingActors": false,
+                  "BuildingActorSpecification": "EFortDeliveryInfoBuildingActorSpecification::All",
+                  "bApplyToGlobalEnvironmentAbilityActor": false
+                },
+                "ProximityApplicationType": "EFortProximityBasedGEApplicationType::ApplyOnProximityTouch"
+              }
+            ],
+            "PawnPersistentAbilitySetBuckets": [],
+            "PersistentlyAppliedAbilitySets": [],
+            "bEnabled": false,
+            "bEnabledByDefault": true,
+            "bHasGEsToApplyOnTouch": true,
+            "bHasGEsToApplyOnExit": false,
+            "bHasGEsToApplyOnPulseTimer": false,
+            "bHasPersistentEffects": false
+          }
+        ]
+      },
+      "bCanBeSavedInCreativeVolume": false,
+      "InitialLifeSpan": 6.0
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BGA_Alteration_FirePool_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_GM_EffectPool_Base_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/BGA_GM_EffectPool_Base.2"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BGA_Alteration_FirePool_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.12"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BGA_Alteration_FirePool_C:InheritableComponentHandler'",
+        "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.6"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BGA_Alteration_FirePool_C:ExecuteUbergraph_BGA_Alteration_FirePool'",
+        "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.3"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BGA_Alteration_FirePool_C:UserConstructionScript'",
+        "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.5"
+      },
+      {
+        "ObjectName": "Function'BGA_Alteration_FirePool_C:OnDeathPlayEffects'",
+        "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.4"
+      },
+      {
+        "ObjectName": "Function'BGA_Alteration_FirePool_C:ExecuteUbergraph_BGA_Alteration_FirePool'",
+        "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.3"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Decal",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FireFX",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DecalMID",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "DecalFadeInLength",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "DecalFadeOutLength",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BGA_Alteration_FirePool": {
+        "ObjectName": "Function'BGA_Alteration_FirePool_C:ExecuteUbergraph_BGA_Alteration_FirePool'",
+        "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.3"
+      },
+      "OnDeathPlayEffects": {
+        "ObjectName": "Function'BGA_Alteration_FirePool_C:OnDeathPlayEffects'",
+        "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.4"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function'BGA_Alteration_FirePool_C:UserConstructionScript'",
+        "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.5"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BGA_Alteration_FirePool_C'Default__BGA_Alteration_FirePool_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "Decal_GEN_VARIABLE",
+    "Outer": "BGA_Alteration_FirePool_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'MD_Enemy_OnDeath_SpawnDamagePool_01_Inst'",
+        "ObjectPath": "/SaveTheWorld/Effects/Fort_Effects/Mutators/Materials/MD_Enemy_OnDeath_SpawnDamagePool_01_Inst.0"
+      },
+      "SortOrder": -100,
+      "DecalSize": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BGA_Alteration_FirePool",
+    "Outer": "BGA_Alteration_FirePool_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_Damage",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_DamageTags",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Momentum",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_HitInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_InstigatedBy",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_DamageCauser",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_EffectContext",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectContextHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_GetGameTimeInSeconds_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDeathPlayEffects",
+    "Outer": "BGA_Alteration_FirePool_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'BGA_GM_EffectPool_Base_C:OnDeathPlayEffects'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/BGA_GM_EffectPool_Base.9"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Damage",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "DamageTags",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Momentum",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InstigatedBy",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamageCauser",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "EffectContext",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectContextHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Outer": "BGA_Alteration_FirePool_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'BGA_GM_EffectPool_Base_C:UserConstructionScript'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/BGA_GM_EffectPool_Base.13"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_GetGameTimeInSeconds_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldLocation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BGA_Alteration_FirePool_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BGA_Alteration_FirePool_C:CylinderDamageAOE_GEN_VARIABLE'",
+            "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.14"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BGA_GM_EffectPool_Base_C'",
+              "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/BGA_GM_EffectPool_Base.2"
+            },
+            "SCSVariableName": "CylinderDamageAoE",
+            "AssociatedGuid": "A0E1F26D-4182C75B-68BC7884-CEF2AB6F"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "StaticMesh",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'StaticMeshComponent'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "bEvaluateWorldPositionOffsetInRayTracing",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'StaticMeshComponent'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "OverrideMaterials",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'StaticMeshComponent'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "None",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'StaticMeshComponent'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "BodyInstance",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'StaticMeshComponent'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "CollisionProfileName",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'BodyInstance'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "CollisionResponses",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'BodyInstance'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 1,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 2,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 3,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 4,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 5,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 6,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 7,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "None",
+                "ArrayIndex": 8,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "RelativeScale3D",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'StaticMeshComponent'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "X",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'Vector'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Y",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'Vector'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'Vector'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "bVisible",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'StaticMeshComponent'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BGA_Alteration_FirePool_C:CylinderAntiOverlap_GEN_VARIABLE'",
+            "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.13"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BGA_GM_EffectPool_Base_C'",
+              "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/BGA_GM_EffectPool_Base.2"
+            },
+            "SCSVariableName": "CylinderAntiOverlap",
+            "AssociatedGuid": "FDE5B36A-47854016-5650A6AA-FB1C21B4"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "StaticMesh",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'StaticMeshComponent'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "bEvaluateWorldPositionOffsetInRayTracing",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'StaticMeshComponent'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "OverrideMaterials",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'StaticMeshComponent'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "None",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'StaticMeshComponent'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "BodyInstance",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'StaticMeshComponent'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "CollisionProfileName",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'BodyInstance'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "CollisionResponses",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'BodyInstance'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 1,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 2,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 3,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 4,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 5,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 6,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 7,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "None",
+                "ArrayIndex": 8,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "RelativeScale3D",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'StaticMeshComponent'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "X",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'Vector'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Y",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'Vector'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "Z",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'Vector'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "FireFX_GEN_VARIABLE",
+    "Outer": "BGA_Alteration_FirePool_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'P_FIreCloud_Idle'",
+        "ObjectPath": "/SaveTheWorld/Effects/Fort_Effects/Mutators/Effects/P_FIreCloud_Idle.66"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -128.0
+      },
+      "RelativeScale3D": {
+        "X": 0.5,
+        "Y": 0.5,
+        "Z": 0.5
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BGA_Alteration_FirePool_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bShouldUpdatePhysicsVolume": true
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BGA_Alteration_FirePool_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.8"
+      },
+      "VariableGuid": "9C512AC7-4EDFD271-9C3F9EB0-745DF256",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BGA_Alteration_FirePool_C:FireFX_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.7"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Template",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ParticleSystemComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "RelativeLocation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ParticleSystemComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "RelativeScale3D",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ParticleSystemComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Y",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "PrimaryComponentTick",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ParticleSystemComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bStartWithTickEnabled",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ActorComponentTickFunction'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BGA_GM_EffectPool_Base_C",
+      "VariableGuid": "C343B626-4F8326D4-65FDA2BF-017BA59C",
+      "InternalVariableName": "FireFX"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'BGA_Alteration_FirePool_C:Decal_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.2"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "DecalMaterial",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'DecalComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "SortOrder",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'DecalComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "DecalSize",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'DecalComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Y",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "RelativeRotation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'DecalComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Pitch",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Rotator'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BGA_GM_EffectPool_Base_C",
+      "VariableGuid": "A0F3B1C1-4CC906EF-2A1622A9-AF19AA31",
+      "InternalVariableName": "Decal"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BGA_Alteration_FirePool_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BGA_Alteration_FirePool_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BGA_Alteration_FirePool_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.11"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BGA_Alteration_FirePool_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BGA_Alteration_FirePool_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.11"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BGA_Alteration_FirePool_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/BGA_Alteration_FirePool.9"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "CylinderAntiOverlap_GEN_VARIABLE",
+    "Outer": "BGA_Alteration_FirePool_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Template": {
+      "ObjectName": "StaticMeshComponent'BGA_GM_EffectPool_Base_C:CylinderAntiOverlap_GEN_VARIABLE'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/BGA_GM_EffectPool_Base.20"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Properties": {
+      "bEvaluateWorldPositionOffsetInRayTracing": true,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "CylinderDamageAOE_GEN_VARIABLE",
+    "Outer": "BGA_Alteration_FirePool_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Template": {
+      "ObjectName": "StaticMeshComponent'BGA_GM_EffectPool_Base_C:CylinderDamageAOE_GEN_VARIABLE'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/BGA_GM_EffectPool_Base.21"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Properties": {
+      "bEvaluateWorldPositionOffsetInRayTracing": true,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "bVisible": false
+    }
+  }
+]

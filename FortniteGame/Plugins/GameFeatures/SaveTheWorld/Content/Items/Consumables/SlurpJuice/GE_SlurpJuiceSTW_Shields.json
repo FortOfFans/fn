@@ -1,0 +1,320 @@
+[
+  {
+    "Type": "AbilitiesGameplayEffectComponent",
+    "Name": "AbilitiesGameplayEffectComponent_0",
+    "Outer": "Default__GE_SlurpJuiceSTW_Shields_C",
+    "Class": "UScriptClass'AbilitiesGameplayEffectComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "GrantAbilityConfigs": [
+        {
+          "Ability": {
+            "ObjectName": "BlueprintGeneratedClass'GAT_SlurpJuiceSTW_C'",
+            "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/GAT_SlurpJuiceSTW.0"
+          },
+          "LevelScalableFloat": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "InputID": -1,
+          "RemovalPolicy": "EGameplayEffectGrantedAbilityRemovePolicy::CancelAbilityImmediately"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "AssetTagsGameplayEffectComponent",
+    "Name": "AssetTagsGameplayEffectComponent_0",
+    "Outer": "Default__GE_SlurpJuiceSTW_Shields_C",
+    "Class": "UScriptClass'AssetTagsGameplayEffectComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "InheritableAssetTags": {
+        "CombinedTags": [
+          "Item.Consumable.SlurpJuice",
+          "Trait.Restoration.Shields"
+        ],
+        "Added": [
+          "Item.Consumable.SlurpJuice",
+          "Trait.Restoration.Shields"
+        ]
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_SlurpJuiceSTW_Shields_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayEffect'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_SlurpJuiceSTW_Shields_C'Default__GE_SlurpJuiceSTW_Shields_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/GE_SlurpJuiceSTW_Shields.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_SlurpJuiceSTW_Shields_C",
+    "Name": "Default__GE_SlurpJuiceSTW_Shields_C",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Items/Consumables/SlurpJuice/GE_SlurpJuiceSTW_Shields.GE_SlurpJuiceSTW_Shields_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DurationPolicy": "EGameplayEffectDurationType::HasDuration",
+      "DurationMagnitude": {
+        "ScalableFloatMagnitude": {
+          "Value": 0.1
+        }
+      },
+      "Period": {
+        "Value": 1.0
+      },
+      "Modifiers": [
+        {
+          "Attribute": {
+            "AttributeName": "CurrentShield",
+            "Attribute": {
+              "Path": [
+                "CurrentShield"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'FortHealthSet'",
+                "ObjectPath": "/Script/FortniteGame"
+              }
+            },
+            "AttributeOwner": {
+              "ObjectName": "Class'FortHealthSet'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          "ModifierOp": "EGameplayModOp::Additive",
+          "ModifierMagnitude": {
+            "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::AttributeBased",
+            "ScalableFloatMagnitude": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": "None"
+              },
+              "RegistryType": {
+                "Name": "None"
+              }
+            },
+            "AttributeBasedMagnitude": {
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "BackingAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "ShieldRegenRate",
+                  "Attribute": {
+                    "Path": [
+                      "ShieldRegenRate"
+                    ],
+                    "ResolvedOwner": {
+                      "ObjectName": "Class'FortRegenHealthSet'",
+                      "ObjectPath": "/Script/FortniteGame"
+                    }
+                  },
+                  "AttributeOwner": {
+                    "ObjectName": "Class'FortRegenHealthSet'",
+                    "ObjectPath": "/Script/FortniteGame"
+                  }
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": true
+              },
+              "AttributeCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              },
+              "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+              "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+              "SourceTagFilter": [],
+              "TargetTagFilter": []
+            },
+            "CustomMagnitude": {
+              "CalculationClassMagnitude": null,
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "FinalLookupCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              }
+            },
+            "SetByCallerMagnitude": {
+              "DataName": "None",
+              "DataTag": {
+                "TagName": "None"
+              }
+            }
+          },
+          "EvaluationChannelSettings": {
+            "Channel": "EGameplayModEvaluationChannel::Channel0"
+          },
+          "SourceTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "TargetTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          }
+        }
+      ],
+      "GameplayCues": [
+        {
+          "MagnitudeAttribute": {
+            "AttributeName": "",
+            "Attribute": {
+              "Path": [],
+              "ResolvedOwner": null
+            },
+            "AttributeOwner": null
+          },
+          "MinLevel": 0.0,
+          "MaxLevel": 0.0,
+          "GameplayCueTags": [
+            "GameplayCue.Abilities.PurpleStuff"
+          ]
+        }
+      ],
+      "InheritableGameplayEffectTags": {
+        "CombinedTags": [
+          "Item.Consumable.SlurpJuice",
+          "Trait.Restoration.Shields"
+        ],
+        "Added": [
+          "Item.Consumable.SlurpJuice",
+          "Trait.Restoration.Shields"
+        ]
+      },
+      "InheritableOwnedTagsContainer": {
+        "CombinedTags": [
+          "Athena.Item.PurpleStuff"
+        ],
+        "Added": [
+          "Athena.Item.PurpleStuff"
+        ]
+      },
+      "StackLimitCount": 1,
+      "GEComponents": [
+        {
+          "ObjectName": "AbilitiesGameplayEffectComponent'Default__GE_SlurpJuiceSTW_Shields_C:AbilitiesGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/GE_SlurpJuiceSTW_Shields.0"
+        },
+        {
+          "ObjectName": "AssetTagsGameplayEffectComponent'Default__GE_SlurpJuiceSTW_Shields_C:AssetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/GE_SlurpJuiceSTW_Shields.1"
+        },
+        {
+          "ObjectName": "TargetTagsGameplayEffectComponent'Default__GE_SlurpJuiceSTW_Shields_C:TargetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/GE_SlurpJuiceSTW_Shields.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "TargetTagsGameplayEffectComponent",
+    "Name": "TargetTagsGameplayEffectComponent_0",
+    "Outer": "Default__GE_SlurpJuiceSTW_Shields_C",
+    "Class": "UScriptClass'TargetTagsGameplayEffectComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "InheritableGrantedTagsContainer": {
+        "CombinedTags": [
+          "Athena.Item.PurpleStuff"
+        ],
+        "Added": [
+          "Athena.Item.PurpleStuff"
+        ]
+      }
+    }
+  }
+]

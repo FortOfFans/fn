@@ -1,0 +1,302 @@
+[
+  {
+    "Type": "AssetTagsGameplayEffectComponent",
+    "Name": "AssetTagsGameplayEffectComponent_0",
+    "Outer": "Default__GE_Alteration_G_OnHit_SlowToFreeze_Freeze_C",
+    "Class": "UScriptClass'AssetTagsGameplayEffectComponent'",
+    "Template": {
+      "ObjectName": "AssetTagsGameplayEffectComponent'Default__GET_Freeze_C:AssetTagsGameplayEffectComponent_0'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_Freeze.0"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "InheritableAssetTags": {
+        "CombinedTags": [
+          "Gameplay.Effect.Negative",
+          "Gameplay.Effect.Frozen",
+          "Granted.AlterationEffect.SlowToFreeze.Freeze"
+        ],
+        "Added": [
+          "Gameplay.Effect.Negative",
+          "Gameplay.Effect.Frozen",
+          "Granted.AlterationEffect.SlowToFreeze.Freeze"
+        ]
+      }
+    }
+  },
+  {
+    "Type": "BlockAbilityTagsGameplayEffectComponent",
+    "Name": "BlockAbilityTagsGameplayEffectComponent_0",
+    "Outer": "Default__GE_Alteration_G_OnHit_SlowToFreeze_Freeze_C",
+    "Class": "UScriptClass'BlockAbilityTagsGameplayEffectComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "InheritableBlockedAbilityTagsContainer": {
+        "CombinedTags": [
+          "Granted.AlterationEffect.SlowToFreeze.Slow"
+        ],
+        "Added": [
+          "Granted.AlterationEffect.SlowToFreeze.Slow"
+        ]
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Alteration_G_OnHit_SlowToFreeze_Freeze_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GET_Freeze_C'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_Freeze.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_Alteration_G_OnHit_SlowToFreeze_Freeze_C'Default__GE_Alteration_G_OnHit_SlowToFreeze_Freeze_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnHit_SlowToFreeze/GE_Alteration_G_OnHit_SlowToFreeze_Freeze.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_Alteration_G_OnHit_SlowToFreeze_Freeze_C",
+    "Name": "Default__GE_Alteration_G_OnHit_SlowToFreeze_Freeze_C",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnHit_SlowToFreeze/GE_Alteration_G_OnHit_SlowToFreeze_Freeze.GE_Alteration_G_OnHit_SlowToFreeze_Freeze_C'",
+    "Template": {
+      "ObjectName": "GET_Freeze_C'Default__GET_Freeze_C'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_Freeze.2"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DurationMagnitude": {
+        "ScalableFloatMagnitude": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'CombatEffects_Alteration'",
+              "ObjectPath": "/Game/Balance/DataTables/CombatEffects_Alteration.0"
+            },
+            "RowName": "Alteration.Weapon.Hit.SlowToFreeze.FreezeDuration"
+          }
+        }
+      },
+      "InheritableGameplayEffectTags": {
+        "CombinedTags": [
+          "Gameplay.Effect.Negative",
+          "Gameplay.Effect.Frozen",
+          "Granted.AlterationEffect.SlowToFreeze.Freeze"
+        ],
+        "Added": [
+          "Gameplay.Effect.Negative",
+          "Gameplay.Effect.Frozen",
+          "Granted.AlterationEffect.SlowToFreeze.Freeze"
+        ]
+      },
+      "InheritableOwnedTagsContainer": {
+        "CombinedTags": [
+          "Gameplay.Status.Frozen",
+          "Granted.AlterationEffect.SlowToFreeze.Freeze"
+        ],
+        "Added": [
+          "Granted.AlterationEffect.SlowToFreeze.Freeze"
+        ]
+      },
+      "InheritableBlockedAbilityTagsContainer": {
+        "CombinedTags": [
+          "Granted.AlterationEffect.SlowToFreeze.Slow"
+        ],
+        "Added": [
+          "Granted.AlterationEffect.SlowToFreeze.Slow"
+        ]
+      },
+      "RemoveGameplayEffectQuery": {
+        "EffectTagQuery": {
+          "TagDictionary": [
+            {
+              "TagName": "Granted.AlterationEffect.SlowToFreeze.Slow"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "AutoDescription": " ANY( Granted.AlterationEffect.SlowToFreeze.Slow )"
+        }
+      },
+      "GEComponents": [
+        {
+          "ObjectName": "AssetTagsGameplayEffectComponent'Default__GE_Alteration_G_OnHit_SlowToFreeze_Freeze_C:AssetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnHit_SlowToFreeze/GE_Alteration_G_OnHit_SlowToFreeze_Freeze.0"
+        },
+        {
+          "ObjectName": "TargetTagRequirementsGameplayEffectComponent'Default__GE_Alteration_G_OnHit_SlowToFreeze_Freeze_C:TargetTagRequirementsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnHit_SlowToFreeze/GE_Alteration_G_OnHit_SlowToFreeze_Freeze.5"
+        },
+        {
+          "ObjectName": "TargetTagsGameplayEffectComponent'Default__GE_Alteration_G_OnHit_SlowToFreeze_Freeze_C:TargetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnHit_SlowToFreeze/GE_Alteration_G_OnHit_SlowToFreeze_Freeze.6"
+        },
+        {
+          "ObjectName": "RemoveOtherGameplayEffectComponent'Default__GE_Alteration_G_OnHit_SlowToFreeze_Freeze_C:RemoveOtherGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnHit_SlowToFreeze/GE_Alteration_G_OnHit_SlowToFreeze_Freeze.4"
+        },
+        {
+          "ObjectName": "BlockAbilityTagsGameplayEffectComponent'Default__GE_Alteration_G_OnHit_SlowToFreeze_Freeze_C:BlockAbilityTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnHit_SlowToFreeze/GE_Alteration_G_OnHit_SlowToFreeze_Freeze.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "RemoveOtherGameplayEffectComponent",
+    "Name": "RemoveOtherGameplayEffectComponent_0",
+    "Outer": "Default__GE_Alteration_G_OnHit_SlowToFreeze_Freeze_C",
+    "Class": "UScriptClass'RemoveOtherGameplayEffectComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RemoveGameplayEffectQueries": [
+        {
+          "CustomMatchDelegate_BP": {
+            "Object": null,
+            "FunctionName": "None"
+          },
+          "OwningTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "EffectTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "SourceTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "SourceAggregateTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "ModifyingAttribute": {
+            "AttributeName": "",
+            "Attribute": {
+              "Path": [],
+              "ResolvedOwner": null
+            },
+            "AttributeOwner": null
+          },
+          "EffectSource": null,
+          "EffectDefinition": null
+        },
+        {
+          "CustomMatchDelegate_BP": {
+            "Object": null,
+            "FunctionName": "None"
+          },
+          "OwningTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "EffectTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Granted.AlterationEffect.SlowToFreeze.Slow"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Granted.AlterationEffect.SlowToFreeze.Slow )"
+          },
+          "SourceTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "SourceAggregateTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "ModifyingAttribute": {
+            "AttributeName": "",
+            "Attribute": {
+              "Path": [],
+              "ResolvedOwner": null
+            },
+            "AttributeOwner": null
+          },
+          "EffectSource": null,
+          "EffectDefinition": null
+        }
+      ]
+    }
+  },
+  {
+    "Type": "TargetTagRequirementsGameplayEffectComponent",
+    "Name": "TargetTagRequirementsGameplayEffectComponent_0",
+    "Outer": "Default__GE_Alteration_G_OnHit_SlowToFreeze_Freeze_C",
+    "Class": "UScriptClass'TargetTagRequirementsGameplayEffectComponent'",
+    "Template": {
+      "ObjectName": "TargetTagRequirementsGameplayEffectComponent'Default__GET_Freeze_C:TargetTagRequirementsGameplayEffectComponent_0'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_Freeze.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "TargetTagsGameplayEffectComponent",
+    "Name": "TargetTagsGameplayEffectComponent_0",
+    "Outer": "Default__GE_Alteration_G_OnHit_SlowToFreeze_Freeze_C",
+    "Class": "UScriptClass'TargetTagsGameplayEffectComponent'",
+    "Template": {
+      "ObjectName": "TargetTagsGameplayEffectComponent'Default__GET_Freeze_C:TargetTagsGameplayEffectComponent_0'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_Freeze.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "InheritableGrantedTagsContainer": {
+        "CombinedTags": [
+          "Gameplay.Status.Frozen",
+          "Granted.AlterationEffect.SlowToFreeze.Freeze"
+        ],
+        "Added": [
+          "Granted.AlterationEffect.SlowToFreeze.Freeze"
+        ]
+      }
+    }
+  }
+]

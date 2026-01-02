@@ -1,0 +1,222 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Invasion_RailGun_Fire_Cue_1P",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeDelay'Invasion_RailGun_Fire_Cue_1P:SoundNodeDelay_0'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Cue_1P.1"
+      },
+      "VolumeMultiplier": 1.4,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::NaturalSound",
+        "AttenuationShapeExtents": {
+          "X": 1000.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 4000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'STW_WeaponRanged_Fire_1P_PSM'",
+        "ObjectPath": "/STW_Sounds/Sounds/FortSoundClassesAndModes/STW_WeaponRanged_Fire_1P_PSM.0"
+      },
+      "bHasDelayNode": true,
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'Weapon_Gunfire_FirstPerson_Conc'",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Weapon_Gunfire_FirstPerson_Conc.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 7.736646,
+      "MaxDistance": 2097152.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Fort_Weapon_Projectile_FirstPerson_Athena_Att'",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Projectile_FirstPerson_Athena_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "Invasion_RailGun_Fire_Cue_1P",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DelayMin": 0.07,
+      "DelayMax": 0.07,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'Invasion_RailGun_Fire_Cue_1P:SoundNodeModulator_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Cue_1P.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "Invasion_RailGun_Fire_Cue_1P",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        0.3
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'Invasion_RailGun_Fire_Cue_1P:SoundNodeRandom_2'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Cue_1P.5"
+        },
+        null
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "Invasion_RailGun_Fire_Cue_1P",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PitchMin": 1.0,
+      "VolumeMin": 1.0,
+      "VolumeMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeQualityLevel'Invasion_RailGun_Fire_Cue_1P:SoundNodeQualityLevel_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Cue_1P.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeQualityLevel",
+    "Name": "SoundNodeQualityLevel_0",
+    "Outer": "Invasion_RailGun_Fire_Cue_1P",
+    "Class": "UScriptClass'SoundNodeQualityLevel'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeMixer'Invasion_RailGun_Fire_Cue_1P:SoundNodeMixer_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Cue_1P.2"
+        },
+        {
+          "ObjectName": "SoundNodeMixer'Invasion_RailGun_Fire_Cue_1P:SoundNodeMixer_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Cue_1P.2"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Invasion_RailGun_Fire_Cue_1P:SoundNodeWavePlayer_10'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Cue_1P.6"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Invasion_RailGun_Fire_Cue_1P:SoundNodeWavePlayer_10'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Cue_1P.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_2",
+    "Outer": "Invasion_RailGun_Fire_Cue_1P",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'Invasion_RailGun_Fire_Cue_1P:SoundNodeWavePlayer_4'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Cue_1P.7"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Invasion_RailGun_Fire_Cue_1P:SoundNodeWavePlayer_8'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Cue_1P.8"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Invasion_RailGun_Fire_Cue_1P:SoundNodeWavePlayer_9'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Cue_1P.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_10",
+    "Outer": "Invasion_RailGun_Fire_Cue_1P",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Close_02.Invasion_RailGun_Fire_Close_02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Invasion_RailGun_Fire_Close_02'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Close_02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "Invasion_RailGun_Fire_Cue_1P",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Close_01.Invasion_RailGun_Fire_Close_01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Invasion_RailGun_Fire_Close_01'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Close_01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_8",
+    "Outer": "Invasion_RailGun_Fire_Cue_1P",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Close_02.Invasion_RailGun_Fire_Close_02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Invasion_RailGun_Fire_Close_02'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Close_02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_9",
+    "Outer": "Invasion_RailGun_Fire_Cue_1P",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Close_03.Invasion_RailGun_Fire_Close_03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Invasion_RailGun_Fire_Close_03'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/STWReactorGrade/Audio/Invasion_RailGun_Fire_Close_03.0"
+    }
+  }
+]

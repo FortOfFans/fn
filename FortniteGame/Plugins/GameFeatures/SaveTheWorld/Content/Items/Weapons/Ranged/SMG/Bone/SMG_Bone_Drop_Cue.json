@@ -1,0 +1,67 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "SMG_Bone_Drop_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'SMG_Bone_Drop_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/Bone/SMG_Bone_Drop_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'STW_Loot_Collect'",
+        "ObjectPath": "/STW_Sounds/Sounds/FortSoundClassesAndModes/STW_Loot_Collect.0"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'Weapon_Drop_StopOldest'",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Weapon_Drop_StopOldest.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 1,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 0.68133336,
+      "MaxDistance": 3000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Fort_Weapon_Drop_Att'",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Drop_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "SMG_Bone_Drop_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'SMG_Bone_Drop_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/Bone/SMG_Bone_Drop_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "SMG_Bone_Drop_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_UI_Sounds/Gameplay/Weapon_Generic_Drop_Pistol.Weapon_Generic_Drop_Pistol",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Weapon_Generic_Drop_Pistol'",
+      "ObjectPath": "/Game/Sounds/Fort_UI_Sounds/Gameplay/Weapon_Generic_Drop_Pistol.0"
+    }
+  }
+]

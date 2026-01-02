@@ -1,0 +1,5170 @@
+[
+  {
+    "Type": "AudioComponent",
+    "Name": "OverheatAudioLayer_GEN_VARIABLE",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Overheat_Release_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Overheat_Release_Cue.0"
+      },
+      "bAutoManageAttachment": true,
+      "AutoAttachLocationRule": "EAttachmentRule::SnapToTarget",
+      "AutoAttachRotationRule": "EAttachmentRule::SnapToTarget",
+      "AutoAttachScaleRule": "EAttachmentRule::SnapToTarget",
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "AudioShapeLineComponent",
+    "Name": "FortAudioShapeLine_GEN_VARIABLE",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'AudioShapeLineComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundOnEdge": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Target_Beam_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Target_Beam_Cue.0"
+      },
+      "SoundOnInside": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Target_Beam_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Target_Beam_Cue.0"
+      },
+      "FadeOutTime": 0.25,
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "B_Assault_SMG_Invasion_RayGun_C",
+    "Name": "Default__B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.B_Assault_SMG_Invasion_RayGun_C'",
+    "Template": {
+      "ObjectName": "B_Assault_Generic_C'Default__B_Assault_Generic_C'",
+      "ObjectPath": "/Game/Weapons/FORT_Rifles/Blueprints/Assault/B_Assault_Generic.0"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "OverheatAudioFeedbackCurve": {
+        "ObjectName": "CurveFloat'C_GalileoBun_OverheatAudio'",
+        "ObjectPath": "/Game/Sounds/Fort_Weapons/AutoRifle/Galileo_Bun/C_GalileoBun_OverheatAudio.0"
+      },
+      "OverheatFXTimer": {
+        "Handle": 0
+      },
+      "OverheatFXTimerReplicated": {
+        "Handle": 0
+      },
+      "Range": 15000.0,
+      "GC_Firing": {
+        "TagName": "GameplayCue.Athena.LlamaRoaster.Firing"
+      },
+      "HitPoint": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "SavePoint": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "RecoilVectorCurve": {
+        "ObjectName": "CurveVector'RecoilCurve'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/RecoilCurve.0"
+      },
+      "AccumulatedRecoil": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "HorizRecoilMult": 0.33000001311302185,
+      "VertRecoilMult": 0.6600000262260437,
+      "Montage_Chargeup_Weapon": {
+        "ObjectName": "AnimMontage'Invasion_RayGun_Chargeup_Rifle_M'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/Animation/Invasion_RayGun_Chargeup_Rifle_M.0"
+      },
+      "Montage_Chargeup_Player": {
+        "ObjectName": "AnimMontage'Invasion_RayGun_Chargeup_Player_Montage'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/Animation/Invasion_RayGun_Chargeup_Player_Montage.0"
+      },
+      "Montage_StartFiring_Weapon": {
+        "ObjectName": "AnimMontage'Invasion_RayGun_Fire_M'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/Animation/Invasion_RayGun_Fire_M.0"
+      },
+      "Montage_StartFriing_Player": {
+        "ObjectName": "AnimMontage'Invasion_RayGun_Fire_CMM_M'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/Animation/Invasion_RayGun_Fire_CMM_M.0"
+      },
+      "Montage_FinishFiring_Weapon": {
+        "ObjectName": "AnimMontage'Invasion_RayGun_Outro_Rifle_M'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/Animation/Invasion_RayGun_Outro_Rifle_M.0"
+      },
+      "Montage_FinishFiring_Player": {
+        "ObjectName": "AnimMontage'Invasion_RayGun_Outro_M'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/Animation/Invasion_RayGun_Outro_M.0"
+      },
+      "LlamaRoasterImpactFXAsset_CascadeEmitter": {
+        "ObjectName": "ParticleSystem'TEMP_P_LlamaRoaster_Impact_ADS'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/Assets_TEMP/TEMP_P_LlamaRoaster_Impact_ADS.208"
+      },
+      "LlamaRoasterImpactFXAsset_NiagaraSystem": {
+        "ObjectName": "NiagaraSystem'NS_Assault_LlamaRoaster_Impact'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/FX/NS_Assault_LlamaRoaster_Impact.44"
+      },
+      "Shells Velocity": {
+        "X": 180.0,
+        "Y": 1.0,
+        "Z": 100.0
+      },
+      "Shells Size": {
+        "X": 1.25,
+        "Y": 1.25,
+        "Z": 1.25
+      },
+      "MuzzleWindParticleSystem": null,
+      "TracerTemplate": null,
+      "ScopeTargetingMuzzleOffset": {
+        "X": 100.0,
+        "Y": 0.0,
+        "Z": -5.0
+      },
+      "bShouldHideReserveAmmo": true,
+      "bShouldAimFromMuzzleAtCloseRange": true,
+      "bUseImpactFXForProjectiles": true,
+      "bUsePersistentBeam": true,
+      "BeamSignificance": {
+        "MinDistanceEpic": 25000.0,
+        "MinDistanceHigh": 25000.0,
+        "MinDistanceMedium": 25000.0,
+        "MinDistanceLow": 20000.0
+      },
+      "DecalSignificance": {
+        "MinDistanceEpic": 4000.0,
+        "MinDistanceHigh": 3000.0,
+        "MinDistanceMedium": 2000.0
+      },
+      "BeamParticleSystem": null,
+      "BeamNiagaraSystemAsset": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/FX/NS_SMG_Invasion_RayGun_Beam.NS_SMG_Invasion_RayGun_Beam",
+        "SubPathString": ""
+      },
+      "DecalSizeMin": {
+        "X": 60.0,
+        "Y": 18.0,
+        "Z": 18.0
+      },
+      "DecalSizeMax": {
+        "X": 70.0,
+        "Y": 22.0,
+        "Z": 22.0
+      },
+      "DecalLifespanMin": 2.0,
+      "DecalLifespanMax": 2.5,
+      "DecalColorStart": {
+        "R": 4.447678,
+        "G": 0.0,
+        "B": 8.0,
+        "A": 1.0,
+        "Hex": "FF00FF"
+      },
+      "DecalColorEnd": {
+        "R": 0.132519,
+        "G": 0.0,
+        "B": 1.0,
+        "A": 1.0,
+        "Hex": "6600FF"
+      },
+      "FireAnimation": null,
+      "FireDownsightsAnimation": null,
+      "WeaponFireMontage": null,
+      "WeaponFireDownsightsMontage": null,
+      "OverheatedAnimation": {
+        "ObjectName": "AnimMontage'Invasion_RayGun_OverHeated_M'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/Animation/Invasion_RayGun_OverHeated_M.0"
+      },
+      "WeaponOverheatedAnimation": {
+        "ObjectName": "AnimMontage'Invasion_RayGun_Overheat_Rifle_M'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/Animation/Invasion_RayGun_Overheat_Rifle_M.0"
+      },
+      "bShouldDisplayReticleOverheatIndicator": false,
+      "SoundLibraryComponent": {
+        "ObjectName": "FortSoundLibraryComponent'Default__B_Assault_SMG_Invasion_RayGun_C:SoundLibraryComponent'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.8"
+      },
+      "QuartzGunfireComp": {
+        "ObjectName": "FortQuartzGunfireComponent'Default__B_Assault_SMG_Invasion_RayGun_C:QuartzGunfireComp'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.6"
+      },
+      "ReticleImage": null,
+      "CameraBase3PClass": {
+        "ObjectName": "BlueprintGeneratedClass'Athena_PlayerCameraModeRanged_C'",
+        "ObjectPath": "/Game/Blueprints/Camera/Athena/Athena_PlayerCameraModeRanged.2"
+      },
+      "CameraTargeting3PClass": {
+        "ObjectName": "BlueprintGeneratedClass'Athena_PlayerCameraModeTargetingAssault_C'",
+        "ObjectPath": "/Game/Blueprints/Camera/Athena/Athena_PlayerCameraModeTargetingAssault.1"
+      },
+      "CameraTargeting1PClass": {
+        "ObjectName": "BlueprintGeneratedClass'Athena_PlayerCameraModeTargeting_1P_C'",
+        "ObjectPath": "/Game/Blueprints/Camera/Athena/Athena_PlayerCameraModeTargeting_1P.8"
+      },
+      "OutOfAmmoSound": {
+        "ObjectName": "SoundCue'Invasion_RayGun_OutOfAmmo_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_OutOfAmmo_Cue.0"
+      },
+      "ReloadSounds": null,
+      "ReloadSounds[1]": null,
+      "ReloadSounds[2]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Equip_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Equip_Cue.0"
+      },
+      "PrimaryFireSound1P": {
+        "ObjectName": "SoundCue'Invasion_RayGun_FireLoop_Close1P_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_FireLoop_Close1P_Cue.0"
+      },
+      "PrimaryFireSound": {
+        "ObjectName": "SoundCue'Invasion_RayGun_FireLoop_Close_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_FireLoop_Close_Cue.0"
+      },
+      "PrimaryFireSound[1]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_OutOfAmmo_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_OutOfAmmo_Cue.0"
+      },
+      "PrimaryFireSound[2]": {
+        "ObjectName": "SoundCue'Rifle_Standard_T00_Degrade_Cue'",
+        "ObjectPath": "/Game/Sounds/Fort_Weapons/Degrades/Rifle_Standard_T00_Degrade_Cue.0"
+      },
+      "PrimaryFireStopSound1P": {
+        "ObjectName": "SoundCue'Invasion_RayGun_FireStop_Close1P_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_FireStop_Close1P_Cue.0"
+      },
+      "PrimaryFireStopSound": {
+        "ObjectName": "SoundCue'Invasion_RayGun_FireStop_Close_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_FireStop_Close_Cue.0"
+      },
+      "TargetingStartSound": {
+        "ObjectName": "SoundCue'Weapon_MILRIFLE_ADS_IN_Cue'",
+        "ObjectPath": "/Game/Sounds/Fort_Weapons/ADS/Weapon_MILRIFLE_ADS_IN_Cue.0"
+      },
+      "TargetingEndSound": {
+        "ObjectName": "SoundCue'Weapon_MILRIFLE_ADS_OUT_Cue'",
+        "ObjectPath": "/Game/Sounds/Fort_Weapons/ADS/Weapon_MILRIFLE_ADS_OUT_Cue.0"
+      },
+      "PrimaryFireSoundFadeOutTime": 0.15,
+      "ImpactPhysicalSurfaceSounds": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Impact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Impact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[1]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Impact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Impact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[2]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Impact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Impact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[3]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Impact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Impact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[4]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_ImpactFlesh_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_ImpactFlesh_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[5]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_ImpactFlesh_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_ImpactFlesh_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[6]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_ImpactFlesh_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_ImpactFlesh_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[7]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_ImpactFlesh_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_ImpactFlesh_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[8]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_ImpactWater_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_ImpactWater_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[9]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Impact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Impact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[10]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Impact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Impact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[11]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Impact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Impact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[12]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Impact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Impact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[13]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Impact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Impact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[14]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Impact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Impact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[15]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Impact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Impact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[16]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Impact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Impact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[17]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_ImpactFlesh_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_ImpactFlesh_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[18]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Impact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Impact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[19]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_ImpactFlesh_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_ImpactFlesh_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[20]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_ImpactFlesh_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_ImpactFlesh_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[21]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_ImpactFlesh_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_ImpactFlesh_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[22]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_ImpactFlesh_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_ImpactFlesh_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[23]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Impact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Impact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[24]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Impact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Impact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[25]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Impact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Impact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[26]": {
+        "ObjectName": "SoundCue'Invasion_RayGun_Impact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/SFX_RayGun/Invasion_RayGun_Impact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceEffects[6]": null,
+      "ImpactPhysicalSurfaceEffects[7]": null,
+      "ImpactNiagaraPhysicalSurfaceEffectAssets": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "NiagaraSystem'NS_Mud_Bullet_Impact'",
+          "ObjectPath": "/Game/Effects/MudInteraction/NS_Mud_Bullet_Impact.24"
+        }
+      ],
+      "PrimaryForceFeedbackEffect": {
+        "ObjectName": "ForceFeedbackEffect'FF_Athena_Fire_Med_R'",
+        "ObjectPath": "/Game/Weapons/ForceFeedback/FF_Athena_Fire_Med_R.0"
+      },
+      "DataStoreManager": {
+        "ObjectName": "FortGenericDataStoreManagerComponent'Default__B_Assault_SMG_Invasion_RayGun_C:GeneralDataStore'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.5"
+      },
+      "SoundIndicatorComponent": {
+        "ObjectName": "FortSoundIndicatorComponent'Default__B_Assault_SMG_Invasion_RayGun_C:SoundIndicatorComponent'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.7"
+      },
+      "WeaponMesh": {
+        "ObjectName": "SkeletalMeshComponentBudgeted'Default__B_Assault_SMG_Invasion_RayGun_C:WeaponMesh0'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.81"
+      },
+      "FireFXSignificance": {
+        "MinDistanceLow": 10000.0
+      },
+      "StartChargeGameplayCue": {
+        "TagName": "GameplayCue.Athena.LlamaRoaster.ChargeUp"
+      },
+      "WeaponReloadMontage": {
+        "ObjectName": "AnimMontage'AssaultRifle_FCBA_Reload_WM'",
+        "ObjectPath": "/Game/Animation/Game/MainPlayer/Combat/Guns/AssaultRifle/AssaultRifle_FCBA_Reload_WM.0"
+      },
+      "WeaponCoreAnimation": "EFortWeaponCoreAnimation::TacticalShotgun",
+      "WeaponPawnAnimSet": {
+        "ObjectName": "FortWeaponAnimSet'TacticalShotgun_AnimAsset'",
+        "ObjectPath": "/Game/Animation/Game/MainPlayer/AnimAssets/TacticalShotgun_AnimAsset.0"
+      },
+      "ProceduralLayeringData": {
+        "ProxyTable": {
+          "ObjectName": "ProxyTable'TacticalShotgun_PT'",
+          "ObjectPath": "/Game/Animation/Game/MainPlayerFN/ProxyTables/TacticalShotgun_PT.0"
+        }
+      },
+      "RootComponent": {
+        "ObjectName": "SkeletalMeshComponentBudgeted'Default__B_Assault_SMG_Invasion_RayGun_C:WeaponMesh0'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.81"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'B_Assault_Generic_C'",
+      "ObjectPath": "/Game/Weapons/FORT_Rifles/Blueprints/Assault/B_Assault_Generic.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'B_Assault_SMG_Invasion_RayGun_C:AlphaFade_Template'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.82"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'B_Assault_SMG_Invasion_RayGun_C:SimpleConstructionScript_1'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.80"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'B_Assault_SMG_Invasion_RayGun_C:InheritableComponentHandler'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.63"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:ExecuteUbergraph_B_Assault_SMG_Invasion_RayGun'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.15"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:AlphaFade__FinishedFunc'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.11"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:AlphaFade__UpdateFunc'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.12"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyEnd_0C95D41443B21C055319439FC4158536'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.41"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyBegin_0C95D41443B21C055319439FC4158536'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.35"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnInterrupted_0C95D41443B21C055319439FC4158536'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.29"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnBlendOut_0C95D41443B21C055319439FC4158536'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.16"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnCompleted_0C95D41443B21C055319439FC4158536'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.22"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyEnd_5522841C4F838F951EB18CA6E538A738'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.42"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyBegin_5522841C4F838F951EB18CA6E538A738'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.36"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnInterrupted_5522841C4F838F951EB18CA6E538A738'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.30"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnBlendOut_5522841C4F838F951EB18CA6E538A738'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.17"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnCompleted_5522841C4F838F951EB18CA6E538A738'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.23"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyEnd_69E7430B406878226666C8B39EFAC086'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.44"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyBegin_69E7430B406878226666C8B39EFAC086'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.38"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnInterrupted_69E7430B406878226666C8B39EFAC086'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.32"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnBlendOut_69E7430B406878226666C8B39EFAC086'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.19"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnCompleted_69E7430B406878226666C8B39EFAC086'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.25"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyEnd_DA098AE84023EB883F689F814EA78703'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.46"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyBegin_DA098AE84023EB883F689F814EA78703'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.40"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnInterrupted_DA098AE84023EB883F689F814EA78703'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.34"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnBlendOut_DA098AE84023EB883F689F814EA78703'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.21"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnCompleted_DA098AE84023EB883F689F814EA78703'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.27"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyEnd_9B081BA7470DC215E0131385110063FC'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.45"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyBegin_9B081BA7470DC215E0131385110063FC'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.39"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnInterrupted_9B081BA7470DC215E0131385110063FC'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.33"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnBlendOut_9B081BA7470DC215E0131385110063FC'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.20"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnCompleted_9B081BA7470DC215E0131385110063FC'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.26"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyEnd_6733B4744547BE7A694B0B8A653BB5B3'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.43"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyBegin_6733B4744547BE7A694B0B8A653BB5B3'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.37"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnInterrupted_6733B4744547BE7A694B0B8A653BB5B3'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.31"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnBlendOut_6733B4744547BE7A694B0B8A653BB5B3'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.18"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnCompleted_6733B4744547BE7A694B0B8A653BB5B3'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.24"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:TriggerDown'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.61"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:CustomEvent_0'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.14"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnStartOverheated'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.53"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:UpdateRecoil'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.62"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:Apply Cam Deltas'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.13"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnStopWeaponFireFX'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.54"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnFinishedCooling'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.28"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnStartCooling'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.51"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:ReceiveTick'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.59"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnOverheatValueChanged_Event_0'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.47"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnPlayImpactFX'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.48"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnStartHeating'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.52"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:PlayFinishedFiringMontage'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.57"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:PlayStartFiringMontage'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.58"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnPlayWeaponFireFX'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.49"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:PlayChargeupMontage'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.56"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnStartCharge'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.50"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnWeaponAttached'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.55"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:SetOverheatParam'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.60"
+      },
+      {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:ExecuteUbergraph_B_Assault_SMG_Invasion_RayGun'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.15"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FortWeaponComponent_RecoilCurve",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'FortWeaponComponent_RecoilCurve'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FortAudioShapeLine",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioShapeLineComponent'",
+          "ObjectPath": "/Script/AudioShapes"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_LlamaRoaster_Chargeup_02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_LlamaRoaster_Overheat",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_LlamaRoaster_NeutronStar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FortWeaponFxComponent_Beam",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'FortWeaponFxComponent_Beam'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NiagaraBeam",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OverheatAudioLayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "AlphaFade_NewTrack_0_E29D2D7E4637873C0DAFD7BC5AD575D4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "AlphaFade__Direction_E29D2D7E4637873C0DAFD7BC5AD575D4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AlphaFade",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "OverheatAudioFeedbackCurve",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CurveFloat'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "OverheatFXTimer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "OverheatFXTimerReplicated",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "Range",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "GC_Firing",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "AppliesCurieFire",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LastDamagedActor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitPoint",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "SavePoint",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bTriggerDown",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "TriggerDownTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RecoilVectorCurve",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'CurveVector'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AccumulatedRecoil",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "HorizRecoilMult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "VertRecoilMult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "LerpedAlpha",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "debugRecoil",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "Tick Delta Seconds",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Montage_Chargeup_Weapon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'AnimMontage'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Montage_Chargeup_Player",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'AnimMontage'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Montage_StartFiring_Weapon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'AnimMontage'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Montage_StartFriing_Player",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'AnimMontage'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Montage_FinishFiring_Weapon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'AnimMontage'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Montage_FinishFiring_Player",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'AnimMontage'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bPlayFinishFiringFX",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ImpactNiagaraHandle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LlamaRoasterImpactFXAsset_CascadeEmitter",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LlamaRoasterImpactFXAsset_NiagaraSystem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraSystem'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_B_Assault_SMG_Invasion_RayGun": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:ExecuteUbergraph_B_Assault_SMG_Invasion_RayGun'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.15"
+      },
+      "SetOverheatParam": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:SetOverheatParam'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.60"
+      },
+      "OnWeaponAttached": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnWeaponAttached'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.55"
+      },
+      "OnStartCharge": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnStartCharge'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.50"
+      },
+      "PlayChargeupMontage": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:PlayChargeupMontage'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.56"
+      },
+      "OnPlayWeaponFireFX": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnPlayWeaponFireFX'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.49"
+      },
+      "PlayStartFiringMontage": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:PlayStartFiringMontage'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.58"
+      },
+      "PlayFinishedFiringMontage": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:PlayFinishedFiringMontage'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.57"
+      },
+      "OnStartHeating": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnStartHeating'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.52"
+      },
+      "OnPlayImpactFX": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnPlayImpactFX'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.48"
+      },
+      "OnOverheatValueChanged_Event_0": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnOverheatValueChanged_Event_0'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.47"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:ReceiveTick'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.59"
+      },
+      "OnStartCooling": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnStartCooling'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.51"
+      },
+      "OnFinishedCooling": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnFinishedCooling'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.28"
+      },
+      "OnStopWeaponFireFX": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnStopWeaponFireFX'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.54"
+      },
+      "Apply Cam Deltas": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:Apply Cam Deltas'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.13"
+      },
+      "UpdateRecoil": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:UpdateRecoil'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.62"
+      },
+      "OnStartOverheated": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnStartOverheated'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.53"
+      },
+      "CustomEvent_0": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:CustomEvent_0'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.14"
+      },
+      "TriggerDown": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:TriggerDown'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.61"
+      },
+      "OnCompleted_6733B4744547BE7A694B0B8A653BB5B3": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnCompleted_6733B4744547BE7A694B0B8A653BB5B3'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.24"
+      },
+      "OnBlendOut_6733B4744547BE7A694B0B8A653BB5B3": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnBlendOut_6733B4744547BE7A694B0B8A653BB5B3'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.18"
+      },
+      "OnInterrupted_6733B4744547BE7A694B0B8A653BB5B3": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnInterrupted_6733B4744547BE7A694B0B8A653BB5B3'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.31"
+      },
+      "OnNotifyBegin_6733B4744547BE7A694B0B8A653BB5B3": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyBegin_6733B4744547BE7A694B0B8A653BB5B3'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.37"
+      },
+      "OnNotifyEnd_6733B4744547BE7A694B0B8A653BB5B3": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyEnd_6733B4744547BE7A694B0B8A653BB5B3'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.43"
+      },
+      "OnCompleted_9B081BA7470DC215E0131385110063FC": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnCompleted_9B081BA7470DC215E0131385110063FC'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.26"
+      },
+      "OnBlendOut_9B081BA7470DC215E0131385110063FC": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnBlendOut_9B081BA7470DC215E0131385110063FC'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.20"
+      },
+      "OnInterrupted_9B081BA7470DC215E0131385110063FC": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnInterrupted_9B081BA7470DC215E0131385110063FC'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.33"
+      },
+      "OnNotifyBegin_9B081BA7470DC215E0131385110063FC": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyBegin_9B081BA7470DC215E0131385110063FC'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.39"
+      },
+      "OnNotifyEnd_9B081BA7470DC215E0131385110063FC": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyEnd_9B081BA7470DC215E0131385110063FC'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.45"
+      },
+      "OnCompleted_DA098AE84023EB883F689F814EA78703": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnCompleted_DA098AE84023EB883F689F814EA78703'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.27"
+      },
+      "OnBlendOut_DA098AE84023EB883F689F814EA78703": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnBlendOut_DA098AE84023EB883F689F814EA78703'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.21"
+      },
+      "OnInterrupted_DA098AE84023EB883F689F814EA78703": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnInterrupted_DA098AE84023EB883F689F814EA78703'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.34"
+      },
+      "OnNotifyBegin_DA098AE84023EB883F689F814EA78703": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyBegin_DA098AE84023EB883F689F814EA78703'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.40"
+      },
+      "OnNotifyEnd_DA098AE84023EB883F689F814EA78703": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyEnd_DA098AE84023EB883F689F814EA78703'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.46"
+      },
+      "OnCompleted_69E7430B406878226666C8B39EFAC086": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnCompleted_69E7430B406878226666C8B39EFAC086'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.25"
+      },
+      "OnBlendOut_69E7430B406878226666C8B39EFAC086": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnBlendOut_69E7430B406878226666C8B39EFAC086'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.19"
+      },
+      "OnInterrupted_69E7430B406878226666C8B39EFAC086": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnInterrupted_69E7430B406878226666C8B39EFAC086'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.32"
+      },
+      "OnNotifyBegin_69E7430B406878226666C8B39EFAC086": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyBegin_69E7430B406878226666C8B39EFAC086'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.38"
+      },
+      "OnNotifyEnd_69E7430B406878226666C8B39EFAC086": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyEnd_69E7430B406878226666C8B39EFAC086'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.44"
+      },
+      "OnCompleted_5522841C4F838F951EB18CA6E538A738": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnCompleted_5522841C4F838F951EB18CA6E538A738'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.23"
+      },
+      "OnBlendOut_5522841C4F838F951EB18CA6E538A738": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnBlendOut_5522841C4F838F951EB18CA6E538A738'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.17"
+      },
+      "OnInterrupted_5522841C4F838F951EB18CA6E538A738": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnInterrupted_5522841C4F838F951EB18CA6E538A738'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.30"
+      },
+      "OnNotifyBegin_5522841C4F838F951EB18CA6E538A738": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyBegin_5522841C4F838F951EB18CA6E538A738'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.36"
+      },
+      "OnNotifyEnd_5522841C4F838F951EB18CA6E538A738": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyEnd_5522841C4F838F951EB18CA6E538A738'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.42"
+      },
+      "OnCompleted_0C95D41443B21C055319439FC4158536": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnCompleted_0C95D41443B21C055319439FC4158536'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.22"
+      },
+      "OnBlendOut_0C95D41443B21C055319439FC4158536": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnBlendOut_0C95D41443B21C055319439FC4158536'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.16"
+      },
+      "OnInterrupted_0C95D41443B21C055319439FC4158536": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnInterrupted_0C95D41443B21C055319439FC4158536'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.29"
+      },
+      "OnNotifyBegin_0C95D41443B21C055319439FC4158536": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyBegin_0C95D41443B21C055319439FC4158536'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.35"
+      },
+      "OnNotifyEnd_0C95D41443B21C055319439FC4158536": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:OnNotifyEnd_0C95D41443B21C055319439FC4158536'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.41"
+      },
+      "AlphaFade__UpdateFunc": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:AlphaFade__UpdateFunc'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.12"
+      },
+      "AlphaFade__FinishedFunc": {
+        "ObjectName": "Function'B_Assault_SMG_Invasion_RayGun_C:AlphaFade__FinishedFunc'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.11"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "B_Assault_SMG_Invasion_RayGun_C'Default__B_Assault_SMG_Invasion_RayGun_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "FortGenericDataStoreManagerComponent",
+    "Name": "GeneralDataStore",
+    "Outer": "Default__B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'FortGenericDataStoreManagerComponent'",
+    "Template": {
+      "ObjectName": "FortGenericDataStoreManagerComponent'Default__B_Assault_Generic_C:GeneralDataStore'",
+      "ObjectPath": "/Game/Weapons/FORT_Rifles/Blueprints/Assault/B_Assault_Generic.2"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FortQuartzGunfireComponent",
+    "Name": "QuartzGunfireComp",
+    "Outer": "Default__B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'FortQuartzGunfireComponent'",
+    "Template": {
+      "ObjectName": "FortQuartzGunfireComponent'Default__B_Assault_Generic_C:QuartzGunfireComp'",
+      "ObjectPath": "/Game/Weapons/FORT_Rifles/Blueprints/Assault/B_Assault_Generic.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FortSoundIndicatorComponent",
+    "Name": "SoundIndicatorComponent",
+    "Outer": "Default__B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'FortSoundIndicatorComponent'",
+    "Template": {
+      "ObjectName": "FortSoundIndicatorComponent'Default__B_Assault_Generic_C:SoundIndicatorComponent'",
+      "ObjectPath": "/Game/Weapons/FORT_Rifles/Blueprints/Assault/B_Assault_Generic.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FortSoundLibraryComponent",
+    "Name": "SoundLibraryComponent",
+    "Outer": "Default__B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'FortSoundLibraryComponent'",
+    "Template": {
+      "ObjectName": "FortSoundLibraryComponent'Default__B_Assault_Generic_C:SoundLibraryComponent'",
+      "ObjectPath": "/Game/Weapons/FORT_Rifles/Blueprints/Assault/B_Assault_Generic.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FortWeaponComponent_RecoilCurve",
+    "Name": "FortWeaponComponent_RecoilCurve_GEN_VARIABLE",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'FortWeaponComponent_RecoilCurve'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "InterpSpeed": {
+        "Value": 5.0
+      },
+      "CurveTimeScale": {
+        "Value": 2.0
+      },
+      "RecoilVectorCurves": [
+        {
+          "ObjectName": "CurveVector'RecoilCurve'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/RecoilCurve.0"
+        }
+      ],
+      "RecoilBehaviorType": "EFortRecoilCurveType::WithOverheat",
+      "TargetingMult": {
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'Invasion_GameData'",
+            "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Invasion_GameData.0"
+          },
+          "RowName": "Default.Mother.LlamaRoaster.TargetingRecoilMult"
+        }
+      },
+      "VertRecoilMult": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'Invasion_GameData'",
+            "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Invasion_GameData.0"
+          },
+          "RowName": "Default.Mother.LlamaRoaster.VertRecoilAngle"
+        }
+      },
+      "HorizRecoilMult": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'Invasion_GameData'",
+            "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Launcher/Invasion/Invasion_GameData.0"
+          },
+          "RowName": "Default.Mother.LlamaRoaster.HorizRecoilAngle"
+        }
+      },
+      "CurveLengthInSeconds": {
+        "Value": 2.0
+      }
+    }
+  },
+  {
+    "Type": "FortWeaponFxComponent_Beam",
+    "Name": "FortWeaponFxComponent_Beam_GEN_VARIABLE",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'FortWeaponFxComponent_Beam'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseBeamSmoothing": false,
+      "bSpawnImpactFXAtInterpedBeamEndpoints": false
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AlphaFade__FinishedFunc",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "AlphaFade__UpdateFunc",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Apply Cam Deltas",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "RecoilRaw",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CustomEvent_0",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Weapon",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'FortWeapon'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_B_Assault_SMG_Invasion_RayGun",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_27",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_26",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_25",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Temp_name_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_24",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_23",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_3",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_22",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_4",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_21",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_5",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_20",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_6",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Temp_name_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_7",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_19",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_18",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_8",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_17",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_9",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_16",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_10",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_15",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_11",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Temp_name_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_12",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_14",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_13",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_13",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_12",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_14",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_11",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_15",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_10",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_16",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Temp_name_Variable_3",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_17",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_9",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_8",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_18",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_7",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_19",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_6",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_20",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_5",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_21",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Temp_name_Variable_4",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_22",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_4",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_3",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_23",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_24",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_25",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_26",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Temp_name_Variable_5",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Weapon_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortWeapon'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_GetTimeSeconds_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Weapon",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortWeapon'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "K2Node_CustomEvent_RecoilAlpha",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetVectorValue_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_RecoilRaw",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Subtract_VectorVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInstigator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Player_Pawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPlayerPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetController_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Player_Controller",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPlayerController'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetControlRotation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Roll",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Pitch",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Yaw",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_27",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_28",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_CurrentValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_MaxValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_CustomEvent_State",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EFortWeaponOverheatState'",
+          "ObjectPath": "/Script/FortniteGame"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_CustomEvent_bIsInCooldown",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_HitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_Event_ImpactPhysicalSurface",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EPhysicalSurface'",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_SpawnedPSC",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'FXSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bBlockingHit",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bInitialOverlap",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Time",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Distance",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Location",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Normal",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactNormal",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_PhysMat",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PhysicalMaterial'",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_HitBoneName",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_BoneName",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_HitItem",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_ElementIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_FaceIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceStart",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceEnd",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Conv_VectorToRotator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInstigator_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_28",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Player_Pawn_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPlayerPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsLocallyControlled_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bPersistentFire",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bSecondaryFire",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInstigator_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Player_Pawn_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPlayerPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_29",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WeaponEventDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInstigator_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Player_Pawn_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPlayerPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateProxyObjectForPlayMontage_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayMontageCallbackProxy'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_30",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WeaponEventDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayMontageCallbackProxy'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInstigator_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Player_Pawn_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPlayerPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_5",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayMontageCallbackProxy'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayMontageCallbackProxy'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_7",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayMontageCallbackProxy'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_8",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_9",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_29",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayMontageCallbackProxy'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_10",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_11",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_31",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsNiagaraEffectEnabled_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_32",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnOverheatValueChanged__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_12",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldLocationAndRotation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnEmitterAtLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAtLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "K2Node_CustomEvent_OverheatParamValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetVectorValue_InTime_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_A_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_MakeRotator_Yaw_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_MakeRotator_Pitch_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Divide_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Divide_DoubleDouble_B_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetFloatParameter_Param_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlendOut_0C95D41443B21C055319439FC4158536",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlendOut_5522841C4F838F951EB18CA6E538A738",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlendOut_6733B4744547BE7A694B0B8A653BB5B3",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlendOut_69E7430B406878226666C8B39EFAC086",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlendOut_9B081BA7470DC215E0131385110063FC",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlendOut_DA098AE84023EB883F689F814EA78703",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCompleted_0C95D41443B21C055319439FC4158536",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCompleted_5522841C4F838F951EB18CA6E538A738",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCompleted_6733B4744547BE7A694B0B8A653BB5B3",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCompleted_69E7430B406878226666C8B39EFAC086",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCompleted_9B081BA7470DC215E0131385110063FC",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCompleted_DA098AE84023EB883F689F814EA78703",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnFinishedCooling",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'B_Ranged_Generic_C:OnFinishedCooling'",
+      "ObjectPath": "/Game/Weapons/Blueprints/B_Ranged_Generic.48"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInterrupted_0C95D41443B21C055319439FC4158536",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInterrupted_5522841C4F838F951EB18CA6E538A738",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInterrupted_6733B4744547BE7A694B0B8A653BB5B3",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInterrupted_69E7430B406878226666C8B39EFAC086",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInterrupted_9B081BA7470DC215E0131385110063FC",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInterrupted_DA098AE84023EB883F689F814EA78703",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyBegin_0C95D41443B21C055319439FC4158536",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyBegin_5522841C4F838F951EB18CA6E538A738",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyBegin_6733B4744547BE7A694B0B8A653BB5B3",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyBegin_69E7430B406878226666C8B39EFAC086",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyBegin_9B081BA7470DC215E0131385110063FC",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyBegin_DA098AE84023EB883F689F814EA78703",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyEnd_0C95D41443B21C055319439FC4158536",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyEnd_5522841C4F838F951EB18CA6E538A738",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyEnd_6733B4744547BE7A694B0B8A653BB5B3",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyEnd_69E7430B406878226666C8B39EFAC086",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyEnd_9B081BA7470DC215E0131385110063FC",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyEnd_DA098AE84023EB883F689F814EA78703",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnOverheatValueChanged_Event_0",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "CurrentValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "MaxValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "State",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EFortWeaponOverheatState'",
+          "ObjectPath": "/Script/FortniteGame"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsInCooldown",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnPlayImpactFX",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'B_Ranged_Generic_C:OnPlayImpactFX'",
+      "ObjectPath": "/Game/Weapons/Blueprints/B_Ranged_Generic.57"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "HitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "ImpactPhysicalSurface",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EPhysicalSurface'",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SpawnedPSC",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'FXSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnPlayWeaponFireFX",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'B_Ranged_Generic_C:OnPlayWeaponFireFX'",
+      "ObjectPath": "/Game/Weapons/Blueprints/B_Ranged_Generic.59"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bPersistentFire",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bSecondaryFire",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStartCharge",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'FortWeapon:OnStartCharge'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStartCooling",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'B_Ranged_Generic_C:OnStartCooling'",
+      "ObjectPath": "/Game/Weapons/Blueprints/B_Ranged_Generic.61"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStartHeating",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'B_Ranged_Generic_C:OnStartHeating'",
+      "ObjectPath": "/Game/Weapons/Blueprints/B_Ranged_Generic.63"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStartOverheated",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'B_Ranged_Generic_C:OnStartOverheated'",
+      "ObjectPath": "/Game/Weapons/Blueprints/B_Ranged_Generic.64"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStopWeaponFireFX",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'B_Ranged_Generic_C:OnStopWeaponFireFX'",
+      "ObjectPath": "/Game/Weapons/Blueprints/B_Ranged_Generic.65"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnWeaponAttached",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'B_Ranged_Generic_C:OnWeaponAttached'",
+      "ObjectPath": "/Game/Weapons/Blueprints/B_Ranged_Generic.66"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayChargeupMontage",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayFinishedFiringMontage",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayStartFiringMontage",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveTick'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetOverheatParam",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "DoubleProperty",
+        "Name": "OverheatParamValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Net | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TriggerDown",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Weapon",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'FortWeapon'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateRecoil",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "DoubleProperty",
+        "Name": "RecoilAlpha",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NiagaraBeam_GEN_VARIABLE",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OverrideParameters": {},
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_LlamaRoaster_Chargeup_02_GEN_VARIABLE",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_Invasion_RayGun_Muzzle'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/FX/NS_Invasion_RayGun_Muzzle.56"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "MinChargeDuration",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.MinChargeDuration",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.MinChargeDuration",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "bEnableAutoLODGeneration": false,
+      "RelativeLocation": {
+        "X": 1.9610852,
+        "Y": 63.886185,
+        "Z": 7.7128263
+      },
+      "RelativeRotation": {
+        "Pitch": -0.00022747835,
+        "Yaw": 90.00029,
+        "Roll": 90.00012
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_LlamaRoaster_NeutronStar_GEN_VARIABLE",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_Invasion_RayGun_NeutronStar'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/FX/NS_Invasion_RayGun_NeutronStar.30"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "StarDeath",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.StarDeath",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.StarDeath",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "RelativeLocation": {
+        "X": 2.138733,
+        "Y": 28.25037,
+        "Z": 13.7631645
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": -30.000092
+      }
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_LlamaRoaster_Overheat_GEN_VARIABLE",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_Invasion_RayGun_Overheat'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/FX/NS_Invasion_RayGun_Overheat.31"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "AlphaMult",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.AlphaMult",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Skeletal Mesh",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraDataInterfaceSkeletalMesh'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 1,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Skeletal Mesh",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraDataInterfaceSkeletalMesh'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 1,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.AlphaMult",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          },
+          {
+            "Offset": 0,
+            "Name": "User.Skeletal Mesh",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraDataInterfaceSkeletalMesh'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 1,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          128,
+          63
+        ],
+        "DataInterfaces": [
+          {
+            "ObjectName": "NiagaraDataInterfaceSkeletalMesh'B_Assault_SMG_Invasion_RayGun_C:NS_LlamaRoaster_Overheat_GEN_VARIABLE.NiagaraDataInterfaceSkeletalMesh_1'",
+            "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.69"
+          }
+        ]
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "NiagaraDataInterfaceSkeletalMesh",
+    "Name": "NiagaraDataInterfaceSkeletalMesh_0",
+    "Outer": "NS_LlamaRoaster_Overheat_GEN_VARIABLE",
+    "Class": "UScriptClass'NiagaraDataInterfaceSkeletalMesh'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FilteredSockets": [
+        "FX_Halo_flipUp_jntSocket",
+        "FX_Halo_flipUp_jntSocket_L",
+        "FX_Halo_flipUp_jntSocket_R"
+      ]
+    }
+  },
+  {
+    "Type": "NiagaraDataInterfaceSkeletalMesh",
+    "Name": "NiagaraDataInterfaceSkeletalMesh_1",
+    "Outer": "NS_LlamaRoaster_Overheat_GEN_VARIABLE",
+    "Class": "UScriptClass'NiagaraDataInterfaceSkeletalMesh'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FilteredSockets": [
+        "FX_Halo_flipUp_jntSocket",
+        "FX_Halo_flipUp_jntSocket_L",
+        "FX_Halo_flipUp_jntSocket_R"
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent_1",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'B_Assault_SMG_Invasion_RayGun_C:NiagaraBeam_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.64"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "bAutoActivate",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraComponent'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "WeaponMesh0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "4092CA69-4C094BA0-698FBCAF-216ADC76",
+      "InternalVariableName": "NiagaraBeam"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'B_Assault_SMG_Invasion_RayGun_C:SceneComponent_1'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.70"
+      },
+      "VariableGuid": "4D3A059E-00000000-00000000-00000000",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'B_Assault_SMG_Invasion_RayGun_C:NS_LlamaRoaster_Chargeup_02_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.65"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Asset",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraComponent'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "OverrideParameters",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraComponent'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "UserParameterRedirects",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "SortedParameterOffsets",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "ParameterData",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "bEnableAutoLODGeneration",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraComponent'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "RelativeLocation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraComponent'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Y",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "RelativeRotation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraComponent'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "Pitch",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Rotator'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Yaw",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Rotator'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Roll",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Rotator'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "bAutoActivate",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraComponent'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "WeaponMesh0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "664DD87A-497BFB31-727ED8A2-995B6B77",
+      "InternalVariableName": "NS_LlamaRoaster_Chargeup_02"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'FortWeaponComponent_RecoilCurve'",
+        "ObjectPath": "/Script/FortniteGame"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "FortWeaponComponent_RecoilCurve'B_Assault_SMG_Invasion_RayGun_C:FortWeaponComponent_RecoilCurve_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.9"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "InterpSpeed",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'FortWeaponComponent_RecoilCurve'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          {
+            "PropertyName": "Value",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ScalableFloat'",
+              "ObjectPath": "/Script/GameplayAbilities"
+            }
+          },
+          {
+            "PropertyName": "CurveTimeScale",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'FortWeaponComponent_RecoilCurve'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          {
+            "PropertyName": "Value",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ScalableFloat'",
+              "ObjectPath": "/Script/GameplayAbilities"
+            }
+          },
+          {
+            "PropertyName": "RecoilVectorCurves",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'FortWeaponComponent_RecoilCurve'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'FortWeaponComponent_RecoilCurve'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          {
+            "PropertyName": "RecoilBehaviorType",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'FortWeaponComponent_RecoilCurve'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          {
+            "PropertyName": "TargetingMult",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'FortWeaponComponent_RecoilCurve'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          {
+            "PropertyName": "Curve",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ScalableFloat'",
+              "ObjectPath": "/Script/GameplayAbilities"
+            }
+          },
+          {
+            "PropertyName": "CurveTable",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'CurveTableRowHandle'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "RowName",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'CurveTableRowHandle'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "VertRecoilMult",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'FortWeaponComponent_RecoilCurve'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          {
+            "PropertyName": "Value",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ScalableFloat'",
+              "ObjectPath": "/Script/GameplayAbilities"
+            }
+          },
+          {
+            "PropertyName": "Curve",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ScalableFloat'",
+              "ObjectPath": "/Script/GameplayAbilities"
+            }
+          },
+          {
+            "PropertyName": "CurveTable",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'CurveTableRowHandle'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "RowName",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'CurveTableRowHandle'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "HorizRecoilMult",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'FortWeaponComponent_RecoilCurve'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          {
+            "PropertyName": "Value",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ScalableFloat'",
+              "ObjectPath": "/Script/GameplayAbilities"
+            }
+          },
+          {
+            "PropertyName": "Curve",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ScalableFloat'",
+              "ObjectPath": "/Script/GameplayAbilities"
+            }
+          },
+          {
+            "PropertyName": "CurveTable",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'CurveTableRowHandle'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "RowName",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'CurveTableRowHandle'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "CurveLengthInSeconds",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'FortWeaponComponent_RecoilCurve'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          {
+            "PropertyName": "Value",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ScalableFloat'",
+              "ObjectPath": "/Script/GameplayAbilities"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "26054910-40D15E79-D5B36B98-6E2B2875",
+      "InternalVariableName": "FortWeaponComponent_RecoilCurve"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'B_Assault_SMG_Invasion_RayGun_C:OverheatAudioLayer_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.0"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Sound",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bAutoManageAttachment",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "AutoAttachLocationRule",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "AutoAttachRotationRule",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "AutoAttachScaleRule",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bAutoActivate",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "WeaponMesh0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "87DD26CD-4C131983-863ED1B7-BD3424C0",
+      "InternalVariableName": "OverheatAudioLayer"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'FortWeaponFxComponent_Beam'",
+        "ObjectPath": "/Script/FortniteGame"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "FortWeaponFxComponent_Beam'B_Assault_SMG_Invasion_RayGun_C:FortWeaponFxComponent_Beam_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.10"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "bUseBeamSmoothing",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'FortWeaponFxComponent_Beam'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          {
+            "PropertyName": "bSpawnImpactFXAtInterpedBeamEndpoints",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'FortWeaponFxComponent_Beam'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "254893C4-4E580D0C-BA7B07A6-C1F6EC8F",
+      "InternalVariableName": "FortWeaponFxComponent_Beam"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'B_Assault_SMG_Invasion_RayGun_C:NS_LlamaRoaster_NeutronStar_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.66"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Asset",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraComponent'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "OverrideParameters",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraComponent'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "UserParameterRedirects",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "SortedParameterOffsets",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "ParameterData",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "RelativeLocation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraComponent'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Y",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "RelativeRotation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraComponent'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "Roll",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Rotator'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "WeaponMesh0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "2A0545F2-41D07873-E3C873B5-61EF992D",
+      "InternalVariableName": "NS_LlamaRoaster_NeutronStar"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'B_Assault_SMG_Invasion_RayGun_C:NS_LlamaRoaster_Overheat_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.67"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Asset",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraComponent'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "OverrideParameters",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraComponent'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "UserParameterRedirects",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "SortedParameterOffsets",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "ParameterData",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "DataInterfaces",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "bAutoActivate",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraComponent'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "WeaponMesh0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "8515F02F-474293B7-C423228F-0F47BC58",
+      "InternalVariableName": "NS_LlamaRoaster_Overheat"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioShapeLineComponent'",
+        "ObjectPath": "/Script/AudioShapes"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioShapeLineComponent'B_Assault_SMG_Invasion_RayGun_C:FortAudioShapeLine_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.1"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "SoundOnEdge",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioShapeLineComponent'",
+              "ObjectPath": "/Script/AudioShapes"
+            }
+          },
+          {
+            "PropertyName": "SoundOnInside",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioShapeLineComponent'",
+              "ObjectPath": "/Script/AudioShapes"
+            }
+          },
+          {
+            "PropertyName": "FadeOutTime",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioShapeLineComponent'",
+              "ObjectPath": "/Script/AudioShapes"
+            }
+          },
+          {
+            "PropertyName": "bAutoActivate",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioShapeLineComponent'",
+              "ObjectPath": "/Script/AudioShapes"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "2F7A3871-4C2DEB1F-09F3D685-6CE625A9",
+      "InternalVariableName": "FortAudioShapeLine"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_1",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'B_Assault_SMG_Invasion_RayGun_C:SimpleConstructionScript_1.SCS_Node_4'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.75"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Assault_SMG_Invasion_RayGun_C:SimpleConstructionScript_1.SCS_Node_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.71"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Assault_SMG_Invasion_RayGun_C:SimpleConstructionScript_1.SCS_Node_5'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.76"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Assault_SMG_Invasion_RayGun_C:SimpleConstructionScript_1.SCS_Node_6'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.77"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Assault_SMG_Invasion_RayGun_C:SimpleConstructionScript_1.SCS_Node_7'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.78"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Assault_SMG_Invasion_RayGun_C:SimpleConstructionScript_1.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.73"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Assault_SMG_Invasion_RayGun_C:SimpleConstructionScript_1.SCS_Node_8'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.79"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Assault_SMG_Invasion_RayGun_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.74"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'B_Assault_SMG_Invasion_RayGun_C:SimpleConstructionScript_1.SCS_Node_4'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.75"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Assault_SMG_Invasion_RayGun_C:SimpleConstructionScript_1.SCS_Node_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.71"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Assault_SMG_Invasion_RayGun_C:SimpleConstructionScript_1.SCS_Node_5'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.76"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Assault_SMG_Invasion_RayGun_C:SimpleConstructionScript_1.SCS_Node_6'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.77"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Assault_SMG_Invasion_RayGun_C:SimpleConstructionScript_1.SCS_Node_7'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.78"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Assault_SMG_Invasion_RayGun_C:SimpleConstructionScript_1.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.73"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Assault_SMG_Invasion_RayGun_C:SimpleConstructionScript_1.SCS_Node_8'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.79"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Assault_SMG_Invasion_RayGun_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.74"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'B_Assault_SMG_Invasion_RayGun_C:SimpleConstructionScript_1.SCS_Node_1'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.72"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponentBudgeted",
+    "Name": "WeaponMesh0",
+    "Outer": "Default__B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'SkeletalMeshComponentBudgeted'",
+    "Template": {
+      "ObjectName": "SkeletalMeshComponentBudgeted'Default__B_Assault_Generic_C:WeaponMesh0'",
+      "ObjectPath": "/Game/Weapons/FORT_Rifles/Blueprints/Assault/B_Assault_Generic.10"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'Invasion_RayGun_AnimBP_C'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/Animation/Invasion_RayGun_AnimBP.0"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'Invasion_RayGun'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/Assets/Meshes/Invasion_RayGun.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'Invasion_RayGun'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/Assets/Meshes/Invasion_RayGun.0"
+      },
+      "OverrideMaterials": [
+        null
+      ]
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "AlphaFade_Template",
+    "Outer": "B_Assault_SMG_Invasion_RayGun_C",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'B_Assault_SMG_Invasion_RayGun_C:CurveFloat_0'",
+            "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/SMG/STWLlamaRoaster/B_Assault_SMG_Invasion_RayGun.4"
+          },
+          "PropertyName": "AlphaFade_NewTrack_0_E29D2D7E4637873C0DAFD7BC5AD575D4",
+          "TrackName": "NewTrack_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "E29D2D7E-4637873C-0DAFD7BC-5AD575D4",
+      "VariableName": "AlphaFade",
+      "DirectionPropertyName": "AlphaFade__Direction_E29D2D7E4637873C0DAFD7BC5AD575D4",
+      "UpdateFunctionName": "AlphaFade__UpdateFunc",
+      "FinishedFunctionName": "AlphaFade__FinishedFunc"
+    }
+  }
+]

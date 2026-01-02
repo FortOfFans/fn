@@ -1,0 +1,591 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_Alteration_Conditional_DamageBasedOnHealth_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GAT_PassiveAbility_C'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_PassiveAbility.0"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'GA_Alteration_Conditional_DamageBasedOnHealth_C:ExecuteUbergraph_GA_Alteration_Conditional_DamageBasedOnHealth'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ConditionalAlterations/Damage_BasedOnHealth/GA_Alteration_Conditional_DamageBasedOnHealth.2"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'GA_Alteration_Conditional_DamageBasedOnHealth_C:Updating Variables'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ConditionalAlterations/Damage_BasedOnHealth/GA_Alteration_Conditional_DamageBasedOnHealth.8"
+      },
+      {
+        "ObjectName": "Function'GA_Alteration_Conditional_DamageBasedOnHealth_C:K2_ShouldAbilityRespondToEvent'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ConditionalAlterations/Damage_BasedOnHealth/GA_Alteration_Conditional_DamageBasedOnHealth.6"
+      },
+      {
+        "ObjectName": "Function'GA_Alteration_Conditional_DamageBasedOnHealth_C:OnChange_F5044A7D4E29AE475234DD9FAEB2DC57'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ConditionalAlterations/Damage_BasedOnHealth/GA_Alteration_Conditional_DamageBasedOnHealth.7"
+      },
+      {
+        "ObjectName": "Function'GA_Alteration_Conditional_DamageBasedOnHealth_C:K2_ActivateAbility'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ConditionalAlterations/Damage_BasedOnHealth/GA_Alteration_Conditional_DamageBasedOnHealth.4"
+      },
+      {
+        "ObjectName": "Function'GA_Alteration_Conditional_DamageBasedOnHealth_C:K2_OnEndAbility'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ConditionalAlterations/Damage_BasedOnHealth/GA_Alteration_Conditional_DamageBasedOnHealth.5"
+      },
+      {
+        "ObjectName": "Function'GA_Alteration_Conditional_DamageBasedOnHealth_C:Activate on Weapon Switch'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ConditionalAlterations/Damage_BasedOnHealth/GA_Alteration_Conditional_DamageBasedOnHealth.1"
+      },
+      {
+        "ObjectName": "Function'GA_Alteration_Conditional_DamageBasedOnHealth_C:FailedToActivatePassiveAbility'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ConditionalAlterations/Damage_BasedOnHealth/GA_Alteration_Conditional_DamageBasedOnHealth.3"
+      },
+      {
+        "ObjectName": "Function'GA_Alteration_Conditional_DamageBasedOnHealth_C:ExecuteUbergraph_GA_Alteration_Conditional_DamageBasedOnHealth'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ConditionalAlterations/Damage_BasedOnHealth/GA_Alteration_Conditional_DamageBasedOnHealth.2"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "GE_Alteration_Conditional_DamageBasedOnHealth",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "Player Current Health",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "GEH_CurrentBuff",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'ActiveGameplayEffectHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "SF_DamageBuffRatio",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'ScalableFloat'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "No Damage Bonus",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Fort Health Set Health",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 72,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayAttribute'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "Player Max Health",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_Alteration_Conditional_DamageBasedOnHealth": {
+        "ObjectName": "Function'GA_Alteration_Conditional_DamageBasedOnHealth_C:ExecuteUbergraph_GA_Alteration_Conditional_DamageBasedOnHealth'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ConditionalAlterations/Damage_BasedOnHealth/GA_Alteration_Conditional_DamageBasedOnHealth.2"
+      },
+      "FailedToActivatePassiveAbility": {
+        "ObjectName": "Function'GA_Alteration_Conditional_DamageBasedOnHealth_C:FailedToActivatePassiveAbility'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ConditionalAlterations/Damage_BasedOnHealth/GA_Alteration_Conditional_DamageBasedOnHealth.3"
+      },
+      "Activate on Weapon Switch": {
+        "ObjectName": "Function'GA_Alteration_Conditional_DamageBasedOnHealth_C:Activate on Weapon Switch'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ConditionalAlterations/Damage_BasedOnHealth/GA_Alteration_Conditional_DamageBasedOnHealth.1"
+      },
+      "K2_OnEndAbility": {
+        "ObjectName": "Function'GA_Alteration_Conditional_DamageBasedOnHealth_C:K2_OnEndAbility'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ConditionalAlterations/Damage_BasedOnHealth/GA_Alteration_Conditional_DamageBasedOnHealth.5"
+      },
+      "K2_ActivateAbility": {
+        "ObjectName": "Function'GA_Alteration_Conditional_DamageBasedOnHealth_C:K2_ActivateAbility'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ConditionalAlterations/Damage_BasedOnHealth/GA_Alteration_Conditional_DamageBasedOnHealth.4"
+      },
+      "OnChange_F5044A7D4E29AE475234DD9FAEB2DC57": {
+        "ObjectName": "Function'GA_Alteration_Conditional_DamageBasedOnHealth_C:OnChange_F5044A7D4E29AE475234DD9FAEB2DC57'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ConditionalAlterations/Damage_BasedOnHealth/GA_Alteration_Conditional_DamageBasedOnHealth.7"
+      },
+      "K2_ShouldAbilityRespondToEvent": {
+        "ObjectName": "Function'GA_Alteration_Conditional_DamageBasedOnHealth_C:K2_ShouldAbilityRespondToEvent'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ConditionalAlterations/Damage_BasedOnHealth/GA_Alteration_Conditional_DamageBasedOnHealth.6"
+      },
+      "Updating Variables": {
+        "ObjectName": "Function'GA_Alteration_Conditional_DamageBasedOnHealth_C:Updating Variables'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ConditionalAlterations/Damage_BasedOnHealth/GA_Alteration_Conditional_DamageBasedOnHealth.8"
+      }
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GA_Alteration_Conditional_DamageBasedOnHealth_C'Default__GA_Alteration_Conditional_DamageBasedOnHealth_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ConditionalAlterations/Damage_BasedOnHealth/GA_Alteration_Conditional_DamageBasedOnHealth.9"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Activate on Weapon Switch",
+    "Outer": "GA_Alteration_Conditional_DamageBasedOnHealth_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_Alteration_Conditional_DamageBasedOnHealth",
+    "Outer": "GA_Alteration_Conditional_DamageBasedOnHealth_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bWasCancelled",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitForAttributeChange_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AbilityTask_WaitAttributeChange'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetAbilityLevel_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Conv_IntToDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeOutgoingGameplayEffectSpec_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectSpecHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitAttributeChangeDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_ActorInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityActorInfo'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetAbilityLevel_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Conv_IntToDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Subtract_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_AssignTagSetByCallerMagnitude_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectSpecHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_ApplyGameplayEffectSpecToOwner_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'ActiveGameplayEffectHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_MakeOutgoingGameplayEffectSpec_Level_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_Level_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Lerp_B_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_AssignTagSetByCallerMagnitude_Magnitude_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "FailedToActivatePassiveAbility",
+    "Outer": "GA_Alteration_Conditional_DamageBasedOnHealth_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'FortGameplayAbility:FailedToActivatePassiveAbility'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ActorInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityActorInfo'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbility",
+    "Outer": "GA_Alteration_Conditional_DamageBasedOnHealth_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayAbility:K2_ActivateAbility'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_OnEndAbility",
+    "Outer": "GA_Alteration_Conditional_DamageBasedOnHealth_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayAbility:K2_OnEndAbility'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bWasCancelled",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ShouldAbilityRespondToEvent",
+    "Outer": "GA_Alteration_Conditional_DamageBasedOnHealth_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayAbility:K2_ShouldAbilityRespondToEvent'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ActorInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityActorInfo'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Payload",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "WeaponTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnChange_F5044A7D4E29AE475234DD9FAEB2DC57",
+    "Outer": "GA_Alteration_Conditional_DamageBasedOnHealth_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Updating Variables",
+    "Outer": "GA_Alteration_Conditional_DamageBasedOnHealth_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActivatingPawn_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetHealth_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetMaxHealth_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "K2Node_VariableSet_Player_Current_Health_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "K2Node_VariableSet_Player_Max_Health_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GA_Alteration_Conditional_DamageBasedOnHealth_C",
+    "Name": "Default__GA_Alteration_Conditional_DamageBasedOnHealth_C",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Items/Alteration_v2/ConditionalAlterations/Damage_BasedOnHealth/GA_Alteration_Conditional_DamageBasedOnHealth.GA_Alteration_Conditional_DamageBasedOnHealth_C'",
+    "Template": {
+      "ObjectName": "GAT_PassiveAbility_C'Default__GAT_PassiveAbility_C'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_PassiveAbility.1"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "GE_Alteration_Conditional_DamageBasedOnHealth": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Alteration_Conditional_DamageBasedOnHealth_C'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ConditionalAlterations/Damage_BasedOnHealth/GE_Alteration_Conditional_DamageBasedOnHealth.1"
+      },
+      "GEH_CurrentBuff": {
+        "Handle": -1,
+        "bPassedFiltersAndWasExecuted": false
+      },
+      "SF_DamageBuffRatio": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CombatEffectMagnitude'",
+            "ObjectPath": "/Game/Balance/DataTables/CombatEffectMagnitude.0"
+          },
+          "RowName": "Item.All.Damage.BasedOnHealth.Normal"
+        },
+        "RegistryType": {
+          "Name": "None"
+        }
+      },
+      "No Damage Bonus": 1.0,
+      "Fort Health Set Health": {
+        "AttributeName": "Health",
+        "Attribute": {
+          "Path": [
+            "Health"
+          ],
+          "ResolvedOwner": {
+            "ObjectName": "Class'FortHealthSet'",
+            "ObjectPath": "/Script/FortniteGame"
+          }
+        },
+        "AttributeOwner": {
+          "ObjectName": "Class'FortHealthSet'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      }
+    }
+  }
+]

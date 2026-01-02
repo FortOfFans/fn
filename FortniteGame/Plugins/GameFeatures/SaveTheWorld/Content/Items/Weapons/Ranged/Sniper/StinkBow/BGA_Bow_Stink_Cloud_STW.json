@@ -1,0 +1,1516 @@
+[
+  {
+    "Type": "AudioComponent",
+    "Name": "LoopingAudio_GEN_VARIABLE",
+    "Outer": "BGA_Bow_Stink_Cloud_STW_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Bow_Stink_AOE_Loop'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Sounds/Stink/Bow_Stink_AOE_Loop.0"
+      }
+    }
+  },
+  {
+    "Type": "BGA_Bow_Stink_Cloud_STW_C",
+    "Name": "Default__BGA_Bow_Stink_Cloud_STW_C",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.BGA_Bow_Stink_Cloud_STW_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "StinkDuration": 2.0,
+      "LifeAfterKill": 1.0,
+      "GasFadeInTime": 1.75,
+      "GasFadeOutTime": 1.5,
+      "Row_CloudDuration": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'STWPrimal_WeaponData'",
+            "ObjectPath": "/SaveTheWorld/Items/Datatables/STWPrimal_WeaponData.0"
+          },
+          "RowName": "Bow.Stink.Cloud.Duration"
+        },
+        "RegistryType": {
+          "Name": "None"
+        }
+      },
+      "Row_InitialDelay": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'STWPrimal_WeaponData'",
+            "ObjectPath": "/SaveTheWorld/Items/Datatables/STWPrimal_WeaponData.0"
+          },
+          "RowName": "Bow.Stink.Cloud.InitialDamageDelay"
+        },
+        "RegistryType": {
+          "Name": "None"
+        }
+      },
+      "Condition": true,
+      "IsFadingIn": true,
+      "bIgnoreInstigatorCollision": true,
+      "DeliverableAbilityInfo": {
+        "ProximityPulseInterval": {
+          "Value": 0.0
+        }
+      },
+      "AreaClass": {
+        "AssetPathName": "/Script/FortniteAI.FortNavArea_Danger",
+        "SubPathString": ""
+      },
+      "bIsNavigationModifier": true,
+      "bCanBeSavedInCreativeVolume": false,
+      "bIsNavigationRelevant": true,
+      "bAllowInteract": false,
+      "bAlwaysUseNetCullDistanceSquaredForRelevancy": true,
+      "StaticGameplayTags": [
+        "Item.Weapon.Ranged.Bow.Stink"
+      ],
+      "NetCullDistanceSquared": 900000000.0
+    },
+    "SerializedSparseClassDataStruct": "UScriptClass'BuildingGameplayActorClassData'",
+    "SerializedSparseClassData": {
+      "NavigationLinkSoftClass": {
+        "AssetPathName": "",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BGA_Bow_Stink_Cloud_STW_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BGA_Bow_Stink_Cloud_STW_C:FadeSmokeTL_Template'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.22"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BGA_Bow_Stink_Cloud_STW_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.20"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BGA_Bow_Stink_Cloud_STW_C:ExecuteUbergraph_BGA_Bow_Stink_Cloud_STW'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'BuildingGameplayActor'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BGA_Bow_Stink_Cloud_STW_C:UserConstructionScript'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.11"
+      },
+      {
+        "ObjectName": "Function'BGA_Bow_Stink_Cloud_STW_C:FadeSmokeTL__FinishedFunc'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.7"
+      },
+      {
+        "ObjectName": "Function'BGA_Bow_Stink_Cloud_STW_C:FadeSmokeTL__UpdateFunc'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.8"
+      },
+      {
+        "ObjectName": "Function'BGA_Bow_Stink_Cloud_STW_C:HideAndKill'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.9"
+      },
+      {
+        "ObjectName": "Function'BGA_Bow_Stink_Cloud_STW_C:ReceiveBeginPlay'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.10"
+      },
+      {
+        "ObjectName": "Function'BGA_Bow_Stink_Cloud_STW_C:FadeIn'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.5"
+      },
+      {
+        "ObjectName": "Function'BGA_Bow_Stink_Cloud_STW_C:FadeOut'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.6"
+      },
+      {
+        "ObjectName": "Function'BGA_Bow_Stink_Cloud_STW_C:ExecuteUbergraph_BGA_Bow_Stink_Cloud_STW'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LoopingAudio",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_StinkCloud",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PostProcessComponent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PostProcessComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PostProcessParentShape",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SphereComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "FadeSmokeTL_Float_D2A8E99844DCB9B0667000B04FC1B0FE",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "FadeSmokeTL__Direction_D2A8E99844DCB9B0667000B04FC1B0FE",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FadeSmokeTL",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "StinkDuration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "LifeAfterKill",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "GasFadeInTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "GasFadeOutTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SmokeVolumeMeshMID",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Row_CloudDuration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'ScalableFloat'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Row_InitialDelay",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'ScalableFloat'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "Fade Out Duration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Condition",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsFadingIn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BGA_Bow_Stink_Cloud_STW": {
+        "ObjectName": "Function'BGA_Bow_Stink_Cloud_STW_C:ExecuteUbergraph_BGA_Bow_Stink_Cloud_STW'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.4"
+      },
+      "FadeOut": {
+        "ObjectName": "Function'BGA_Bow_Stink_Cloud_STW_C:FadeOut'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.6"
+      },
+      "FadeIn": {
+        "ObjectName": "Function'BGA_Bow_Stink_Cloud_STW_C:FadeIn'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.5"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BGA_Bow_Stink_Cloud_STW_C:ReceiveBeginPlay'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.10"
+      },
+      "HideAndKill": {
+        "ObjectName": "Function'BGA_Bow_Stink_Cloud_STW_C:HideAndKill'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.9"
+      },
+      "FadeSmokeTL__UpdateFunc": {
+        "ObjectName": "Function'BGA_Bow_Stink_Cloud_STW_C:FadeSmokeTL__UpdateFunc'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.8"
+      },
+      "FadeSmokeTL__FinishedFunc": {
+        "ObjectName": "Function'BGA_Bow_Stink_Cloud_STW_C:FadeSmokeTL__FinishedFunc'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.7"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function'BGA_Bow_Stink_Cloud_STW_C:UserConstructionScript'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.11"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BGA_Bow_Stink_Cloud_STW_C'Default__BGA_Bow_Stink_Cloud_STW_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0_1_2",
+    "Outer": "BGA_Bow_Stink_Cloud_STW_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": -0.13810037,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -0.13809827,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 1.0,
+            "ArriveTangent": 2.1133506,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 2.113353,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BGA_Bow_Stink_Cloud_STW",
+    "Outer": "BGA_Bow_Stink_Cloud_STW_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FMax_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValue_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValue_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FMax_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValue_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_VariableSet_BlendWeight_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetPlayRate_NewRate_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FMax_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_FadeOut_FadeOutDuration_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetPlayRate_NewRate_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_B_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_Time_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "FadeIn",
+    "Outer": "BGA_Bow_Stink_Cloud_STW_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "FadeOut",
+    "Outer": "BGA_Bow_Stink_Cloud_STW_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "FadeSmokeTL__FinishedFunc",
+    "Outer": "BGA_Bow_Stink_Cloud_STW_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "FadeSmokeTL__UpdateFunc",
+    "Outer": "BGA_Bow_Stink_Cloud_STW_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "HideAndKill",
+    "Outer": "BGA_Bow_Stink_Cloud_STW_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Net | FUNC_NetReliable | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BGA_Bow_Stink_Cloud_STW_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Outer": "BGA_Bow_Stink_Cloud_STW_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:UserConstructionScript'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_StinkCloud_GEN_VARIABLE",
+    "Outer": "BGA_Bow_Stink_Cloud_STW_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_Bow_Stink_Bomb_AoE'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/FX/NS_Bow_Stink_Bomb_AoE.45"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Visibility",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Visibility",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.Visibility",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    }
+  },
+  {
+    "Type": "PostProcessComponent",
+    "Name": "PostProcessComponent_GEN_VARIABLE",
+    "Outer": "BGA_Bow_Stink_Cloud_STW_C",
+    "Class": "UScriptClass'PostProcessComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Settings": {
+        "bOverride_ColorContrast": true,
+        "bOverride_ColorSaturationMidtones": true,
+        "bOverride_SceneColorTint": true,
+        "bOverride_VignetteIntensity": true,
+        "bOverride_AmbientOcclusionIntensity": true,
+        "ColorContrast": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 0.8
+        },
+        "ColorSaturationMidtones": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 0.88
+        },
+        "SceneColorTint": {
+          "R": 0.9,
+          "G": 0.648687,
+          "B": 0.173755,
+          "A": 1.0,
+          "Hex": "F4D374"
+        },
+        "AutoExposureBiasBackup": 1.0,
+        "VignetteIntensity": 0.8
+      },
+      "Priority": 1000000.0,
+      "BlendRadius": 400.0,
+      "BlendWeight": 0.7,
+      "bUnbound": false
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BGA_Bow_Stink_Cloud_STW_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BGA_Bow_Stink_Cloud_STW_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.14"
+      },
+      "CookedComponentInstancingData": {
+        "bHasValidCookedData": true
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BGA_Bow_Stink_Cloud_STW_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BGA_Bow_Stink_Cloud_STW_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BGA_Bow_Stink_Cloud_STW_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.19"
+        }
+      ],
+      "VariableGuid": "45DC4413-43632CDB-396CD080-12F1DE57",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BGA_Bow_Stink_Cloud_STW_C:NS_StinkCloud_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.12"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Asset",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraComponent'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "OverrideParameters",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraComponent'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "UserParameterRedirects",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "SortedParameterOffsets",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "ParameterData",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "95B9DB11-43C1B54F-096D4D92-726C6E7F",
+      "InternalVariableName": "NS_StinkCloud"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_16",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SphereComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SphereComponent'BGA_Bow_Stink_Cloud_STW_C:PostProcessParentShape_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.21"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "SphereRadius",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SphereComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ShapeColor",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SphereComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "B",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Color'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "G",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Color'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "R",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Color'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "bUseSystemDefaultObstacleAreaClass",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SphereComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "AreaClassOverride",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SphereComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bGenerateOverlapEvents",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SphereComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "BodyInstance",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SphereComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "CollisionProfileName",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'BodyInstance'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "CollisionResponses",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'BodyInstance'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'CollisionResponse'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'CollisionResponse'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 1,
+            "PropertyScope": {
+              "ObjectName": "Class'CollisionResponse'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 2,
+            "PropertyScope": {
+              "ObjectName": "Class'CollisionResponse'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 3,
+            "PropertyScope": {
+              "ObjectName": "Class'CollisionResponse'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 4,
+            "PropertyScope": {
+              "ObjectName": "Class'CollisionResponse'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 5,
+            "PropertyScope": {
+              "ObjectName": "Class'CollisionResponse'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 6,
+            "PropertyScope": {
+              "ObjectName": "Class'CollisionResponse'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 7,
+            "PropertyScope": {
+              "ObjectName": "Class'CollisionResponse'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 8,
+            "PropertyScope": {
+              "ObjectName": "Class'CollisionResponse'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BGA_Bow_Stink_Cloud_STW_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.18"
+        }
+      ],
+      "VariableGuid": "0C0007DF-4381D48A-B48B3187-BAC912C8",
+      "InternalVariableName": "PostProcessParentShape"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_17",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PostProcessComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PostProcessComponent'BGA_Bow_Stink_Cloud_STW_C:PostProcessComponent_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.13"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Settings",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bOverride_ColorContrast",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bOverride_ColorSaturationMidtones",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bOverride_SceneColorTint",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bOverride_VignetteIntensity",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bOverride_AmbientOcclusionIntensity",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ColorContrast",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "W",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector4'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "ColorSaturationMidtones",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "W",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector4'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "SceneColorTint",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "R",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'LinearColor'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "G",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'LinearColor'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "B",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'LinearColor'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "AutoExposureBiasBackup",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "VignetteIntensity",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Priority",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "BlendRadius",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "BlendWeight",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bUnbound",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "F419F152-4CE266A0-6586CAA2-ECCB3F34",
+      "InternalVariableName": "PostProcessComponent"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'BGA_Bow_Stink_Cloud_STW_C:LoopingAudio_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.0"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Sound",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "FCFF35D9-40ACC806-98974F81-D4502EBD",
+      "InternalVariableName": "LoopingAudio"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BGA_Bow_Stink_Cloud_STW_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BGA_Bow_Stink_Cloud_STW_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.15"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BGA_Bow_Stink_Cloud_STW_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BGA_Bow_Stink_Cloud_STW_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BGA_Bow_Stink_Cloud_STW_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BGA_Bow_Stink_Cloud_STW_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BGA_Bow_Stink_Cloud_STW_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.19"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BGA_Bow_Stink_Cloud_STW_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.15"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "PostProcessParentShape_GEN_VARIABLE",
+    "Outer": "BGA_Bow_Stink_Cloud_STW_C",
+    "Class": "UScriptClass'SphereComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SphereRadius": 300.0,
+      "ShapeColor": {
+        "B": 139,
+        "G": 255,
+        "R": 0,
+        "A": 255,
+        "Hex": "00FF8B"
+      },
+      "bUseSystemDefaultObstacleAreaClass": false,
+      "AreaClassOverride": {
+        "ObjectName": "Class'FortMetaNavArea_Obstacles'",
+        "ObjectPath": "/Script/FortniteAI"
+      },
+      "bGenerateOverlapEvents": false,
+      "BodyInstance": {
+        "CollisionProfileName": "Custom",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponWorldMulti",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "FadeSmokeTL_Template",
+    "Outer": "BGA_Bow_Stink_Cloud_STW_C",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BGA_Bow_Stink_Cloud_STW_C:CurveFloat_0_1_2'",
+            "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/BGA_Bow_Stink_Cloud_STW.3"
+          },
+          "PropertyName": "FadeSmokeTL_Float_D2A8E99844DCB9B0667000B04FC1B0FE",
+          "TrackName": "Float",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "D2A8E998-44DCB9B0-667000B0-4FC1B0FE",
+      "VariableName": "FadeSmokeTL",
+      "DirectionPropertyName": "FadeSmokeTL__Direction_D2A8E99844DCB9B0667000B04FC1B0FE",
+      "UpdateFunctionName": "FadeSmokeTL__UpdateFunc",
+      "FinishedFunctionName": "FadeSmokeTL__FinishedFunc"
+    }
+  }
+]

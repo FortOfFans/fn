@@ -1,0 +1,178 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "Meat_Gadget_Physics",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'Meat_Gadget_Physics:SkeletalBodySetup_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Consumables/Meat/Assets/Meshes/Meat_Gadget_Physics.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Meat_Gadget_Physics:SkeletalBodySetup_1'",
+          "ObjectPath": "/SaveTheWorld/Items/Consumables/Meat/Assets/Meshes/Meat_Gadget_Physics.3"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Meat_Gadget_Physics:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Consumables/Meat/Assets/Meshes/Meat_Gadget_Physics.1"
+        }
+      ],
+      "SolverSettings": {
+        "CullDistance": 1.0,
+        "bUseLinearJointSolver": false,
+        "bUseManifolds": false
+      },
+      "ThumbnailInfo": null
+    },
+    "CollisionDisableTable": [
+      {
+        "Key": {
+          "Indices": [
+            0,
+            1
+          ]
+        },
+        "Value": false
+      }
+    ]
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "Meat_Gadget_Physics",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "dyn_meat_01",
+        "ConstraintBone1": "dyn_meat_01",
+        "ConstraintBone2": "Melee_TwoHanded_Handle",
+        "Pos2": {
+          "X": 9.078379,
+          "Y": 0.0,
+          "Z": 2.015805E-15
+        },
+        "PriAxis2": {
+          "X": 0.9999993,
+          "Y": -0.0011707168,
+          "Z": -8.652802E-05
+        },
+        "SecAxis2": {
+          "X": 0.0011707168,
+          "Y": 0.99999934,
+          "Z": -5.0649927E-08
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1LimitDegrees": 12.0,
+            "Swing2LimitDegrees": 12.0,
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistLimitDegrees": 1.0,
+            "TwistMotion": "EAngularConstraintMotion::ACM_Limited"
+          },
+          "AngularDrive": {
+            "TwistDrive": {
+              "Stiffness": 670.0
+            },
+            "SwingDrive": {
+              "Stiffness": 670.0
+            },
+            "SlerpDrive": {
+              "Stiffness": 670.0,
+              "bEnablePositionDrive": true
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "Meat_Gadget_Physics",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 13.774621,
+              "Y": 1.1788392,
+              "Z": 0.56459236
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -89.5479,
+              "Roll": -88.95478
+            },
+            "Radius": 14.113357,
+            "Length": 18.275663,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "DefaultInstance": {
+        "bOverrideMass": true
+      },
+      "BoneName": "Melee_TwoHanded_Handle",
+      "PhysicsType": "EPhysicsType::PhysType_Kinematic",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "AD3EBAA647D9395C16A3FB9AA3A57CDE"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "Meat_Gadget_Physics",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 13.511016,
+              "Y": 2.3633054E-06,
+              "Z": -0.00091967883
+            },
+            "Rotation": {
+              "Pitch": 90.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "Radius": 12.588557,
+            "Length": 7.2066393,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "DefaultInstance": {
+        "MassInKgOverride": 5.0,
+        "AngularDamping": 31.0,
+        "bOverrideMass": true
+      },
+      "BoneName": "dyn_meat_01",
+      "PhysicsType": "EPhysicsType::PhysType_Simulated",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "BF63984743EF773FC541D89D47BACEEE"
+  }
+]

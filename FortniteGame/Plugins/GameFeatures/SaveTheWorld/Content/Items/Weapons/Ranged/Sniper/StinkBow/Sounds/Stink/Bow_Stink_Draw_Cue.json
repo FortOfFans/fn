@@ -1,0 +1,262 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Bow_Stink_Draw_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer'Bow_Stink_Draw_Cue:SoundNodeMixer_0'",
+        "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Sounds/Stink/Bow_Stink_Draw_Cue.3"
+      },
+      "VolumeMultiplier": 0.501,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'STW_WeaponFoley'",
+        "ObjectPath": "/STW_Sounds/Sounds/FortSoundClassesAndModes/STW_WeaponFoley.0"
+      },
+      "bDebug": true,
+      "bHasDelayNode": true,
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'Bow_Global_Conc'",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Bow_Global_Conc.0"
+        },
+        {
+          "ObjectName": "SoundConcurrency'Bow_Local_Conc'",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/Bow_Local_Conc.0"
+        }
+      ],
+      "Duration": 10000.5,
+      "MaxDistance": 2250.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Fort_Weapon_Reload_Att'",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_Weapon_Reload_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "Bow_Stink_Draw_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DelayMin": 0.5,
+      "DelayMax": 0.5,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'Bow_Stink_Draw_Cue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Sounds/Stink/Bow_Stink_Draw_Cue.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeEnveloper",
+    "Name": "SoundNodeEnveloper_0",
+    "Outer": "Bow_Stink_Draw_Cue",
+    "Class": "UScriptClass'SoundNodeEnveloper'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VolumeCurve": {
+        "EditorCurveData": {
+          "Keys": [
+            {
+              "InterpMode": "RCIM_Cubic",
+              "TangentMode": "RCTM_User",
+              "TangentWeightMode": "RCTWM_WeightedNone",
+              "Time": 0.02994433,
+              "Value": 0.056441545,
+              "ArriveTangent": -0.04790634,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangent": -0.047906738,
+              "LeaveTangentWeight": 0.0
+            },
+            {
+              "InterpMode": "RCIM_Cubic",
+              "TangentMode": "RCTM_User",
+              "TangentWeightMode": "RCTWM_WeightedNone",
+              "Time": 5.0,
+              "Value": 1.0,
+              "ArriveTangent": -0.049366247,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangent": -0.049364924,
+              "LeaveTangentWeight": 0.0
+            }
+          ]
+        }
+      },
+      "PitchCurve": {
+        "EditorCurveData": {
+          "Keys": [
+            {
+              "InterpMode": "RCIM_Linear",
+              "TangentMode": "RCTM_Auto",
+              "TangentWeightMode": "RCTWM_WeightedNone",
+              "Time": 0.0,
+              "Value": 0.9,
+              "ArriveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangent": 0.0,
+              "LeaveTangentWeight": 0.0
+            },
+            {
+              "InterpMode": "RCIM_Linear",
+              "TangentMode": "RCTM_Auto",
+              "TangentWeightMode": "RCTWM_WeightedNone",
+              "Time": 10.0,
+              "Value": 1.2,
+              "ArriveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangent": 0.0,
+              "LeaveTangentWeight": 0.0
+            }
+          ]
+        }
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'Bow_Stink_Draw_Cue:SoundNodeDelay_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Sounds/Stink/Bow_Stink_Draw_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "Bow_Stink_Draw_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        0.6
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'Bow_Stink_Draw_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Sounds/Stink/Bow_Stink_Draw_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeModulator'Bow_Stink_Draw_Cue:SoundNodeModulator_2'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Sounds/Stink/Bow_Stink_Draw_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_2",
+    "Outer": "Bow_Stink_Draw_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VolumeMin": 0.7,
+      "VolumeMax": 0.7,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeEnveloper'Bow_Stink_Draw_Cue:SoundNodeEnveloper_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Sounds/Stink/Bow_Stink_Draw_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "Bow_Stink_Draw_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'Bow_Stink_Draw_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Sounds/Stink/Bow_Stink_Draw_Cue.6"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Bow_Stink_Draw_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Sounds/Stink/Bow_Stink_Draw_Cue.7"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Bow_Stink_Draw_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Sounds/Stink/Bow_Stink_Draw_Cue.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Bow_Stink_Draw_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Sounds/Stink/Bow_Stink_Draw_01.Bow_Stink_Draw_01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Bow_Stink_Draw_01'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Sounds/Stink/Bow_Stink_Draw_01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "Bow_Stink_Draw_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Sounds/Stink/Bow_Stink_Draw_02.Bow_Stink_Draw_02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Bow_Stink_Draw_02'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Sounds/Stink/Bow_Stink_Draw_02.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "Bow_Stink_Draw_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Sounds/Stink/Bow_Stink_Draw_03.Bow_Stink_Draw_03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Bow_Stink_Draw_03'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Sounds/Stink/Bow_Stink_Draw_03.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "Bow_Stink_Draw_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Sounds/Bone/Bow_Bone_Draw_TensionLoop_01.Bow_Bone_Draw_TensionLoop_01",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Bow_Bone_Draw_TensionLoop_01'",
+      "ObjectPath": "/SaveTheWorld/Items/Weapons/Ranged/Sniper/StinkBow/Sounds/Bone/Bow_Bone_Draw_TensionLoop_01.0"
+    }
+  }
+]

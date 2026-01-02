@@ -1,0 +1,101 @@
+[
+  {
+    "Type": "AdditionalEffectsGameplayEffectComponent",
+    "Name": "AdditionalEffectsGameplayEffectComponent_0",
+    "Outer": "Default__GE_Alteration_Melee_OnDmgReceived_CountStack_C",
+    "Class": "UScriptClass'AdditionalEffectsGameplayEffectComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OnApplicationGameplayEffects": [
+        {
+          "EffectClass": {
+            "ObjectName": "BlueprintGeneratedClass'GE_Alteration_Melee_OnDmgReceived_PacingCooldown_C'",
+            "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GE_Alteration_Melee_OnDmgReceived_PacingCooldown.1"
+          },
+          "RequiredSourceTags": []
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Alteration_Melee_OnDmgReceived_CountStack_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayEffect'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_Alteration_Melee_OnDmgReceived_CountStack_C'Default__GE_Alteration_Melee_OnDmgReceived_CountStack_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GE_Alteration_Melee_OnDmgReceived_CountStack.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_Alteration_Melee_OnDmgReceived_CountStack_C",
+    "Name": "Default__GE_Alteration_Melee_OnDmgReceived_CountStack_C",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Items/Alterations/Gameplay/GE_Alteration_Melee_OnDmgReceived_CountStack.GE_Alteration_Melee_OnDmgReceived_CountStack_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DurationPolicy": "EGameplayEffectDurationType::Infinite",
+      "ConditionalGameplayEffects": [
+        {
+          "EffectClass": {
+            "ObjectName": "BlueprintGeneratedClass'GE_Alteration_Melee_OnDmgReceived_PacingCooldown_C'",
+            "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GE_Alteration_Melee_OnDmgReceived_PacingCooldown.1"
+          },
+          "RequiredSourceTags": []
+        }
+      ],
+      "OverflowEffects": [
+        {
+          "ObjectName": "BlueprintGeneratedClass'GE_Alteration_Melee_OnDmgReceived_DmgBuffApply_C'",
+          "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GE_Alteration_Melee_OnDmgReceived_DmgBuffApply.0"
+        }
+      ],
+      "bDenyOverflowApplication": true,
+      "bClearStackOnOverflow": true,
+      "ApplicationTagRequirements": {
+        "IgnoreTags": [
+          "Abilities.Alterations.OnCooldown.DamageConduitPacing"
+        ]
+      },
+      "StackingType": "EGameplayEffectStackingType::AggregateByTarget",
+      "StackLimitCount": 5,
+      "GEComponents": [
+        {
+          "ObjectName": "AdditionalEffectsGameplayEffectComponent'Default__GE_Alteration_Melee_OnDmgReceived_CountStack_C:AdditionalEffectsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GE_Alteration_Melee_OnDmgReceived_CountStack.0"
+        },
+        {
+          "ObjectName": "TargetTagRequirementsGameplayEffectComponent'Default__GE_Alteration_Melee_OnDmgReceived_CountStack_C:TargetTagRequirementsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GE_Alteration_Melee_OnDmgReceived_CountStack.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "TargetTagRequirementsGameplayEffectComponent",
+    "Name": "TargetTagRequirementsGameplayEffectComponent_0",
+    "Outer": "Default__GE_Alteration_Melee_OnDmgReceived_CountStack_C",
+    "Class": "UScriptClass'TargetTagRequirementsGameplayEffectComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ApplicationTagRequirements": {
+        "IgnoreTags": [
+          "Abilities.Alterations.OnCooldown.DamageConduitPacing"
+        ]
+      }
+    }
+  }
+]

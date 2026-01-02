@@ -1,0 +1,492 @@
+[
+  {
+    "Type": "AnimMontage",
+    "Name": "ApplySlurp_STW",
+    "Class": "UScriptClass'AnimMontage'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlendIn": {
+        "BlendTime": 0.2
+      },
+      "BlendOut": {
+        "BlendTime": 0.4
+      },
+      "CompositeSections": [
+        {
+          "SectionName": "Default",
+          "NextSectionName": "Loop",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'ApplySlurp_STW'",
+            "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/ApplySlurp_STW.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 2.7333333,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'SlurpJuice_Drinking_CMM'",
+            "ObjectPath": "/Game/Animation/Game/MainPlayer/Reacts/Healing/SlurpJuice/SlurpJuice_Drinking_CMM.0"
+          }
+        }
+      ],
+      "SlotAnimTracks": [
+        {
+          "SlotName": "UpperBody",
+          "AnimTrack": {
+            "AnimSegments": [
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'SlurpJuice_Drinking_CMM'",
+                  "ObjectPath": "/Game/Animation/Game/MainPlayer/Reacts/Healing/SlurpJuice/SlurpJuice_Drinking_CMM.0"
+                },
+                "StartPos": 0.0,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 2.7333333,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              }
+            ]
+          }
+        },
+        {
+          "SlotName": "AdditiveCorrectiveUpperBody",
+          "AnimTrack": {
+            "AnimSegments": [
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'SlurpJuice_Drinking_CMF'",
+                  "ObjectPath": "/Game/Animation/Game/MainPlayer/Reacts/Healing/SlurpJuice/SlurpJuice_Drinking_CMF.0"
+                },
+                "StartPos": 0.0,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 2.7333333,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              }
+            ]
+          }
+        }
+      ],
+      "BranchingPointMarkers": [
+        {
+          "NotifyIndex": 2,
+          "TriggerTime": 1.9644558,
+          "NotifyEventType": "EAnimNotifyEventType::Begin"
+        }
+      ],
+      "CommonTargetFrameRate": {
+        "Numerator": 30
+      },
+      "Notifies": [
+        {
+          "TriggerTimeOffset": 0.0001,
+          "EndTriggerTimeOffset": -0.0001,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "FortConsumeSound",
+          "Notify": null,
+          "NotifyStateClass": {
+            "ObjectName": "FortAnimNotifyState_ConsumeSound'ApplySlurp_STW:FortAnimNotifyState_ConsumeSound_0'",
+            "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/ApplySlurp_STW.5"
+          },
+          "Duration": 2.7333333,
+          "EndLink": {
+            "LinkedMontage": {
+              "ObjectName": "AnimMontage'ApplySlurp_STW'",
+              "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/ApplySlurp_STW.0"
+            },
+            "SlotIndex": 0,
+            "SegmentIndex": 0,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 2.7333333,
+            "LinkValue": 2.7333333,
+            "LinkedSequence": {
+              "ObjectName": "AnimSequence'SlurpJuice_Drinking_CMM'",
+              "ObjectPath": "/Game/Animation/Game/MainPlayer/Reacts/Healing/SlurpJuice/SlurpJuice_Drinking_CMM.0"
+            }
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bCanBeFilteredViaRequest": true,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 3,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'ApplySlurp_STW'",
+            "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/ApplySlurp_STW.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 2.7333333,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'SlurpJuice_Drinking_CMM'",
+            "ObjectPath": "/Game/Animation/Game/MainPlayer/Reacts/Healing/SlurpJuice/SlurpJuice_Drinking_CMM.0"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 0.0,
+          "NotifyName": "P_Consume_Item",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlayParticleEffect'ApplySlurp_STW:AnimNotify_PlayParticleEffect_C_0'",
+            "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/ApplySlurp_STW.1"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": -1,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 1.9967768,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bCanBeFilteredViaRequest": true,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 2,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'ApplySlurp_STW'",
+            "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/ApplySlurp_STW.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 2.7333333,
+          "LinkValue": 1.9627148,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'SlurpJuice_Drinking_CMM'",
+            "ObjectPath": "/Game/Animation/Game/MainPlayer/Reacts/Healing/SlurpJuice/SlurpJuice_Drinking_CMM.0"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 0.0,
+          "NotifyName": "TriggerAbility",
+          "Notify": {
+            "ObjectName": "FortAnimNotify_TriggerGameplayAbility'ApplySlurp_STW:FortAnimNotify_TriggerGameplayAbility_0'",
+            "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/ApplySlurp_STW.4"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": -1,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 1.9967768,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::BranchingPoint",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bCanBeFilteredViaRequest": true,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'ApplySlurp_STW'",
+            "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/ApplySlurp_STW.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 2.7333333,
+          "LinkValue": 1.9644558,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'SlurpJuice_Drinking_CMM'",
+            "ObjectPath": "/Game/Animation/Game/MainPlayer/Reacts/Healing/SlurpJuice/SlurpJuice_Drinking_CMM.0"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 0.0,
+          "NotifyName": "SlurpJuice_Drink_Complete_Athena_Cue",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlaySound'ApplySlurp_STW:AnimNotify_PlaySound_C_0'",
+            "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/ApplySlurp_STW.2"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": -1,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 1.9675372,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bCanBeFilteredViaRequest": true,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 4,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'ApplySlurp_STW'",
+            "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/ApplySlurp_STW.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 2.7333333,
+          "LinkValue": 1.9675372,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'SlurpJuice_Drinking_CMM'",
+            "ObjectPath": "/Game/Animation/Game/MainPlayer/Reacts/Healing/SlurpJuice/SlurpJuice_Drinking_CMM.0"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlayFeedbackLine",
+          "Notify": {
+            "ObjectName": "FortAnimNotify_PlayFeedbackLine'ApplySlurp_STW:AnimNotify_PlayFeedbackLine_C_2'",
+            "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/ApplySlurp_STW.3"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": -1,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 2.5101218,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bCanBeFilteredViaRequest": true,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 1,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'ApplySlurp_STW'",
+            "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/ApplySlurp_STW.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 2.7333333,
+          "LinkValue": 2.5101218,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'SlurpJuice_Drinking_CMM'",
+            "ObjectPath": "/Game/Animation/Game/MainPlayer/Reacts/Healing/SlurpJuice/SlurpJuice_Drinking_CMM.0"
+          }
+        }
+      ],
+      "SequenceLength": 2.7333333,
+      "RawCurveData": {
+        "FloatCurves": [
+          {
+            "FloatCurve": {
+              "Keys": [
+                {
+                  "InterpMode": "RCIM_Linear",
+                  "TangentMode": "RCTM_Auto",
+                  "TangentWeightMode": "RCTWM_WeightedNone",
+                  "Time": 0.0,
+                  "Value": 0.7,
+                  "ArriveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangent": 0.0,
+                  "LeaveTangentWeight": 0.0
+                }
+              ],
+              "DefaultValue": 3.4028235E+38,
+              "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+              "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+            },
+            "CurveName": "AdditiveLayer",
+            "CurveTypeFlags": 4
+          },
+          {
+            "FloatCurve": {
+              "Keys": [
+                {
+                  "InterpMode": "RCIM_Linear",
+                  "TangentMode": "RCTM_Auto",
+                  "TangentWeightMode": "RCTWM_WeightedNone",
+                  "Time": 0.0,
+                  "Value": 1.0,
+                  "ArriveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangent": 0.0,
+                  "LeaveTangentWeight": 0.0
+                }
+              ],
+              "DefaultValue": 3.4028235E+38,
+              "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+              "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+            },
+            "CurveName": "BothHandFK",
+            "CurveTypeFlags": 20
+          },
+          {
+            "FloatCurve": {
+              "Keys": [
+                {
+                  "InterpMode": "RCIM_Linear",
+                  "TangentMode": "RCTM_Auto",
+                  "TangentWeightMode": "RCTWM_WeightedNone",
+                  "Time": 0.0,
+                  "Value": 1.0,
+                  "ArriveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangent": 0.0,
+                  "LeaveTangentWeight": 0.0
+                }
+              ],
+              "DefaultValue": 3.4028235E+38,
+              "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+              "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+            },
+            "CurveName": "MeleeAnim",
+            "CurveTypeFlags": 20
+          },
+          {
+            "FloatCurve": {
+              "Keys": [
+                {
+                  "InterpMode": "RCIM_Linear",
+                  "TangentMode": "RCTM_Auto",
+                  "TangentWeightMode": "RCTWM_WeightedNone",
+                  "Time": 0.0,
+                  "Value": 1.0,
+                  "ArriveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangent": 0.0,
+                  "LeaveTangentWeight": 0.0
+                }
+              ],
+              "DefaultValue": 3.4028235E+38,
+              "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+              "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+            },
+            "CurveName": "UsingConsumable",
+            "CurveTypeFlags": 20
+          }
+        ]
+      },
+      "Skeleton": {
+        "ObjectName": "Skeleton'Fortnite_M_Avg_Player_Skeleton'",
+        "ObjectPath": "/Game/Characters/Player/Male/Male_Avg_Base/Fortnite_M_Avg_Player_Skeleton.127"
+      }
+    },
+    "SkeletonGuid": "DACFD8A5-4F30AA51-0C2EC492-2122676F"
+  },
+  {
+    "Type": "AnimNotify_PlayParticleEffect",
+    "Name": "AnimNotify_PlayParticleEffect_C_0",
+    "Outer": "ApplySlurp_STW",
+    "Class": "UScriptClass'AnimNotify_PlayParticleEffect'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PSTemplate": {
+        "ObjectName": "ParticleSystem'P_Consumable_ItemUseComplete_Blue'",
+        "ObjectPath": "/Game/Effects/Fort_Effects/Effects/Characters/Generic/Consumables/P_Consumable_ItemUseComplete_Blue.72"
+      },
+      "SocketName": "FX_Chest"
+    }
+  },
+  {
+    "Type": "AnimNotify_PlaySound",
+    "Name": "AnimNotify_PlaySound_C_0",
+    "Outer": "ApplySlurp_STW",
+    "Class": "UScriptClass'AnimNotify_PlaySound'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Item_Consumables_SlurpJuiceSTW_Drink_Complete_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/Sound/Item_Consumables_SlurpJuiceSTW_Drink_Complete_Cue.0"
+      },
+      "PitchMultiplier": 1.5,
+      "bFollow": true
+    }
+  },
+  {
+    "Type": "FortAnimNotify_PlayFeedbackLine",
+    "Name": "AnimNotify_PlayFeedbackLine_C_2",
+    "Outer": "ApplySlurp_STW",
+    "Class": "UScriptClass'FortAnimNotify_PlayFeedbackLine'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Event": {
+        "FeedbackBank": {
+          "ObjectName": "FortFeedbackBank'Soldier_Male_Feedback'",
+          "ObjectPath": "/SaveTheWorld/Characters/Feedback/Soldier_Male_Feedback.0"
+        },
+        "EventName": "ReplenishedHealth"
+      }
+    }
+  },
+  {
+    "Type": "FortAnimNotify_TriggerGameplayAbility",
+    "Name": "FortAnimNotify_TriggerGameplayAbility_0",
+    "Outer": "ApplySlurp_STW",
+    "Class": "UScriptClass'FortAnimNotify_TriggerGameplayAbility'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FortAnimNotifyState_ConsumeSound",
+    "Name": "FortAnimNotifyState_ConsumeSound_0",
+    "Outer": "ApplySlurp_STW",
+    "Class": "UScriptClass'FortAnimNotifyState_ConsumeSound'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ConsumeUseSound": {
+        "ObjectName": "SoundCue'Item_Consumables_SlurpJuiceSTW_Drink_Cue'",
+        "ObjectPath": "/SaveTheWorld/Items/Consumables/SlurpJuice/Sound/Item_Consumables_SlurpJuiceSTW_Drink_Cue.0"
+      }
+    }
+  }
+]

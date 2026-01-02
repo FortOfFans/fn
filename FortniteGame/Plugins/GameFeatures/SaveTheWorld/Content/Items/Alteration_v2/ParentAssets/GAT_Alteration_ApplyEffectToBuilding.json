@@ -1,0 +1,1013 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GAT_Alteration_ApplyEffectToBuilding_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GAT_PassiveAbility_C'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_PassiveAbility.0"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:ExecuteUbergraph_GAT_Alteration_ApplyEffectToBuilding'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.3"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:CalculateSetByCallerMagnitude'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.2"
+      },
+      {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:GetBuildingAsTargetData'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.5"
+      },
+      {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:Removed_4A58AEC14D1355D68BAF55AB02360E9A'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.12"
+      },
+      {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:NormalApplication'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.8"
+      },
+      {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:SetByCaller'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.13"
+      },
+      {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:ReinitializeBuildingInfo'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.11"
+      },
+      {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:OnBuildingDestroyed'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.9"
+      },
+      {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:WaitForTagRemoval'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.14"
+      },
+      {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:K2_ActivateAbility'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.6"
+      },
+      {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:K2_OnEndAbility'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.7"
+      },
+      {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:OnConstructionComplete'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.10"
+      },
+      {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:ApplyDelayTimer'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.1"
+      },
+      {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:FailedToActivatePassiveAbility'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.4"
+      },
+      {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:ExecuteUbergraph_GAT_Alteration_ApplyEffectToBuilding'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.3"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "GE_AppliedToBuilding",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Tag_Applied",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "GE_ActiveHandle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | AdvancedDisplay",
+        "Struct": {
+          "ObjectName": "Class'ActiveGameplayEffectHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlacedTrap",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance | AdvancedDisplay",
+        "PropertyClass": {
+          "ObjectName": "Class'BuildingTrap'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TargetBuilding",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | AdvancedDisplay",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AttachedBuilding",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance | AdvancedDisplay",
+        "PropertyClass": {
+          "ObjectName": "Class'BuildingSMActor'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "b_SetByCaller",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Tag_SetByCaller",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "b_Debug",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ApplyDelayTimerHandle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "ApplyDelayTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GAT_Alteration_ApplyEffectToBuilding": {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:ExecuteUbergraph_GAT_Alteration_ApplyEffectToBuilding'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.3"
+      },
+      "FailedToActivatePassiveAbility": {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:FailedToActivatePassiveAbility'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.4"
+      },
+      "ApplyDelayTimer": {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:ApplyDelayTimer'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.1"
+      },
+      "OnConstructionComplete": {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:OnConstructionComplete'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.10"
+      },
+      "K2_OnEndAbility": {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:K2_OnEndAbility'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.7"
+      },
+      "K2_ActivateAbility": {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:K2_ActivateAbility'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.6"
+      },
+      "WaitForTagRemoval": {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:WaitForTagRemoval'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.14"
+      },
+      "OnBuildingDestroyed": {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:OnBuildingDestroyed'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.9"
+      },
+      "ReinitializeBuildingInfo": {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:ReinitializeBuildingInfo'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.11"
+      },
+      "SetByCaller": {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:SetByCaller'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.13"
+      },
+      "NormalApplication": {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:NormalApplication'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.8"
+      },
+      "Removed_4A58AEC14D1355D68BAF55AB02360E9A": {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:Removed_4A58AEC14D1355D68BAF55AB02360E9A'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.12"
+      },
+      "GetBuildingAsTargetData": {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:GetBuildingAsTargetData'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.5"
+      },
+      "CalculateSetByCallerMagnitude": {
+        "ObjectName": "Function'GAT_Alteration_ApplyEffectToBuilding_C:CalculateSetByCallerMagnitude'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.2"
+      }
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GAT_Alteration_ApplyEffectToBuilding_C'Default__GAT_Alteration_ApplyEffectToBuilding_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.15"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ApplyDelayTimer",
+    "Outer": "GAT_Alteration_ApplyEffectToBuilding_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CalculateSetByCallerMagnitude",
+    "Outer": "GAT_Alteration_ApplyEffectToBuilding_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "DoubleProperty",
+        "Name": "Magnitude",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GAT_Alteration_ApplyEffectToBuilding",
+    "Outer": "GAT_Alteration_ApplyEffectToBuilding_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetAbilityLevel_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Conv_IntToDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_CalculateSetByCallerMagnitude_Magnitude",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeOutgoingGameplayEffectSpec_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectSpecHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_AssignTagSetByCallerMagnitude_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectSpecHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_K2_ApplyGameplayEffectSpecToTarget_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "CallFunc_K2_ApplyGameplayEffectSpecToTarget_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "Struct": {
+            "ObjectName": "Class'ActiveGameplayEffectHandle'",
+            "ObjectPath": "/Script/GameplayAbilities"
+          }
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_IsValidIndex_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetAbilityLevel_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "Struct": {
+            "ObjectName": "Class'ActiveGameplayEffectHandle'",
+            "ObjectPath": "/Script/GameplayAbilities"
+          }
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_IsValidIndex_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAbilitySystemComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnConstructionComplete__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsUnderConstruction_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitGameplayTagRemove_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AbilityTask_WaitGameplayTagRemoved'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_DestroyedActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAvatarActorFromActorInfo_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'ActorDestroyedSignature__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBuilding_Trap",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'BuildingTrap'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_DoesTagAssetInterfaceHaveTag_TagContainerInterface_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_DoesTagAssetInterfaceHaveTag_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_RemoveActiveGameplayEffect_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bWasCancelled",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_BuildingSMActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'BuildingSMActor'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_3",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitGameplayTagDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetBuildingAsTargetData_AttachedBuilding",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'BuildingSMActor'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetBuildingAsTargetData_BuildingTargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetBuildingAsTargetData_IsValid",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_ActorInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityActorInfo'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_MakeOutgoingGameplayEffectSpec_Level_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_AssignTagSetByCallerMagnitude_Magnitude_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_Time_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "FailedToActivatePassiveAbility",
+    "Outer": "GAT_Alteration_ApplyEffectToBuilding_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'FortGameplayAbility:FailedToActivatePassiveAbility'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ActorInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityActorInfo'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetBuildingAsTargetData",
+    "Outer": "GAT_Alteration_ApplyEffectToBuilding_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Trap",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'BuildingTrap'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AttachedBuilding",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm",
+        "PropertyClass": {
+          "ObjectName": "Class'BuildingSMActor'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "BuildingTargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "Parm | OutParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsValid",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetBuildingAttachedTo_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'BuildingSMActor'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_AbilityTargetDataFromActor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_TargetDataHasActor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbility",
+    "Outer": "GAT_Alteration_ApplyEffectToBuilding_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayAbility:K2_ActivateAbility'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_OnEndAbility",
+    "Outer": "GAT_Alteration_ApplyEffectToBuilding_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayAbility:K2_OnEndAbility'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bWasCancelled",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "NormalApplication",
+    "Outer": "GAT_Alteration_ApplyEffectToBuilding_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBuildingDestroyed",
+    "Outer": "GAT_Alteration_ApplyEffectToBuilding_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DestroyedActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnConstructionComplete",
+    "Outer": "GAT_Alteration_ApplyEffectToBuilding_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "BuildingSMActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'BuildingSMActor'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReinitializeBuildingInfo",
+    "Outer": "GAT_Alteration_ApplyEffectToBuilding_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Removed_4A58AEC14D1355D68BAF55AB02360E9A",
+    "Outer": "GAT_Alteration_ApplyEffectToBuilding_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetByCaller",
+    "Outer": "GAT_Alteration_ApplyEffectToBuilding_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "WaitForTagRemoval",
+    "Outer": "GAT_Alteration_ApplyEffectToBuilding_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GAT_Alteration_ApplyEffectToBuilding_C",
+    "Name": "Default__GAT_Alteration_ApplyEffectToBuilding_C",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Items/Alteration_v2/ParentAssets/GAT_Alteration_ApplyEffectToBuilding.GAT_Alteration_ApplyEffectToBuilding_C'",
+    "Template": {
+      "ObjectName": "GAT_PassiveAbility_C'Default__GAT_PassiveAbility_C'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_PassiveAbility.1"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Tag_Applied": {
+        "TagName": "None"
+      },
+      "GE_ActiveHandle": {
+        "Handle": -1,
+        "bPassedFiltersAndWasExecuted": false
+      },
+      "TargetBuilding": {},
+      "Tag_SetByCaller": {
+        "TagName": "None"
+      },
+      "ApplyDelayTimerHandle": {
+        "Handle": 0
+      },
+      "ApplyDelayTime": 1.0,
+      "bStartWithCooldown": true,
+      "NetExecutionPolicy": "EGameplayAbilityNetExecutionPolicy::LocalPredicted",
+      "CooldownGameplayEffectClass": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Cooldown_ApplyEffectToBuilding_C'",
+        "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GE_Cooldown_ApplyEffectToBuilding.1"
+      }
+    }
+  }
+]

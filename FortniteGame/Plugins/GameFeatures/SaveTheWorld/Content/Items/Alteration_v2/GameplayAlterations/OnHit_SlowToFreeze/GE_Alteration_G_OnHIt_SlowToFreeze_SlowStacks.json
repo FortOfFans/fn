@@ -1,0 +1,124 @@
+[
+  {
+    "Type": "AssetTagsGameplayEffectComponent",
+    "Name": "AssetTagsGameplayEffectComponent_0",
+    "Outer": "Default__GE_Alteration_G_OnHIt_SlowToFreeze_SlowStacks_C",
+    "Class": "UScriptClass'AssetTagsGameplayEffectComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "InheritableAssetTags": {
+        "CombinedTags": [
+          "Granted.AlterationEffect.SlowToFreeze.Slow"
+        ],
+        "Added": [
+          "Granted.AlterationEffect.SlowToFreeze.Slow"
+        ]
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Alteration_G_OnHIt_SlowToFreeze_SlowStacks_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayEffect'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_Alteration_G_OnHIt_SlowToFreeze_SlowStacks_C'Default__GE_Alteration_G_OnHIt_SlowToFreeze_SlowStacks_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnHit_SlowToFreeze/GE_Alteration_G_OnHIt_SlowToFreeze_SlowStacks.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_Alteration_G_OnHIt_SlowToFreeze_SlowStacks_C",
+    "Name": "Default__GE_Alteration_G_OnHIt_SlowToFreeze_SlowStacks_C",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnHit_SlowToFreeze/GE_Alteration_G_OnHIt_SlowToFreeze_SlowStacks.GE_Alteration_G_OnHIt_SlowToFreeze_SlowStacks_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DurationPolicy": "EGameplayEffectDurationType::HasDuration",
+      "DurationMagnitude": {
+        "ScalableFloatMagnitude": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'CombatEffects_Alteration'",
+              "ObjectPath": "/Game/Balance/DataTables/CombatEffects_Alteration.0"
+            },
+            "RowName": "Alteration.Weapon.Hit.SlowToFreeze.SlowDuration"
+          }
+        }
+      },
+      "bSuppressStackingCues": true,
+      "InheritableGameplayEffectTags": {
+        "CombinedTags": [
+          "Granted.AlterationEffect.SlowToFreeze.Slow"
+        ],
+        "Added": [
+          "Granted.AlterationEffect.SlowToFreeze.Slow"
+        ]
+      },
+      "OngoingTagRequirements": {
+        "IgnoreTags": [
+          "Granted.AlterationEffect.SlowToFreeze.Freeze"
+        ]
+      },
+      "ApplicationTagRequirements": {
+        "IgnoreTags": [
+          "Granted.AlterationEffect.SlowToFreeze.Freeze"
+        ]
+      },
+      "RemovalTagRequirements": {
+        "RequireTags": [
+          "Granted.AlterationEffect.SlowToFreeze.Freeze"
+        ]
+      },
+      "StackingType": "EGameplayEffectStackingType::AggregateByTarget",
+      "StackLimitCount": 10,
+      "GEComponents": [
+        {
+          "ObjectName": "AssetTagsGameplayEffectComponent'Default__GE_Alteration_G_OnHIt_SlowToFreeze_SlowStacks_C:AssetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnHit_SlowToFreeze/GE_Alteration_G_OnHIt_SlowToFreeze_SlowStacks.0"
+        },
+        {
+          "ObjectName": "TargetTagRequirementsGameplayEffectComponent'Default__GE_Alteration_G_OnHIt_SlowToFreeze_SlowStacks_C:TargetTagRequirementsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/GameplayAlterations/OnHit_SlowToFreeze/GE_Alteration_G_OnHIt_SlowToFreeze_SlowStacks.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "TargetTagRequirementsGameplayEffectComponent",
+    "Name": "TargetTagRequirementsGameplayEffectComponent_0",
+    "Outer": "Default__GE_Alteration_G_OnHIt_SlowToFreeze_SlowStacks_C",
+    "Class": "UScriptClass'TargetTagRequirementsGameplayEffectComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ApplicationTagRequirements": {
+        "IgnoreTags": [
+          "Granted.AlterationEffect.SlowToFreeze.Freeze"
+        ]
+      },
+      "OngoingTagRequirements": {
+        "IgnoreTags": [
+          "Granted.AlterationEffect.SlowToFreeze.Freeze"
+        ]
+      },
+      "RemovalTagRequirements": {
+        "RequireTags": [
+          "Granted.AlterationEffect.SlowToFreeze.Freeze"
+        ]
+      }
+    }
+  }
+]

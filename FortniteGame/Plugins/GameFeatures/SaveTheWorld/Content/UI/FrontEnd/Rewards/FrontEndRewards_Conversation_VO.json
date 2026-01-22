@@ -1,0 +1,593 @@
+[
+  {
+    "Type": "FrontEndRewards_Conversation_VO_C",
+    "Name": "Default__FrontEndRewards_Conversation_VO_C",
+    "Class": "WidgetBlueprintGeneratedClass'/SaveTheWorld/UI/Frontend/Rewards/FrontEndRewards_Conversation_VO.FrontEndRewards_Conversation_VO_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ReplayAction": {
+        "DataTable": {
+          "ObjectName": "DataTable'InputActionDataTable'",
+          "ObjectPath": "/FortUILibrary/Input/InputActionDataTable.0"
+        },
+        "RowName": "Replay"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "CreateConversationActor",
+    "Outer": "FrontEndRewards_Conversation_VO_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "NewAnnoucement",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'Announce_Gen_Quest_Conversation_FrontEndRewards_C'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/Announce_Gen_Quest_Conversation_FrontEndRewards.2"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetLocalFortPlayerControllers_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetLocalFortPlayerControllers_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'FortPlayerController'",
+            "ObjectPath": "/Script/FortniteGame"
+          }
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_FortClientAnnouncementData_Conversation",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'FortClientAnnouncementData_Conversation'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeTransform_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 96,
+        "Struct": {
+          "ObjectName": "Class'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_FinishSpawningActor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'Announce_Gen_Quest_Conversation_FrontEndRewards_C'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/Announce_Gen_Quest_Conversation_FrontEndRewards.2"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Private | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "HandleConversationFinished",
+    "Outer": "FrontEndRewards_Conversation_VO_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "FinishedConversation",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'Announce_Gen_Quest_Conversation_FrontEndRewards_C'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/Announce_Gen_Quest_Conversation_FrontEndRewards.2"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetQuestDefinitionBP_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortQuestItemDefinition'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CallFunc_GetRewardType_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EFortQuestRewardType'",
+          "ObjectPath": "/Script/FortniteGame"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Private | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "HandleNewSentence",
+    "Outer": "FrontEndRewards_Conversation_VO_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "Sentence",
+        "Flags": "RF_Public",
+        "ElementSize": 208,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'FortConversationSentence'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetDataFromSentence_Text",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetDataFromSentence_TalkingHeadTexture",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Private | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "HandleReplayAction",
+    "Outer": "FrontEndRewards_Conversation_VO_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Committed",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Private | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayConversation",
+    "Outer": "FrontEndRewards_Conversation_VO_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "QuestItem",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'FortQuestItem'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetQuestDefinitionBP_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortQuestItemDefinition'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CallFunc_GetRewardType_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EFortQuestRewardType'",
+          "ObjectPath": "/Script/FortniteGame"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Function'Announce_Gen_Quest_Conversation_FrontEndRewards_C:OnCurrentConversationFinished__DelegateSignature'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/Announce_Gen_Quest_Conversation_FrontEndRewards.5"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValidConversation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateConversationActor_NewAnnoucement",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'Announce_Gen_Quest_Conversation_FrontEndRewards_C'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/Announce_Gen_Quest_Conversation_FrontEndRewards.2"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PopulateFromConversation",
+    "Outer": "FrontEndRewards_Conversation_VO_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Conversation",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'FortConversation'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValidConversation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'CommonActionCommited__DelegateSignature'",
+          "ObjectPath": "/Script/CommonUI"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "StopConversation",
+    "Outer": "FrontEndRewards_Conversation_VO_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "FrontEndRewards_Conversation_VO_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'FrontEndRewards_Conversation_VO_C:WidgetTree'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/FrontEndRewards_Conversation_VO.9"
+      },
+      "bClassRequiresNativeTick": true,
+      "CookedPropertyGuids": [
+        {
+          "Key": "ConversationActor",
+          "Value": "5A19C8BD-4FF38A14-9AC9CFA7-42C4ADEA"
+        },
+        {
+          "Key": "QuestItemRef",
+          "Value": "2015C2A5-4A98AD36-43D7E5A6-B4D0A7C4"
+        },
+        {
+          "Key": "Conversation",
+          "Value": "7229A786-4A696905-5B00549A-67EB30D7"
+        },
+        {
+          "Key": "ReplayAction",
+          "Value": "FD3DE54E-46E67C28-3E5D00BB-A53D8961"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortRewardConversationWidget'",
+      "ObjectPath": "/Script/SaveTheWorldUI"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'FrontEndRewards_Conversation_VO_C:CreateConversationActor'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/FrontEndRewards_Conversation_VO.1"
+      },
+      {
+        "ObjectName": "Function'FrontEndRewards_Conversation_VO_C:PlayConversation'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/FrontEndRewards_Conversation_VO.5"
+      },
+      {
+        "ObjectName": "Function'FrontEndRewards_Conversation_VO_C:HandleConversationFinished'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/FrontEndRewards_Conversation_VO.2"
+      },
+      {
+        "ObjectName": "Function'FrontEndRewards_Conversation_VO_C:HandleNewSentence'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/FrontEndRewards_Conversation_VO.3"
+      },
+      {
+        "ObjectName": "Function'FrontEndRewards_Conversation_VO_C:StopConversation'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/FrontEndRewards_Conversation_VO.7"
+      },
+      {
+        "ObjectName": "Function'FrontEndRewards_Conversation_VO_C:HandleReplayAction'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/FrontEndRewards_Conversation_VO.4"
+      },
+      {
+        "ObjectName": "Function'FrontEndRewards_Conversation_VO_C:PopulateFromConversation'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/FrontEndRewards_Conversation_VO.6"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ReplayAction",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'DataTableRowHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Conversation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FortConversation'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "QuestItemRef",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FortQuestItem'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ConversationActor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'Announce_Gen_Quest_Conversation_FrontEndRewards_C'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/Announce_Gen_Quest_Conversation_FrontEndRewards.2"
+        }
+      }
+    ],
+    "FuncMap": {
+      "PopulateFromConversation": {
+        "ObjectName": "Function'FrontEndRewards_Conversation_VO_C:PopulateFromConversation'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/FrontEndRewards_Conversation_VO.6"
+      },
+      "HandleReplayAction": {
+        "ObjectName": "Function'FrontEndRewards_Conversation_VO_C:HandleReplayAction'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/FrontEndRewards_Conversation_VO.4"
+      },
+      "StopConversation": {
+        "ObjectName": "Function'FrontEndRewards_Conversation_VO_C:StopConversation'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/FrontEndRewards_Conversation_VO.7"
+      },
+      "HandleNewSentence": {
+        "ObjectName": "Function'FrontEndRewards_Conversation_VO_C:HandleNewSentence'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/FrontEndRewards_Conversation_VO.3"
+      },
+      "HandleConversationFinished": {
+        "ObjectName": "Function'FrontEndRewards_Conversation_VO_C:HandleConversationFinished'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/FrontEndRewards_Conversation_VO.2"
+      },
+      "PlayConversation": {
+        "ObjectName": "Function'FrontEndRewards_Conversation_VO_C:PlayConversation'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/FrontEndRewards_Conversation_VO.5"
+      },
+      "CreateConversationActor": {
+        "ObjectName": "Function'FrontEndRewards_Conversation_VO_C:CreateConversationActor'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/FrontEndRewards_Conversation_VO.1"
+      }
+    },
+    "ClassFlags": "CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'FortClientEventInterface'",
+          "ObjectPath": "/Script/FortniteGame"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "FrontEndRewards_Conversation_VO_C'Default__FrontEndRewards_Conversation_VO_C'",
+      "ObjectPath": "/SaveTheWorld/UI/Frontend/Rewards/FrontEndRewards_Conversation_VO.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal",
+      "ImplementedInterfaces": "((Interface=\"/Script/CoreUObject.Class'/Script/FortniteGame.FortClientEventInterface'\"))"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "FrontEndRewards_Conversation_VO_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted"
+  }
+]

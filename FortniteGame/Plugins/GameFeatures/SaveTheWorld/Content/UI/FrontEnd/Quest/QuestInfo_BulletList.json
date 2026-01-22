@@ -1,0 +1,625 @@
+[
+  {
+    "Type": "CommonBorder",
+    "Name": "CommonBorder_3",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CommonBorder'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Background": {
+        "TintColor": {
+          "SpecifiedColor": {
+            "R": 0.008023,
+            "G": 0.01096,
+            "B": 0.026241,
+            "A": 1.0,
+            "Hex": "161B2D"
+          }
+        },
+        "Tiling": "ESlateBrushTileType::Horizontal",
+        "ImageSize": {
+          "X": 6.0,
+          "Y": 6.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'Rule-Dotted-8'",
+          "ObjectPath": "/Game/UI/Foundation/Textures/Rule/Rule-Dotted-8.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'QuestInfo_BulletList_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_23'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.13"
+      }
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "TextBlockTitle",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CommonTextBlock'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Style": {
+        "ObjectName": "BlueprintGeneratedClass'TextStyle-Base-S-B-Blue_C'",
+        "ObjectPath": "/FortUILibrary/Styles/Typography/Foundation/TextStyle-Base-S-B-Blue.0"
+      },
+      "Text": {
+        "Namespace": "",
+        "Key": "C842928645C496FB7AB8F6813190C793",
+        "SourceString": "Title",
+        "LocalizedString": "Title"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 1.0,
+          "G": 0.0,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "FF00FF"
+        }
+      },
+      "Font": {
+        "FontObject": null,
+        "TypefaceFontName": "None"
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'QuestInfo_BulletList_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_6'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.14"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AddEntry",
+    "Outer": "QuestInfo_BulletList_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "TextProperty",
+        "Name": "EntryText",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetChildrenCount_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'QuestInfo_BulletListEntry_C'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletListEntry.16"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_AddChild_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PanelSlot'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "AddEntryWithBrush",
+    "Outer": "QuestInfo_BulletList_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "TextProperty",
+        "Name": "EntryText",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "EntryIconBrush",
+        "Flags": "RF_Public",
+        "ElementSize": 208,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'SlateBrush'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NewEntry",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'QuestInfo_BulletListEntry_C'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletListEntry.16"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Create_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'QuestInfo_BulletListEntry_C'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletListEntry.16"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetChildrenCount_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_AddChild_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PanelSlot'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Outer": "QuestInfo_BulletList_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_QuestInfo_BulletList",
+    "Outer": "QuestInfo_BulletList_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "InitDesignView",
+    "Outer": "QuestInfo_BulletList_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Private | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PreConstruct",
+    "Outer": "QuestInfo_BulletList_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:PreConstruct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_4",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'QuestInfo_BulletList_C:WidgetTree.Overlay_4.OverlaySlot_1'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.9"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'QuestInfo_BulletList_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_7'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.15"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Outer": "Overlay_4",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'QuestInfo_BulletList_C:WidgetTree.Overlay_4'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.8"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'QuestInfo_BulletList_C:WidgetTree.VerticalBoxBulletList'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.12"
+      }
+    }
+  },
+  {
+    "Type": "QuestInfo_BulletList_C",
+    "Name": "Default__QuestInfo_BulletList_C",
+    "Class": "WidgetBlueprintGeneratedClass'/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.QuestInfo_BulletList_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_2",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'QuestInfo_BulletList_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_6'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.14"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'QuestInfo_BulletList_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_23'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.13"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'QuestInfo_BulletList_C:WidgetTree.VerticalBox_2.VerticalBoxSlot_7'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.15"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBoxBulletList",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "OverlaySlot'QuestInfo_BulletList_C:WidgetTree.Overlay_4.OverlaySlot_1'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.9"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_23",
+    "Outer": "VerticalBox_2",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Padding": {
+        "Top": 4.0,
+        "Bottom": 4.0
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox'QuestInfo_BulletList_C:WidgetTree.VerticalBox_2'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.11"
+      },
+      "Content": {
+        "ObjectName": "CommonBorder'QuestInfo_BulletList_C:WidgetTree.CommonBorder_3'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.0"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_6",
+    "Outer": "VerticalBox_2",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'QuestInfo_BulletList_C:WidgetTree.VerticalBox_2'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.11"
+      },
+      "Content": {
+        "ObjectName": "CommonTextBlock'QuestInfo_BulletList_C:WidgetTree.TextBlockTitle'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.1"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_7",
+    "Outer": "VerticalBox_2",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Padding": {
+        "Top": 5.0
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox'QuestInfo_BulletList_C:WidgetTree.VerticalBox_2'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.11"
+      },
+      "Content": {
+        "ObjectName": "Overlay'QuestInfo_BulletList_C:WidgetTree.Overlay_4'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.8"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "QuestInfo_BulletList_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'QuestInfo_BulletList_C:WidgetTree'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.17"
+      },
+      "Bindings": [
+        {
+          "ObjectName": "TextBlockTitle",
+          "PropertyName": "Text",
+          "FunctionName": "None",
+          "SourcePath": {
+            "Segments": [
+              {
+                "Name": "TitleText",
+                "ArrayIndex": -1
+              }
+            ],
+            "CachedFunction": null
+          },
+          "Kind": "EBindingKind::Property"
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'QuestInfo_BulletList_C:ExecuteUbergraph_QuestInfo_BulletList'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.5"
+      },
+      "CookedPropertyGuids": [
+        {
+          "Key": "TitleText",
+          "Value": "6591296C-43D79DC0-2FE406B1-825A59DF"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'CommonUserWidget'",
+      "ObjectPath": "/Script/CommonUI"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'QuestInfo_BulletList_C:AddEntryWithBrush'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.3"
+      },
+      {
+        "ObjectName": "Function'QuestInfo_BulletList_C:InitDesignView'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.6"
+      },
+      {
+        "ObjectName": "Function'QuestInfo_BulletList_C:AddEntry'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.2"
+      },
+      {
+        "ObjectName": "Function'QuestInfo_BulletList_C:PreConstruct'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.7"
+      },
+      {
+        "ObjectName": "Function'QuestInfo_BulletList_C:Construct'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.4"
+      },
+      {
+        "ObjectName": "Function'QuestInfo_BulletList_C:ExecuteUbergraph_QuestInfo_BulletList'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.5"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "VerticalBoxBulletList",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'VerticalBox'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TextBlockTitle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CommonTextBlock'",
+          "ObjectPath": "/Script/CommonUI"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "TitleText",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_QuestInfo_BulletList": {
+        "ObjectName": "Function'QuestInfo_BulletList_C:ExecuteUbergraph_QuestInfo_BulletList'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.5"
+      },
+      "Construct": {
+        "ObjectName": "Function'QuestInfo_BulletList_C:Construct'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.4"
+      },
+      "PreConstruct": {
+        "ObjectName": "Function'QuestInfo_BulletList_C:PreConstruct'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.7"
+      },
+      "AddEntry": {
+        "ObjectName": "Function'QuestInfo_BulletList_C:AddEntry'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.2"
+      },
+      "InitDesignView": {
+        "ObjectName": "Function'QuestInfo_BulletList_C:InitDesignView'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.6"
+      },
+      "AddEntryWithBrush": {
+        "ObjectName": "Function'QuestInfo_BulletList_C:AddEntryWithBrush'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.3"
+      }
+    },
+    "ClassFlags": "CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "QuestInfo_BulletList_C'Default__QuestInfo_BulletList_C'",
+      "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.10"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "QuestInfo_BulletList_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "VerticalBox'QuestInfo_BulletList_C:WidgetTree.VerticalBox_2'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Quest/QuestInfo_BulletList.11"
+      }
+    }
+  }
+]

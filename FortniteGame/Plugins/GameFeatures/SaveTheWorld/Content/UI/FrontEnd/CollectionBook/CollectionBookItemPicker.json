@@ -1,0 +1,320 @@
+[
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "CommonBorder_0",
+    "Class": "UScriptClass'BorderSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Padding": {
+        "Top": 4.0,
+        "Bottom": 4.0
+      },
+      "Parent": {
+        "ObjectName": "CommonBorder'CollectionBookItemPicker_C:WidgetTree.CommonBorder_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.2"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'CollectionBookItemPicker_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.9"
+      }
+    }
+  },
+  {
+    "Type": "CollectionBookItemPicker_C",
+    "Name": "Default__CollectionBookItemPicker_C",
+    "Class": "WidgetBlueprintGeneratedClass'/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.CollectionBookItemPicker_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "MulchConfirmationModalClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'MulchConfirmationModalWidget_C'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/ItemManagement/MulchConfirmationModal/MulchConfirmationModalWidget.71"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false,
+      "FlowDirectionPreference": "EFlowDirectionPreference::LeftToRight"
+    }
+  },
+  {
+    "Type": "CommonBorder",
+    "Name": "CommonBorder_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CommonBorder'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Style": {
+        "ObjectName": "BlueprintGeneratedClass'Border_DarkBlue_VGrad_C'",
+        "ObjectPath": "/FortUILibrary/Styles/Border/Border_DarkBlue_VGrad.0"
+      },
+      "Padding": {
+        "Top": 4.0,
+        "Bottom": 4.0
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'CollectionBookItemPicker_C:WidgetTree.CommonBorder_0.BorderSlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.0"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'CollectionBookItemPicker_C:WidgetTree.Overlay_2.OverlaySlot_1'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.8"
+      }
+    }
+  },
+  {
+    "Type": "FortItemTileView",
+    "Name": "PickerTileView",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'FortItemTileView'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BP_OnEntryGenerated": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "FortItemTileView'CollectionBookItemPicker_C:WidgetTree.PickerTileView'",
+              "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.3"
+            },
+            "FunctionName": "HandleItemWidgetCreated"
+          }
+        ]
+      },
+      "EntryWidgetClass": {
+        "ObjectName": "WidgetBlueprintGeneratedClass'CollectionBookItemPickerButton_C'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPickerButton.9"
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'CollectionBookItemPicker_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.10"
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_CollectionBookItemPicker",
+    "Outer": "CollectionBookItemPicker_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "HandleCommitAction",
+    "Outer": "CollectionBookItemPicker_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Passthrough",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_TryCommitSelectedItem_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCollectComplete",
+    "Outer": "CollectionBookItemPicker_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'FortCollectionBookPicker:OnCollectComplete'",
+      "ObjectPath": "/Script/SaveTheWorldUI"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_2",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'CollectionBookItemPicker_C:WidgetTree.Overlay_2.OverlaySlot_1'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Outer": "Overlay_2",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'CollectionBookItemPicker_C:WidgetTree.Overlay_2'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.7"
+      },
+      "Content": {
+        "ObjectName": "CommonBorder'CollectionBookItemPicker_C:WidgetTree.CommonBorder_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.2"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'CollectionBookItemPicker_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.10"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot'CollectionBookItemPicker_C:WidgetTree.CommonBorder_0.BorderSlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.0"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_0",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Size": {
+        "SizeRule": "ESlateSizeRule::Fill"
+      },
+      "Parent": {
+        "ObjectName": "VerticalBox'CollectionBookItemPicker_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.9"
+      },
+      "Content": {
+        "ObjectName": "FortItemTileView'CollectionBookItemPicker_C:WidgetTree.PickerTileView'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.3"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "CollectionBookItemPicker_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'CollectionBookItemPicker_C:WidgetTree'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.12"
+      },
+      "bClassRequiresNativeTick": true,
+      "UberGraphFunction": {
+        "ObjectName": "Function'CollectionBookItemPicker_C:ExecuteUbergraph_CollectionBookItemPicker'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortCollectionBookPicker'",
+      "ObjectPath": "/Script/SaveTheWorldUI"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'CollectionBookItemPicker_C:HandleCommitAction'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.5"
+      },
+      {
+        "ObjectName": "Function'CollectionBookItemPicker_C:OnCollectComplete'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.6"
+      },
+      {
+        "ObjectName": "Function'CollectionBookItemPicker_C:ExecuteUbergraph_CollectionBookItemPicker'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_CollectionBookItemPicker": {
+        "ObjectName": "Function'CollectionBookItemPicker_C:ExecuteUbergraph_CollectionBookItemPicker'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.4"
+      },
+      "OnCollectComplete": {
+        "ObjectName": "Function'CollectionBookItemPicker_C:OnCollectComplete'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.6"
+      },
+      "HandleCommitAction": {
+        "ObjectName": "Function'CollectionBookItemPicker_C:HandleCommitAction'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.5"
+      }
+    },
+    "ClassFlags": "CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CollectionBookItemPicker_C'Default__CollectionBookItemPicker_C'",
+      "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "CollectionBookItemPicker_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'CollectionBookItemPicker_C:WidgetTree.Overlay_2'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/CollectionBook/CollectionBookItemPicker.7"
+      }
+    }
+  }
+]

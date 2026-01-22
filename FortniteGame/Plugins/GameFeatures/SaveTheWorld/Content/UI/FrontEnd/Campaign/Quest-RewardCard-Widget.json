@@ -1,0 +1,1156 @@
+[
+  {
+    "Type": "Border",
+    "Name": "CardBottomBorder",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Padding": {
+        "Left": 16.0,
+        "Top": 48.0,
+        "Right": 0.0,
+        "Bottom": 12.0
+      },
+      "Background": {
+        "DrawAs": "ESlateBrushDrawType::Box",
+        "ImageSize": {
+          "X": 32.0,
+          "Y": 64.0
+        },
+        "Margin": {
+          "Left": 0.25,
+          "Top": 0.25,
+          "Right": 0.25,
+          "Bottom": 0.25
+        },
+        "ResourceObject": {
+          "ObjectName": "MaterialInstanceConstant'M-UI-Reward-Card-Bottom-Inst'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Materials/M-UI-Reward-Card-Bottom-Inst.0"
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'Quest-RewardCard-Widget_C:WidgetTree.CardBottomBorder.BorderSlot_1'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.1"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'Quest-RewardCard-Widget_C:WidgetTree.Overlay_1.OverlaySlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.19"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_1",
+    "Outer": "CardBottomBorder",
+    "Class": "UScriptClass'BorderSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Padding": {
+        "Left": 16.0,
+        "Top": 48.0,
+        "Right": 0.0,
+        "Bottom": 12.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Left",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Border'Quest-RewardCard-Widget_C:WidgetTree.CardBottomBorder'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.0"
+      },
+      "Content": {
+        "ObjectName": "Image'Quest-RewardCard-Widget_C:WidgetTree.IconItemtype'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.12"
+      }
+    }
+  },
+  {
+    "Type": "CommonLazyImage",
+    "Name": "CardComposition",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CommonLazyImage'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaterialTextureParamName": "Icon",
+      "Brush": {
+        "DrawAs": "ESlateBrushDrawType::Box",
+        "Margin": {
+          "Left": 0.025,
+          "Top": 0.035,
+          "Right": 0.025,
+          "Bottom": 0.035
+        },
+        "ResourceObject": {
+          "ObjectName": "Material'M-UI-Reward-Card-Master'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Materials/M-UI-Reward-Card-Master.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'Quest-RewardCard-Widget_C:WidgetTree.Overlay_1.OverlaySlot_3'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.20"
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Card Initialize",
+    "Outer": "Quest-RewardCard-Widget_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_Quest-RewardCard-Widget",
+    "Outer": "Quest-RewardCard-Widget_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetMaterialFromRewardItem",
+    "Outer": "Quest-RewardCard-Widget_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CallFunc_GetItemType_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EFortItemType'",
+          "ObjectPath": "/Script/FortniteGame"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Select_Default_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "Item-DataPolpulate",
+    "Outer": "Quest-RewardCard-Widget_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_TryGetCategory_OutCategoryDisplayName",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_TryGetCategory_OutHasIcon",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_TryGetCategory_OutCategoryIconBrush",
+        "Flags": "RF_Public",
+        "ElementSize": 1248,
+        "Struct": {
+          "ObjectName": "Class'FortMultiSizeBrush'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_TryGetCategory_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "CallFunc_GetLargePreviewImage_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetBrushResourceAsTexture2D_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CallFunc_GetRarity_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EFortRarity'",
+          "ObjectPath": "/Script/FortniteGame"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BPGetRarityData_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 120,
+        "Struct": {
+          "ObjectName": "Class'FortRarityItemData'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Item-Setup",
+    "Outer": "Quest-RewardCard-Widget_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMaterialFromRewardItem_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetDynamicMaterial_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateTemporaryItemInstanceBP_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortItem'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetDynamicMaterial_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PreConstruct",
+    "Outer": "Quest-RewardCard-Widget_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:PreConstruct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Image",
+    "Name": "CardBackground",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 512.0,
+          "Y": 512.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Reward-Card'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Textures/T-Reward-Card.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'Quest-RewardCard-Widget_C:WidgetTree.Overlay_0.OverlaySlot_4'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.18"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "CardShadow",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Brush": {
+        "ResourceObject": {
+          "ObjectName": "Material'M-UI-Reward-CardShadow'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Materials/M-UI-Reward-CardShadow.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'Quest-RewardCard-Widget_C:WidgetTree.Overlay_0.OverlaySlot_1'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.16"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "CardSheen",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 512.0,
+          "Y": 512.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Material'M-UI-Reward-CardGlare'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Materials/M-UI-Reward-CardGlare.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'Quest-RewardCard-Widget_C:WidgetTree.Overlay_0.OverlaySlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.15"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "IconItemtype",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Brush": {
+        "DrawAs": "ESlateBrushDrawType::Box",
+        "ImageSize": {
+          "X": 48.0,
+          "Y": 48.0
+        },
+        "Margin": {
+          "Left": 0.025,
+          "Top": 0.035,
+          "Right": 0.025,
+          "Bottom": 0.035
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-Hero-Soldier-64'",
+          "ObjectPath": "/Game/UI/Foundation/Textures/Icons/ItemTypes/T-Icon-Hero-Soldier-64.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "BorderSlot'Quest-RewardCard-Widget_C:WidgetTree.CardBottomBorder.BorderSlot_1'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.1"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'Quest-RewardCard-Widget_C:WidgetTree.Overlay_0.OverlaySlot_1'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.16"
+        },
+        {
+          "ObjectName": "OverlaySlot'Quest-RewardCard-Widget_C:WidgetTree.Overlay_0.OverlaySlot_4'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.18"
+        },
+        {
+          "ObjectName": "OverlaySlot'Quest-RewardCard-Widget_C:WidgetTree.Overlay_0.OverlaySlot_3'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.17"
+        },
+        {
+          "ObjectName": "OverlaySlot'Quest-RewardCard-Widget_C:WidgetTree.Overlay_0.OverlaySlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.15"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_1",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'Quest-RewardCard-Widget_C:WidgetTree.Overlay_1.OverlaySlot_3'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.20"
+        },
+        {
+          "ObjectName": "OverlaySlot'Quest-RewardCard-Widget_C:WidgetTree.Overlay_1.OverlaySlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.19"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'Quest-RewardCard-Widget_C:WidgetTree.Overlay_0.OverlaySlot_3'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.17"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "Overlay_0",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'Quest-RewardCard-Widget_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.13"
+      },
+      "Content": {
+        "ObjectName": "Image'Quest-RewardCard-Widget_C:WidgetTree.CardSheen'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.11"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Outer": "Overlay_0",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'Quest-RewardCard-Widget_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.13"
+      },
+      "Content": {
+        "ObjectName": "Image'Quest-RewardCard-Widget_C:WidgetTree.CardShadow'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.10"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Outer": "Overlay_0",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Padding": {
+        "Left": 136.0,
+        "Top": 29.0,
+        "Right": 136.0,
+        "Bottom": 96.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'Quest-RewardCard-Widget_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.13"
+      },
+      "Content": {
+        "ObjectName": "Overlay'Quest-RewardCard-Widget_C:WidgetTree.Overlay_1'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.14"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_4",
+    "Outer": "Overlay_0",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'Quest-RewardCard-Widget_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.13"
+      },
+      "Content": {
+        "ObjectName": "Image'Quest-RewardCard-Widget_C:WidgetTree.CardBackground'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.9"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "Overlay_1",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Padding": {
+        "Left": 6.0,
+        "Right": 6.0,
+        "Bottom": 6.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Bottom",
+      "Parent": {
+        "ObjectName": "Overlay'Quest-RewardCard-Widget_C:WidgetTree.Overlay_1'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.14"
+      },
+      "Content": {
+        "ObjectName": "Border'Quest-RewardCard-Widget_C:WidgetTree.CardBottomBorder'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.0"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Outer": "Overlay_1",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'Quest-RewardCard-Widget_C:WidgetTree.Overlay_1'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.14"
+      },
+      "Content": {
+        "ObjectName": "CommonLazyImage'Quest-RewardCard-Widget_C:WidgetTree.CardComposition'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.2"
+      }
+    }
+  },
+  {
+    "Type": "Quest-RewardCard-Widget_C",
+    "Name": "Default__Quest-RewardCard-Widget_C",
+    "Class": "WidgetBlueprintGeneratedClass'/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.Quest-RewardCard-Widget_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "CardType": {
+        "ObjectName": "FortHeroType'HID_016_Athena_Commando_F'",
+        "ObjectPath": "/BRCosmetics/Athena/Heroes/HID_016_Athena_Commando_F.0"
+      },
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "Quest-RewardCard-Widget_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'Quest-RewardCard-Widget_C:WidgetTree'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.23"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'Quest-RewardCard-Widget_C:ExecuteUbergraph_Quest-RewardCard-Widget'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.4"
+      },
+      "CookedPropertyGuids": [
+        {
+          "Key": "CanSetTextureParams",
+          "Value": "3C453672-47D9EDB4-6963BABA-6A97960C"
+        },
+        {
+          "Key": "ItemToRepresent",
+          "Value": "15DB93F2-429374A5-B34F878A-F3D2B6A6"
+        },
+        {
+          "Key": "ShadowOff",
+          "Value": "A40D60FA-48B819E5-6A734A8E-71D79162"
+        },
+        {
+          "Key": "MID-CardBottomBorder",
+          "Value": "A44AA434-4F9892D4-3FE8608D-6D21C426"
+        },
+        {
+          "Key": "MID-CardComp",
+          "Value": "74CB4ABC-45C0BE57-A1D6B2AA-4E4AC265"
+        },
+        {
+          "Key": "CardType",
+          "Value": "EEF5F896-4DA6DAF9-0BACE0AF-F88DBED6"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'CommonUserWidget'",
+      "ObjectPath": "/Script/CommonUI"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'Quest-RewardCard-Widget_C:GetMaterialFromRewardItem'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.5"
+      },
+      {
+        "ObjectName": "Function'Quest-RewardCard-Widget_C:Card Initialize'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.3"
+      },
+      {
+        "ObjectName": "Function'Quest-RewardCard-Widget_C:Item-DataPolpulate'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.6"
+      },
+      {
+        "ObjectName": "Function'Quest-RewardCard-Widget_C:Item-Setup'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.7"
+      },
+      {
+        "ObjectName": "Function'Quest-RewardCard-Widget_C:PreConstruct'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.8"
+      },
+      {
+        "ObjectName": "Function'Quest-RewardCard-Widget_C:ExecuteUbergraph_Quest-RewardCard-Widget'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "IconItemtype",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CardSheen",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CardShadow",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CardComposition",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CommonLazyImage'",
+          "ObjectPath": "/Script/CommonUI"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CardBottomBorder",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Border'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CardBackground",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CardType",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'FortItemDefinition'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MID-CardComp",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MID-CardBottomBorder",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ShadowOff",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ItemToRepresent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FortItem'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_Quest-RewardCard-Widget": {
+        "ObjectName": "Function'Quest-RewardCard-Widget_C:ExecuteUbergraph_Quest-RewardCard-Widget'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.4"
+      },
+      "PreConstruct": {
+        "ObjectName": "Function'Quest-RewardCard-Widget_C:PreConstruct'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.8"
+      },
+      "Item-Setup": {
+        "ObjectName": "Function'Quest-RewardCard-Widget_C:Item-Setup'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.7"
+      },
+      "Item-DataPolpulate": {
+        "ObjectName": "Function'Quest-RewardCard-Widget_C:Item-DataPolpulate'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.6"
+      },
+      "Card Initialize": {
+        "ObjectName": "Function'Quest-RewardCard-Widget_C:Card Initialize'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.3"
+      },
+      "GetMaterialFromRewardItem": {
+        "ObjectName": "Function'Quest-RewardCard-Widget_C:GetMaterialFromRewardItem'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.5"
+      }
+    },
+    "ClassFlags": "CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Quest-RewardCard-Widget_C'Default__Quest-RewardCard-Widget_C'",
+      "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.21"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "Quest-RewardCard-Widget_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'Quest-RewardCard-Widget_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/Campaign/Quest-RewardCard-Widget.13"
+      }
+    }
+  }
+]

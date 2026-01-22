@@ -1,0 +1,3492 @@
+[
+  {
+    "Type": "CommonTextBlock",
+    "Name": "Label",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CommonTextBlock'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Text": {
+        "Namespace": "",
+        "Key": "D086B8BB4C0B03DEDD36FE8B640B7BA4",
+        "SourceString": "ADD GADGET",
+        "LocalizedString": "ADD GADGET"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'BurbankSmall'",
+          "ObjectPath": "/FortUILibrary/Fonts/BurbankSmall.0"
+        },
+        "TypefaceFontName": "Black",
+        "Size": 13.0
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.15"
+      },
+      "bIsVariable": true,
+      "RenderOpacity": 0.75
+    }
+  },
+  {
+    "Type": "CommonWidgetSwitcherLegacy",
+    "Name": "StateSet",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CommonWidgetSwitcherLegacy'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TransitionDuration": 0.1,
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.StateSet.WidgetSwitcherSlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.80"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.StateSet.WidgetSwitcherSlot_1'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.81"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.Overlay_0.OverlaySlot_2'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.63"
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "GetCurrentGadget",
+    "Outer": "HeroLoadoutGadgetSlotRowContent_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CurrentGadget",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm",
+        "PropertyClass": {
+          "ObjectName": "Class'FortGadgetItemDefinition'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGadgetDefinitionBySlotIndex_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortGadgetItemDefinition'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "HandleLoadoutSlotChanged",
+    "Outer": "HeroLoadoutGadgetSlotRowContent_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "A",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "B",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "C",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "HandlePostDifferentLoadoutSlotSet",
+    "Outer": "HeroLoadoutGadgetSlotRowContent_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'FortOnItemChangedDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "HandlePreDifferentLoadoutSlotSet",
+    "Outer": "HeroLoadoutGadgetSlotRowContent_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'FortOnItemChangedDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Hover",
+    "Outer": "HeroLoadoutGadgetSlotRowContent_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'WidgetAnimationHandle'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetHeroLoadoutSlot",
+    "Outer": "HeroLoadoutGadgetSlotRowContent_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "HeroLoadout",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'FortCampaignHeroLoadoutItem'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "GadgetSlotIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SlottedHover",
+    "Outer": "HeroLoadoutGadgetSlotRowContent_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_PlayAnimation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'WidgetAnimationHandle'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SlottedUnhover",
+    "Outer": "HeroLoadoutGadgetSlotRowContent_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_PlayAnimationReverse_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'WidgetAnimationHandle'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Unhover",
+    "Outer": "HeroLoadoutGadgetSlotRowContent_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_PlayAnimationReverse_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'WidgetAnimationHandle'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateFromLoadoutSlot",
+    "Outer": "HeroLoadoutGadgetSlotRowContent_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetCurrentGadget_CurrentGadget",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortGadgetItemDefinition'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'Widget'",
+          "ObjectPath": "/Script/UMG"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateFromSlottedGadget",
+    "Outer": "HeroLoadoutGadgetSlotRowContent_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetCurrentGadget_CurrentGadget",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortGadgetItemDefinition'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_GetDisplayName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_TextToUpper_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_NoResourceBrush_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 208,
+        "Struct": {
+          "ObjectName": "Class'SlateBrush'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetCurrentGadget_CurrentGadget_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortGadgetItemDefinition'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetItemDefinitionSmallPreviewImageBrush_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 208,
+        "Struct": {
+          "ObjectName": "Class'SlateBrush'",
+          "ObjectPath": "/Script/SlateCore"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "HeroLoadoutGadgetSlotRowContent_C",
+    "Name": "Default__HeroLoadoutGadgetSlotRowContent_C",
+    "Class": "WidgetBlueprintGeneratedClass'/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.HeroLoadoutGadgetSlotRowContent_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "GadgetSlotIndex": -1,
+      "bIsFocusable": true,
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false,
+      "FlowDirectionPreference": "EFlowDirectionPreference::Culture"
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "HorizontalBox_1",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_2'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.16"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.15"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.Overlay_1.OverlaySlot_1'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.66"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Outer": "HorizontalBox_1",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Padding": {
+        "Left": 12.0
+      },
+      "Parent": {
+        "ObjectName": "HorizontalBox'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.HorizontalBox_1'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.14"
+      },
+      "Content": {
+        "ObjectName": "CommonTextBlock'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.Label'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.0"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_2",
+    "Outer": "HorizontalBox_1",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "HorizontalBox'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.HorizontalBox_1'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.14"
+      },
+      "Content": {
+        "ObjectName": "Spacer'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.Spacer_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.76"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "EmptyStateButtonImage",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Brush": {
+        "ResourceObject": {
+          "ObjectName": "MaterialInstanceConstant'M_UI_LoadoutButton_Empty'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Art/Materials/Button/M_UI_LoadoutButton_Empty.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.EmptyState.OverlaySlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.62"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "GadgetIcon_Backing",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.002125,
+        "B": 0.017642,
+        "A": 1.0,
+        "Hex": "000724"
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.GadgetIcon_Backing_Box.SizeBoxSlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.73"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible"
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "GadgetImage",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 42.0,
+          "Y": 42.0
+        }
+      },
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.75"
+      }
+    }
+  },
+  {
+    "Type": "Image",
+    "Name": "PopulatedStateButtonImage",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Image'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ColorAndOpacity": {
+        "R": 0.0,
+        "G": 0.002125,
+        "B": 0.017642,
+        "A": 1.0,
+        "Hex": "000724"
+      },
+      "Slot": {
+        "ObjectName": "OverlaySlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.PopulatedState_Button_Backing.OverlaySlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.69"
+      },
+      "Visibility": "ESlateVisibility::SelfHitTestInvisible",
+      "RenderOpacity": 0.5
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Hover_Empty",
+    "Outer": "Hover_Empty_INST",
+    "Class": "UScriptClass'MovieScene'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "9650E61A-42105F99-A1AD2CAD-58BC65BB",
+          "Name": "Label",
+          "ParentGuid": "00000000-00000000-00000000-00000000",
+          "SpawnableObjectBindingID": {
+            "Guid": "00000000-00000000-00000000-00000000",
+            "SequenceID": 0,
+            "ResolveParentIndex": -1
+          }
+        },
+        {
+          "Tags": [],
+          "Guid": "CE16AB0B-423FF795-E2551C9A-E1780C3A",
+          "Name": "EmptyStateButtonImage",
+          "ParentGuid": "00000000-00000000-00000000-00000000",
+          "SpawnableObjectBindingID": {
+            "Guid": "00000000-00000000-00000000-00000000",
+            "SequenceID": 0,
+            "ResolveParentIndex": -1
+          }
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "9650E61A-42105F99-A1AD2CAD-58BC65BB",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.Hover_Empty.MovieScene2DTransformTrack_1'",
+              "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.25"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.Hover_Empty.MovieSceneFloatTrack_1'",
+              "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.52"
+            }
+          ],
+          "Decorations": []
+        },
+        {
+          "ObjectGuid": "CE16AB0B-423FF795-E2551C9A-E1780C3A",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneWidgetMaterialTrack'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.Hover_Empty.MovieSceneWidgetMaterialTrack_0'",
+              "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.56"
+            }
+          ],
+          "Decorations": []
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 12001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 60
+      },
+      "Signature": "2217830A-4B37490D-66E5038C-A827FB2C"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "Hover_Slotted",
+    "Outer": "Hover_Slotted_INST",
+    "Class": "UScriptClass'MovieScene'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Possessables": [
+        {
+          "Tags": [],
+          "Guid": "11911A27-4632E737-17763386-4150CB7A",
+          "Name": "Label",
+          "ParentGuid": "00000000-00000000-00000000-00000000",
+          "SpawnableObjectBindingID": {
+            "Guid": "00000000-00000000-00000000-00000000",
+            "SequenceID": 0,
+            "ResolveParentIndex": -1
+          }
+        },
+        {
+          "Tags": [],
+          "Guid": "15163EE8-438FB692-32FCA1BE-0306D848",
+          "Name": "PopulatedStateButtonImage",
+          "ParentGuid": "00000000-00000000-00000000-00000000",
+          "SpawnableObjectBindingID": {
+            "Guid": "00000000-00000000-00000000-00000000",
+            "SequenceID": 0,
+            "ResolveParentIndex": -1
+          }
+        },
+        {
+          "Tags": [],
+          "Guid": "3AB96B2F-49FE4670-E09056BE-798200DE",
+          "Name": "GadgetIcon_Backing",
+          "ParentGuid": "00000000-00000000-00000000-00000000",
+          "SpawnableObjectBindingID": {
+            "Guid": "00000000-00000000-00000000-00000000",
+            "SequenceID": 0,
+            "ResolveParentIndex": -1
+          }
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "11911A27-4632E737-17763386-4150CB7A",
+          "Tracks": [
+            {
+              "ObjectName": "MovieScene2DTransformTrack'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieScene2DTransformTrack_1'",
+              "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.26"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneFloatTrack_0'",
+              "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.53"
+            }
+          ],
+          "Decorations": []
+        },
+        {
+          "ObjectGuid": "15163EE8-438FB692-32FCA1BE-0306D848",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneColorTrack'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneColorTrack_0'",
+              "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.45"
+            },
+            {
+              "ObjectName": "MovieSceneFloatTrack'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneFloatTrack_2'",
+              "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.54"
+            }
+          ],
+          "Decorations": []
+        },
+        {
+          "ObjectGuid": "3AB96B2F-49FE4670-E09056BE-798200DE",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneColorTrack'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneColorTrack_1'",
+              "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.46"
+            }
+          ],
+          "Decorations": []
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 12001
+            }
+          }
+        }
+      },
+      "DisplayRate": {
+        "Numerator": 60
+      },
+      "Signature": "F4F6F71B-4818762B-9D90C090-8DE783CE"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Outer": "MovieScene2DTransformTrack_1",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0060425904,
+              "LeaveTangent": 0.0060425904,
+              "ArriveTangentWeight": 12.831405,
+              "LeaveTangentWeight": 12.831405,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 12.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "EvalOptions": {
+        "CompletionMode": "EMovieSceneCompletionMode::KeepState"
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.Hover_Empty.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.27"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.Hover_Empty.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.28"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 12000
+            }
+          }
+        }
+      },
+      "Signature": "A04149F5-44C3842B-2447A298-72EF368F"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformSection",
+    "Name": "MovieScene2DTransformSection_0",
+    "Outer": "MovieScene2DTransformTrack_1",
+    "Class": "UScriptClass'MovieScene2DTransformSection'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Translation": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.006043,
+              "LeaveTangent": 0.006043,
+              "ArriveTangentWeight": 12.831405,
+              "LeaveTangentWeight": 12.831405,
+              "TangentWeightMode": 3
+            },
+            "InterpMode": 2,
+            "TangentMode": 1
+          },
+          {
+            "Value": 12.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "EvalOptions": {
+        "CompletionMode": "EMovieSceneCompletionMode::KeepState"
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseInFunction'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.33"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0.EaseOutFunction'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.34"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 12000
+            }
+          }
+        }
+      },
+      "Signature": "7E46E3BF-4F5811D6-D507639F-4AC7C064"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_1",
+    "Outer": "Hover_Empty",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.Hover_Empty.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.23"
+        }
+      ],
+      "EvaluationFieldGuid": "FB6860EE-42AFF121-4A5D3E9D-A2FC0CDA",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.Hover_Empty.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.23"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 12000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "FB6860EE-42AFF121-4A5D3E9D-A2FC0CDA"
+    }
+  },
+  {
+    "Type": "MovieScene2DTransformTrack",
+    "Name": "MovieScene2DTransformTrack_1",
+    "Outer": "Hover_Slotted",
+    "Class": "UScriptClass'MovieScene2DTransformTrack'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderTransform",
+        "PropertyPath": "RenderTransform",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieScene2DTransformSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.24"
+        }
+      ],
+      "EvaluationFieldGuid": "7B9D7E85-4DB0DA67-04716690-B17B363F",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieScene2DTransformSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+              "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.24"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 12000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "7B9D7E85-4DB0DA67-04716690-B17B363F"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieScene2DTransformSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieScene2DTransformSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneParameterSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneParameterSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieScene2DTransformSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieScene2DTransformSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneColorSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneColorSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneColorSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneColorSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneFloatSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneFloatSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneColorSection",
+    "Name": "MovieSceneColorSection_0",
+    "Outer": "MovieSceneColorTrack_0",
+    "Class": "UScriptClass'MovieSceneColorSection'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RedCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.003035,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "GreenCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.002125,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.016807,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "BlueCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.017642,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.132868,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "AlphaCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          }
+        ],
+        "Values": [
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseInFunction'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.35"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneColorTrack_0.MovieSceneColorSection_0.EaseOutFunction'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.36"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 12000
+            }
+          }
+        }
+      },
+      "Signature": "B28A381B-45AC6DB6-1F71FB87-3FC98CEF"
+    }
+  },
+  {
+    "Type": "MovieSceneColorSection",
+    "Name": "MovieSceneColorSection_0",
+    "Outer": "MovieSceneColorTrack_1",
+    "Class": "UScriptClass'MovieSceneColorSection'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "GreenCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.002125,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.005,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "BlueCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.017642,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.04,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneColorTrack_1.MovieSceneColorSection_0.EaseInFunction'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.37"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneColorTrack_1.MovieSceneColorSection_0.EaseOutFunction'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.38"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 12000
+            }
+          }
+        }
+      },
+      "Signature": "9E2CADD4-4826D52A-6FBB72A8-9B633EE5"
+    }
+  },
+  {
+    "Type": "MovieSceneColorTrack",
+    "Name": "MovieSceneColorTrack_0",
+    "Outer": "Hover_Slotted",
+    "Class": "UScriptClass'MovieSceneColorTrack'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "ColorAndOpacity",
+        "PropertyPath": "ColorAndOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneColorSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.43"
+        }
+      ],
+      "EvaluationFieldGuid": "3DF82EE5-439DC668-19B74385-0DA12A7E",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+              "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.43"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 12000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "3DF82EE5-439DC668-19B74385-0DA12A7E"
+    }
+  },
+  {
+    "Type": "MovieSceneColorTrack",
+    "Name": "MovieSceneColorTrack_1",
+    "Outer": "Hover_Slotted",
+    "Class": "UScriptClass'MovieSceneColorTrack'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "ColorAndOpacity",
+        "PropertyPath": "ColorAndOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneColorSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneColorTrack_1.MovieSceneColorSection_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.44"
+        }
+      ],
+      "EvaluationFieldGuid": "D3AE1C26-4A9CAF44-04936BA4-D34CDA82",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneColorSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneColorTrack_1.MovieSceneColorSection_0'",
+              "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.44"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 12000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "D3AE1C26-4A9CAF44-04936BA4-D34CDA82"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Outer": "Hover_Empty_INST",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 4,
+                  "Capacity": 4
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 3,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 12000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.Hover_Empty.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.23"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.Hover_Empty.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+                "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.49"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneParameterSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.Hover_Empty.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+                "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.55"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 2
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneParameterSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.Hover_Empty.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+                "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.55"
+              },
+              "EntityID": 1
+            },
+            "SharedMetaDataIndex": 2
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "9650E61A-42105F99-A1AD2CAD-58BC65BB"
+          },
+          {
+            "ObjectBindingID": "9650E61A-42105F99-A1AD2CAD-58BC65BB"
+          },
+          {
+            "ObjectBindingID": "CE16AB0B-423FF795-E2551C9A-E1780C3A"
+          }
+        ]
+      },
+      "DeterminismFences": [
+        {
+          "FrameNumber": {
+            "Value": 12000
+          },
+          "bInclusive": false
+        }
+      ],
+      "CompiledSignature": "0A630FA0-4E1CF2ED-BD7C0E81-EBD06CB4",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": "EMovieSceneSequenceCompilerMask::EntityComponentField",
+      "AllocatedMask": "EMovieSceneSequenceCompilerMask::EntityComponentField"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Outer": "Hover_Slotted_INST",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 5,
+                  "Capacity": 5
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 2,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 3,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 4,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": 0
+              },
+              "DataID": {
+                "EntryIndex": -1
+              }
+            },
+            "ChildNodes": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 1,
+                  "Capacity": 1
+                }
+              ],
+              "Items": [
+                {
+                  "Range": {
+                    "LowerBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 0
+                      }
+                    },
+                    "UpperBound": {
+                      "Type": 1,
+                      "Value": {
+                        "Value": 12000
+                      }
+                    }
+                  },
+                  "Parent": {
+                    "ChildrenHandle": {
+                      "EntryIndex": -1
+                    },
+                    "Index": 0
+                  },
+                  "ChildrenID": {
+                    "EntryIndex": -1
+                  },
+                  "DataID": {
+                    "EntryIndex": 0
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieScene2DTransformSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieScene2DTransformTrack_1.MovieScene2DTransformSection_0'",
+                "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.24"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+                "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.50"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneColorSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneColorTrack_0.MovieSceneColorSection_0'",
+                "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.43"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 2
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneFloatSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+                "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.51"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 3
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneColorSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneColorTrack_1.MovieSceneColorSection_0'",
+                "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.44"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 4
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "11911A27-4632E737-17763386-4150CB7A"
+          },
+          {
+            "ObjectBindingID": "11911A27-4632E737-17763386-4150CB7A"
+          },
+          {
+            "ObjectBindingID": "15163EE8-438FB692-32FCA1BE-0306D848"
+          },
+          {
+            "ObjectBindingID": "15163EE8-438FB692-32FCA1BE-0306D848"
+          },
+          {
+            "ObjectBindingID": "3AB96B2F-49FE4670-E09056BE-798200DE"
+          }
+        ]
+      },
+      "DeterminismFences": [
+        {
+          "FrameNumber": {
+            "Value": 12000
+          },
+          "bInclusive": false
+        }
+      ],
+      "CompiledSignature": "1FAAC24A-46561C3F-95EDA3B6-F507F0A6",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": "EMovieSceneSequenceCompilerMask::EntityComponentField",
+      "AllocatedMask": "EMovieSceneSequenceCompilerMask::EntityComponentField"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_1",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.75,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.Hover_Empty.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.29"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.Hover_Empty.MovieSceneFloatTrack_1.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.30"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 12000
+            }
+          }
+        }
+      },
+      "Signature": "E19DDE29-461B351A-C3A4CC87-EA57520E"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_0",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.75,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 1.0,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.39"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneFloatTrack_0.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.40"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 12000
+            }
+          }
+        }
+      },
+      "Signature": "15994963-4B223DC4-E13065BC-618C5EAD"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatSection",
+    "Name": "MovieSceneFloatSection_0",
+    "Outer": "MovieSceneFloatTrack_2",
+    "Class": "UScriptClass'MovieSceneFloatSection'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatCurve": {
+        "PreInfinityExtrap": "RCCE_Constant",
+        "PostInfinityExtrap": "RCCE_Constant",
+        "Times": [
+          {
+            "Value": 0
+          },
+          {
+            "Value": 12000
+          }
+        ],
+        "Values": [
+          {
+            "Value": 0.5,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          },
+          {
+            "Value": 0.75,
+            "Tangent": {
+              "ArriveTangent": 0.0,
+              "LeaveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangentWeight": 0.0,
+              "TangentWeightMode": 0
+            },
+            "InterpMode": 2,
+            "TangentMode": 0
+          }
+        ],
+        "DefaultValue": 0.0,
+        "bHasDefaultValue": false,
+        "TickResolution": {
+          "Numerator": 60000,
+          "Denominator": 1
+        },
+        "bShowCurve": false,
+        "StructFallback": null
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseInFunction'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.41"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneFloatTrack_2.MovieSceneFloatSection_0.EaseOutFunction'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.42"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 12000
+            }
+          }
+        }
+      },
+      "Signature": "5C96D8E6-416881F7-95B72397-C468AB44"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_1",
+    "Outer": "Hover_Empty",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.Hover_Empty.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.49"
+        }
+      ],
+      "EvaluationFieldGuid": "B44194AD-4976A285-ECD3CEA0-2A694BD2",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.Hover_Empty.MovieSceneFloatTrack_1.MovieSceneFloatSection_0'",
+              "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.49"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 12000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "B44194AD-4976A285-ECD3CEA0-2A694BD2"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_0",
+    "Outer": "Hover_Slotted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.50"
+        }
+      ],
+      "EvaluationFieldGuid": "9CAA81BE-418050FE-B81CB4A2-0C59CC27",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneFloatTrack_0.MovieSceneFloatSection_0'",
+              "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.50"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 12000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "9CAA81BE-418050FE-B81CB4A2-0C59CC27"
+    }
+  },
+  {
+    "Type": "MovieSceneFloatTrack",
+    "Name": "MovieSceneFloatTrack_2",
+    "Outer": "Hover_Slotted",
+    "Class": "UScriptClass'MovieSceneFloatTrack'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PropertyBinding": {
+        "PropertyName": "RenderOpacity",
+        "PropertyPath": "RenderOpacity",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneFloatSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.51"
+        }
+      ],
+      "EvaluationFieldGuid": "1B25F5E5-4BFB9B77-65D19E88-5AB25B5F",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneFloatSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted.MovieSceneFloatTrack_2.MovieSceneFloatSection_0'",
+              "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.51"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 12000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "1B25F5E5-4BFB9B77-65D19E88-5AB25B5F"
+    }
+  },
+  {
+    "Type": "MovieSceneParameterSection",
+    "Name": "MovieSceneParameterSection_0",
+    "Outer": "MovieSceneWidgetMaterialTrack_0",
+    "Class": "UScriptClass'MovieSceneParameterSection'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ScalarParameterNamesAndCurves": [
+        {
+          "ParameterCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 12000
+              }
+            ],
+            "Values": [
+              {
+                "Value": 0.0,
+                "Tangent": {
+                  "ArriveTangent": 0.00021259183,
+                  "LeaveTangent": 0.00021259183,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 1
+              },
+              {
+                "Value": 1.0,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          },
+          "ParameterName": "AnimateHover"
+        },
+        {
+          "ParameterCurve": {
+            "PreInfinityExtrap": "RCCE_Constant",
+            "PostInfinityExtrap": "RCCE_Constant",
+            "Times": [
+              {
+                "Value": 0
+              },
+              {
+                "Value": 9000
+              },
+              {
+                "Value": 12000
+              }
+            ],
+            "Values": [
+              {
+                "Value": 0.0,
+                "Tangent": {
+                  "ArriveTangent": 2.4036217E-05,
+                  "LeaveTangent": 2.4036217E-05,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 1
+              },
+              {
+                "Value": 0.125,
+                "Tangent": {
+                  "ArriveTangent": 0.0,
+                  "LeaveTangent": 0.0,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 0
+              },
+              {
+                "Value": 0.0,
+                "Tangent": {
+                  "ArriveTangent": -6.506045E-05,
+                  "LeaveTangent": -6.506045E-05,
+                  "ArriveTangentWeight": 0.0,
+                  "LeaveTangentWeight": 0.0,
+                  "TangentWeightMode": 0
+                },
+                "InterpMode": 2,
+                "TangentMode": 1
+              }
+            ],
+            "DefaultValue": 0.0,
+            "bHasDefaultValue": false,
+            "TickResolution": {
+              "Numerator": 60000,
+              "Denominator": 1
+            },
+            "bShowCurve": false,
+            "StructFallback": null
+          },
+          "ParameterName": "AnimateIconPosition_V"
+        }
+      ],
+      "EvalOptions": {
+        "CompletionMode": "EMovieSceneCompletionMode::KeepState"
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.Hover_Empty.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0.EaseInFunction'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.31"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.Hover_Empty.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0.EaseOutFunction'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.32"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 12000
+            }
+          }
+        }
+      },
+      "Signature": "1ABB76D4-4239AADC-5C4712A1-C4D186B5"
+    }
+  },
+  {
+    "Type": "MovieSceneWidgetMaterialTrack",
+    "Name": "MovieSceneWidgetMaterialTrack_0",
+    "Outer": "Hover_Empty",
+    "Class": "UScriptClass'MovieSceneWidgetMaterialTrack'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BrushPropertyNamePath": [
+        "Brush"
+      ],
+      "TrackName": "Brush",
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneParameterSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.Hover_Empty.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.55"
+        }
+      ],
+      "EvaluationFieldGuid": "9C2F61E6-49CC0875-33FE81A5-8D347533",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneParameterSection'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.Hover_Empty.MovieSceneWidgetMaterialTrack_0.MovieSceneParameterSection_0'",
+              "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.55"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Inclusive",
+                "Value": {
+                  "Value": 12000
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "9C2F61E6-49CC0875-33FE81A5-8D347533"
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "EmptyState",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.EmptyState.OverlaySlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.62"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.StateSet.WidgetSwitcherSlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.80"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.Overlay_0.OverlaySlot_2'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.63"
+        },
+        {
+          "ObjectName": "OverlaySlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.Overlay_0.OverlaySlot_3'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.64"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "SizeBoxSlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.74"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "Overlay_1",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.Overlay_1.OverlaySlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.65"
+        },
+        {
+          "ObjectName": "OverlaySlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.Overlay_1.OverlaySlot_1'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.66"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.Overlay_0.OverlaySlot_3'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.64"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "PopulatedState",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.PopulatedState.OverlaySlot_2'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.67"
+        },
+        {
+          "ObjectName": "OverlaySlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.PopulatedState.OverlaySlot_7'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.68"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.StateSet.WidgetSwitcherSlot_1'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.81"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "PopulatedState_Button_Backing",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Overlay'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.PopulatedState_Button_Backing.OverlaySlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.69"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.PopulatedState.OverlaySlot_2'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.67"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "EmptyState",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.EmptyState'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.57"
+      },
+      "Content": {
+        "ObjectName": "Image'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.EmptyStateButtonImage'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.17"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Outer": "Overlay_0",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.58"
+      },
+      "Content": {
+        "ObjectName": "CommonWidgetSwitcherLegacy'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.StateSet'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.1"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_3",
+    "Outer": "Overlay_0",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.58"
+      },
+      "Content": {
+        "ObjectName": "Overlay'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.Overlay_1'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.59"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "Overlay_1",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.Overlay_1'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.59"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.72"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_1",
+    "Outer": "Overlay_1",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.Overlay_1'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.59"
+      },
+      "Content": {
+        "ObjectName": "HorizontalBox'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.HorizontalBox_1'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.14"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_2",
+    "Outer": "PopulatedState",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.PopulatedState'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.60"
+      },
+      "Content": {
+        "ObjectName": "Overlay'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.PopulatedState_Button_Backing'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.61"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_7",
+    "Outer": "PopulatedState",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "Overlay'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.PopulatedState'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.60"
+      },
+      "Content": {
+        "ObjectName": "SizeBox'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.GadgetIcon_Backing_Box'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.70"
+      }
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Outer": "PopulatedState_Button_Backing",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Fill",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Fill",
+      "Parent": {
+        "ObjectName": "Overlay'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.PopulatedState_Button_Backing'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.61"
+      },
+      "Content": {
+        "ObjectName": "Image'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.PopulatedStateButtonImage'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.20"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "GadgetIcon_Backing_Box",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidthOverride": 56.0,
+      "HeightOverride": 56.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.GadgetIcon_Backing_Box.SizeBoxSlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.73"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.PopulatedState.OverlaySlot_7'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.68"
+      }
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidthOverride": 512.0,
+      "HeightOverride": 56.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.SizeBox_0.SizeBoxSlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.74"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SizeBox",
+    "Name": "SizeBox_1",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'SizeBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidthOverride": 56.0,
+      "HeightOverride": 56.0,
+      "MinDesiredWidth": 56.0,
+      "MinDesiredHeight": 56.0,
+      "bOverride_WidthOverride": true,
+      "bOverride_HeightOverride": true,
+      "bOverride_MinDesiredWidth": true,
+      "bOverride_MinDesiredHeight": true,
+      "Slots": [
+        {
+          "ObjectName": "SizeBoxSlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.SizeBox_1.SizeBoxSlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.75"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.Overlay_1.OverlaySlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.65"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "GadgetIcon_Backing_Box",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.GadgetIcon_Backing_Box'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.70"
+      },
+      "Content": {
+        "ObjectName": "Image'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.GadgetIcon_Backing'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.18"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_0",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "SizeBox'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.71"
+      },
+      "Content": {
+        "ObjectName": "Overlay'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.Overlay_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.58"
+      }
+    }
+  },
+  {
+    "Type": "SizeBoxSlot",
+    "Name": "SizeBoxSlot_0",
+    "Outer": "SizeBox_1",
+    "Class": "UScriptClass'SizeBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Padding": {
+        "Left": 5.0,
+        "Top": 5.0,
+        "Right": 5.0,
+        "Bottom": 5.0
+      },
+      "Parent": {
+        "ObjectName": "SizeBox'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.SizeBox_1'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.72"
+      },
+      "Content": {
+        "ObjectName": "Image'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.GadgetImage'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.19"
+      }
+    }
+  },
+  {
+    "Type": "Spacer",
+    "Name": "Spacer_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Spacer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Size": {
+        "X": 56.0,
+        "Y": 1.0
+      },
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.HorizontalBox_1.HorizontalBoxSlot_2'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.16"
+      }
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Hover_Empty_INST",
+    "Outer": "HeroLoadoutGadgetSlotRowContent_C",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.Hover_Empty'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.21"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "EmptyStateButtonImage",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "CE16AB0B-423FF795-E2551C9A-E1780C3A",
+          "bIsRootWidget": false,
+          "DynamicBinding": {
+            "Function": null,
+            "ResolveParamsProperty": {
+              "Path": [],
+              "ResolvedOwner": null
+            }
+          }
+        },
+        {
+          "WidgetName": "Label",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "9650E61A-42105F99-A1AD2CAD-58BC65BB",
+          "bIsRootWidget": false,
+          "DynamicBinding": {
+            "Function": null,
+            "ResolveParamsProperty": {
+              "Path": [],
+              "ResolvedOwner": null
+            }
+          }
+        }
+      ],
+      "DisplayLabel": "Hover_Empty",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST.CompiledData'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.47"
+      },
+      "Signature": "0A630FA0-4E1CF2ED-BD7C0E81-EBD06CB4"
+    }
+  },
+  {
+    "Type": "WidgetAnimation",
+    "Name": "Hover_Slotted_INST",
+    "Outer": "HeroLoadoutGadgetSlotRowContent_C",
+    "Class": "UScriptClass'WidgetAnimation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.Hover_Slotted'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.22"
+      },
+      "AnimationBindings": [
+        {
+          "WidgetName": "PopulatedStateButtonImage",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "15163EE8-438FB692-32FCA1BE-0306D848",
+          "bIsRootWidget": false,
+          "DynamicBinding": {
+            "Function": null,
+            "ResolveParamsProperty": {
+              "Path": [],
+              "ResolvedOwner": null
+            }
+          }
+        },
+        {
+          "WidgetName": "GadgetIcon_Backing",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "3AB96B2F-49FE4670-E09056BE-798200DE",
+          "bIsRootWidget": false,
+          "DynamicBinding": {
+            "Function": null,
+            "ResolveParamsProperty": {
+              "Path": [],
+              "ResolvedOwner": null
+            }
+          }
+        },
+        {
+          "WidgetName": "Label",
+          "SlotWidgetName": "None",
+          "AnimationGuid": "11911A27-4632E737-17763386-4150CB7A",
+          "bIsRootWidget": false,
+          "DynamicBinding": {
+            "Function": null,
+            "ResolveParamsProperty": {
+              "Path": [],
+              "ResolvedOwner": null
+            }
+          }
+        }
+      ],
+      "DisplayLabel": "Hover_Slotted",
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST.CompiledData'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.48"
+      },
+      "Signature": "1FAAC24A-46561C3F-95EDA3B6-F507F0A6"
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "HeroLoadoutGadgetSlotRowContent_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'HeroLoadoutGadgetSlotRowContent_C:WidgetTree'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.82"
+      },
+      "Animations": [
+        {
+          "ObjectName": "WidgetAnimation'HeroLoadoutGadgetSlotRowContent_C:Hover_Empty_INST'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.77"
+        },
+        {
+          "ObjectName": "WidgetAnimation'HeroLoadoutGadgetSlotRowContent_C:Hover_Slotted_INST'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.78"
+        }
+      ],
+      "CookedPropertyGuids": [
+        {
+          "Key": "HeroLoadout",
+          "Value": "20A35ED4-400E7CEC-CDDD2C9C-2246AABE"
+        },
+        {
+          "Key": "GadgetSlotIndex",
+          "Value": "9A175618-43014F6A-BFA74199-604BA458"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'CommonUserWidget'",
+      "ObjectPath": "/Script/CommonUI"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:SlottedUnhover'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.9"
+      },
+      {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:SlottedHover'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.8"
+      },
+      {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:Unhover'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.10"
+      },
+      {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:Hover'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.6"
+      },
+      {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:UpdateFromSlottedGadget'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.12"
+      },
+      {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:UpdateFromLoadoutSlot'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.11"
+      },
+      {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:HandlePreDifferentLoadoutSlotSet'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.5"
+      },
+      {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:SetHeroLoadoutSlot'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.7"
+      },
+      {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:HandlePostDifferentLoadoutSlotSet'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.4"
+      },
+      {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:HandleLoadoutSlotChanged'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.3"
+      },
+      {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:GetCurrentGadget'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.2"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "StateSet",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CommonWidgetSwitcherLegacy'",
+          "ObjectPath": "/Script/CommonUILegacy"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PopulatedStateButtonImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PopulatedState",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Overlay'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Label",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CommonTextBlock'",
+          "ObjectPath": "/Script/CommonUI"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GadgetImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GadgetIcon_Backing",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EmptyStateButtonImage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Image'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EmptyState",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Overlay'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Hover_Empty",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Hover_Slotted",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Transient | RepSkip",
+        "PropertyClass": {
+          "ObjectName": "Class'WidgetAnimation'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "GadgetSlotIndex",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HeroLoadout",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn",
+        "PropertyClass": {
+          "ObjectName": "Class'FortCampaignHeroLoadoutItem'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      }
+    ],
+    "FuncMap": {
+      "GetCurrentGadget": {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:GetCurrentGadget'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.2"
+      },
+      "HandleLoadoutSlotChanged": {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:HandleLoadoutSlotChanged'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.3"
+      },
+      "HandlePostDifferentLoadoutSlotSet": {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:HandlePostDifferentLoadoutSlotSet'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.4"
+      },
+      "SetHeroLoadoutSlot": {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:SetHeroLoadoutSlot'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.7"
+      },
+      "HandlePreDifferentLoadoutSlotSet": {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:HandlePreDifferentLoadoutSlotSet'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.5"
+      },
+      "UpdateFromLoadoutSlot": {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:UpdateFromLoadoutSlot'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.11"
+      },
+      "UpdateFromSlottedGadget": {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:UpdateFromSlottedGadget'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.12"
+      },
+      "Hover": {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:Hover'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.6"
+      },
+      "Unhover": {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:Unhover'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.10"
+      },
+      "SlottedHover": {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:SlottedHover'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.8"
+      },
+      "SlottedUnhover": {
+        "ObjectName": "Function'HeroLoadoutGadgetSlotRowContent_C:SlottedUnhover'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.9"
+      }
+    },
+    "ClassFlags": "CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "HeroLoadoutGadgetSlotRowContent_C'Default__HeroLoadoutGadgetSlotRowContent_C'",
+      "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.13"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Outer": "StateSet",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "CommonWidgetSwitcherLegacy'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.StateSet'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.1"
+      },
+      "Content": {
+        "ObjectName": "Overlay'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.EmptyState'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.57"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Outer": "StateSet",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "CommonWidgetSwitcherLegacy'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.StateSet'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.1"
+      },
+      "Content": {
+        "ObjectName": "Overlay'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.PopulatedState'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.60"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "HeroLoadoutGadgetSlotRowContent_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "SizeBox'HeroLoadoutGadgetSlotRowContent_C:WidgetTree.SizeBox_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/Gadgets/HeroLoadoutGadgetSlotRowContent.71"
+      }
+    }
+  }
+]

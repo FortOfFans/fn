@@ -1,0 +1,646 @@
+[
+  {
+    "Type": "Border",
+    "Name": "Border_2",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'Border'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Background": {
+        "ResourceObject": {
+          "ObjectName": "MaterialInstanceConstant'M_Border_Solid_DkBlue'",
+          "ObjectPath": "/FortUILibrary/Styles/Border/Materials/M_Border_Solid_DkBlue.0"
+        }
+      },
+      "BrushColor": {
+        "R": 1.0,
+        "G": 1.0,
+        "B": 1.0,
+        "A": 0.25,
+        "Hex": "3FFFFFFF"
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.Border_2.BorderSlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.1"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_2'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.18"
+      }
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Outer": "Border_2",
+    "Class": "UScriptClass'BorderSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Padding": {
+        "Left": 0.0,
+        "Top": 0.0,
+        "Right": 0.0,
+        "Bottom": 0.0
+      },
+      "Parent": {
+        "ObjectName": "Border'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.Border_2'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.0"
+      },
+      "Content": {
+        "ObjectName": "HeroLoadoutActiveAbilitiesDetailWidget_C'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.HeroLoadoutActiveAbilitiesDetailWidget'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.7"
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "SetTargetHeroLoadoutSlot",
+    "Outer": "HeroLoadoutSlotTooltipDetailsPanel_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Loadout",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'FortCampaignHeroLoadoutItem'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "SlotName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "SlotType",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EHeroLoadoutSlotType'",
+          "ObjectPath": "/Script/SaveTheWorldUI"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateFromGadgetSlot",
+    "Outer": "HeroLoadoutSlotTooltipDetailsPanel_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateFromHeroSlot",
+    "Outer": "HeroLoadoutSlotTooltipDetailsPanel_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Temp_byte_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_NameName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ESlateVisibility'",
+          "ObjectPath": "/Script/UMG"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateFromTeamPerkSlot",
+    "Outer": "HeroLoadoutSlotTooltipDetailsPanel_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GadgetDetailsWidget_C",
+    "Name": "GadgetDetailsWidget",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'/SaveTheWorld/UI/Foundation/Items/Details/GadgetDetailsWidget.GadgetDetailsWidget_C'",
+    "Template": {
+      "ObjectName": "GadgetDetailsWidget_C'Default__GadgetDetailsWidget_C'",
+      "ObjectPath": "/SaveTheWorld/UI/Foundation/Items/Details/GadgetDetailsWidget.11"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.17"
+      },
+      "FlowDirectionPreference": "EFlowDirectionPreference::Inherit"
+    }
+  },
+  {
+    "Type": "HeroLoadoutActiveAbilitiesDetailWidget_C",
+    "Name": "HeroLoadoutActiveAbilitiesDetailWidget",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'/SaveTheWorld/UI/Foundation/Items/Details/HeroLoadoutActiveAbilitiesDetailWidget.HeroLoadoutActiveAbilitiesDetailWidget_C'",
+    "Template": {
+      "ObjectName": "HeroLoadoutActiveAbilitiesDetailWidget_C'Default__HeroLoadoutActiveAbilitiesDetailWidget_C'",
+      "ObjectPath": "/SaveTheWorld/UI/Foundation/Items/Details/HeroLoadoutActiveAbilitiesDetailWidget.12"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IsHeroLoadout-Tooltip": true,
+      "Slot": {
+        "ObjectName": "BorderSlot'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.Border_2.BorderSlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.1"
+      },
+      "FlowDirectionPreference": "EFlowDirectionPreference::Inherit"
+    }
+  },
+  {
+    "Type": "HeroLoadoutPerksDetailWidget_C",
+    "Name": "HeroLoadoutPerksDetailWidget",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'/SaveTheWorld/UI/Foundation/Items/Details/HeroLoadoutPerksDetailWidget.HeroLoadoutPerksDetailWidget_C'",
+    "Template": {
+      "ObjectName": "HeroLoadoutPerksDetailWidget_C'Default__HeroLoadoutPerksDetailWidget_C'",
+      "ObjectPath": "/SaveTheWorld/UI/Foundation/Items/Details/HeroLoadoutPerksDetailWidget.42"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IsHeroLoadOut-Tooltip": true,
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.16"
+      },
+      "FlowDirectionPreference": "EFlowDirectionPreference::Inherit"
+    }
+  },
+  {
+    "Type": "HeroLoadoutSlotTooltipDetailsPanel_C",
+    "Name": "Default__HeroLoadoutSlotTooltipDetailsPanel_C",
+    "Class": "WidgetBlueprintGeneratedClass'/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.HeroLoadoutSlotTooltipDetailsPanel_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false,
+      "FlowDirectionPreference": "EFlowDirectionPreference::Culture"
+    }
+  },
+  {
+    "Type": "NamedSlot",
+    "Name": "DetailsContainerSlotWidget",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'NamedSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "PanelSlot'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.DetailsContainerSlotWidget.PanelSlot_1'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.11"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "ScrollBoxSlot'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.ScrollBox.ScrollBoxSlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.13"
+      }
+    }
+  },
+  {
+    "Type": "PanelSlot",
+    "Name": "PanelSlot_1",
+    "Outer": "DetailsContainerSlotWidget",
+    "Class": "UScriptClass'PanelSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "NamedSlot'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.DetailsContainerSlotWidget'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.10"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.15"
+      }
+    }
+  },
+  {
+    "Type": "ScrollBox",
+    "Name": "ScrollBox",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'ScrollBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "ScrollBoxSlot'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.ScrollBox.ScrollBoxSlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.13"
+        }
+      ],
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "ScrollBoxSlot",
+    "Name": "ScrollBoxSlot_0",
+    "Outer": "ScrollBox",
+    "Class": "UScriptClass'ScrollBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "ScrollBox'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.ScrollBox'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.12"
+      },
+      "Content": {
+        "ObjectName": "NamedSlot'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.DetailsContainerSlotWidget'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.10"
+      }
+    }
+  },
+  {
+    "Type": "TeamPerkDetailsWidget_C",
+    "Name": "TeamPerkDetailsWidget",
+    "Outer": "WidgetTree",
+    "Class": "WidgetBlueprintGeneratedClass'/SaveTheWorld/UI/Foundation/Items/Details/TeamPerkDetailsWidget.TeamPerkDetailsWidget_C'",
+    "Template": {
+      "ObjectName": "TeamPerkDetailsWidget_C'Default__TeamPerkDetailsWidget_C'",
+      "ObjectPath": "/SaveTheWorld/UI/Foundation/Items/Details/TeamPerkDetailsWidget.25"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.19"
+      },
+      "FlowDirectionPreference": "EFlowDirectionPreference::Inherit"
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'VerticalBox'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_2'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.18"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.16"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_3'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.19"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
+          "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.17"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "PanelSlot'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.DetailsContainerSlotWidget.PanelSlot_1'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.11"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Outer": "VerticalBox_0",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.15"
+      },
+      "Content": {
+        "ObjectName": "HeroLoadoutPerksDetailWidget_C'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.HeroLoadoutPerksDetailWidget'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.8"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Outer": "VerticalBox_0",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.15"
+      },
+      "Content": {
+        "ObjectName": "GadgetDetailsWidget_C'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.GadgetDetailsWidget'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.6"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_2",
+    "Outer": "VerticalBox_0",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.15"
+      },
+      "Content": {
+        "ObjectName": "Border'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.Border_2'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.0"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_3",
+    "Outer": "VerticalBox_0",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Parent": {
+        "ObjectName": "VerticalBox'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.15"
+      },
+      "Content": {
+        "ObjectName": "TeamPerkDetailsWidget_C'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.TeamPerkDetailsWidget'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.14"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "HeroLoadoutSlotTooltipDetailsPanel_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.21"
+      },
+      "NamedSlots": [
+        "DetailsContainerSlotWidget"
+      ],
+      "InstanceNamedSlots": [
+        "DetailsContainerSlotWidget"
+      ],
+      "CookedPropertyGuids": [
+        {
+          "Key": "TargetSlotName",
+          "Value": "60164B88-4B9CAEEB-F1A1E3BF-0BBF6F0D"
+        },
+        {
+          "Key": "TargetLoadout",
+          "Value": "466AC0E0-4AAC937E-58F323A4-B94F3088"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortItemDetailsHostPanel'",
+      "ObjectPath": "/Script/FortniteUI"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'HeroLoadoutSlotTooltipDetailsPanel_C:UpdateFromGadgetSlot'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.3"
+      },
+      {
+        "ObjectName": "Function'HeroLoadoutSlotTooltipDetailsPanel_C:UpdateFromTeamPerkSlot'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.5"
+      },
+      {
+        "ObjectName": "Function'HeroLoadoutSlotTooltipDetailsPanel_C:UpdateFromHeroSlot'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.4"
+      },
+      {
+        "ObjectName": "Function'HeroLoadoutSlotTooltipDetailsPanel_C:SetTargetHeroLoadoutSlot'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.2"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "TeamPerkDetailsWidget",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'TeamPerkDetailsWidget_C'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Items/Details/TeamPerkDetailsWidget.32"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HeroLoadoutPerksDetailWidget",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HeroLoadoutPerksDetailWidget_C'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Items/Details/HeroLoadoutPerksDetailWidget.69"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HeroLoadoutActiveAbilitiesDetailWidget",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'HeroLoadoutActiveAbilitiesDetailWidget_C'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Items/Details/HeroLoadoutActiveAbilitiesDetailWidget.24"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GadgetDetailsWidget",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "WidgetBlueprintGeneratedClass'GadgetDetailsWidget_C'",
+          "ObjectPath": "/SaveTheWorld/UI/Foundation/Items/Details/GadgetDetailsWidget.27"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TargetLoadout",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FortCampaignHeroLoadoutItem'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "TargetSlotName",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "SetTargetHeroLoadoutSlot": {
+        "ObjectName": "Function'HeroLoadoutSlotTooltipDetailsPanel_C:SetTargetHeroLoadoutSlot'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.2"
+      },
+      "UpdateFromHeroSlot": {
+        "ObjectName": "Function'HeroLoadoutSlotTooltipDetailsPanel_C:UpdateFromHeroSlot'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.4"
+      },
+      "UpdateFromTeamPerkSlot": {
+        "ObjectName": "Function'HeroLoadoutSlotTooltipDetailsPanel_C:UpdateFromTeamPerkSlot'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.5"
+      },
+      "UpdateFromGadgetSlot": {
+        "ObjectName": "Function'HeroLoadoutSlotTooltipDetailsPanel_C:UpdateFromGadgetSlot'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.3"
+      }
+    },
+    "ClassFlags": "CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "HeroLoadoutSlotTooltipDetailsPanel_C'Default__HeroLoadoutSlotTooltipDetailsPanel_C'",
+      "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.9"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "HeroLoadoutSlotTooltipDetailsPanel_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "ScrollBox'HeroLoadoutSlotTooltipDetailsPanel_C:WidgetTree.ScrollBox'",
+        "ObjectPath": "/SaveTheWorld/UI/Frontend/HeroLoadout/HeroSlots/HeroLoadoutSlotTooltipDetailsPanel.12"
+      }
+    }
+  }
+]

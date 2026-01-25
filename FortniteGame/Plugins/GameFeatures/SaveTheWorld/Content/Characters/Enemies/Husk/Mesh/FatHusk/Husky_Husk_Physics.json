@@ -1,0 +1,350 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "Husky_Husk_Physics",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        2,
+        4
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'Husky_Husk_Physics:SkeletalBodySetup_4'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Mesh/FatHusk/Husky_Husk_Physics.4"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Husky_Husk_Physics:SkeletalBodySetup_5'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Mesh/FatHusk/Husky_Husk_Physics.5"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Husky_Husk_Physics:SkeletalBodySetup_7'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Mesh/FatHusk/Husky_Husk_Physics.6"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Husky_Husk_Physics:SkeletalBodySetup_8'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Mesh/FatHusk/Husky_Husk_Physics.7"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Husky_Husk_Physics:SkeletalBodySetup_10'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Mesh/FatHusk/Husky_Husk_Physics.3"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Husky_Husk_Physics:PhysicsConstraintTemplate_37'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Mesh/FatHusk/Husky_Husk_Physics.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Husky_Husk_Physics:PhysicsConstraintTemplate_40'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Mesh/FatHusk/Husky_Husk_Physics.2"
+        }
+      ],
+      "SolverSettings": {
+        "CullDistance": 1.0,
+        "bUseLinearJointSolver": false,
+        "bUseManifolds": false
+      }
+    },
+    "CollisionDisableTable": [
+      {
+        "Key": {
+          "Indices": [
+            0,
+            1
+          ]
+        },
+        "Value": false
+      },
+      {
+        "Key": {
+          "Indices": [
+            2,
+            3
+          ]
+        },
+        "Value": false
+      }
+    ]
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_37",
+    "Outer": "Husky_Husk_Physics",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "lowerarm_l",
+        "ConstraintBone1": "lowerarm_l",
+        "ConstraintBone2": "upperarm_l",
+        "Pos2": {
+          "X": 19.018997,
+          "Y": 0.4920618,
+          "Z": -0.6818745
+        },
+        "PriAxis2": {
+          "X": 0.8786423,
+          "Y": 0.42933607,
+          "Z": -0.20893486
+        },
+        "SecAxis2": {
+          "X": -0.43295336,
+          "Y": 0.900897,
+          "Z": 0.030518677
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1LimitDegrees": 60.0,
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Locked"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Locked"
+          },
+          "AngularDrive": {
+            "TwistDrive": {
+              "Stiffness": 5.0,
+              "bEnableVelocityDrive": true
+            },
+            "SwingDrive": {
+              "Stiffness": 5.0,
+              "bEnableVelocityDrive": true
+            },
+            "SlerpDrive": {
+              "Stiffness": 5.0,
+              "bEnableVelocityDrive": true
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_40",
+    "Outer": "Husky_Husk_Physics",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "lowerarm_r",
+        "ConstraintBone1": "lowerarm_r",
+        "ConstraintBone2": "upperarm_r",
+        "Pos2": {
+          "X": -19.019102,
+          "Y": -0.49204785,
+          "Z": 0.6819159
+        },
+        "PriAxis2": {
+          "X": 0.87864256,
+          "Y": 0.4293361,
+          "Z": -0.20893498
+        },
+        "SecAxis2": {
+          "X": -0.43295345,
+          "Y": 0.90089726,
+          "Z": 0.030518658
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1LimitDegrees": 60.0,
+            "Swing1Motion": "EAngularConstraintMotion::ACM_Limited",
+            "Swing2Motion": "EAngularConstraintMotion::ACM_Locked"
+          },
+          "TwistLimit": {
+            "TwistMotion": "EAngularConstraintMotion::ACM_Locked"
+          },
+          "AngularDrive": {
+            "TwistDrive": {
+              "Stiffness": 5.0,
+              "bEnableVelocityDrive": true
+            },
+            "SwingDrive": {
+              "Stiffness": 5.0,
+              "bEnableVelocityDrive": true
+            },
+            "SlerpDrive": {
+              "Stiffness": 5.0,
+              "bEnableVelocityDrive": true
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_10",
+    "Outer": "Husky_Husk_Physics",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 1.6182954,
+              "Y": 5.4618816,
+              "Z": -0.13622037
+            },
+            "Rotation": {
+              "Pitch": 0.0014753208,
+              "Yaw": 70.72565,
+              "Roll": -89.9996
+            },
+            "Radius": 13.944524,
+            "Length": 10.073574,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "head",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "7B905F5E4A7C21E973BB8E9A72EBB36F"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_4",
+    "Outer": "Husky_Husk_Physics",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 3.310103,
+              "Y": 1.391253,
+              "Z": 1.09503235E-05
+            },
+            "Rotation": {
+              "Pitch": -90.0,
+              "Yaw": -75.39199,
+              "Roll": 75.39206
+            },
+            "Radius": 11.5,
+            "Length": 10.5,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "upperarm_l",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "453396524CB87425177480AF408474B2"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_5",
+    "Outer": "Husky_Husk_Physics",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 18.444397,
+              "Y": 1.6284099,
+              "Z": 0.86431867
+            },
+            "Rotation": {
+              "Pitch": -78.75019,
+              "Yaw": -179.99983,
+              "Roll": 179.9998
+            },
+            "Radius": 9.75,
+            "Length": 25.0,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "bConsiderForBounds": false,
+      "BoneName": "lowerarm_l",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "EBF365BE4E6769E524A587B50E93C2C6"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_7",
+    "Outer": "Husky_Husk_Physics",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -5.019241,
+              "Y": 1.3912565,
+              "Z": -4.937683E-07
+            },
+            "Rotation": {
+              "Pitch": -90.0,
+              "Yaw": -75.39199,
+              "Roll": 75.39206
+            },
+            "Radius": 11.5,
+            "Length": 10.5,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "BoneName": "upperarm_r",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "74F3069343266E90C228E6BB94FF7668"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_8",
+    "Outer": "Husky_Husk_Physics",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -19.478796,
+              "Y": 1.62767,
+              "Z": 0.98275423
+            },
+            "Rotation": {
+              "Pitch": -78.75019,
+              "Yaw": -179.99983,
+              "Roll": 179.9998
+            },
+            "Radius": 9.75,
+            "Length": 25.0,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "bConsiderForBounds": false,
+      "BoneName": "lowerarm_r",
+      "CollisionTraceFlag": "ECollisionTraceFlag::CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "58ACBBD0436AAA855AFE508C36824E01"
+  }
+]

@@ -1,0 +1,2366 @@
+[
+  {
+    "Type": "AudioComponent",
+    "Name": "FeedbackAudioComp0",
+    "Outer": "Default__HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Template": {
+      "ObjectName": "AudioComponent'Default__HuskPawn_C:FeedbackAudioComp0'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.0"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Husky_Husk_Pain_Cue'",
+        "ObjectPath": "/Game/Sounds/Fort_Monster_Husky_Husk/Efforts/Husky_Husk_Pain_Cue.0"
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__HuskPawn_Husky_RiotShield_C:CollisionCylinder'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.3"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "Husky_ShieldImpact_Cue_GEN_VARIABLE",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Husky_Shield_Respawn_Cue'",
+        "ObjectPath": "/SaveTheWorld/Sounds/Fort_Gadgets/ConstructionWorker/Husky_Shield_Respawn_Cue.0"
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'HuskPawn_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NumReplicatedProperties": 1,
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'HuskPawn_Husky_RiotShield_C:SimpleConstructionScript_38'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.36"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'HuskPawn_Husky_RiotShield_C:InheritableComponentHandler'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.29"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:ExecuteUbergraph_HuskPawn_Husky_RiotShield'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.13"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:SetupImpactLocation'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.26"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:OnRep_RiotShieldBGA'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.23"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:IgnitePropaneTank'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.18"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:FSMRemovePropaneTank'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.16"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:FSMFailedToSpawnTank'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.15"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:FSMBeginPropaneTankMelee'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.14"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:BeeCloudDespawned'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.10"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:ManageBurpEffect'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.20"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:ReceiveBeginPlay'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.24"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:KillTheShield'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.19"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:BindToDeath'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.11"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:GameplayCue.Impact.Physical.Creature'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.17"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:OnBeginDance'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.21"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:OnEndDance'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.22"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:RespawnShield'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.25"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:Shield_ReSpawn_Sound'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.27"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:EnsureRiotShieldVisibility'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.12"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:ExecuteUbergraph_HuskPawn_Husky_RiotShield'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.13"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Husky_ShieldImpact_Cue",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ShieldLocation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "HuskyShieldBGAClass",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'BuildingGameplayActor'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RiotShieldBGA",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnTemplate | RepNotify",
+        "RepNotifyFunc": "OnRep_RiotShieldBGA",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'B_BGA_RiotShield_C'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/B_BGA_RiotShield.1"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_HuskPawn_Husky_RiotShield": {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:ExecuteUbergraph_HuskPawn_Husky_RiotShield'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.13"
+      },
+      "EnsureRiotShieldVisibility": {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:EnsureRiotShieldVisibility'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.12"
+      },
+      "Shield_ReSpawn_Sound": {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:Shield_ReSpawn_Sound'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.27"
+      },
+      "RespawnShield": {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:RespawnShield'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.25"
+      },
+      "OnEndDance": {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:OnEndDance'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.22"
+      },
+      "OnBeginDance": {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:OnBeginDance'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.21"
+      },
+      "GameplayCue.Impact.Physical.Creature": {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:GameplayCue.Impact.Physical.Creature'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.17"
+      },
+      "BindToDeath": {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:BindToDeath'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.11"
+      },
+      "KillTheShield": {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:KillTheShield'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.19"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:ReceiveBeginPlay'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.24"
+      },
+      "ManageBurpEffect": {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:ManageBurpEffect'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.20"
+      },
+      "BeeCloudDespawned": {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:BeeCloudDespawned'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.10"
+      },
+      "FSMBeginPropaneTankMelee": {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:FSMBeginPropaneTankMelee'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.14"
+      },
+      "FSMFailedToSpawnTank": {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:FSMFailedToSpawnTank'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.15"
+      },
+      "FSMRemovePropaneTank": {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:FSMRemovePropaneTank'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.16"
+      },
+      "IgnitePropaneTank": {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:IgnitePropaneTank'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.18"
+      },
+      "OnRep_RiotShieldBGA": {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:OnRep_RiotShieldBGA'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.23"
+      },
+      "SetupImpactLocation": {
+        "ObjectName": "Function'HuskPawn_Husky_RiotShield_C:SetupImpactLocation'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.26"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "BlueprintGeneratedClass'HuskInterface_C'",
+          "ObjectPath": "/Game/Characters/Enemies/Husk/Blueprints/HuskInterface.0"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "HuskPawn_Husky_RiotShield_C'Default__HuskPawn_Husky_RiotShield_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.28"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal",
+      "ImplementedInterfaces": "((Interface=\"/Script/Engine.BlueprintGeneratedClass'/Game/Characters/Enemies/Husk/Blueprints/HuskInterface.HuskInterface_C'\"))"
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Outer": "Default__HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Template": {
+      "ObjectName": "CapsuleComponent'Default__HuskPawn_C:CollisionCylinder'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.2"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FortAbilitySystemComponent",
+    "Name": "AbilitySystemComponent",
+    "Outer": "Default__HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'FortAbilitySystemComponent'",
+    "Template": {
+      "ObjectName": "FortAbilitySystemComponent'Default__HuskPawn_C:AbilitySystemComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ActiveGameplayCues": {
+        "Owner": {
+          "ObjectName": "FortAbilitySystemComponent'Default__HuskPawn_Husky_RiotShield_C:AbilitySystemComponent'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.4"
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortEmoteComponent",
+    "Name": "FortEmoteComponent",
+    "Outer": "Default__HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'FortEmoteComponent'",
+    "Template": {
+      "ObjectName": "FortEmoteComponent'Default__HuskPawn_C:FortEmoteComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FortMovementComp_AIChar",
+    "Name": "CharMoveComp",
+    "Outer": "Default__HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'FortMovementComp_AIChar'",
+    "Template": {
+      "ObjectName": "FortMovementComp_AIChar'Default__HuskPawn_C:CharMoveComp'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RotationRate": {
+        "Pitch": 0.0,
+        "Yaw": 110.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "FortPooledSkelMeshComponent",
+    "Name": "CharacterMesh0",
+    "Outer": "Default__HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'FortPooledSkelMeshComponent'",
+    "Template": {
+      "ObjectName": "FortPooledSkelMeshComponent'Default__HuskPawn_C:CharacterMesh0'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.6"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'HuskyHusk_Sheild_AnimBlueprint_Child_C'",
+        "ObjectPath": "/SaveTheWorld/Animation/Game/Enemies/HuskyHusk_Riot/HuskyHusk_Sheild_AnimBlueprint_Child.0"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'Husky_Husk'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Mesh/FatHusk/Husky_Husk.10"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'Husky_Husk'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Mesh/FatHusk/Husky_Husk.10"
+      },
+      "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::AlwaysTickPoseAndRefreshBones",
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'M_Husk_HuskyRiot_Body'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk_HuskyRiot/Materials/M_Husk_HuskyRiot_Body.0"
+        }
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_Pawn",
+        "CollisionEnabled": "ECollisionEnabled::QueryOnly",
+        "CollisionProfileName": "FortPawnMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponMulti",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "FCC_Trace_Weapon",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileMesh",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponWorldMulti",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponPawnAndWorldMulti",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "FCC_Object_Water",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        },
+        "MassInKgOverride": 153.22787
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__HuskPawn_Husky_RiotShield_C:CollisionCylinder'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.3"
+      }
+    }
+  },
+  {
+    "Type": "FortSoundIndicatorComponent",
+    "Name": "SoundIndicatorComponent",
+    "Outer": "Default__HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'FortSoundIndicatorComponent'",
+    "Template": {
+      "ObjectName": "FortSoundIndicatorComponent'Default__HuskPawn_C:SoundIndicatorComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.7"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FortSoundLibraryComponent",
+    "Name": "SoundLibraryComponent",
+    "Outer": "Default__HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'FortSoundLibraryComponent'",
+    "Template": {
+      "ObjectName": "FortSoundLibraryComponent'Default__HuskPawn_C:SoundLibraryComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.8"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "Function",
+    "Name": "BeeCloudDespawned",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Cloud",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'FortProjectileBase'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BindToDeath",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EnsureRiotShieldVisibility",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Net | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_HuskPawn_Husky_RiotShield",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Temp_byte_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EPhysicalSurface'",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_7",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_8",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_9",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_10",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_11",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_12",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_13",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_14",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Pawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "K2Node_Event_RemainingFuseTime",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_JustDrop",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Cloud",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortProjectileBase'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_Enabled",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentRotation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeTransform_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 96,
+        "Struct": {
+          "ObjectName": "Class'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDead_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_DamagedActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_Damage",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_InstigatedBy",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_DamageCauser",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_HitLocation",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_FHitComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_BoneName",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_Momentum",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnBuildingGameplayActor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'BuildingGameplayActor'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsB_BGA_Riot_Shield",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'B_BGA_RiotShield_C'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/B_BGA_RiotShield.1"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetCurrentMontage_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AnimMontage'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_GameplayCueEvent_EventType",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EGameplayCueEvent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_GameplayCueEvent_Parameters",
+        "Flags": "RF_Public",
+        "ElementSize": 224,
+        "PropertyFlags": "ConstParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'GameplayCueParameters'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_SetupImpactLocation_Location",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SetupImpactLocation_Directional_Emitter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_SetupImpactLocation_NewParam",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetHitResult_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "CallFunc_GetFortPhysicalSurface_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EPhysicalSurface'",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bBlockingHit",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bInitialOverlap",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Time",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Distance",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Location",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Normal",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactNormal",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_PhysMat",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PhysicalMaterial'",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_HitBoneName",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_BoneName",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_HitItem",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_ElementIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_FaceIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceStart",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceEnd",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetImpactPhysicalSurfaceSound_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'SoundBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetTimelineLength_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'PawnDamagedSignature__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FMin_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_AttachToComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_Contains_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_Contains_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_15",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Temp_object_Variable_16",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_LastIndex_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Select_Default_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Clamp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnEmitterAtLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_AttachToComponent_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_B_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FMin_B_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Delay_Duration_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "FSMBeginPropaneTankMelee",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "FSMFailedToSpawnTank",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "FSMRemovePropaneTank",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GameplayCue.Impact.Physical.Creature",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'HuskPawn_C:GameplayCue.Impact.Physical.Creature'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.21"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "EventType",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EGameplayCueEvent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Parameters",
+        "Flags": "RF_Public",
+        "ElementSize": 224,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'GameplayCueParameters'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "IgnitePropaneTank",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Pawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "RemainingFuseTime",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "JustDrop",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "KillTheShield",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamagedActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Damage",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InstigatedBy",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamageCauser",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitLocation",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FHitComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "BoneName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Momentum",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ManageBurpEffect",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Enabled",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBeginDance",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'EnemyPawn_Parent_C:OnBeginDance'",
+      "ObjectPath": "/Game/Characters/Enemies/Blueprints/EnemyPawn_Parent.51"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnEndDance",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'EnemyPawn_Parent_C:OnEndDance'",
+      "ObjectPath": "/Game/Characters/Enemies/Blueprints/EnemyPawn_Parent.56"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRep_RiotShieldBGA",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_AttachToComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'HuskPawn_C:ReceiveBeginPlay'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.33"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "RespawnShield",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetupImpactLocation",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Montage",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Location",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Directional_Emitter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "NewParam",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "OverrideEmitter?",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LocalAttack_DOWN_Emitter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LocalAttack_UP_Emitter",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "SocketName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ObjectObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ObjectObject_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ObjectObject_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetSocketTransform_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 96,
+        "Struct": {
+          "ObjectName": "Class'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Location",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Rotation",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Scale",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Shield_ReSpawn_Sound",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Net | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "HuskPawn_Husky_RiotShield_C",
+    "Name": "Default__HuskPawn_Husky_RiotShield_C",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.HuskPawn_Husky_RiotShield_C'",
+    "Template": {
+      "ObjectName": "HuskPawn_C'Default__HuskPawn_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.43"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "HuskyShieldBGAClass": {
+        "ObjectName": "BlueprintGeneratedClass'B_BGA_RiotShield_C'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/B_BGA_RiotShield.1"
+      },
+      "Additive Hit React Montage": {
+        "ObjectName": "AnimMontage'HuskyAdditiveHitReactMontage'",
+        "ObjectPath": "/SaveTheWorld/Animation/Game/Enemies/HuskHusky/Montage/HuskyAdditiveHitReactMontage.0"
+      },
+      "FrozenHuskMeshScale": {
+        "X": 1.25,
+        "Y": 1.25,
+        "Z": 1.1
+      },
+      "Should Use Aux Elemental Particles": true,
+      "DefaultNavFilter": {
+        "ObjectName": "BlueprintGeneratedClass'NavFilter_HuskyCheapWalls_C'",
+        "ObjectPath": "/Game/AI/NavFilters/NavFilter_HuskyCheapWalls.0"
+      },
+      "HotspotType": "EFortHotSpotSlot::MeleeHuge",
+      "ImpactPhysicalSurfaceSounds[6]": {
+        "ObjectName": "SoundCue'Husky_Husk_Body_Impact_Cue'",
+        "ObjectPath": "/Game/Sounds/Fort_Monster_Husk/SFX/Husky_Husk_Body_Impact_Cue.0"
+      },
+      "ImpactPhysicalSurfaceSounds[13]": null,
+      "DefaultGameplayAbilitySets": [
+        {
+          "ObjectName": "FortAbilitySet'GAS_RiotHusky_NonCombat'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/RiotShield/GAS_RiotHusky_NonCombat.0"
+        },
+        {
+          "ObjectName": "FortAbilitySet'GAS_HuskATLASZapHighDamage'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Base/GAS_HuskATLASZapHighDamage.0"
+        },
+        {
+          "ObjectName": "FortAbilitySet'GAS_RiotHusky_Attacks'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/RiotShield/GAS_RiotHusky_Attacks.0"
+        }
+      ],
+      "AIPawnAbilitySystemComponent": {
+        "ObjectName": "FortAbilitySystemComponent'Default__HuskPawn_Husky_RiotShield_C:AbilitySystemComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.4"
+      },
+      "SoundIndicatorComponent": {
+        "ObjectName": "FortSoundIndicatorComponent'Default__HuskPawn_Husky_RiotShield_C:SoundIndicatorComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.8"
+      },
+      "bUpdateMeshComponentUpdateFlagOnServer": false,
+      "PawnStatHandle": {
+        "RowName": "HuskGeneric_Husky_RiotShield"
+      },
+      "PushSize": "EFortPawnPushSize::FPPS_Large",
+      "DefaultFootstepSound": {
+        "ObjectName": "SoundCue'Husky_Husk_Step_Walk_Dirt_Cue'",
+        "ObjectPath": "/SaveTheWorld/Sounds/Fort_Step_Sounds/Husk/Husky_Husk_Step_Walk_Dirt_Cue.0"
+      },
+      "DefaultFastFootstepSound": {
+        "ObjectName": "SoundCue'Husky_Husk_Step_Run_Dirt_Cue'",
+        "ObjectPath": "/SaveTheWorld/Sounds/Fort_Step_Sounds/Husk/Husky_Husk_Step_Run_Dirt_Cue.0"
+      },
+      "SoundLibraryComponent": {
+        "ObjectName": "FortSoundLibraryComponent'Default__HuskPawn_Husky_RiotShield_C:SoundLibraryComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.9"
+      },
+      "EmoteComponent": {
+        "ObjectName": "FortEmoteComponent'Default__HuskPawn_Husky_RiotShield_C:FortEmoteComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.5"
+      },
+      "EmoteMusicClockComponent": {
+        "ObjectName": "MusicClockComponent'Default__HuskPawn_Husky_RiotShield_C:EmoteMusicClockComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.30"
+      },
+      "DefaultFeedback": {
+        "ObjectName": "FortFeedbackBank'Enemy_Husky_Husk_Feedback'",
+        "ObjectPath": "/Game/Characters/Feedback/Enemy_Husky_Husk_Feedback.0"
+      },
+      "VocalChords": [
+        {
+          "FeedbackAudioComponent": {
+            "ObjectName": "AudioComponent'Default__HuskPawn_Husky_RiotShield_C:FeedbackAudioComp0'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.0"
+          },
+          "ReplicatedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "PendingSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "QueuedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "CurrentSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          }
+        }
+      ],
+      "AbilitySystemComponent": {
+        "ObjectName": "FortAbilitySystemComponent'Default__HuskPawn_Husky_RiotShield_C:AbilitySystemComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.4"
+      },
+      "GameplayTags": [
+        "NPC.Behavior.UsesMeleeOnRangedCooldown",
+        "NPC.CharacterType.Husk.RiotShield"
+      ],
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "9C9DAE82406445DF60FD7CB07229BE0A",
+        "SourceString": "Riot Husky",
+        "LocalizedString": "Riot Husky"
+      },
+      "HealthBarWidth": 112.5,
+      "Mesh": {
+        "ObjectName": "FortPooledSkelMeshComponent'Default__HuskPawn_Husky_RiotShield_C:CharacterMesh0'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.7"
+      },
+      "CharacterMovement": {
+        "ObjectName": "FortMovementComp_AIChar'Default__HuskPawn_Husky_RiotShield_C:CharMoveComp'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.6"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__HuskPawn_Husky_RiotShield_C:CollisionCylinder'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.3"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__HuskPawn_Husky_RiotShield_C:CollisionCylinder'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.3"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MusicClockComponent",
+    "Name": "EmoteMusicClockComponent",
+    "Outer": "Default__HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'MusicClockComponent'",
+    "Template": {
+      "ObjectName": "MusicClockComponent'Default__HuskPawn_C:EmoteMusicClockComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.45"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent_58",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "ShieldLocation_GEN_VARIABLE",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 48.017094,
+        "Y": -0.55438995,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_38",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'HuskPawn_Husky_RiotShield_C:Husky_ShieldImpact_Cue_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.1"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Sound",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bAutoActivate",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "CollisionCylinder",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "66E0B40F-4131EE8E-B4798DA4-089718D6",
+      "InternalVariableName": "Husky_ShieldImpact_Cue"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_38",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'HuskPawn_Husky_RiotShield_C:ShieldLocation_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.32"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "RelativeLocation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SceneComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Y",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "RelativeRotation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SceneComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Yaw",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Rotator'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "CollisionCylinder",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "5EC907CB-4E39ABE2-37BDC896-BA940F7F",
+      "InternalVariableName": "ShieldLocation"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_68",
+    "Outer": "SimpleConstructionScript_38",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'HuskPawn_Husky_RiotShield_C:SceneComponent_58'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.31"
+      },
+      "VariableGuid": "4D3A059E-00000000-00000000-00000000",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_38",
+    "Outer": "HuskPawn_Husky_RiotShield_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'HuskPawn_Husky_RiotShield_C:SimpleConstructionScript_38.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.34"
+        },
+        {
+          "ObjectName": "SCS_Node'HuskPawn_Husky_RiotShield_C:SimpleConstructionScript_38.SCS_Node_0'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.33"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'HuskPawn_Husky_RiotShield_C:SimpleConstructionScript_38.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.34"
+        },
+        {
+          "ObjectName": "SCS_Node'HuskPawn_Husky_RiotShield_C:SimpleConstructionScript_38.SCS_Node_0'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.33"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'HuskPawn_Husky_RiotShield_C:SimpleConstructionScript_38.SCS_Node_68'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Husky_RiotShield.35"
+      }
+    }
+  }
+]

@@ -1,0 +1,722 @@
+[
+  {
+    "Type": "AudioComponent",
+    "Name": "FeedbackAudioComp0",
+    "Outer": "Default__HuskPawn_Bombshell_Poison_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Template": {
+      "ObjectName": "AudioComponent'Default__HuskPawn_Bombshell_C:FeedbackAudioComp0'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell.0"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Husk_Wakeup_Cue'",
+        "ObjectPath": "/Game/Sounds/Fort_Monster_Husk/Husk_Efforts/Husk_Wakeup_Cue.0"
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__HuskPawn_Bombshell_Poison_C:CollisionCylinder'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.3"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "FireSound_GEN_VARIABLE",
+    "Outer": "HuskPawn_Bombshell_Poison_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Husk_Bee_Fireloop_cue'",
+        "ObjectPath": "/SaveTheWorld/Sounds/Fort_Monster_Husk/Husk_Bee_Efforts/Husk_Bee_Fireloop_cue.0"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "HuskPawn_Bombshell_Poison_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'HuskPawn_Bombshell_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NumReplicatedProperties": 1,
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'HuskPawn_Bombshell_Poison_C:SimpleConstructionScript_39'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.19"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'HuskPawn_Bombshell_Poison_C:InheritableComponentHandler'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.14"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'HuskPawn_Bombshell_Poison_C:ExecuteUbergraph_HuskPawn_Bombshell_Poison'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.10"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'HuskPawn_Bombshell_Poison_C:OnRep_hiveBroken'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.12"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Bombshell_Poison_C:OnDeathServer'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.11"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Bombshell_Poison_C:ExecuteUbergraph_HuskPawn_Bombshell_Poison'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.10"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FireSound",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "hiveBroken",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance | RepNotify",
+        "RepNotifyFunc": "OnRep_hiveBroken",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_HuskPawn_Bombshell_Poison": {
+        "ObjectName": "Function'HuskPawn_Bombshell_Poison_C:ExecuteUbergraph_HuskPawn_Bombshell_Poison'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.10"
+      },
+      "OnDeathServer": {
+        "ObjectName": "Function'HuskPawn_Bombshell_Poison_C:OnDeathServer'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.11"
+      },
+      "OnRep_hiveBroken": {
+        "ObjectName": "Function'HuskPawn_Bombshell_Poison_C:OnRep_hiveBroken'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.12"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "HuskPawn_Bombshell_Poison_C'Default__HuskPawn_Bombshell_Poison_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.13"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Outer": "Default__HuskPawn_Bombshell_Poison_C",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Template": {
+      "ObjectName": "CapsuleComponent'Default__HuskPawn_Bombshell_C:CollisionCylinder'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell.2"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FortAbilitySystemComponent",
+    "Name": "AbilitySystemComponent",
+    "Outer": "Default__HuskPawn_Bombshell_Poison_C",
+    "Class": "UScriptClass'FortAbilitySystemComponent'",
+    "Template": {
+      "ObjectName": "FortAbilitySystemComponent'Default__HuskPawn_Bombshell_C:AbilitySystemComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ActiveGameplayCues": {
+        "Owner": {
+          "ObjectName": "FortAbilitySystemComponent'Default__HuskPawn_Bombshell_Poison_C:AbilitySystemComponent'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.4"
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortEmoteComponent",
+    "Name": "FortEmoteComponent",
+    "Outer": "Default__HuskPawn_Bombshell_Poison_C",
+    "Class": "UScriptClass'FortEmoteComponent'",
+    "Template": {
+      "ObjectName": "FortEmoteComponent'Default__HuskPawn_Bombshell_C:FortEmoteComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FortMovementComp_AIChar",
+    "Name": "CharMoveComp",
+    "Outer": "Default__HuskPawn_Bombshell_Poison_C",
+    "Class": "UScriptClass'FortMovementComp_AIChar'",
+    "Template": {
+      "ObjectName": "FortMovementComp_AIChar'Default__HuskPawn_Bombshell_C:CharMoveComp'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FortPooledSkelMeshComponent",
+    "Name": "CharacterMesh0",
+    "Outer": "Default__HuskPawn_Bombshell_Poison_C",
+    "Class": "UScriptClass'FortPooledSkelMeshComponent'",
+    "Template": {
+      "ObjectName": "FortPooledSkelMeshComponent'Default__HuskPawn_Bombshell_C:CharacterMesh0'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell.6"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__HuskPawn_Bombshell_Poison_C:CollisionCylinder'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.3"
+      }
+    }
+  },
+  {
+    "Type": "FortSoundIndicatorComponent",
+    "Name": "SoundIndicatorComponent",
+    "Outer": "Default__HuskPawn_Bombshell_Poison_C",
+    "Class": "UScriptClass'FortSoundIndicatorComponent'",
+    "Template": {
+      "ObjectName": "FortSoundIndicatorComponent'Default__HuskPawn_Bombshell_C:SoundIndicatorComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell.7"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FortSoundLibraryComponent",
+    "Name": "SoundLibraryComponent",
+    "Outer": "Default__HuskPawn_Bombshell_Poison_C",
+    "Class": "UScriptClass'FortSoundLibraryComponent'",
+    "Template": {
+      "ObjectName": "FortSoundLibraryComponent'Default__HuskPawn_Bombshell_C:SoundLibraryComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell.8"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_HuskPawn_Bombshell_Poison",
+    "Outer": "HuskPawn_Bombshell_Poison_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_Damage",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_DamageTags",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Momentum",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_HitInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_InstigatedBy",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_DamageCauser",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_EffectContext",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectContextHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDeathServer",
+    "Outer": "HuskPawn_Bombshell_Poison_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'FortPawn:OnDeathServer'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Damage",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "DamageTags",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Momentum",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InstigatedBy",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamageCauser",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "EffectContext",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectContextHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintAuthorityOnly | FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRep_hiveBroken",
+    "Outer": "HuskPawn_Bombshell_Poison_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "HuskPawn_Bombshell_Poison_C",
+    "Name": "Default__HuskPawn_Bombshell_Poison_C",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.HuskPawn_Bombshell_Poison_C'",
+    "Template": {
+      "ObjectName": "HuskPawn_Bombshell_C'Default__HuskPawn_Bombshell_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell.14"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "HotspotType": "EFortHotSpotSlot::Melee",
+      "DefaultGameplayAbilitySets": [
+        {
+          "ObjectName": "FortAbilitySet'GAS_HuskNonCombat'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Base/GAS_HuskNonCombat.0"
+        },
+        {
+          "ObjectName": "FortAbilitySet'GAS_HuskATLASZap'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Base/GAS_HuskATLASZap.0"
+        },
+        {
+          "ObjectName": "FortAbilitySet'GAS_HuskPoisonLobberAttack'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/PoisonLobber/GAS_HuskPoisonLobberAttack.0"
+        }
+      ],
+      "AIPawnAbilitySystemComponent": {
+        "ObjectName": "FortAbilitySystemComponent'Default__HuskPawn_Bombshell_Poison_C:AbilitySystemComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.4"
+      },
+      "WallRangedAttackGameplayAbilityTags": [],
+      "SoundIndicatorComponent": {
+        "ObjectName": "FortSoundIndicatorComponent'Default__HuskPawn_Bombshell_Poison_C:SoundIndicatorComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.8"
+      },
+      "PawnStatHandle": {
+        "RowName": "HuskGeneric_Lobber_Poison"
+      },
+      "SoundLibraryComponent": {
+        "ObjectName": "FortSoundLibraryComponent'Default__HuskPawn_Bombshell_Poison_C:SoundLibraryComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.9"
+      },
+      "EmoteComponent": {
+        "ObjectName": "FortEmoteComponent'Default__HuskPawn_Bombshell_Poison_C:FortEmoteComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.5"
+      },
+      "EmoteMusicClockComponent": {
+        "ObjectName": "MusicClockComponent'Default__HuskPawn_Bombshell_Poison_C:EmoteMusicClockComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.15"
+      },
+      "VocalChords": [
+        {
+          "FeedbackAudioComponent": {
+            "ObjectName": "AudioComponent'Default__HuskPawn_Bombshell_Poison_C:FeedbackAudioComp0'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.0"
+          },
+          "ReplicatedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "PendingSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "QueuedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "CurrentSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          }
+        }
+      ],
+      "AbilitySystemComponent": {
+        "ObjectName": "FortAbilitySystemComponent'Default__HuskPawn_Bombshell_Poison_C:AbilitySystemComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.4"
+      },
+      "GameplayTags": [
+        "NPC.Behavior.Retreats",
+        "NPC.CharacterType.Husk.PoisonLobber"
+      ],
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "1E380FB442CAC621C53EEDB4ED3A0393",
+        "SourceString": "Poison Lobber",
+        "LocalizedString": "Poison Lobber"
+      },
+      "Mesh": {
+        "ObjectName": "FortPooledSkelMeshComponent'Default__HuskPawn_Bombshell_Poison_C:CharacterMesh0'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.7"
+      },
+      "CharacterMovement": {
+        "ObjectName": "FortMovementComp_AIChar'Default__HuskPawn_Bombshell_Poison_C:CharMoveComp'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.6"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__HuskPawn_Bombshell_Poison_C:CollisionCylinder'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.3"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__HuskPawn_Bombshell_Poison_C:CollisionCylinder'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.3"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "HuskPawn_Bombshell_Poison_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ParticleSystemComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ParticleSystemComponent'HuskPawn_Bombshell_Poison_C:HeadParticleSysComponent_GEN_VARIABLE'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.16"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'HuskPawn_Bombshell_C'",
+              "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell.1"
+            },
+            "SCSVariableName": "HeadParticleSysComponent",
+            "AssociatedGuid": "4F440016-40CF887C-2A917C91-A5C9A6A8"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "Template",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ParticleSystemComponent'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "PrimaryComponentTick",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ParticleSystemComponent'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "bStartWithTickEnabled",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ActorComponentTickFunction'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "MusicClockComponent",
+    "Name": "EmoteMusicClockComponent",
+    "Outer": "Default__HuskPawn_Bombshell_Poison_C",
+    "Class": "UScriptClass'MusicClockComponent'",
+    "Template": {
+      "ObjectName": "MusicClockComponent'Default__HuskPawn_Bombshell_C:EmoteMusicClockComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell.16"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "HeadParticleSysComponent_GEN_VARIABLE",
+    "Outer": "HuskPawn_Bombshell_Poison_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Template": {
+      "ObjectName": "ParticleSystemComponent'HuskPawn_Bombshell_C:HeadParticleSysComponent_GEN_VARIABLE'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell.17"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'P_LobberHead_Vapor'",
+        "ObjectPath": "/SaveTheWorld/Effects/Fort_Effects/Creatures/Husk/Poison_Lobber/P_LobberHead_Vapor.45"
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_39",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'HuskPawn_Bombshell_Poison_C:FireSound_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.1"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Sound",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "CollisionCylinder",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "26E305D7-4568EE8C-F03418B5-319693A1",
+      "InternalVariableName": "FireSound"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_72",
+    "Outer": "SimpleConstructionScript_39",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": null,
+      "VariableGuid": "4D3A059E-00000000-00000000-00000000",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_39",
+    "Outer": "HuskPawn_Bombshell_Poison_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'HuskPawn_Bombshell_Poison_C:SimpleConstructionScript_39.SCS_Node_1'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.17"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'HuskPawn_Bombshell_Poison_C:SimpleConstructionScript_39.SCS_Node_1'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.17"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'HuskPawn_Bombshell_Poison_C:SimpleConstructionScript_39.SCS_Node_72'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Bombshell_Poison.18"
+      }
+    }
+  }
+]

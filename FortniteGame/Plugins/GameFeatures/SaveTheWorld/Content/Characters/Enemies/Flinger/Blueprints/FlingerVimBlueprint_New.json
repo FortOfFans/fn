@@ -1,0 +1,2934 @@
+[
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "FlingerVimBlueprint_New_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Locomotion",
+          "InitialState": 0,
+          "States": [
+            {
+              "PlayerNodeIndices": [
+                2
+              ],
+              "LayerNodeIndices": [],
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 7,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "AutomaticRuleTriggerTime": -1.0,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 8,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "AutomaticRuleTriggerTime": -1.0,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateName": "Idle",
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "EntryRuleNodeIndex": -1,
+              "bAlwaysResetOnEntry": false,
+              "bIsAConduit": false
+            },
+            {
+              "PlayerNodeIndices": [
+                4
+              ],
+              "LayerNodeIndices": [],
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 9,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "AutomaticRuleTriggerTime": -1.0,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateName": "Stunned",
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "EntryRuleNodeIndex": -1,
+              "bAlwaysResetOnEntry": false,
+              "bIsAConduit": false
+            },
+            {
+              "PlayerNodeIndices": [
+                6
+              ],
+              "LayerNodeIndices": [],
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 10,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "AutomaticRuleTriggerTime": -1.0,
+                  "SyncGroupNameToRequireValidMarkersRule": "None",
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateName": "Walk",
+              "StateRootNodeIndex": 5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "EntryRuleNodeIndex": -1,
+              "bAlwaysResetOnEntry": false,
+              "bIsAConduit": false
+            }
+          ],
+          "Transitions": [
+            {
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "MinTimeBeforeReentry": -1.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "bAllowInertializationForSelfTransitions": false,
+              "StateName": "None"
+            },
+            {
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.25,
+              "MinTimeBeforeReentry": -1.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "bAllowInertializationForSelfTransitions": false,
+              "StateName": "None"
+            },
+            {
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.3,
+              "MinTimeBeforeReentry": -1.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "bAllowInertializationForSelfTransitions": false,
+              "StateName": "None"
+            },
+            {
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "MinTimeBeforeReentry": -1.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "bAllowInertializationForSelfTransitions": false,
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'Flinger_Skeleton'",
+        "ObjectPath": "/Game/Characters/Enemies/Flinger/Mesh/Flinger_Skeleton.35"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": [
+              14
+            ]
+          }
+        }
+      ],
+      "AnimNodeData": [
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            0,
+            12,
+            4294967295
+          ],
+          "NodeIndex": 0,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 1,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295
+          ],
+          "NodeIndex": 2,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295
+          ],
+          "NodeIndex": 3,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 4,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 5,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 6,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 7,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 8,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 9,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 10,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295
+          ],
+          "NodeIndex": 11,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295
+          ],
+          "NodeIndex": 12,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295
+          ],
+          "NodeIndex": 13,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295
+          ],
+          "NodeIndex": 14,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            12,
+            11,
+            10,
+            9,
+            10,
+            4294967295,
+            8,
+            2147483648,
+            7,
+            4294967295,
+            6,
+            5,
+            10
+          ],
+          "NodeIndex": 15,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            1,
+            13,
+            4294967295,
+            2,
+            16,
+            16,
+            16,
+            16
+          ],
+          "NodeIndex": 16,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            12,
+            11,
+            10,
+            9,
+            10,
+            4294967295,
+            8,
+            8,
+            7,
+            4294967295,
+            6,
+            5,
+            10
+          ],
+          "NodeIndex": 17,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            3,
+            13,
+            4294967295,
+            4,
+            16,
+            16,
+            16,
+            16
+          ],
+          "NodeIndex": 18,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            12,
+            11,
+            10,
+            9,
+            10,
+            4294967295,
+            8,
+            8,
+            7,
+            4294967295,
+            6,
+            5,
+            10
+          ],
+          "NodeIndex": 19,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            14,
+            13,
+            4294967295,
+            15,
+            16,
+            16,
+            16,
+            16
+          ],
+          "NodeIndex": 20,
+          "Flags": 0
+        },
+        {
+          "AnimClassInterface": {
+            "ObjectName": "AnimBlueprintGeneratedClass'FlingerVimBlueprint_New_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.0"
+          },
+          "Entries": [
+            16,
+            16,
+            16,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295,
+            4294967295
+          ],
+          "NodeIndex": 21,
+          "Flags": 0
+        }
+      ],
+      "NodeTypeMap": [
+        {
+          "Key": "Class'/Script/Engine.AnimNode_StateMachine'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "StateMachineIndexInClass",
+                "Value": 3
+              },
+              {
+                "Key": "MaxTransitionsPerFrame",
+                "Value": 4
+              },
+              {
+                "Key": "MaxTransitionsRequests",
+                "Value": 5
+              },
+              {
+                "Key": "bSkipFirstUpdateTransition",
+                "Value": 6
+              },
+              {
+                "Key": "bReinitializeOnBecomingRelevant",
+                "Value": 7
+              },
+              {
+                "Key": "bCreateNotifyMetaData",
+                "Value": 8
+              },
+              {
+                "Key": "bAllowConduitEntryStates",
+                "Value": 9
+              }
+            ],
+            "NumProperties": 10
+          }
+        },
+        {
+          "Key": "Class'/Script/Engine.AnimNode_Base'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "Key": "Class'/Script/Engine.AnimNode_StateResult'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "Result",
+                "Value": 3
+              },
+              {
+                "Key": "Name",
+                "Value": 4
+              },
+              {
+                "Key": "LayerGroup",
+                "Value": 5
+              },
+              {
+                "Key": "Group",
+                "Value": 6
+              },
+              {
+                "Key": "StateIndex",
+                "Value": 7
+              },
+              {
+                "Key": "StateEntryFunction",
+                "Value": 8
+              },
+              {
+                "Key": "StateFullyBlendedInFunction",
+                "Value": 9
+              },
+              {
+                "Key": "StateExitFunction",
+                "Value": 10
+              },
+              {
+                "Key": "StateFullyBlendedOutFunction",
+                "Value": 11
+              }
+            ],
+            "NumProperties": 12
+          }
+        },
+        {
+          "Key": "Class'/Script/Engine.AnimNode_Root'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "Result",
+                "Value": 3
+              },
+              {
+                "Key": "Name",
+                "Value": 4
+              },
+              {
+                "Key": "LayerGroup",
+                "Value": 5
+              },
+              {
+                "Key": "Group",
+                "Value": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "Key": "Class'/Script/Engine.AnimNode_SequencePlayer'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              },
+              {
+                "Key": "PlayRateScaleBiasClampState",
+                "Value": 7
+              },
+              {
+                "Key": "GroupName",
+                "Value": 8
+              },
+              {
+                "Key": "GroupRole",
+                "Value": 9
+              },
+              {
+                "Key": "bOverridePositionWhenJoiningSyncGroupAsLeader",
+                "Value": 10
+              },
+              {
+                "Key": "Method",
+                "Value": 11
+              },
+              {
+                "Key": "bIgnoreForRelevancyTest",
+                "Value": 12
+              },
+              {
+                "Key": "Sequence",
+                "Value": 13
+              },
+              {
+                "Key": "PlayRateBasis",
+                "Value": 14
+              },
+              {
+                "Key": "PlayRate",
+                "Value": 15
+              },
+              {
+                "Key": "PlayRateScaleBiasClampConstants",
+                "Value": 16
+              },
+              {
+                "Key": "PlayRateScaleBiasClamp",
+                "Value": 17
+              },
+              {
+                "Key": "StartPosition",
+                "Value": 18
+              },
+              {
+                "Key": "bLoopAnimation",
+                "Value": 19
+              },
+              {
+                "Key": "bStartFromMatchingPose",
+                "Value": 20
+              }
+            ],
+            "NumProperties": 21
+          }
+        },
+        {
+          "Key": "Class'/Script/Engine.AnimNode_SequencePlayerBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              },
+              {
+                "Key": "PlayRateScaleBiasClampState",
+                "Value": 7
+              }
+            ],
+            "NumProperties": 8
+          }
+        },
+        {
+          "Key": "Class'/Script/Engine.AnimNode_AssetPlayerBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "GroupIndex",
+                "Value": 3
+              },
+              {
+                "Key": "GroupScope",
+                "Value": 4
+              },
+              {
+                "Key": "BlendWeight",
+                "Value": 5
+              },
+              {
+                "Key": "InternalTimeAccumulator",
+                "Value": 6
+              }
+            ],
+            "NumProperties": 7
+          }
+        },
+        {
+          "Key": "Class'/Script/Engine.AnimNode_AssetPlayerRelevancyBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              }
+            ],
+            "NumProperties": 3
+          }
+        },
+        {
+          "Key": "Class'/Script/Engine.AnimNode_TransitionResult'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "bCanEnterTransition",
+                "Value": 3
+              }
+            ],
+            "NumProperties": 4
+          }
+        },
+        {
+          "Key": "Class'/Script/Engine.AnimNode_UseCachedPose'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "LinkToCachingNode",
+                "Value": 3
+              },
+              {
+                "Key": "CachePoseName",
+                "Value": 4
+              }
+            ],
+            "NumProperties": 5
+          }
+        },
+        {
+          "Key": "Class'/Script/AnimGraphRuntime.AnimNode_TwoWayBlend'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "A",
+                "Value": 3
+              },
+              {
+                "Key": "B",
+                "Value": 4
+              },
+              {
+                "Key": "AlphaInputType",
+                "Value": 5
+              },
+              {
+                "Key": "bResetChildOnActivation",
+                "Value": 6
+              },
+              {
+                "Key": "bAlphaBoolEnabled",
+                "Value": 7
+              },
+              {
+                "Key": "bAlwaysUpdateChildren",
+                "Value": 8
+              },
+              {
+                "Key": "Alpha",
+                "Value": 9
+              },
+              {
+                "Key": "AlphaScaleBias",
+                "Value": 10
+              },
+              {
+                "Key": "AlphaBoolBlend",
+                "Value": 11
+              },
+              {
+                "Key": "AlphaCurveName",
+                "Value": 12
+              },
+              {
+                "Key": "AlphaScaleBiasClamp",
+                "Value": 13
+              }
+            ],
+            "NumProperties": 14
+          }
+        },
+        {
+          "Key": "Class'/Script/Engine.AnimNode_SaveCachedPose'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "Pose",
+                "Value": 3
+              },
+              {
+                "Key": "CachePoseName",
+                "Value": 4
+              }
+            ],
+            "NumProperties": 5
+          }
+        },
+        {
+          "Key": "Class'/Script/AnimGraphRuntime.AnimNode_Slot'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "Source",
+                "Value": 3
+              },
+              {
+                "Key": "SlotName",
+                "Value": 4
+              },
+              {
+                "Key": "bAlwaysUpdateSourcePose",
+                "Value": 5
+              }
+            ],
+            "NumProperties": 6
+          }
+        },
+        {
+          "Key": "Class'/Script/AnimGraphRuntime.AnimNode_TwoBoneIK'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "ComponentPose",
+                "Value": 3
+              },
+              {
+                "Key": "LODThreshold",
+                "Value": 4
+              },
+              {
+                "Key": "ActualAlpha",
+                "Value": 5
+              },
+              {
+                "Key": "AlphaInputType",
+                "Value": 6
+              },
+              {
+                "Key": "bAlphaBoolEnabled",
+                "Value": 7
+              },
+              {
+                "Key": "Alpha",
+                "Value": 8
+              },
+              {
+                "Key": "AlphaScaleBias",
+                "Value": 9
+              },
+              {
+                "Key": "AlphaBoolBlend",
+                "Value": 10
+              },
+              {
+                "Key": "AlphaCurveName",
+                "Value": 11
+              },
+              {
+                "Key": "AlphaScaleBiasClamp",
+                "Value": 12
+              },
+              {
+                "Key": "ValidationVisualWarningMessage",
+                "Value": 13
+              },
+              {
+                "Key": "IKBone",
+                "Value": 14
+              },
+              {
+                "Key": "StartStretchRatio",
+                "Value": 15
+              },
+              {
+                "Key": "MaxStretchScale",
+                "Value": 16
+              },
+              {
+                "Key": "StretchLimits",
+                "Value": 17
+              },
+              {
+                "Key": "bNoTwist",
+                "Value": 18
+              },
+              {
+                "Key": "JointTargetSpaceBoneName",
+                "Value": 19
+              },
+              {
+                "Key": "EffectorSpaceBoneName",
+                "Value": 20
+              },
+              {
+                "Key": "EffectorLocation",
+                "Value": 21
+              },
+              {
+                "Key": "EffectorTarget",
+                "Value": 22
+              },
+              {
+                "Key": "JointTargetLocation",
+                "Value": 23
+              },
+              {
+                "Key": "JointTarget",
+                "Value": 24
+              },
+              {
+                "Key": "TwistAxis",
+                "Value": 25
+              },
+              {
+                "Key": "EffectorLocationSpace",
+                "Value": 26
+              },
+              {
+                "Key": "JointTargetLocationSpace",
+                "Value": 27
+              },
+              {
+                "Key": "bAllowTwist",
+                "Value": 28
+              },
+              {
+                "Key": "bAllowStretching",
+                "Value": 29
+              },
+              {
+                "Key": "bTakeRotationFromEffectorSpace",
+                "Value": 30
+              },
+              {
+                "Key": "bMaintainEffectorRelRot",
+                "Value": 31
+              }
+            ],
+            "NumProperties": 32
+          }
+        },
+        {
+          "Key": "Class'/Script/AnimGraphRuntime.AnimNode_SkeletalControlBase'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "ComponentPose",
+                "Value": 3
+              },
+              {
+                "Key": "LODThreshold",
+                "Value": 4
+              },
+              {
+                "Key": "ActualAlpha",
+                "Value": 5
+              },
+              {
+                "Key": "AlphaInputType",
+                "Value": 6
+              },
+              {
+                "Key": "bAlphaBoolEnabled",
+                "Value": 7
+              },
+              {
+                "Key": "Alpha",
+                "Value": 8
+              },
+              {
+                "Key": "AlphaScaleBias",
+                "Value": 9
+              },
+              {
+                "Key": "AlphaBoolBlend",
+                "Value": 10
+              },
+              {
+                "Key": "AlphaCurveName",
+                "Value": 11
+              },
+              {
+                "Key": "AlphaScaleBiasClamp",
+                "Value": 12
+              },
+              {
+                "Key": "ValidationVisualWarningMessage",
+                "Value": 13
+              }
+            ],
+            "NumProperties": 14
+          }
+        },
+        {
+          "Key": "Class'/Script/Engine.AnimNode_ConvertComponentToLocalSpace'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "ComponentPose",
+                "Value": 3
+              }
+            ],
+            "NumProperties": 4
+          }
+        },
+        {
+          "Key": "Class'/Script/Engine.AnimNode_ConvertLocalToComponentSpace'",
+          "Value": {
+            "NameToIndexMap": [
+              {
+                "Key": "InitialUpdateFunction",
+                "Value": 0
+              },
+              {
+                "Key": "BecomeRelevantFunction",
+                "Value": 1
+              },
+              {
+                "Key": "UpdateFunction",
+                "Value": 2
+              },
+              {
+                "Key": "LocalPose",
+                "Value": 3
+              }
+            ],
+            "NumProperties": 4
+          }
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'FlingerVimBlueprint_New_C:ExecuteUbergraph_FlingerVimBlueprint_New'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortAIAnimInstance'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'FlingerVimBlueprint_New_C:AnimGraph'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.2"
+      },
+      {
+        "ObjectName": "Function'FlingerVimBlueprint_New_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_SequencePlayer_FAE54917452C122F3E3C4A9EF6F4AD3F'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.3"
+      },
+      {
+        "ObjectName": "Function'FlingerVimBlueprint_New_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_5172BD5646FEC28D140562B89BD907AA'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.5"
+      },
+      {
+        "ObjectName": "Function'FlingerVimBlueprint_New_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_8D03D3734EFC15D0357B44B30E132708'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.6"
+      },
+      {
+        "ObjectName": "Function'FlingerVimBlueprint_New_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_F34AB0D3442DF52EAAD037B323003D7A'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.7"
+      },
+      {
+        "ObjectName": "Function'FlingerVimBlueprint_New_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_34B2EF3C44F6A8F2821520B6BCACB7E1'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.4"
+      },
+      {
+        "ObjectName": "Function'FlingerVimBlueprint_New_C:ExecuteUbergraph_FlingerVimBlueprint_New'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.8"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__AnimBlueprintMutables",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'FlingerVimBlueprint_New_C:AnimBlueprintGeneratedMutableData'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.10"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'AnimSubsystemInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'AnimSubsystemInstance'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Root",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 200,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_Root'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 208,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_Slot'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_LocalToComponentSpace",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_ConvertLocalToComponentSpace'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_ComponentToLocalSpace",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 160,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_ConvertComponentToLocalSpace'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TwoBoneIK_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1040,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_TwoBoneIK'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TwoBoneIK",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1040,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_TwoBoneIK'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 208,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_Slot'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SaveCachedPose",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 256,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_SaveCachedPose'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_UseCachedPose_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 176,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_UseCachedPose'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TwoWayBlend",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 336,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_TwoWayBlend'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_UseCachedPose",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 176,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_UseCachedPose'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 168,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 168,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 168,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 168,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_TransitionResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 368,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_StateResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 368,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_StateResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 328,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_SequencePlayer'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 368,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_StateResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateMachine",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 360,
+        "Struct": {
+          "ObjectName": "Class'AnimNode_StateMachine'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_FlingerVimBlueprint_New": {
+        "ObjectName": "Function'FlingerVimBlueprint_New_C:ExecuteUbergraph_FlingerVimBlueprint_New'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.8"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_34B2EF3C44F6A8F2821520B6BCACB7E1": {
+        "ObjectName": "Function'FlingerVimBlueprint_New_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_34B2EF3C44F6A8F2821520B6BCACB7E1'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.4"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_F34AB0D3442DF52EAAD037B323003D7A": {
+        "ObjectName": "Function'FlingerVimBlueprint_New_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_F34AB0D3442DF52EAAD037B323003D7A'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.7"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_8D03D3734EFC15D0357B44B30E132708": {
+        "ObjectName": "Function'FlingerVimBlueprint_New_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_8D03D3734EFC15D0357B44B30E132708'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.6"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_5172BD5646FEC28D140562B89BD907AA": {
+        "ObjectName": "Function'FlingerVimBlueprint_New_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_5172BD5646FEC28D140562B89BD907AA'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_SequencePlayer_FAE54917452C122F3E3C4A9EF6F4AD3F": {
+        "ObjectName": "Function'FlingerVimBlueprint_New_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_SequencePlayer_FAE54917452C122F3E3C4A9EF6F4AD3F'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.3"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'FlingerVimBlueprint_New_C:AnimGraph'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.2"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "FlingerVimBlueprint_New_C'Default__FlingerVimBlueprint_New_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "FlingerVimBlueprint_New_C",
+    "Name": "Default__FlingerVimBlueprint_New_C",
+    "Class": "AnimBlueprintGeneratedClass'/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.FlingerVimBlueprint_New_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "__AnimBlueprintMutables": {
+        "__FloatProperty": 1.0
+      },
+      "AnimBlueprintExtension_PropertyAccess": {},
+      "AnimBlueprintExtension_Base": {},
+      "AnimGraphNode_Root": {
+        "Result": {
+          "LinkID": 3
+        }
+      },
+      "AnimGraphNode_Slot_1": {
+        "Source": {
+          "LinkID": 21
+        },
+        "SlotName": "FullBody",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_LocalToComponentSpace": {
+        "LocalPose": {
+          "LinkID": 9
+        }
+      },
+      "AnimGraphNode_ComponentToLocalSpace": {
+        "ComponentPose": {
+          "LinkID": 5
+        }
+      },
+      "AnimGraphNode_TwoBoneIK_1": {
+        "IKBone": {
+          "BoneName": "hand_l"
+        },
+        "StartStretchRatio": 0.0,
+        "MaxStretchScale": 0.0,
+        "EffectorLocation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "EffectorTarget": {
+          "bUseSocket": false,
+          "BoneReference": {
+            "BoneName": "ik_hand_l"
+          },
+          "SocketReference": {
+            "SocketName": "None"
+          }
+        },
+        "JointTargetLocation": {
+          "X": -100.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "JointTarget": {
+          "bUseSocket": false,
+          "BoneReference": {
+            "BoneName": "lowerarm_l"
+          },
+          "SocketReference": {
+            "SocketName": "None"
+          }
+        },
+        "TwistAxis": {
+          "Axis": {
+            "X": 1.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "bInLocalSpace": true
+        },
+        "EffectorLocationSpace": "EBoneControlSpace::BCS_BoneSpace",
+        "JointTargetLocationSpace": "EBoneControlSpace::BCS_BoneSpace",
+        "bAllowStretching": false,
+        "bTakeRotationFromEffectorSpace": true,
+        "bMaintainEffectorRelRot": false,
+        "bAllowTwist": true,
+        "ComponentPose": {
+          "LinkID": 2
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::HermiteCubic"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        }
+      },
+      "AnimGraphNode_TwoBoneIK": {
+        "IKBone": {
+          "BoneName": "hand_r"
+        },
+        "StartStretchRatio": 0.0,
+        "MaxStretchScale": 0.0,
+        "EffectorLocation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "EffectorTarget": {
+          "bUseSocket": false,
+          "BoneReference": {
+            "BoneName": "ik_hand_r"
+          },
+          "SocketReference": {
+            "SocketName": "None"
+          }
+        },
+        "JointTargetLocation": {
+          "X": 0.0,
+          "Y": 150.0,
+          "Z": 0.0
+        },
+        "JointTarget": {
+          "bUseSocket": false,
+          "BoneReference": {
+            "BoneName": "lowerarm_r"
+          },
+          "SocketReference": {
+            "SocketName": "None"
+          }
+        },
+        "TwistAxis": {
+          "Axis": {
+            "X": 1.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "bInLocalSpace": true
+        },
+        "EffectorLocationSpace": "EBoneControlSpace::BCS_BoneSpace",
+        "JointTargetLocationSpace": "EBoneControlSpace::BCS_BoneSpace",
+        "bAllowStretching": false,
+        "bTakeRotationFromEffectorSpace": true,
+        "bMaintainEffectorRelRot": false,
+        "bAllowTwist": true,
+        "ComponentPose": {
+          "LinkID": 4
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::HermiteCubic"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        }
+      },
+      "AnimGraphNode_Slot": {
+        "Source": {
+          "LinkID": 10
+        },
+        "SlotName": "AdditiveLayer",
+        "bAlwaysUpdateSourcePose": false
+      },
+      "AnimGraphNode_SaveCachedPose": {
+        "Pose": {
+          "LinkID": 1
+        },
+        "CachePoseName": "FullBody"
+      },
+      "AnimGraphNode_UseCachedPose_1": {
+        "LinkToCachingNode": {
+          "LinkID": 7
+        },
+        "CachePoseName": "FullBody"
+      },
+      "AnimGraphNode_TwoWayBlend": {
+        "A": {
+          "LinkID": 8
+        },
+        "B": {
+          "LinkID": 6
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "bResetChildOnActivation": false,
+        "bAlwaysUpdateChildren": false,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::HermiteCubic"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        }
+      },
+      "AnimGraphNode_UseCachedPose": {
+        "LinkToCachingNode": {
+          "LinkID": 7
+        },
+        "CachePoseName": "FullBody"
+      },
+      "AnimGraphNode_TransitionResult_3": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_2": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_1": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_2": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Walk_Default'",
+          "ObjectPath": "/SaveTheWorld/Animation/Game/Enemies/Flinger/Locomotion/Walk_Default.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_2": {
+        "Result": {
+          "LinkID": 15
+        }
+      },
+      "AnimGraphNode_SequencePlayer_1": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Stun'",
+          "ObjectPath": "/SaveTheWorld/Animation/Game/Enemies/Flinger/Reacts/HitReacts/Stun.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_1": {
+        "Result": {
+          "LinkID": 17
+        }
+      },
+      "AnimGraphNode_SequencePlayer": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Idle_Default'",
+          "ObjectPath": "/SaveTheWorld/Animation/Game/Enemies/Flinger/Locomotion/Idle_Default.0"
+        },
+        "PlayRateScaleBiasClampState": {},
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult": {
+        "Result": {
+          "LinkID": 19
+        }
+      },
+      "AnimGraphNode_StateMachine": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "MaxTransitionsRequests": 32,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true,
+        "bCreateNotifyMetaData": true,
+        "bAllowConduitEntryStates": false
+      },
+      "PawnSpeed2D": 425.0
+    },
+    "SerializedSparseClassDataStruct": "ScriptStruct'/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.FlingerVimBlueprint_New_C:AnimBlueprintGeneratedConstantData'",
+    "SerializedSparseClassData": {
+      "__NameProperty_103": "AnimGraph",
+      "__NameProperty_104": "Walk",
+      "__IntProperty_105": 2,
+      "__NameProperty_106": "Stunned",
+      "__IntProperty_107": 1,
+      "__BoolProperty_108": true,
+      "__FloatProperty_109": 0.0,
+      "__StructProperty_110": {
+        "bMapRange": false,
+        "bClampResult": false,
+        "bInterpResult": false,
+        "InRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "OutRange": {
+          "Min": 0.0,
+          "Max": 1.0
+        },
+        "Scale": 1.0,
+        "Bias": 0.0,
+        "ClampMin": 0.0,
+        "ClampMax": 1.0,
+        "InterpSpeedIncreasing": 10.0,
+        "InterpSpeedDecreasing": 10.0
+      },
+      "__FloatProperty_111": 1.0,
+      "__EnumProperty_112": "EAnimSyncMethod::DoNotSync",
+      "__BoolProperty_113": false,
+      "__ByteProperty_114": "EAnimGroupRole::CanBeLeader",
+      "__NameProperty_115": "None",
+      "__NameProperty_116": "DefaultSharedGroup",
+      "__NameProperty_117": "Idle",
+      "__IntProperty_118": 0,
+      "__StructProperty_119": {
+        "ClassName": "None",
+        "FunctionName": "None"
+      },
+      "AnimBlueprintExtension_PropertyAccess": {
+        "Library": {
+          "PathSegments": [],
+          "SrcPaths": [],
+          "DestPaths": [],
+          "CopyBatchArray": []
+        }
+      },
+      "AnimBlueprintExtension_Base": {},
+      "AnimGraphNode_Root": {
+        "CopyRecords": [],
+        "Function": null,
+        "BoundFunction": "None"
+      },
+      "AnimGraphNode_Slot_1": {
+        "CopyRecords": [],
+        "Function": null,
+        "BoundFunction": "None"
+      },
+      "AnimGraphNode_LocalToComponentSpace": {
+        "CopyRecords": [],
+        "Function": null,
+        "BoundFunction": "None"
+      },
+      "AnimGraphNode_ComponentToLocalSpace": {
+        "CopyRecords": [],
+        "Function": null,
+        "BoundFunction": "None"
+      },
+      "AnimGraphNode_TwoBoneIK_1": {
+        "CopyRecords": [],
+        "Function": null,
+        "BoundFunction": "None"
+      },
+      "AnimGraphNode_TwoBoneIK": {
+        "CopyRecords": [],
+        "Function": null,
+        "BoundFunction": "None"
+      },
+      "AnimGraphNode_Slot": {
+        "CopyRecords": [],
+        "Function": null,
+        "BoundFunction": "None"
+      },
+      "AnimGraphNode_SaveCachedPose": {
+        "CopyRecords": [],
+        "Function": null,
+        "BoundFunction": "None"
+      },
+      "AnimGraphNode_UseCachedPose_1": {
+        "CopyRecords": [],
+        "Function": null,
+        "BoundFunction": "None"
+      },
+      "AnimGraphNode_TwoWayBlend": {
+        "CopyRecords": [],
+        "Function": null,
+        "BoundFunction": "None"
+      },
+      "AnimGraphNode_UseCachedPose": {
+        "CopyRecords": [],
+        "Function": null,
+        "BoundFunction": "None"
+      },
+      "AnimGraphNode_TransitionResult_3": {
+        "CopyRecords": [],
+        "Function": {
+          "ObjectName": "Function'FlingerVimBlueprint_New_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_34B2EF3C44F6A8F2821520B6BCACB7E1'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.4"
+        },
+        "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_34B2EF3C44F6A8F2821520B6BCACB7E1"
+      },
+      "AnimGraphNode_TransitionResult_2": {
+        "CopyRecords": [],
+        "Function": {
+          "ObjectName": "Function'FlingerVimBlueprint_New_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_F34AB0D3442DF52EAAD037B323003D7A'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.7"
+        },
+        "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_F34AB0D3442DF52EAAD037B323003D7A"
+      },
+      "AnimGraphNode_TransitionResult_1": {
+        "CopyRecords": [],
+        "Function": {
+          "ObjectName": "Function'FlingerVimBlueprint_New_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_8D03D3734EFC15D0357B44B30E132708'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.6"
+        },
+        "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_8D03D3734EFC15D0357B44B30E132708"
+      },
+      "AnimGraphNode_TransitionResult": {
+        "CopyRecords": [],
+        "Function": {
+          "ObjectName": "Function'FlingerVimBlueprint_New_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_5172BD5646FEC28D140562B89BD907AA'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.5"
+        },
+        "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_5172BD5646FEC28D140562B89BD907AA"
+      },
+      "AnimGraphNode_SequencePlayer_2": {
+        "CopyRecords": [],
+        "Function": {
+          "ObjectName": "Function'FlingerVimBlueprint_New_C:EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_SequencePlayer_FAE54917452C122F3E3C4A9EF6F4AD3F'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Flinger/Blueprints/FlingerVimBlueprint_New.3"
+        },
+        "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_SequencePlayer_FAE54917452C122F3E3C4A9EF6F4AD3F"
+      },
+      "AnimGraphNode_StateResult_2": {
+        "CopyRecords": [],
+        "Function": null,
+        "BoundFunction": "None"
+      },
+      "AnimGraphNode_SequencePlayer_1": {
+        "CopyRecords": [],
+        "Function": null,
+        "BoundFunction": "None"
+      },
+      "AnimGraphNode_StateResult_1": {
+        "CopyRecords": [],
+        "Function": null,
+        "BoundFunction": "None"
+      },
+      "AnimGraphNode_SequencePlayer": {
+        "CopyRecords": [],
+        "Function": null,
+        "BoundFunction": "None"
+      },
+      "AnimGraphNode_StateResult": {
+        "CopyRecords": [],
+        "Function": null,
+        "BoundFunction": "None"
+      },
+      "AnimGraphNode_StateMachine": {
+        "CopyRecords": [],
+        "Function": null,
+        "BoundFunction": "None"
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "FlingerVimBlueprint_New_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraph",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm",
+        "Struct": {
+          "ObjectName": "Class'PoseLink'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_SequencePlayer_FAE54917452C122F3E3C4A9EF6F4AD3F",
+    "Outer": "FlingerVimBlueprint_New_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_34B2EF3C44F6A8F2821520B6BCACB7E1",
+    "Outer": "FlingerVimBlueprint_New_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_5172BD5646FEC28D140562B89BD907AA",
+    "Outer": "FlingerVimBlueprint_New_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_8D03D3734EFC15D0357B44B30E132708",
+    "Outer": "FlingerVimBlueprint_New_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_FlingerVimBlueprint_New_AnimGraphNode_TransitionResult_F34AB0D3442DF52EAAD037B323003D7A",
+    "Outer": "FlingerVimBlueprint_New_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_FlingerVimBlueprint_New",
+    "Outer": "FlingerVimBlueprint_New_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Greater_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Divide_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_StructMemberSet___FloatProperty_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_NotEqual_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "ScriptStruct",
+    "Name": "AnimBlueprintGeneratedConstantData",
+    "Outer": "FlingerVimBlueprint_New_C",
+    "Class": "UScriptClass'ScriptStruct'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'AnimBlueprintConstantData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_103",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_104",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_105",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_106",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_107",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_108",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_109",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_110",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 44,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "Class'InputScaleBiasClampConstants'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty_111",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "__EnumProperty_112",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Class'EAnimSyncMethod'",
+          "ObjectPath": "/Script/Engine"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "__BoolProperty_113",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "__ByteProperty_114",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Class'EAnimGroupRole'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_115",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_116",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "__NameProperty_117",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "__IntProperty_118",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "__StructProperty_119",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "BlueprintVisible",
+        "Struct": {
+          "ObjectName": "Class'AnimNodeFunctionRef'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_PropertyAccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "Class'AnimSubsystem_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimBlueprintExtension_Base",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "Class'AnimSubsystem_Base'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Root",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_LocalToComponentSpace",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_ComponentToLocalSpace",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TwoBoneIK_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TwoBoneIK",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Slot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SaveCachedPose",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_UseCachedPose_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TwoWayBlend",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_UseCachedPose",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_TransitionResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_SequencePlayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateMachine",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'AnimNodeExposedValueHandler_PropertyAccess'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ]
+  },
+  {
+    "Type": "ScriptStruct",
+    "Name": "AnimBlueprintGeneratedMutableData",
+    "Outer": "FlingerVimBlueprint_New_C",
+    "Class": "UScriptClass'ScriptStruct'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'AnimBlueprintMutableData'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "__FloatProperty",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible"
+      }
+    ]
+  }
+]

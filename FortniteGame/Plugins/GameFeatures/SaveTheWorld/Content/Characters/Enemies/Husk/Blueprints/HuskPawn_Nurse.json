@@ -1,0 +1,1125 @@
+[
+  {
+    "Type": "AudioComponent",
+    "Name": "FeedbackAudioComp0",
+    "Outer": "Default__HuskPawn_Nurse_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Template": {
+      "ObjectName": "AudioComponent'Default__HuskPawn_C:FeedbackAudioComp0'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.0"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Husk_Run_Breath_Cue'",
+        "ObjectPath": "/Game/Sounds/Fort_Monster_Husk/Husk_Efforts/Husk_Run_Breath_Cue.0"
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__HuskPawn_Nurse_C:CollisionCylinder'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.5"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "AOE Heal Audio_GEN_VARIABLE",
+    "Outer": "HuskPawn_Nurse_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "AOE_Husk_Recieve_Impact_GEN_VARIABLE",
+    "Outer": "HuskPawn_Nurse_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'SFX_Nurse_Husk_Healing_Husk_Recieve_Impact'",
+        "ObjectPath": "/SaveTheWorld/Sounds/Fort_Monster_Husk_Nurse/SFX_Nurse_Husk_Healing_Husk_Recieve_Impact.0"
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "HealingLoop_GEN_VARIABLE",
+    "Outer": "HuskPawn_Nurse_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'SFX_Nurse_Husk_Healing_Loop_Cue'",
+        "ObjectPath": "/Game/Sounds/Fort_Monster_Husk_Nurse/SFX_Nurse_Husk_Healing_Loop_Cue.0"
+      },
+      "bOverrideAttenuation": true,
+      "PitchModulationMin": 0.95,
+      "PitchModulationMax": 1.05,
+      "VolumeModulationMin": 1.5,
+      "VolumeModulationMax": 1.7,
+      "AttenuationOverrides": {
+        "bEnableListenerFocus": true,
+        "SpatializationAlgorithm": "ESoundSpatializationAlgorithm::SPATIALIZATION_HRTF",
+        "StereoSpread": 4000.0,
+        "FocusAzimuth": 35.0,
+        "NonFocusAzimuth": 75.0,
+        "NonFocusVolumeAttenuation": 0.3,
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
+        "FalloffDistance": 1500.0
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "HuskPawn_Nurse_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'HuskPawn_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'HuskPawn_Nurse_C:SimpleConstructionScript_37'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.29"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'HuskPawn_Nurse_C:InheritableComponentHandler'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.20"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'HuskPawn_Nurse_C:ExecuteUbergraph_HuskPawn_Nurse'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.13"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'HuskPawn_Nurse_C:BeginDeathFX'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.12"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Nurse_C:ReceiveBeginPlay'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.18"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Nurse_C:PlayAudioSFX_Start'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.17"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Nurse_C:PlayAudioSFX_End'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.15"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Nurse_C:PlayAudioSFX_Loop'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.16"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Nurse_C:OnDeathPlayEffects'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.14"
+      },
+      {
+        "ObjectName": "Function'HuskPawn_Nurse_C:ExecuteUbergraph_HuskPawn_Nurse'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.13"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HealingLoop",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AOE_Husk_Recieve_Impact",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AOE Heal Audio",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HealAoe",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HealSound_Start",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'SoundBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HealSoundEnd",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'SoundBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_HuskPawn_Nurse": {
+        "ObjectName": "Function'HuskPawn_Nurse_C:ExecuteUbergraph_HuskPawn_Nurse'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.13"
+      },
+      "OnDeathPlayEffects": {
+        "ObjectName": "Function'HuskPawn_Nurse_C:OnDeathPlayEffects'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.14"
+      },
+      "PlayAudioSFX_Loop": {
+        "ObjectName": "Function'HuskPawn_Nurse_C:PlayAudioSFX_Loop'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.16"
+      },
+      "PlayAudioSFX_End": {
+        "ObjectName": "Function'HuskPawn_Nurse_C:PlayAudioSFX_End'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.15"
+      },
+      "PlayAudioSFX_Start": {
+        "ObjectName": "Function'HuskPawn_Nurse_C:PlayAudioSFX_Start'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.17"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'HuskPawn_Nurse_C:ReceiveBeginPlay'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.18"
+      },
+      "BeginDeathFX": {
+        "ObjectName": "Function'HuskPawn_Nurse_C:BeginDeathFX'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.12"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "HuskPawn_Nurse_C'Default__HuskPawn_Nurse_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.19"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Outer": "Default__HuskPawn_Nurse_C",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Template": {
+      "ObjectName": "CapsuleComponent'Default__HuskPawn_C:CollisionCylinder'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.2"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FortAbilitySystemComponent",
+    "Name": "AbilitySystemComponent",
+    "Outer": "Default__HuskPawn_Nurse_C",
+    "Class": "UScriptClass'FortAbilitySystemComponent'",
+    "Template": {
+      "ObjectName": "FortAbilitySystemComponent'Default__HuskPawn_C:AbilitySystemComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ActiveGameplayCues": {
+        "Owner": {
+          "ObjectName": "FortAbilitySystemComponent'Default__HuskPawn_Nurse_C:AbilitySystemComponent'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.6"
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortEmoteComponent",
+    "Name": "FortEmoteComponent",
+    "Outer": "Default__HuskPawn_Nurse_C",
+    "Class": "UScriptClass'FortEmoteComponent'",
+    "Template": {
+      "ObjectName": "FortEmoteComponent'Default__HuskPawn_C:FortEmoteComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FortMovementComp_AIChar",
+    "Name": "CharMoveComp",
+    "Outer": "Default__HuskPawn_Nurse_C",
+    "Class": "UScriptClass'FortMovementComp_AIChar'",
+    "Template": {
+      "ObjectName": "FortMovementComp_AIChar'Default__HuskPawn_C:CharMoveComp'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FortPooledSkelMeshComponent",
+    "Name": "CharacterMesh0",
+    "Outer": "Default__HuskPawn_Nurse_C",
+    "Class": "UScriptClass'FortPooledSkelMeshComponent'",
+    "Template": {
+      "ObjectName": "FortPooledSkelMeshComponent'Default__HuskPawn_C:CharacterMesh0'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.6"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'Nurse_Healer_Enemy'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Mesh/Nurse_Healer/Nurse_Healer_Enemy.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'Nurse_Healer_Enemy'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Mesh/Nurse_Healer/Nurse_Healer_Enemy.0"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'femaleHusk_Nurse_Mat_Inst'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Mesh/Nurse_Healer/Materials/femaleHusk_Nurse_Mat_Inst.0"
+        }
+      ],
+      "BodyInstance": {
+        "MassInKgOverride": 100.0
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__HuskPawn_Nurse_C:CollisionCylinder'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.5"
+      }
+    }
+  },
+  {
+    "Type": "FortSoundIndicatorComponent",
+    "Name": "SoundIndicatorComponent",
+    "Outer": "Default__HuskPawn_Nurse_C",
+    "Class": "UScriptClass'FortSoundIndicatorComponent'",
+    "Template": {
+      "ObjectName": "FortSoundIndicatorComponent'Default__HuskPawn_C:SoundIndicatorComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.7"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FortSoundLibraryComponent",
+    "Name": "SoundLibraryComponent",
+    "Outer": "Default__HuskPawn_Nurse_C",
+    "Class": "UScriptClass'FortSoundLibraryComponent'",
+    "Template": {
+      "ObjectName": "FortSoundLibraryComponent'Default__HuskPawn_C:SoundLibraryComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.8"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "Function",
+    "Name": "BeginDeathFX",
+    "Outer": "HuskPawn_Nurse_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'EnemyPawn_Parent_C:BeginDeathFX'",
+      "ObjectPath": "/Game/Characters/Enemies/Blueprints/EnemyPawn_Parent.26"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_HuskPawn_Nurse",
+    "Outer": "HuskPawn_Nurse_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_Damage",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_DamageTags",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Momentum",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_HitInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_InstigatedBy",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_DamageCauser",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_EffectContext",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectContextHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDeathPlayEffects",
+    "Outer": "HuskPawn_Nurse_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'EnemyPawn_Parent_C:OnDeathPlayEffects'",
+      "ObjectPath": "/Game/Characters/Enemies/Blueprints/EnemyPawn_Parent.55"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "Damage",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "DamageTags",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Momentum",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InstigatedBy",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamageCauser",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "EffectContext",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectContextHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayAudioSFX_End",
+    "Outer": "HuskPawn_Nurse_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayAudioSFX_Loop",
+    "Outer": "HuskPawn_Nurse_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayAudioSFX_Start",
+    "Outer": "HuskPawn_Nurse_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "HuskPawn_Nurse_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'HuskPawn_C:ReceiveBeginPlay'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.33"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "HuskPawn_Nurse_C",
+    "Name": "Default__HuskPawn_Nurse_C",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.HuskPawn_Nurse_C'",
+    "Template": {
+      "ObjectName": "HuskPawn_C'Default__HuskPawn_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.43"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "HealSound_Start": {
+        "ObjectName": "SoundCue'SFX_Nurse_Husk_Healing_Start_Cue'",
+        "ObjectPath": "/SaveTheWorld/Sounds/Fort_Monster_Husk_Nurse/SFX_Nurse_Husk_Healing_Start_Cue.0"
+      },
+      "HealSoundEnd": {
+        "ObjectName": "SoundCue'SFX_Nurse_Husk_Healing_End_Cue'",
+        "ObjectPath": "/SaveTheWorld/Sounds/Fort_Monster_Husk_Nurse/SFX_Nurse_Husk_Healing_End_Cue.0"
+      },
+      "BehaviorTree": {
+        "ObjectName": "BehaviorTree'BT_HuskNurse'",
+        "ObjectPath": "/SaveTheWorld/AI/BehaviorTrees/EnemyBTs/BT_HuskNurse.3"
+      },
+      "FollowPlayerRange": 4000.0,
+      "HotspotType": "EFortHotSpotSlot::MeleeHuge",
+      "DefaultGameplayAbilitySets": [
+        {
+          "ObjectName": "FortAbilitySet'GAS_HuskLobberNonCombat'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Lobber/GAS_HuskLobberNonCombat.0"
+        },
+        {
+          "ObjectName": "FortAbilitySet'GAS_HuskATLASZap'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Base/GAS_HuskATLASZap.0"
+        },
+        {
+          "ObjectName": "FortAbilitySet'GAS_HuskNurse'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Nurse/GAS_HuskNurse.0"
+        }
+      ],
+      "AIPawnAbilitySystemComponent": {
+        "ObjectName": "FortAbilitySystemComponent'Default__HuskPawn_Nurse_C:AbilitySystemComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.6"
+      },
+      "WallRangedAttackGameplayAbilityTags": [
+        "NPC.Ability.Attack.Ranged.Primary"
+      ],
+      "SoundIndicatorComponent": {
+        "ObjectName": "FortSoundIndicatorComponent'Default__HuskPawn_Nurse_C:SoundIndicatorComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.10"
+      },
+      "PawnStatHandle": {
+        "RowName": "HuskNurse"
+      },
+      "SoundLibraryComponent": {
+        "ObjectName": "FortSoundLibraryComponent'Default__HuskPawn_Nurse_C:SoundLibraryComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.11"
+      },
+      "LineTestForDamageZoneBoneDetectionRadius": 19.0,
+      "EmoteComponent": {
+        "ObjectName": "FortEmoteComponent'Default__HuskPawn_Nurse_C:FortEmoteComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.7"
+      },
+      "EmoteMusicClockComponent": {
+        "ObjectName": "MusicClockComponent'Default__HuskPawn_Nurse_C:EmoteMusicClockComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.21"
+      },
+      "DefaultFeedback": {
+        "ObjectName": "FortFeedbackBank'Enemy_HuskBombShell_Feedback'",
+        "ObjectPath": "/SaveTheWorld/Characters/Feedback/Enemy_HuskBombShell_Feedback.0"
+      },
+      "VocalChords": [
+        {
+          "FeedbackAudioComponent": {
+            "ObjectName": "AudioComponent'Default__HuskPawn_Nurse_C:FeedbackAudioComp0'",
+            "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.0"
+          },
+          "ReplicatedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "PendingSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "QueuedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "CurrentSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          }
+        }
+      ],
+      "AbilitySystemComponent": {
+        "ObjectName": "FortAbilitySystemComponent'Default__HuskPawn_Nurse_C:AbilitySystemComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.6"
+      },
+      "GameplayTags": [
+        "NPC.Behavior.Retreats",
+        "SpecialEvent.Holiday.LobberCoal",
+        "NPC.CharacterType.Husk.Nurse"
+      ],
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "2BCF0A484069EE16B5F3048DCE2E0C53",
+        "SourceString": "Lobber",
+        "LocalizedString": "Lobber"
+      },
+      "Mesh": {
+        "ObjectName": "FortPooledSkelMeshComponent'Default__HuskPawn_Nurse_C:CharacterMesh0'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.9"
+      },
+      "CharacterMovement": {
+        "ObjectName": "FortMovementComp_AIChar'Default__HuskPawn_Nurse_C:CharMoveComp'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.8"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__HuskPawn_Nurse_C:CollisionCylinder'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.5"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__HuskPawn_Nurse_C:CollisionCylinder'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.5"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "HuskPawn_Nurse_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MusicClockComponent",
+    "Name": "EmoteMusicClockComponent",
+    "Outer": "Default__HuskPawn_Nurse_C",
+    "Class": "UScriptClass'MusicClockComponent'",
+    "Template": {
+      "ObjectName": "MusicClockComponent'Default__HuskPawn_C:EmoteMusicClockComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn.45"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "HealAoe_GEN_VARIABLE",
+    "Outer": "HuskPawn_Nurse_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'P_Husk_Healer_Heal'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Effects/P_Husk_Healer_Heal.104"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 17.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent_60",
+    "Outer": "HuskPawn_Nurse_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_37",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'HuskPawn_Nurse_C:AOE_Husk_Recieve_Impact_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.2"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Sound",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bAutoActivate",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "CollisionCylinder",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "4F1F9AB0-43DB4262-D0EF06BE-6C33889A",
+      "InternalVariableName": "AOE_Husk_Recieve_Impact"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_37",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'HuskPawn_Nurse_C:HealAoe_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.22"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Template",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ParticleSystemComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "RelativeLocation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ParticleSystemComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "PrimaryComponentTick",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ParticleSystemComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bStartWithTickEnabled",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ActorComponentTickFunction'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "CharacterMesh0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "6993D7ED-4B48059C-339554B1-E035D7E4",
+      "InternalVariableName": "HealAoe"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_37",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'HuskPawn_Nurse_C:AOE Heal Audio_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.1"
+      },
+      "CookedComponentInstancingData": {
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "CollisionCylinder",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "F61A8A0A-4969C0F1-71348088-DB39204F",
+      "InternalVariableName": "AOE Heal Audio"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_37",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'HuskPawn_Nurse_C:HealingLoop_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.3"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Sound",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bOverrideAttenuation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "PitchModulationMin",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "PitchModulationMax",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "VolumeModulationMin",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "VolumeModulationMax",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "AttenuationOverrides",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bEnableListenerFocus",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SoundAttenuationSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "SpatializationAlgorithm",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SoundAttenuationSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "StereoSpread",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SoundAttenuationSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "FocusAzimuth",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SoundAttenuationSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "NonFocusAzimuth",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SoundAttenuationSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "NonFocusVolumeAttenuation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SoundAttenuationSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "DistanceAlgorithm",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SoundAttenuationSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "FalloffDistance",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SoundAttenuationSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "CollisionCylinder",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "D7B0E8C9-428EAEE5-E46AA0A2-D3C9B8CE",
+      "InternalVariableName": "HealingLoop"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_70",
+    "Outer": "SimpleConstructionScript_37",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'HuskPawn_Nurse_C:SceneComponent_60'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.23"
+      },
+      "VariableGuid": "4D3A059E-00000000-00000000-00000000",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_37",
+    "Outer": "HuskPawn_Nurse_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'HuskPawn_Nurse_C:SimpleConstructionScript_37.SCS_Node_1'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.25"
+        },
+        {
+          "ObjectName": "SCS_Node'HuskPawn_Nurse_C:SimpleConstructionScript_37.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.26"
+        },
+        {
+          "ObjectName": "SCS_Node'HuskPawn_Nurse_C:SimpleConstructionScript_37.SCS_Node_0'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.24"
+        },
+        {
+          "ObjectName": "SCS_Node'HuskPawn_Nurse_C:SimpleConstructionScript_37.SCS_Node_3'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.27"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'HuskPawn_Nurse_C:SimpleConstructionScript_37.SCS_Node_1'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.25"
+        },
+        {
+          "ObjectName": "SCS_Node'HuskPawn_Nurse_C:SimpleConstructionScript_37.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.26"
+        },
+        {
+          "ObjectName": "SCS_Node'HuskPawn_Nurse_C:SimpleConstructionScript_37.SCS_Node_0'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.24"
+        },
+        {
+          "ObjectName": "SCS_Node'HuskPawn_Nurse_C:SimpleConstructionScript_37.SCS_Node_3'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.27"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'HuskPawn_Nurse_C:SimpleConstructionScript_37.SCS_Node_70'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/HuskPawn_Nurse.28"
+      }
+    }
+  }
+]

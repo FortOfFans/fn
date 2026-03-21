@@ -1,0 +1,273 @@
+[
+  {
+    "Type": "AssetTagsGameplayEffectComponent",
+    "Name": "AssetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AssetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Perk_H_ImJustNotUserFriendly_Reflect_Damage_T01_C'Default__GE_Perk_H_ImJustNotUserFriendly_Reflect_Damage_T01_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/ImJustNotUserFriendly/GE_Perk_H_ImJustNotUserFriendly_Reflect_Damage_T01.2"
+    },
+    "Template": {
+      "ObjectName": "AssetTagsGameplayEffectComponent'Default__GET_ReflectDamage_C:AssetTagsGameplayEffectComponent_0'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/GET_ReflectDamage.0"
+    },
+    "Properties": {
+      "InheritableAssetTags": {
+        "CombinedTags": [
+          "Gameplay.Damage",
+          "Gameplay.Effect.Instant",
+          "Damage.Reflected",
+          "Abilities.generic.ReflectedDamage",
+          "Gameplay.Damage.Physical",
+          "Asset.PerkEffect.ImJustNotUserFriendly.Damage",
+          "Asset.AbilityGroup.Hero.Constructor.Decoy"
+        ],
+        "Added": [
+          "Asset.PerkEffect.ImJustNotUserFriendly.Damage",
+          "Asset.AbilityGroup.Hero.Constructor.Decoy"
+        ]
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Perk_H_ImJustNotUserFriendly_Reflect_Damage_T01_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GET_ReflectDamage_C'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/GET_ReflectDamage.1"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_Perk_H_ImJustNotUserFriendly_Reflect_Damage_T01_C'Default__GE_Perk_H_ImJustNotUserFriendly_Reflect_Damage_T01_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/ImJustNotUserFriendly/GE_Perk_H_ImJustNotUserFriendly_Reflect_Damage_T01.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_Perk_H_ImJustNotUserFriendly_Reflect_Damage_T01_C",
+    "Name": "Default__GE_Perk_H_ImJustNotUserFriendly_Reflect_Damage_T01_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Perks/Hero/ImJustNotUserFriendly/GE_Perk_H_ImJustNotUserFriendly_Reflect_Damage_T01.GE_Perk_H_ImJustNotUserFriendly_Reflect_Damage_T01_C'",
+    "Template": {
+      "ObjectName": "GET_ReflectDamage_C'Default__GET_ReflectDamage_C'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/GET_ReflectDamage.2"
+    },
+    "Properties": {
+      "Executions": [
+        {
+          "CalculationClass": {
+            "ObjectName": "Class'FortDamageFormulaExecutionCalculation'",
+            "ObjectPath": "/Script/FortniteGame"
+          },
+          "PassedInTags": [],
+          "CalculationModifiers": [
+            {
+              "CapturedAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "OutgoingBaseDamage",
+                  "Attribute": {
+                    "Path": [
+                      "OutgoingBaseDamage"
+                    ],
+                    "ResolvedOwner": {
+                      "ObjectName": "Class'FortDamageSet'",
+                      "ObjectPath": "/Script/FortniteGame"
+                    }
+                  },
+                  "AttributeOwner": {
+                    "ObjectName": "Class'FortDamageSet'",
+                    "ObjectPath": "/Script/FortniteGame"
+                  }
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": true
+              },
+              "TransientAggregatorIdentifier": {
+                "TagName": "None"
+              },
+              "AggregatorType": "EGameplayEffectScopedModifierAggregatorType::CapturedAttributeBacked",
+              "ModifierOp": "EGameplayModOp::Additive",
+              "ModifierMagnitude": {
+                "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::AttributeBased",
+                "ScalableFloatMagnitude": {
+                  "Value": 0.0,
+                  "Curve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  },
+                  "RegistryType": {
+                    "Name": "None"
+                  }
+                },
+                "AttributeBasedMagnitude": {
+                  "Coefficient": {
+                    "Value": 1.0,
+                    "Curve": {
+                      "CurveTable": {
+                        "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+                        "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+                      },
+                      "RowName": "Perk.ImJustNotUserFriendly.T01.DamageReflect"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PreMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PostMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "BackingAttribute": {
+                    "AttributeToCapture": {
+                      "AttributeName": "OutgoingBaseAbilityDamageMultiplier",
+                      "Attribute": {
+                        "Path": [
+                          "OutgoingBaseAbilityDamageMultiplier"
+                        ],
+                        "ResolvedOwner": {
+                          "ObjectName": "Class'FortDamageSet'",
+                          "ObjectPath": "/Script/FortniteGame"
+                        }
+                      },
+                      "AttributeOwner": {
+                        "ObjectName": "Class'FortDamageSet'",
+                        "ObjectPath": "/Script/FortniteGame"
+                      }
+                    },
+                    "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                    "bSnapshot": false
+                  },
+                  "AttributeCurve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  },
+                  "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+                  "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+                  "SourceTagFilter": [],
+                  "TargetTagFilter": []
+                },
+                "CustomMagnitude": {
+                  "CalculationClassMagnitude": null,
+                  "Coefficient": {
+                    "Value": 1.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PreMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PostMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "FinalLookupCurve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  }
+                },
+                "SetByCallerMagnitude": {
+                  "DataName": "None",
+                  "DataTag": {
+                    "TagName": "None"
+                  }
+                }
+              },
+              "EvaluationChannelSettings": {
+                "Channel": "EGameplayModEvaluationChannel::Channel0"
+              },
+              "SourceTags": {
+                "RequireTags": [],
+                "IgnoreTags": [],
+                "TagQuery": {
+                  "TokenStreamVersion": 0,
+                  "TagDictionary": [],
+                  "QueryTokenStream": [],
+                  "UserDescription": "",
+                  "AutoDescription": ""
+                }
+              },
+              "TargetTags": {
+                "RequireTags": [],
+                "IgnoreTags": [],
+                "TagQuery": {
+                  "TokenStreamVersion": 0,
+                  "TagDictionary": [],
+                  "QueryTokenStream": [],
+                  "UserDescription": "",
+                  "AutoDescription": ""
+                }
+              }
+            }
+          ],
+          "ConditionalGameplayEffects": []
+        }
+      ],
+      "InheritableGameplayEffectTags": {
+        "CombinedTags": [
+          "Gameplay.Damage",
+          "Gameplay.Effect.Instant",
+          "Damage.Reflected",
+          "Abilities.generic.ReflectedDamage",
+          "Gameplay.Damage.Physical",
+          "Asset.PerkEffect.ImJustNotUserFriendly.Damage",
+          "Asset.AbilityGroup.Hero.Constructor.Decoy"
+        ],
+        "Added": [
+          "Asset.PerkEffect.ImJustNotUserFriendly.Damage",
+          "Asset.AbilityGroup.Hero.Constructor.Decoy"
+        ]
+      },
+      "GEComponents": [
+        {
+          "ObjectName": "AssetTagsGameplayEffectComponent'Default__GE_Perk_H_ImJustNotUserFriendly_Reflect_Damage_T01_C:AssetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/ImJustNotUserFriendly/GE_Perk_H_ImJustNotUserFriendly_Reflect_Damage_T01.0"
+        }
+      ]
+    }
+  }
+]

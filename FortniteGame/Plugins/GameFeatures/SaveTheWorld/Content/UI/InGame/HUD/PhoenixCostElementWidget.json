@@ -1,0 +1,430 @@
+[
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BorderSlot'",
+    "Outer": {
+      "ObjectName": "CommonBorder'PhoenixCostElementWidget_C:WidgetTree.CommonBorder_29'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.1"
+    },
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "CommonBorder'PhoenixCostElementWidget_C:WidgetTree.CommonBorder_29'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.1"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'PhoenixCostElementWidget_C:WidgetTree.VerticalBox_71'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.6"
+      }
+    }
+  },
+  {
+    "Type": "CommonBorder",
+    "Name": "CommonBorder_29",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CommonBorder'",
+    "Outer": {
+      "ObjectName": "WidgetTree'PhoenixCostElementWidget_C:WidgetTree'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.10"
+    },
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'PhoenixCostElementWidget_C:WidgetTree.CommonBorder_29.BorderSlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.0"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "CostAmount",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CommonTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'PhoenixCostElementWidget_C:WidgetTree'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.10"
+    },
+    "Properties": {
+      "Style": {
+        "ObjectName": "BlueprintGeneratedClass'TextStyle_BurbankSmall_S_White_C'",
+        "ObjectPath": "/FortUILibrary/Styles/Typography/Foundation/TextStyle_BurbankSmall_S_White.0"
+      },
+      "Text": {
+        "Namespace": "",
+        "Key": "2D36C51441C5B594EF26BEB79CB4987B",
+        "SourceString": "99",
+        "LocalizedString": "99"
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 1.0,
+          "G": 0.0,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "FF00FF"
+        }
+      },
+      "Font": {
+        "FontObject": null,
+        "TypefaceFontName": "None"
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'PhoenixCostElementWidget_C:WidgetTree.VerticalBox_71.VerticalBoxSlot_1'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.8"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "FortLazyImage",
+    "Name": "CostIcon",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortLazyImage'",
+    "Outer": {
+      "ObjectName": "WidgetTree'PhoenixCostElementWidget_C:WidgetTree'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.10"
+    },
+    "Properties": {
+      "Brush": {
+        "ImageSize": {
+          "X": 48.0,
+          "Y": 48.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'T-Icon-S-Loot-Crystal-Red'",
+          "ObjectPath": "/Game/UI/Foundation/Textures/Icons/Items/T-Icon-S-Loot-Crystal-Red.0"
+        }
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'PhoenixCostElementWidget_C:WidgetTree.VerticalBox_71.VerticalBoxSlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.7"
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "SetElementCost",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'PhoenixCostElementWidget_C'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.9"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "Cost",
+        "Flags": "RF_Public",
+        "ElementSize": 28,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'FortItemQuantityPair'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "Temp_class_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'CommonTextStyle'",
+          "ObjectPath": "/Script/CommonUI"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetItemDefinitionFromItemQuantityPair_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ItemDefinitionBase'",
+          "ObjectPath": "/Script/ItemizationCoreRuntime"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "SoftObjectProperty",
+        "Name": "CallFunc_GetSmallPreviewImage_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyFlags": "UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'Texture2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "Temp_class_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'CommonTextStyle'",
+          "ObjectPath": "/Script/CommonUI"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetContext_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortInventoryContext'",
+          "ObjectPath": "/Script/FortniteUI"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetItemDefinitionFromItemQuantityPair_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ItemDefinitionBase'",
+          "ObjectPath": "/Script/ItemizationCoreRuntime"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetNumInInventory_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CallFunc_Conv_IntToText_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'CommonTextStyle'",
+          "ObjectPath": "/Script/CommonUI"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "PhoenixCostElementWidget_C",
+    "Name": "Default__PhoenixCostElementWidget_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.PhoenixCostElementWidget_C'",
+    "Properties": {
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_71",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'PhoenixCostElementWidget_C:WidgetTree'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.10"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'PhoenixCostElementWidget_C:WidgetTree.VerticalBox_71.VerticalBoxSlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.7"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'PhoenixCostElementWidget_C:WidgetTree.VerticalBox_71.VerticalBoxSlot_1'",
+          "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.8"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "BorderSlot'PhoenixCostElementWidget_C:WidgetTree.CommonBorder_29.BorderSlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.0"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'PhoenixCostElementWidget_C:WidgetTree.VerticalBox_71'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.6"
+    },
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Top",
+      "Parent": {
+        "ObjectName": "VerticalBox'PhoenixCostElementWidget_C:WidgetTree.VerticalBox_71'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.6"
+      },
+      "Content": {
+        "ObjectName": "FortLazyImage'PhoenixCostElementWidget_C:WidgetTree.CostIcon'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.3"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'PhoenixCostElementWidget_C:WidgetTree.VerticalBox_71'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.6"
+    },
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'PhoenixCostElementWidget_C:WidgetTree.VerticalBox_71'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.6"
+      },
+      "Content": {
+        "ObjectName": "CommonTextBlock'PhoenixCostElementWidget_C:WidgetTree.CostAmount'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.2"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "PhoenixCostElementWidget_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'PhoenixCostElementWidget_C:WidgetTree'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.10"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'PhoenixCostElementWidget_C:SetElementCost'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CostIcon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FortLazyImage'",
+          "ObjectPath": "/Script/FortniteUI"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CostAmount",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CommonTextBlock'",
+          "ObjectPath": "/Script/CommonUI"
+        }
+      }
+    ],
+    "FuncMap": {
+      "SetElementCost": {
+        "ObjectName": "Function'PhoenixCostElementWidget_C:SetElementCost'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.4"
+      }
+    },
+    "ClassFlags": "CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "PhoenixCostElementWidget_C'Default__PhoenixCostElementWidget_C'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.5"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'PhoenixCostElementWidget_C'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.9"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CommonBorder'PhoenixCostElementWidget_C:WidgetTree.CommonBorder_29'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PhoenixCostElementWidget.1"
+      }
+    }
+  }
+]

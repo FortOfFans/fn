@@ -1,0 +1,1117 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_Constructor_GoinConstructor_ShieldBlock_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GAT_ConstructorActiveAbility_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Parents/GAT_ConstructorActiveAbility.0"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:ExecuteUbergraph_GA_Constructor_GoinConstructor_ShieldBlock'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.4"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:RegisterWithGoalManager'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.8"
+      },
+      {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:UnregisterWithGoalManager'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.10"
+      },
+      {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:Completed_DCBF8561419838A859434F9D8C1AA79B'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.3"
+      },
+      {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:Cancelled_DCBF8561419838A859434F9D8C1AA79B'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.1"
+      },
+      {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:Triggered_DCBF8561419838A859434F9D8C1AA79B'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.9"
+      },
+      {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:K2_ActivateAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.5"
+      },
+      {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:K2_OnEndAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.6"
+      },
+      {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:Check If Player Is Moving Forward'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.2"
+      },
+      {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:OnAbilityInputReleased'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.7"
+      },
+      {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:ExecuteUbergraph_GA_Constructor_GoinConstructor_ShieldBlock'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ActivateShieldEvent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Movespeed_Handle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'ActiveGameplayEffectHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "GE_Movespeed",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Event_TimerHandle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "DeactivateShieldEvent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "Angle_To_Trigger",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Disable_Primary",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'ActiveGameplayEffectHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Constructor_Block_Anim",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'AnimMontage'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "StartTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BlockAnimSequence",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'AnimSequenceBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "BlockingHandle2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'ActiveGameplayEffectHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "FullyOpenCue",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "GE_BlockingArmor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "GE_DisablePrimary",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ShieldUnfoldCue",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "World Assignment Identifier",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 48,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'FortAIAssignmentIdentifier'",
+          "ObjectPath": "/Script/FortniteAI"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Assignment_Settings",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FortAIAssignmentSettings'",
+          "ObjectPath": "/Script/FortniteAI"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Goal",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'FortAIGoalInfo'",
+          "ObjectPath": "/Script/FortniteAI"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TauntEffect_GCN",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_Constructor_GoinConstructor_ShieldBlock": {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:ExecuteUbergraph_GA_Constructor_GoinConstructor_ShieldBlock'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.4"
+      },
+      "OnAbilityInputReleased": {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:OnAbilityInputReleased'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.7"
+      },
+      "Check If Player Is Moving Forward": {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:Check If Player Is Moving Forward'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.2"
+      },
+      "K2_OnEndAbility": {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:K2_OnEndAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.6"
+      },
+      "K2_ActivateAbility": {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:K2_ActivateAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.5"
+      },
+      "Triggered_DCBF8561419838A859434F9D8C1AA79B": {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:Triggered_DCBF8561419838A859434F9D8C1AA79B'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.9"
+      },
+      "Cancelled_DCBF8561419838A859434F9D8C1AA79B": {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:Cancelled_DCBF8561419838A859434F9D8C1AA79B'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.1"
+      },
+      "Completed_DCBF8561419838A859434F9D8C1AA79B": {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:Completed_DCBF8561419838A859434F9D8C1AA79B'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.3"
+      },
+      "UnregisterWithGoalManager": {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:UnregisterWithGoalManager'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.10"
+      },
+      "RegisterWithGoalManager": {
+        "ObjectName": "Function'GA_Constructor_GoinConstructor_ShieldBlock_C:RegisterWithGoalManager'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.8"
+      }
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GA_Constructor_GoinConstructor_ShieldBlock_C'Default__GA_Constructor_GoinConstructor_ShieldBlock_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.11"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Cancelled_DCBF8561419838A859434F9D8C1AA79B",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Constructor_GoinConstructor_ShieldBlock_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Check If Player Is Moving Forward",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Constructor_GoinConstructor_ShieldBlock_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Completed_DCBF8561419838A859434F9D8C1AA79B",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Constructor_GoinConstructor_ShieldBlock_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_Constructor_GoinConstructor_ShieldBlock",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Constructor_GoinConstructor_ShieldBlock_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_TargetData_1",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_ApplicationTag_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitTargetSelectionDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitTargetSelectionDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bWasCancelled",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BP_ApplyGameplayEffectToOwner_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'ActiveGameplayEffectHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_CommitAbility_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetActorForwardVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetCurrentAcceleration_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_GetAngleBetweenTwoVectors_Angle__Degrees_",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayMontageWaitTarget_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortAbilityTask_PlayMontageWaitTarget'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_GetTimeSeconds_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_TargetData_2",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_ApplicationTag_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_3",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitTargetSelectionDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_GetGameTimeInSeconds_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Subtract_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BP_ApplyGameplayEffectToOwner_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'ActiveGameplayEffectHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetPlayLength_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Subtract_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAbilitySystemComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeEffectContext_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectContextHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BP_ApplyGameplayEffectToSelf_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'ActiveGameplayEffectHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_GameplayEffectContextHandle",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectContextHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_B_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Delay_Duration_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbility",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Constructor_GoinConstructor_ShieldBlock_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.0"
+    },
+    "Super": {
+      "ObjectName": "Function'GAT_ConstructorActiveAbility_C:K2_ActivateAbility'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Parents/GAT_ConstructorActiveAbility.2"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_OnEndAbility",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Constructor_GoinConstructor_ShieldBlock_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.0"
+    },
+    "Super": {
+      "ObjectName": "Function'GAT_ActiveAbility_Hero_C:K2_OnEndAbility'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_ActiveAbility_Hero.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bWasCancelled",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnAbilityInputReleased",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Constructor_GoinConstructor_ShieldBlock_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortGameplayAbility:OnAbilityInputReleased'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "RegisterWithGoalManager",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Constructor_GoinConstructor_ShieldBlock_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_CreateWorldAssignment_AssignmentIdentifier",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "Struct": {
+          "ObjectName": "Class'FortAIAssignmentIdentifier'",
+          "ObjectPath": "/Script/FortniteAI"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "CallFunc_CreateWorldAssignment_CreationResult",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EAssignmentCreationResult'",
+          "ObjectPath": "/Script/FortniteAI"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeGoalFromActor_Goal",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'FortAIGoalInfo'",
+          "ObjectPath": "/Script/FortniteAI"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAIGoalManager_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortAIGoalManager'",
+          "ObjectPath": "/Script/FortniteAI"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Triggered_DCBF8561419838A859434F9D8C1AA79B",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Constructor_GoinConstructor_ShieldBlock_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UnregisterWithGoalManager",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Constructor_GoinConstructor_ShieldBlock_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAIGoalManager_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortAIGoalManager'",
+          "ObjectPath": "/Script/FortniteAI"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GA_Constructor_GoinConstructor_ShieldBlock_C",
+    "Name": "Default__GA_Constructor_GoinConstructor_ShieldBlock_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GA_Constructor_GoinConstructor_ShieldBlock.GA_Constructor_GoinConstructor_ShieldBlock_C'",
+    "Template": {
+      "ObjectName": "GAT_ConstructorActiveAbility_C'Default__GAT_ConstructorActiveAbility_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Parents/GAT_ConstructorActiveAbility.3"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "ActivateShieldEvent": {
+        "TagName": "Event.Ability.Constructor.GoinConstructor.ShieldBlock.Activate"
+      },
+      "Movespeed_Handle": {
+        "WeakOwningASC": null,
+        "Handle": -1,
+        "bPassedFiltersAndWasExecuted": false
+      },
+      "GE_Movespeed": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Constructor_GoinConstructor_MoveSpeed_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GE_Constructor_GoinConstructor_MoveSpeed.1"
+      },
+      "Event_TimerHandle": {
+        "Handle": 0
+      },
+      "DeactivateShieldEvent": {
+        "TagName": "Event.Ability.Constructor.GoinConstructor.ShieldBlock.Deactivate"
+      },
+      "Angle_To_Trigger": 35.0,
+      "Disable_Primary": {
+        "WeakOwningASC": null,
+        "Handle": -1,
+        "bPassedFiltersAndWasExecuted": false
+      },
+      "Constructor_Block_Anim": {
+        "ObjectName": "AnimMontage'GoinConstructor_ShieldBlock_CLM_M'",
+        "ObjectPath": "/SaveTheWorld/Animation/Game/MainPlayer/Combat/Gadgets/Large/GoinConstructor/GoinConstructor_ShieldBlock_CLM_M.0"
+      },
+      "BlockAnimSequence": {
+        "ObjectName": "AnimSequence'GoinConstructor_FullOpen_Arm'",
+        "ObjectPath": "/SaveTheWorld/Animation/Game/MainPlayer/Combat/Gadgets/Large/GoinConstructor/ConstructorArm_Anims/GoinConstructor_FullOpen_Arm.0"
+      },
+      "BlockingHandle2": {
+        "WeakOwningASC": null,
+        "Handle": -1,
+        "bPassedFiltersAndWasExecuted": false
+      },
+      "FullyOpenCue": {
+        "TagName": "GameplayCue.Abilities.Constructor.GoinConstructor.ConstructorArmFullyOpen"
+      },
+      "GE_BlockingArmor": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Constructor_GoinConstructor_Blocking_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GE_Constructor_GoinConstructor_Blocking.2"
+      },
+      "GE_DisablePrimary": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Constructor_GoinConstructor_DisablePrimary_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GE_Constructor_GoinConstructor_DisablePrimary.0"
+      },
+      "ShieldUnfoldCue": {
+        "TagName": "GameplayCue.Abilities.Constructor.GoinConstructor.ShieldUnfold"
+      },
+      "World Assignment Identifier": {
+        "AssignmentType": "EAssignmentType::World",
+        "AssignmentGameplayTags": [
+          "NPC.Assignment.Taunt"
+        ],
+        "AssignmentTeam": "EFortTeam::Monster"
+      },
+      "Goal": {
+        "Actor": null,
+        "Location": {
+          "X": 3.4028235E+38,
+          "Y": 3.4028235E+38,
+          "Z": 3.4028235E+38
+        },
+        "bActorAlwaysPerceived": true
+      },
+      "TauntEffect_GCN": {
+        "TagName": "GameplayCue.Abilities.Constructor.GoinConstructor.Taunt"
+      },
+      "AbilityTags": [
+        "Abilities.Constructor.GoinConstructor.ShieldBlock"
+      ],
+      "ActivationRequiredTags": [
+        "Granted.AbilityEffect.Constructor.GoinConstructor.Duration"
+      ]
+    }
+  }
+]

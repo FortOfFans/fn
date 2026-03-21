@@ -1,0 +1,929 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_UG_ShieldActor_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "NumReplicatedProperties": 2,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'GA_UG_ShieldActor_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.15"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'GA_UG_ShieldActor_C:ExecuteUbergraph_GA_UG_ShieldActor'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.1"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'GA_UG_ShieldActor_C:UserConstructionScript'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.3"
+      },
+      {
+        "ObjectName": "Function'GA_UG_ShieldActor_C:ReceiveBeginPlay'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.2"
+      },
+      {
+        "ObjectName": "Function'GA_UG_ShieldActor_C:ExecuteUbergraph_GA_UG_ShieldActor'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.1"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sm_MinbossShield_Back",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "P_MinibossShieldAmbient_Back",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RotatingMovement",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'RotatingMovementComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "P_MinibossShieldAmbient_Front",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_MinibossShield_Front",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "EnemyCapsuleHalfSize",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | ExposeOnSpawn"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "EnemyCapsuleHalfRadius",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | ExposeOnSpawn"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "EnemyCapsuleRadiusMultiplier",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "SmasherShieldScale",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_UG_ShieldActor": {
+        "ObjectName": "Function'GA_UG_ShieldActor_C:ExecuteUbergraph_GA_UG_ShieldActor'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.1"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'GA_UG_ShieldActor_C:ReceiveBeginPlay'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.2"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function'GA_UG_ShieldActor_C:UserConstructionScript'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GA_UG_ShieldActor_C'Default__GA_UG_ShieldActor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.4"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_UG_ShieldActor",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_UG_ShieldActor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInstigator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_AddLocalOffset_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "K2Node_DynamicCast_AsGameplay_Tag_Asset_Interface",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasMatchingGameplayTag_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_X",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Y",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_BreakVector_Z",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_AddLocalOffset_SweepHitResult_1",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_AddLocalOffset_SweepHitResult_2",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_UG_ShieldActor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_UG_ShieldActor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:UserConstructionScript'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GA_UG_ShieldActor_C",
+    "Name": "Default__GA_UG_ShieldActor_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.GA_UG_ShieldActor_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "EnemyCapsuleRadiusMultiplier": 2.799999952316284,
+      "SmasherShieldScale": {
+        "X": 1.1,
+        "Y": 1.1,
+        "Z": 1.1
+      },
+      "bReplicateMovement": true,
+      "bHidden": true,
+      "bCanBeDamaged": false,
+      "bReplicates": true
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "P_MinibossShieldAmbient_Back_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_UG_ShieldActor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.0"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'P_MinibossShieldAmbient'",
+        "ObjectPath": "/SaveTheWorld/Effects/Fort_Effects/Miniboss/Shield/P_MinibossShieldAmbient.17"
+      },
+      "TranslucencySortPriority": -1,
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.00001,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.5,
+        "Y": 0.5,
+        "Z": 0.40000004
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "P_MinibossShieldAmbient_Front_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_UG_ShieldActor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.0"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'P_MinibossShieldAmbient'",
+        "ObjectPath": "/SaveTheWorld/Effects/Fort_Effects/Miniboss/Shield/P_MinibossShieldAmbient.17"
+      },
+      "TranslucencySortPriority": -1,
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -89.99998,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.5,
+        "Y": 0.5,
+        "Z": 0.4
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "RotatingMovementComponent",
+    "Name": "RotatingMovement_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'RotatingMovementComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_UG_ShieldActor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.0"
+    },
+    "Properties": {
+      "RotationRate": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
+      "bRotationInLocalSpace": false,
+      "PlaneConstraintNormal": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0
+      },
+      "bSnapToPlaneAtStart": true,
+      "PlaneConstraintAxisSetting": "EPlaneConstraintAxisSetting::Z"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_UG_ShieldActor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.0"
+    },
+    "Properties": {
+      "bHiddenInGame": true
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'GA_UG_ShieldActor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.15"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'GA_UG_ShieldActor_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.8"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'GA_UG_ShieldActor_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.11"
+        },
+        {
+          "ObjectName": "SCS_Node'GA_UG_ShieldActor_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.13"
+        }
+      ],
+      "VariableGuid": "C059ECBB-44DF46DB-F266B081-987BC772",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'GA_UG_ShieldActor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.15"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'GA_UG_ShieldActor_C:P_MinibossShieldAmbient_Front_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.6"
+      },
+      "VariableGuid": "C1CDF3A5-4A2350E4-4D89509A-285ADE2E",
+      "InternalVariableName": "P_MinibossShieldAmbient_Front"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'GA_UG_ShieldActor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.15"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'GA_UG_ShieldActor_C:SM_MinibossShield_Front_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.17"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'GA_UG_ShieldActor_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.10"
+        }
+      ],
+      "VariableGuid": "EBB71CAC-429A9535-ED5D0DA4-49633947",
+      "InternalVariableName": "SM_MinibossShield_Front"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'GA_UG_ShieldActor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.15"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'RotatingMovementComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "RotatingMovementComponent'GA_UG_ShieldActor_C:RotatingMovement_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.7"
+      },
+      "VariableGuid": "63EE9932-4062BD32-64DC4297-926375E0",
+      "InternalVariableName": "RotatingMovement"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'GA_UG_ShieldActor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.15"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'GA_UG_ShieldActor_C:Sm_MinbossShield_Back_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.16"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'GA_UG_ShieldActor_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.14"
+        }
+      ],
+      "VariableGuid": "D10C2FFB-4F79B80F-29B9AD92-391E52B4",
+      "InternalVariableName": "Sm_MinbossShield_Back"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'GA_UG_ShieldActor_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.15"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'GA_UG_ShieldActor_C:P_MinibossShieldAmbient_Back_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.5"
+      },
+      "VariableGuid": "71874305-4AAC0C07-C5696782-D31A397F",
+      "InternalVariableName": "P_MinibossShieldAmbient_Back"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_UG_ShieldActor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'GA_UG_ShieldActor_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.9"
+        },
+        {
+          "ObjectName": "SCS_Node'GA_UG_ShieldActor_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.12"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'GA_UG_ShieldActor_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.9"
+        },
+        {
+          "ObjectName": "SCS_Node'GA_UG_ShieldActor_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.11"
+        },
+        {
+          "ObjectName": "SCS_Node'GA_UG_ShieldActor_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.10"
+        },
+        {
+          "ObjectName": "SCS_Node'GA_UG_ShieldActor_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.12"
+        },
+        {
+          "ObjectName": "SCS_Node'GA_UG_ShieldActor_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.14"
+        },
+        {
+          "ObjectName": "SCS_Node'GA_UG_ShieldActor_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.13"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'GA_UG_ShieldActor_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.9"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Sm_MinbossShield_Back_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_UG_ShieldActor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_MinibossShield'",
+        "ObjectPath": "/SaveTheWorld/Effects/Fort_Effects/Miniboss/Shield/SM_MinibossShield.1"
+      },
+      "CanCharacterStepUpOn": "ECanBeCharacterBase::ECB_No",
+      "BodyInstance": {
+        "bNotifyRigidBodyCollision": true,
+        "CollisionProfileName": "Custom",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "FCC_Trace_Weapon",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_Projectile",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileIgnoreAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 1.2874603E-05,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -89.99997,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.5,
+        "Y": 0.5,
+        "Z": 0.4
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_MinibossShield_Front_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_UG_ShieldActor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_ShieldActor.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_MinibossShield'",
+        "ObjectPath": "/SaveTheWorld/Effects/Fort_Effects/Miniboss/Shield/SM_MinibossShield.1"
+      },
+      "CanCharacterStepUpOn": "ECanBeCharacterBase::ECB_No",
+      "BodyInstance": {
+        "bNotifyRigidBodyCollision": true,
+        "CollisionProfileName": "Custom",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "FCC_Trace_Weapon",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_Projectile",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileIgnoreAI",
+              "Response": "ECollisionResponse::ECR_Block"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 89.999985,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.5,
+        "Y": 0.5,
+        "Z": 0.4
+      }
+    }
+  }
+]

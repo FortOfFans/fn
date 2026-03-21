@@ -1,0 +1,184 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_PlayerDefenderComponent_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_PlayerDefenderComponent_C:ExecuteUbergraph_BP_PlayerDefenderComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/BP_PlayerDefenderComponent.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortPlayerDefenderComponent'",
+      "ObjectPath": "/Script/SaveTheWorldRuntime"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_PlayerDefenderComponent_C:DespawnPrimaryDefender'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/BP_PlayerDefenderComponent.4"
+      },
+      {
+        "ObjectName": "Function'BP_PlayerDefenderComponent_C:DespawnAllSecondaryDefenders'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/BP_PlayerDefenderComponent.3"
+      },
+      {
+        "ObjectName": "Function'BP_PlayerDefenderComponent_C:Despawn1SecondaryDefender'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/BP_PlayerDefenderComponent.2"
+      },
+      {
+        "ObjectName": "Function'BP_PlayerDefenderComponent_C:ExecuteUbergraph_BP_PlayerDefenderComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/BP_PlayerDefenderComponent.5"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_PlayerDefenderComponent": {
+        "ObjectName": "Function'BP_PlayerDefenderComponent_C:ExecuteUbergraph_BP_PlayerDefenderComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/BP_PlayerDefenderComponent.5"
+      },
+      "Despawn1SecondaryDefender": {
+        "ObjectName": "Function'BP_PlayerDefenderComponent_C:Despawn1SecondaryDefender'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/BP_PlayerDefenderComponent.2"
+      },
+      "DespawnAllSecondaryDefenders": {
+        "ObjectName": "Function'BP_PlayerDefenderComponent_C:DespawnAllSecondaryDefenders'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/BP_PlayerDefenderComponent.3"
+      },
+      "DespawnPrimaryDefender": {
+        "ObjectName": "Function'BP_PlayerDefenderComponent_C:DespawnPrimaryDefender'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/BP_PlayerDefenderComponent.4"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_PlayerDefenderComponent_C'Default__BP_PlayerDefenderComponent_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/BP_PlayerDefenderComponent.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_PlayerDefenderComponent_C",
+    "Name": "Default__BP_PlayerDefenderComponent_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Characters/Survivors/Components/BP_PlayerDefenderComponent.BP_PlayerDefenderComponent_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "SpawnInDefenderEQSQuery": {
+        "ObjectName": "EnvQuery'DefenderSpawnEQS'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/DefenderSpawnEQS.0"
+      },
+      "BehaviorTree": {
+        "ObjectName": "BehaviorTree'BT_Defender'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/BT_Defender.4"
+      },
+      "ExtraAbilitySets": [
+        {
+          "ObjectName": "FortAbilitySet'GAS_DefenderPortalAbilities'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Portal/GAS_DefenderPortalAbilities.0"
+        },
+        {
+          "ObjectName": "FortAbilitySet'GAS_DefenderTeleportAbility'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/GAS_DefenderTeleportAbility.0"
+        },
+        {
+          "ObjectName": "FortAbilitySet'GAS_DefenderFollower'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAS_DefenderFollower.0"
+        },
+        {
+          "ObjectName": "FortAbilitySet'GAS_DefenderRevivePlayer'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/RevivePlayers/GAS_DefenderRevivePlayer.0"
+        },
+        {
+          "ObjectName": "FortAbilitySet'GAS_DefenderScaling'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/DefenderScaling/GAS_DefenderScaling.0"
+        }
+      ],
+      "RevivePlayerAbilityTags": [
+        "NPC.Ability.NonAttack.DBNOReviveOther"
+      ],
+      "DefenderReviveCooldownGE": {
+        "ObjectName": "BlueprintGeneratedClass'GE_DefenderPlayerRevive_Cooldown_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/RevivePlayers/GE_DefenderPlayerRevive_Cooldown.0"
+      },
+      "ValidateDefenseLocationQuery": {
+        "ObjectName": "EnvQuery'ValidDefensePingEQS'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/ValidDefensePingEQS.0"
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Despawn1SecondaryDefender",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PlayerDefenderComponent_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/BP_PlayerDefenderComponent.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DespawnAllSecondaryDefenders",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PlayerDefenderComponent_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/BP_PlayerDefenderComponent.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DespawnPrimaryDefender",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PlayerDefenderComponent_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/BP_PlayerDefenderComponent.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_PlayerDefenderComponent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PlayerDefenderComponent_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/BP_PlayerDefenderComponent.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  }
+]

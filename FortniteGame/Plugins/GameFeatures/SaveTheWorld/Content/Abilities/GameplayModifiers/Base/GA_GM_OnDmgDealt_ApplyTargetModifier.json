@@ -1,0 +1,323 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_GM_OnDmgDealt_ApplyTargetModifier_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GA_GM_OnDmgDealtBase_C'",
+      "ObjectPath": "/Game/Abilities/GameplayModifiers/Base/GA_GM_OnDmgDealtBase.0"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'GA_GM_OnDmgDealt_ApplyTargetModifier_C:ExecuteUbergraph_GA_GM_OnDmgDealt_ApplyTargetModifier'",
+        "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/GA_GM_OnDmgDealt_ApplyTargetModifier.2"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'GA_GM_OnDmgDealt_ApplyTargetModifier_C:K2_ShouldAbilityRespondToEvent'",
+        "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/GA_GM_OnDmgDealt_ApplyTargetModifier.3"
+      },
+      {
+        "ObjectName": "Function'GA_GM_OnDmgDealt_ApplyTargetModifier_C:DoOnDmgDealtBehavior'",
+        "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/GA_GM_OnDmgDealt_ApplyTargetModifier.1"
+      },
+      {
+        "ObjectName": "Function'GA_GM_OnDmgDealt_ApplyTargetModifier_C:ExecuteUbergraph_GA_GM_OnDmgDealt_ApplyTargetModifier'",
+        "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/GA_GM_OnDmgDealt_ApplyTargetModifier.2"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TargetTag",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AIDmgTag",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Apply To Self",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_GM_OnDmgDealt_ApplyTargetModifier": {
+        "ObjectName": "Function'GA_GM_OnDmgDealt_ApplyTargetModifier_C:ExecuteUbergraph_GA_GM_OnDmgDealt_ApplyTargetModifier'",
+        "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/GA_GM_OnDmgDealt_ApplyTargetModifier.2"
+      },
+      "DoOnDmgDealtBehavior": {
+        "ObjectName": "Function'GA_GM_OnDmgDealt_ApplyTargetModifier_C:DoOnDmgDealtBehavior'",
+        "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/GA_GM_OnDmgDealt_ApplyTargetModifier.1"
+      },
+      "K2_ShouldAbilityRespondToEvent": {
+        "ObjectName": "Function'GA_GM_OnDmgDealt_ApplyTargetModifier_C:K2_ShouldAbilityRespondToEvent'",
+        "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/GA_GM_OnDmgDealt_ApplyTargetModifier.3"
+      }
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GA_GM_OnDmgDealt_ApplyTargetModifier_C'Default__GA_GM_OnDmgDealt_ApplyTargetModifier_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/GA_GM_OnDmgDealt_ApplyTargetModifier.4"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "DoOnDmgDealtBehavior",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_GM_OnDmgDealt_ApplyTargetModifier_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/GA_GM_OnDmgDealt_ApplyTargetModifier.0"
+    },
+    "Super": {
+      "ObjectName": "Function'GA_GM_OnDmgDealtBase_C:DoOnDmgDealtBehavior'",
+      "ObjectPath": "/Game/Abilities/GameplayModifiers/Base/GA_GM_OnDmgDealtBase.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "EventData",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_GM_OnDmgDealt_ApplyTargetModifier",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_GM_OnDmgDealt_ApplyTargetModifier_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/GA_GM_OnDmgDealt_ApplyTargetModifier.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_EventData",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "Struct": {
+          "ObjectName": "Class'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_AbilityTargetDataFromActor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_ApplyGameplayEffectContainer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "CallFunc_ApplyGameplayEffectContainer_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 16,
+          "PropertyFlags": "ContainsInstancedReference",
+          "Struct": {
+            "ObjectName": "Class'ActiveGameplayEffectHandle'",
+            "ObjectPath": "/Script/GameplayAbilities"
+          }
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ShouldAbilityRespondToEvent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_GM_OnDmgDealt_ApplyTargetModifier_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/GA_GM_OnDmgDealt_ApplyTargetModifier.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayAbility:K2_ShouldAbilityRespondToEvent'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ActorInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityActorInfo'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Payload",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasTag_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasTag_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "GA_GM_OnDmgDealt_ApplyTargetModifier_C",
+    "Name": "Default__GA_GM_OnDmgDealt_ApplyTargetModifier_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/GameplayModifiers/Base/GA_GM_OnDmgDealt_ApplyTargetModifier.GA_GM_OnDmgDealt_ApplyTargetModifier_C'",
+    "Template": {
+      "ObjectName": "GA_GM_OnDmgDealtBase_C'Default__GA_GM_OnDmgDealtBase_C'",
+      "ObjectPath": "/Game/Abilities/GameplayModifiers/Base/GA_GM_OnDmgDealtBase.4"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "TargetTag": {
+        "TagName": "Class"
+      },
+      "AIDmgTag": {
+        "TagName": "NPC.Ability.Attack.Melee"
+      }
+    }
+  }
+]

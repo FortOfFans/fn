@@ -1,0 +1,541 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Prj_GrappleHook_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'Prj_GrappleHook_C:SimpleConstructionScript_1'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.13"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'Prj_GrappleHook_C:ExecuteUbergraph_Prj_GrappleHook'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortProjectileBase'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'Prj_GrappleHook_C:ReceiveBeginPlay'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.6"
+      },
+      {
+        "ObjectName": "Function'Prj_GrappleHook_C:OnStop'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.5"
+      },
+      {
+        "ObjectName": "Function'Prj_GrappleHook_C:ExecuteUbergraph_Prj_GrappleHook'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "P_Grapple_Reticle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "S_BottleRocket",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitLocation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bHitTarget",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bIsDead",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_Prj_GrappleHook": {
+        "ObjectName": "Function'Prj_GrappleHook_C:ExecuteUbergraph_Prj_GrappleHook'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.4"
+      },
+      "OnStop": {
+        "ObjectName": "Function'Prj_GrappleHook_C:OnStop'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.5"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'Prj_GrappleHook_C:ReceiveBeginPlay'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Prj_GrappleHook_C'Default__Prj_GrappleHook_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.8"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "FortProjectileMovementComponent",
+    "Name": "ProjectileComp0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortProjectileMovementComponent'",
+    "Outer": {
+      "ObjectName": "Prj_GrappleHook_C'Default__Prj_GrappleHook_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.8"
+    }
+  },
+  {
+    "Type": "FortProjectileRootComponent",
+    "Name": "CollisionCapsule0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortProjectileRootComponent'",
+    "Outer": {
+      "ObjectName": "Prj_GrappleHook_C'Default__Prj_GrappleHook_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.8"
+    },
+    "Properties": {
+      "CapsuleHalfHeight": 1.0,
+      "CapsuleRadius": 1.0,
+      "bUseSystemDefaultObstacleAreaClass": false,
+      "AreaClassOverride": {
+        "ObjectName": "Class'FortMetaNavArea_Obstacles'",
+        "ObjectPath": "/Script/FortniteAI"
+      },
+      "BodyInstance": {
+        "MassInKgOverride": 0.01646487
+      }
+    }
+  },
+  {
+    "Type": "FortWaterInteractionComponent",
+    "Name": "WaterComponentName",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortWaterInteractionComponent'",
+    "Outer": {
+      "ObjectName": "Prj_GrappleHook_C'Default__Prj_GrappleHook_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.8"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_Prj_GrappleHook",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'Prj_GrappleHook_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Hit",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStop",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'Prj_GrappleHook_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortProjectileBase:OnStop'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "Hit",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'Prj_GrappleHook_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "P_Spot_GrenadeE512E15F4F9AAB68187F16BC9A04BA8A",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'Prj_GrappleHook_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.0"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'P_Spot_Grenade'",
+        "ObjectPath": "/SaveTheWorld/Gadgets/Assets/GrappleHook/P_Spot_Grenade.10"
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "Prj_GrappleHook_C",
+    "Name": "Default__Prj_GrappleHook_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.Prj_GrappleHook_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "HitLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "CapsuleComponent": {
+        "ObjectName": "FortProjectileRootComponent'Default__Prj_GrappleHook_C:CollisionCapsule0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.2"
+      },
+      "ProjectileMovementComponent": {
+        "ObjectName": "FortProjectileMovementComponent'Default__Prj_GrappleHook_C:ProjectileComp0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.1"
+      },
+      "WaterInteractionComponent": {
+        "ObjectName": "FortWaterInteractionComponent'Default__Prj_GrappleHook_C:WaterComponentName'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.3"
+      },
+      "CollisionComponent": {
+        "ObjectName": "FortProjectileRootComponent'Default__Prj_GrappleHook_C:CollisionCapsule0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.2"
+      },
+      "RootComponent": {
+        "ObjectName": "FortProjectileRootComponent'Default__Prj_GrappleHook_C:CollisionCapsule0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.2"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot7F29C93C47E5B48AA5FCACB557EDAAF9",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'Prj_GrappleHook_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'Prj_GrappleHook_C:SimpleConstructionScript_1'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.13"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'Prj_GrappleHook_C:DefaultSceneRoot7F29C93C47E5B48AA5FCACB557EDAAF9'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.9"
+      },
+      "VariableGuid": "11A78AF0-4741934B-76882496-D937E487",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'Prj_GrappleHook_C:SimpleConstructionScript_1'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.13"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'Prj_GrappleHook_C:S_BottleRocket94ECCDCE4A039FCB86068198987D7D2E'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.14"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "StaticMesh",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'StaticMeshComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "RelativeLocation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'StaticMeshComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "RelativeScale3D",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'StaticMeshComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "CollisionCapsule0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "468C4159-427A9538-8BF8F5BB-E2D101C2",
+      "InternalVariableName": "S_BottleRocket"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'Prj_GrappleHook_C:SimpleConstructionScript_1'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.13"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'Prj_GrappleHook_C:P_Spot_GrenadeE512E15F4F9AAB68187F16BC9A04BA8A'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.7"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Template",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ParticleSystemComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "PrimaryComponentTick",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ParticleSystemComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bStartWithTickEnabled",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ActorComponentTickFunction'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bAutoActivate",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ParticleSystemComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "CollisionCapsule0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "F40A5888-4E73D2B4-DDA3EFBD-D6F8BBDD",
+      "InternalVariableName": "P_Grapple_Reticle"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'Prj_GrappleHook_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'Prj_GrappleHook_C:SimpleConstructionScript_1.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.11"
+        },
+        {
+          "ObjectName": "SCS_Node'Prj_GrappleHook_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.12"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'Prj_GrappleHook_C:SimpleConstructionScript_1.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.11"
+        },
+        {
+          "ObjectName": "SCS_Node'Prj_GrappleHook_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.12"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'Prj_GrappleHook_C:SimpleConstructionScript_1.SCS_Node_1'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.10"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "S_BottleRocket94ECCDCE4A039FCB86068198987D7D2E",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'Prj_GrappleHook_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/GrappleHook/Prj_GrappleHook.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'S_BottleRocket'",
+        "ObjectPath": "/Game/Gadgets/Assets/BottleRocket/S_BottleRocket.1"
+      },
+      "RelativeLocation": {
+        "X": -14.5541525,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.26655015,
+        "Y": 1.0,
+        "Z": 1.0
+      }
+    }
+  }
+]

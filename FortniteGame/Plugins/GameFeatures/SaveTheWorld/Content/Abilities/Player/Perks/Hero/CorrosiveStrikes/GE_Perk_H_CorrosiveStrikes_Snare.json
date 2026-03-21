@@ -1,0 +1,293 @@
+[
+  {
+    "Type": "AssetTagsGameplayEffectComponent",
+    "Name": "AssetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AssetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Perk_H_CorrosiveStrikes_Snare_C'Default__GE_Perk_H_CorrosiveStrikes_Snare_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/CorrosiveStrikes/GE_Perk_H_CorrosiveStrikes_Snare.2"
+    },
+    "Template": {
+      "ObjectName": "AssetTagsGameplayEffectComponent'Default__GET_Snare_C:AssetTagsGameplayEffectComponent_0'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_Snare.0"
+    },
+    "Properties": {
+      "InheritableAssetTags": {
+        "CombinedTags": [
+          "Gameplay.Status.Snare",
+          "Gameplay.Effect.Negative",
+          "Asset.PerkEffect.CorrosiveStrikes.Snare"
+        ],
+        "Added": [
+          "Gameplay.Status.Snare",
+          "Gameplay.Effect.Negative",
+          "Asset.PerkEffect.CorrosiveStrikes.Snare"
+        ]
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Perk_H_CorrosiveStrikes_Snare_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GET_Snare_C'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_Snare.1"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_Perk_H_CorrosiveStrikes_Snare_C'Default__GE_Perk_H_CorrosiveStrikes_Snare_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/CorrosiveStrikes/GE_Perk_H_CorrosiveStrikes_Snare.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_Perk_H_CorrosiveStrikes_Snare_C",
+    "Name": "Default__GE_Perk_H_CorrosiveStrikes_Snare_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Perks/Hero/CorrosiveStrikes/GE_Perk_H_CorrosiveStrikes_Snare.GE_Perk_H_CorrosiveStrikes_Snare_C'",
+    "Template": {
+      "ObjectName": "GET_Snare_C'Default__GET_Snare_C'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_Snare.2"
+    },
+    "Properties": {
+      "DurationMagnitude": {
+        "ScalableFloatMagnitude": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+              "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+            },
+            "RowName": "Perk.CorrosiveStrikes.T01.Duration"
+          }
+        }
+      },
+      "Modifiers": [
+        {
+          "Attribute": {
+            "AttributeName": "LandSpeedMultiplier",
+            "Attribute": {
+              "Path": [
+                "LandSpeedMultiplier"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'FortMovementSet'",
+                "ObjectPath": "/Script/FortniteGame"
+              }
+            },
+            "AttributeOwner": {
+              "ObjectName": "Class'FortMovementSet'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          "ModifierOp": "EGameplayModOp::Multiplicitive",
+          "ModifierMagnitude": {
+            "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::ScalableFloat",
+            "ScalableFloatMagnitude": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+                  "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+                },
+                "RowName": "Perk.CorrosiveStrikes.T01.Snare"
+              },
+              "RegistryType": {
+                "Name": "None"
+              }
+            },
+            "AttributeBasedMagnitude": {
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "BackingAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "",
+                  "Attribute": {
+                    "Path": [],
+                    "ResolvedOwner": null
+                  },
+                  "AttributeOwner": null
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": false
+              },
+              "AttributeCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              },
+              "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+              "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+              "SourceTagFilter": [],
+              "TargetTagFilter": []
+            },
+            "CustomMagnitude": {
+              "CalculationClassMagnitude": null,
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "FinalLookupCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              }
+            },
+            "SetByCallerMagnitude": {
+              "DataName": "None",
+              "DataTag": {
+                "TagName": "None"
+              }
+            }
+          },
+          "EvaluationChannelSettings": {
+            "Channel": "EGameplayModEvaluationChannel::Channel0"
+          },
+          "SourceTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "TargetTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          }
+        }
+      ],
+      "InheritableGameplayEffectTags": {
+        "CombinedTags": [
+          "Gameplay.Status.Snare",
+          "Gameplay.Effect.Negative",
+          "Asset.PerkEffect.CorrosiveStrikes.Snare"
+        ],
+        "Added": [
+          "Gameplay.Status.Snare",
+          "Gameplay.Effect.Negative",
+          "Asset.PerkEffect.CorrosiveStrikes.Snare"
+        ]
+      },
+      "InheritableOwnedTagsContainer": {
+        "CombinedTags": [
+          "Gameplay.Status.Snare",
+          "Granted.PerkEffect.CorrosiveStrikes.Snare"
+        ],
+        "Added": [
+          "Gameplay.Status.Snare",
+          "Granted.PerkEffect.CorrosiveStrikes.Snare"
+        ]
+      },
+      "GEComponents": [
+        {
+          "ObjectName": "AssetTagsGameplayEffectComponent'Default__GE_Perk_H_CorrosiveStrikes_Snare_C:AssetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/CorrosiveStrikes/GE_Perk_H_CorrosiveStrikes_Snare.0"
+        },
+        {
+          "ObjectName": "TargetTagsGameplayEffectComponent'Default__GE_Perk_H_CorrosiveStrikes_Snare_C:TargetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/CorrosiveStrikes/GE_Perk_H_CorrosiveStrikes_Snare.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "TargetTagsGameplayEffectComponent",
+    "Name": "TargetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TargetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Perk_H_CorrosiveStrikes_Snare_C'Default__GE_Perk_H_CorrosiveStrikes_Snare_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/CorrosiveStrikes/GE_Perk_H_CorrosiveStrikes_Snare.2"
+    },
+    "Template": {
+      "ObjectName": "TargetTagsGameplayEffectComponent'Default__GET_Snare_C:TargetTagsGameplayEffectComponent_0'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_Snare.3"
+    },
+    "Properties": {
+      "InheritableGrantedTagsContainer": {
+        "CombinedTags": [
+          "Gameplay.Status.Snare",
+          "Granted.PerkEffect.CorrosiveStrikes.Snare"
+        ],
+        "Added": [
+          "Gameplay.Status.Snare",
+          "Granted.PerkEffect.CorrosiveStrikes.Snare"
+        ]
+      }
+    }
+  }
+]

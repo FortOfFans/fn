@@ -1,0 +1,494 @@
+[
+  {
+    "Type": "AudioComponent",
+    "Name": "FeedbackAudioComp0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AudioComponent'",
+    "Outer": {
+      "ObjectName": "Defender_Melee_C'Default__Defender_Melee_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.4"
+    },
+    "Template": {
+      "ObjectName": "AudioComponent'Default__Defender_C:FeedbackAudioComp0'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.0"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__Defender_Melee_C:CollisionCylinder'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.3"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Defender_Melee_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'Defender_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.1"
+    },
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'Defender_Melee_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.16"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'Defender_Melee_C:InheritableComponentHandler'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.11"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Defender_Melee_C'Default__Defender_Melee_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.4"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "BP_DefenderComponent_C",
+    "Name": "BP_DefenderComponent_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Characters/Survivors/Components/BP_DefenderComponent.BP_DefenderComponent_C'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'Defender_Melee_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.1"
+    },
+    "Template": {
+      "ObjectName": "BP_DefenderComponent_C'Defender_C:BP_DefenderComponent_GEN_VARIABLE'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.2"
+    },
+    "Properties": {
+      "DefenderAnchorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_DefenderAnchorMelee_C'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/BP_DefenderAnchorMelee.1"
+      },
+      "DefenderFollowEQSSize": 1024.0,
+      "DefenderFollowEQSSpaceBetween": 512.0,
+      "MaxZAvoidMoveInHalfTiles": 4
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "Defender_Melee_C'Default__Defender_Melee_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.4"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'Default__Defender_C:CollisionCylinder'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.3"
+    }
+  },
+  {
+    "Type": "Defender_Melee_C",
+    "Name": "Default__Defender_Melee_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Characters/Survivors/Defender_Melee.Defender_Melee_C'",
+    "Template": {
+      "ObjectName": "Defender_C'Default__Defender_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.4"
+    },
+    "Properties": {
+      "SurvivorAnchorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_SurvivorAnchor_3x5_C'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/BP_SurvivorAnchor_3x5.1"
+      },
+      "RequiredWeaponPickupTagQuery": {
+        "TagDictionary": [
+          {
+            "TagName": "weapon.melee"
+          }
+        ],
+        "QueryTokenStream": [
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "AutoDescription": " ANY( weapon.melee )"
+      },
+      "NoWeaponInCombatEventName": "NoMeleeWeaponInCombat",
+      "NoWeaponOutOfCombatEventName": "NoMeleeWeaponOutOfCombat",
+      "AppearanceOverrideEntries": [
+        {
+          "AppearanceName": "None",
+          "bIsFemale": false,
+          "SkeletalMesh": {
+            "AssetPathName": "/SaveTheWorld/Characters/Survivors/Male/Small/M_SML_FastFood_01/Meshes/M_SML_FastFood_01.M_SML_FastFood_01",
+            "SubPathString": ""
+          },
+          "FeedbackBank": {
+            "AssetPathName": "/STW_Sounds/Characters/Feedback/Defender_Male_Feedback.Defender_Male_Feedback",
+            "SubPathString": ""
+          }
+        },
+        {
+          "AppearanceName": "ValFemale",
+          "bIsFemale": true,
+          "SkeletalMesh": {
+            "AssetPathName": "/SaveTheWorld/Characters/Survivors/Female/Small/F_SML_Valerie_02/Meshes/F_SML_Valerie_02.F_SML_Valerie_02",
+            "SubPathString": ""
+          },
+          "FeedbackBank": {
+            "AssetPathName": "/SaveTheWorld/Characters/Feedback/Defender_Female_Feedback.Defender_Female_Feedback",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "AIPawnAbilitySystemComponent": {
+        "ObjectName": "FortAbilitySystemComponent'Default__Defender_Melee_C:AbilitySystemComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.5"
+      },
+      "SoundIndicatorComponent": {
+        "ObjectName": "FortSoundIndicatorComponent'Default__Defender_Melee_C:SoundIndicatorComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.9"
+      },
+      "PawnStatHandle": {
+        "RowName": "Survivor_Defend_Melee"
+      },
+      "SoundLibraryComponent": {
+        "ObjectName": "FortSoundLibraryComponent'Default__Defender_Melee_C:SoundLibraryComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.10"
+      },
+      "EmoteComponent": {
+        "ObjectName": "FortEmoteComponent'Default__Defender_Melee_C:FortEmoteComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.6"
+      },
+      "EmoteMusicClockComponent": {
+        "ObjectName": "MusicClockComponent'Default__Defender_Melee_C:EmoteMusicClockComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.12"
+      },
+      "VocalChords": [
+        {
+          "FeedbackAudioComponent": {
+            "ObjectName": "AudioComponent'Default__Defender_Melee_C:FeedbackAudioComp0'",
+            "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.0"
+          },
+          "ReplicatedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "PendingSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "QueuedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "CurrentSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          }
+        }
+      ],
+      "AbilitySystemComponent": {
+        "ObjectName": "FortAbilitySystemComponent'Default__Defender_Melee_C:AbilitySystemComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.5"
+      },
+      "GameplayTags": [
+        "NPC.CharacterType.Survivor.Defender.Melee"
+      ],
+      "Mesh": {
+        "ObjectName": "FortPooledSkelMeshComponent'Default__Defender_Melee_C:CharacterMesh0'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.8"
+      },
+      "CharacterMovement": {
+        "ObjectName": "FortMovementComp_AIChar'Default__Defender_Melee_C:CharMoveComp'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.7"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__Defender_Melee_C:CollisionCylinder'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.3"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__Defender_Melee_C:CollisionCylinder'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.3"
+      }
+    }
+  },
+  {
+    "Type": "FortAbilitySystemComponent",
+    "Name": "AbilitySystemComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortAbilitySystemComponent'",
+    "Outer": {
+      "ObjectName": "Defender_Melee_C'Default__Defender_Melee_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.4"
+    },
+    "Template": {
+      "ObjectName": "FortAbilitySystemComponent'Default__Defender_C:AbilitySystemComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.5"
+    },
+    "Properties": {
+      "ActiveGameplayCues": {
+        "Owner": {
+          "ObjectName": "FortAbilitySystemComponent'Default__Defender_Melee_C:AbilitySystemComponent'",
+          "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.5"
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortEmoteComponent",
+    "Name": "FortEmoteComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortEmoteComponent'",
+    "Outer": {
+      "ObjectName": "Defender_Melee_C'Default__Defender_Melee_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.4"
+    },
+    "Template": {
+      "ObjectName": "FortEmoteComponent'Default__Defender_C:FortEmoteComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.7"
+    }
+  },
+  {
+    "Type": "FortMovementComp_AIChar",
+    "Name": "CharMoveComp",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortMovementComp_AIChar'",
+    "Outer": {
+      "ObjectName": "Defender_Melee_C'Default__Defender_Melee_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.4"
+    },
+    "Template": {
+      "ObjectName": "FortMovementComp_AIChar'Default__Defender_C:CharMoveComp'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.9"
+    }
+  },
+  {
+    "Type": "FortPooledSkelMeshComponent",
+    "Name": "CharacterMesh0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortPooledSkelMeshComponent'",
+    "Outer": {
+      "ObjectName": "Defender_Melee_C'Default__Defender_Melee_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.4"
+    },
+    "Template": {
+      "ObjectName": "FortPooledSkelMeshComponent'Default__Defender_C:CharacterMesh0'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.10"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__Defender_Melee_C:CollisionCylinder'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.3"
+      }
+    }
+  },
+  {
+    "Type": "FortSoundIndicatorComponent",
+    "Name": "SoundIndicatorComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortSoundIndicatorComponent'",
+    "Outer": {
+      "ObjectName": "Defender_Melee_C'Default__Defender_Melee_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.4"
+    },
+    "Template": {
+      "ObjectName": "FortSoundIndicatorComponent'Default__Defender_C:SoundIndicatorComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.11"
+    }
+  },
+  {
+    "Type": "FortSoundLibraryComponent",
+    "Name": "SoundLibraryComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortSoundLibraryComponent'",
+    "Outer": {
+      "ObjectName": "Defender_Melee_C'Default__Defender_Melee_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.4"
+    },
+    "Template": {
+      "ObjectName": "FortSoundLibraryComponent'Default__Defender_C:SoundLibraryComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.12"
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'Defender_Melee_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.1"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "BlueprintGeneratedClass'BP_DefenderComponent_C'",
+            "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/BP_DefenderComponent.0"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_DefenderComponent_C'Defender_Melee_C:BP_DefenderComponent_GEN_VARIABLE'",
+            "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.2"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'Defender_C'",
+              "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.1"
+            },
+            "SCSVariableName": "BP_DefenderComponent",
+            "AssociatedGuid": "E31A138B-4C9F5D1B-EBCDE5A0-FD2F14B6"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "DefenderAnchorClass",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_DefenderComponent_C'",
+                  "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/BP_DefenderComponent.0"
+                }
+              },
+              {
+                "PropertyName": "DefenderFollowEQSSize",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_DefenderComponent_C'",
+                  "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/BP_DefenderComponent.0"
+                }
+              },
+              {
+                "PropertyName": "DefenderFollowEQSSpaceBetween",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_DefenderComponent_C'",
+                  "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/BP_DefenderComponent.0"
+                }
+              },
+              {
+                "PropertyName": "MaxZAvoidMoveInHalfTiles",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "BlueprintGeneratedClass'BP_DefenderComponent_C'",
+                  "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/BP_DefenderComponent.0"
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "MusicClockComponent",
+    "Name": "EmoteMusicClockComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MusicClockComponent'",
+    "Outer": {
+      "ObjectName": "Defender_Melee_C'Default__Defender_Melee_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.4"
+    },
+    "Template": {
+      "ObjectName": "MusicClockComponent'Default__Defender_C:EmoteMusicClockComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.31"
+    }
+  },
+  {
+    "Type": "MusicTimerManager",
+    "Name": "MusicTimerManager_MusicClockComponent",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MusicTimerManager'",
+    "Outer": {
+      "ObjectName": "MusicClockComponent'Default__Defender_Melee_C:EmoteMusicClockComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.12"
+    },
+    "Template": {
+      "ObjectName": "MusicTimerManager'Default__Defender_C:EmoteMusicClockComponent.MusicTimerManager_MusicClockComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.32"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'Defender_Melee_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'Defender_Melee_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.16"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'Defender_Melee_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.14"
+      },
+      "VariableGuid": "9F261E0B-4D9E8EB8-7B4F5D82-9F3B49E1",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'Defender_Melee_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.1"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'Defender_Melee_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_Melee.15"
+      }
+    }
+  }
+]

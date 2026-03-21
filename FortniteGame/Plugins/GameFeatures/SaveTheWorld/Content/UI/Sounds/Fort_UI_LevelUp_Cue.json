@@ -1,0 +1,113 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Fort_UI_LevelUp_Cue",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer'Fort_UI_LevelUp_Cue:SoundNodeMixer_2'",
+        "ObjectPath": "/SaveTheWorld/UI/Sounds/Fort_UI_LevelUp_Cue.2"
+      },
+      "VolumeMultiplier": 0.8,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'STW_UI_InGame_NonCritical'",
+        "ObjectPath": "/STW_Sounds/Sounds/FortSoundClassesAndModes/STW_UI_InGame_NonCritical.0"
+      },
+      "bOverrideConcurrency": true,
+      "bHasDelayNode": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 1,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest"
+      },
+      "Duration": 5.80975,
+      "MaxDistance": 2097152.0
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Outer": {
+      "ObjectName": "SoundCue'Fort_UI_LevelUp_Cue'",
+      "ObjectPath": "/SaveTheWorld/UI/Sounds/Fort_UI_LevelUp_Cue.0"
+    },
+    "Properties": {
+      "DelayMin": 0.1,
+      "DelayMax": 0.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'Fort_UI_LevelUp_Cue:SoundNodeWavePlayer_6'",
+          "ObjectPath": "/SaveTheWorld/UI/Sounds/Fort_UI_LevelUp_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Outer": {
+      "ObjectName": "SoundCue'Fort_UI_LevelUp_Cue'",
+      "ObjectPath": "/SaveTheWorld/UI/Sounds/Fort_UI_LevelUp_Cue.0"
+    },
+    "Properties": {
+      "InputVolume": [
+        1.3,
+        0.8
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'Fort_UI_LevelUp_Cue:SoundNodeDelay_4'",
+          "ObjectPath": "/SaveTheWorld/UI/Sounds/Fort_UI_LevelUp_Cue.1"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Fort_UI_LevelUp_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "/SaveTheWorld/UI/Sounds/Fort_UI_LevelUp_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Outer": {
+      "ObjectName": "SoundCue'Fort_UI_LevelUp_Cue'",
+      "ObjectPath": "/SaveTheWorld/UI/Sounds/Fort_UI_LevelUp_Cue.0"
+    },
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Sounds/Fort_UI_Sounds/FrontEnd/end_of_round_reward_09.end_of_round_reward_09",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'end_of_round_reward_09'",
+      "ObjectPath": "/SaveTheWorld/Sounds/Fort_UI_Sounds/FrontEnd/end_of_round_reward_09.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Outer": {
+      "ObjectName": "SoundCue'Fort_UI_LevelUp_Cue'",
+      "ObjectPath": "/SaveTheWorld/UI/Sounds/Fort_UI_LevelUp_Cue.0"
+    },
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Sounds/Fort_UI_Sounds/FrontEnd/fort_new_levelup.fort_new_levelup",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'fort_new_levelup'",
+      "ObjectPath": "/SaveTheWorld/Sounds/Fort_UI_Sounds/FrontEnd/fort_new_levelup.0"
+    }
+  }
+]

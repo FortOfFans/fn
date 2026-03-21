@@ -1,0 +1,292 @@
+[
+  {
+    "Type": "AerialFeedback_C",
+    "Name": "Default__AerialFeedback_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/SaveTheWorld/UI/InGame/HUD/AerialFeedback.AerialFeedback_C'",
+    "Properties": {
+      "HUDElementTag": [
+        "Athena.HideForCapture",
+        "HUD.StW.HideOnGhost"
+      ],
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CommonTextBlock",
+    "Name": "Text_Feedback",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CommonTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AerialFeedback_C:WidgetTree'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.9"
+    },
+    "Properties": {
+      "Text": {
+        "CultureInvariantString": "To Deploy Glider"
+      },
+      "Font": {
+        "FontObject": {
+          "ObjectName": "Font'BurbankSmall'",
+          "ObjectPath": "/FortUILibrary/Fonts/BurbankSmall.0"
+        },
+        "OutlineSettings": {
+          "OutlineSize": 3,
+          "bSeparateFillAlpha": true,
+          "bApplyOutlineToDropShadows": true,
+          "OutlineMaterial": {
+            "ObjectName": "Material'M-FontShadow'",
+            "ObjectPath": "/FortUILibrary/Materials/Foundation/M-FontShadow.0"
+          },
+          "OutlineColor": {
+            "R": 0.0,
+            "G": 0.0,
+            "B": 0.0,
+            "A": 0.5,
+            "Hex": "7F000000"
+          }
+        },
+        "TypefaceFontName": "Black",
+        "Size": 15.0
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "TextTransformPolicy": "ETextTransformPolicy::ToUpper",
+      "Slot": {
+        "ObjectName": "FortSimpleWidgetAnimationsSlot'AerialFeedback_C:WidgetTree.AnimationsPanel.FortSimpleWidgetAnimationsSlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.3"
+      }
+    }
+  },
+  {
+    "Type": "FortSimpleWidgetAnimationsPanel",
+    "Name": "AnimationsPanel",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortSimpleWidgetAnimationsPanel'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AerialFeedback_C:WidgetTree'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.9"
+    },
+    "Properties": {
+      "Animations": [
+        {
+          "Name": "Intro",
+          "bIsEnabled": true,
+          "Targets": [
+            {
+              "TargetName": "Text_Feedback",
+              "Translation": {
+                "ObjectName": "CurveVector'AthenaAerialFeedback_IntroTranslation'",
+                "ObjectPath": "/Game/Athena/HUD/AthenaAerialFeedback_IntroTranslation.0"
+              },
+              "Scale": {
+                "ObjectName": "CurveVector'AthenaAerialFeedback_IntroScale'",
+                "ObjectPath": "/Game/Athena/HUD/AthenaAerialFeedback_IntroScale.0"
+              },
+              "Alpha": {
+                "ObjectName": "CurveFloat'AthenaAerialFeedback_IntroAlpha'",
+                "ObjectPath": "/Game/Athena/HUD/AthenaAerialFeedback_IntroAlpha.0"
+              },
+              "bResetOnFinish": false,
+              "bShouldAnimateTranslation": true,
+              "bShouldAnimateScale": true,
+              "bShouldAnimateAlpha": true,
+              "MaterialScalarAnimations": []
+            }
+          ],
+          "OnAnimationsFinished": {
+            "InvocationList": []
+          }
+        }
+      ],
+      "Slots": [
+        {
+          "ObjectName": "FortSimpleWidgetAnimationsSlot'AerialFeedback_C:WidgetTree.AnimationsPanel.FortSimpleWidgetAnimationsSlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.3"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'AerialFeedback_C:WidgetTree.Panel_Content.HorizontalBoxSlot_1'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.6"
+      }
+    }
+  },
+  {
+    "Type": "FortSimpleWidgetAnimationsSlot",
+    "Name": "FortSimpleWidgetAnimationsSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortSimpleWidgetAnimationsSlot'",
+    "Outer": {
+      "ObjectName": "FortSimpleWidgetAnimationsPanel'AerialFeedback_C:WidgetTree.AnimationsPanel'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.2"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "FortSimpleWidgetAnimationsPanel'AerialFeedback_C:WidgetTree.AnimationsPanel'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.2"
+      },
+      "Content": {
+        "ObjectName": "CommonTextBlock'AerialFeedback_C:WidgetTree.Text_Feedback'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.1"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBox",
+    "Name": "Panel_Content",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AerialFeedback_C:WidgetTree'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.9"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "HorizontalBoxSlot'AerialFeedback_C:WidgetTree.Panel_Content.HorizontalBoxSlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.5"
+        },
+        {
+          "ObjectName": "HorizontalBoxSlot'AerialFeedback_C:WidgetTree.Panel_Content.HorizontalBoxSlot_1'",
+          "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'AerialFeedback_C:WidgetTree.Panel_Content'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.4"
+    },
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Right",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'AerialFeedback_C:WidgetTree.Panel_Content'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.4"
+      },
+      "Content": {
+        "ObjectName": "KeybindWidget_C'AerialFeedback_C:WidgetTree.KeyBind'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.7"
+      }
+    }
+  },
+  {
+    "Type": "HorizontalBoxSlot",
+    "Name": "HorizontalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'HorizontalBoxSlot'",
+    "Outer": {
+      "ObjectName": "HorizontalBox'AerialFeedback_C:WidgetTree.Panel_Content'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.4"
+    },
+    "Properties": {
+      "Padding": {
+        "Left": 4.0
+      },
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "HorizontalBox'AerialFeedback_C:WidgetTree.Panel_Content'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.4"
+      },
+      "Content": {
+        "ObjectName": "FortSimpleWidgetAnimationsPanel'AerialFeedback_C:WidgetTree.AnimationsPanel'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.2"
+      }
+    }
+  },
+  {
+    "Type": "KeybindWidget_C",
+    "Name": "KeyBind",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/FortUILibrary/Input/KeybindWidget.KeybindWidget_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'AerialFeedback_C:WidgetTree'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.9"
+    },
+    "Template": {
+      "ObjectName": "KeybindWidget_C'Default__KeybindWidget_C'",
+      "ObjectPath": "/FortUILibrary/Input/KeybindWidget.3"
+    },
+    "Properties": {
+      "AxisScale": 1.0,
+      "Slot": {
+        "ObjectName": "HorizontalBoxSlot'AerialFeedback_C:WidgetTree.Panel_Content.HorizontalBoxSlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.5"
+      },
+      "RenderTransform": {
+        "Translation": {
+          "X": 0.0,
+          "Y": -2.0
+        }
+      },
+      "bIsVariable": false
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "AerialFeedback_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'AerialFeedback_C:WidgetTree'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortAerialFeedback'",
+      "ObjectPath": "/Script/FortniteUI"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "AnimationsPanel",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FortSimpleWidgetAnimationsPanel'",
+          "ObjectPath": "/Script/FortniteUI"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "AerialFeedback_C'Default__AerialFeedback_C'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'AerialFeedback_C'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.8"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "HorizontalBox'AerialFeedback_C:WidgetTree.Panel_Content'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/AerialFeedback.4"
+      }
+    }
+  }
+]

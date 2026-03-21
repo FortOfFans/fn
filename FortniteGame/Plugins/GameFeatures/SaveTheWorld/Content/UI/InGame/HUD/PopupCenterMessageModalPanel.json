@@ -1,0 +1,404 @@
+[
+  {
+    "Type": "CommonTextBlock",
+    "Name": "CenterMessageText",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CommonTextBlock'",
+    "Outer": {
+      "ObjectName": "WidgetTree'PopupCenterMessageModalPanel_C:WidgetTree'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.11"
+    },
+    "Properties": {
+      "Style": {
+        "ObjectName": "BlueprintGeneratedClass'TextStyle-HeaderParent_C'",
+        "ObjectPath": "/FortUILibrary/Styles/Typography/Foundation/TextStyle-HeaderParent.0"
+      },
+      "Text": {
+        "Namespace": "",
+        "Key": "28CB9C774CE534340267388808D8931C",
+        "SourceString": "Waiting...",
+        "LocalizedString": "Waiting..."
+      },
+      "ColorAndOpacity": {
+        "SpecifiedColor": {
+          "R": 1.0,
+          "G": 0.0,
+          "B": 1.0,
+          "A": 1.0,
+          "Hex": "FF00FF"
+        }
+      },
+      "Font": {
+        "FontObject": null,
+        "TypefaceFontName": "None"
+      },
+      "ShadowOffset": {
+        "X": 0.0,
+        "Y": 0.0
+      },
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'PopupCenterMessageModalPanel_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.8"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "LeaveZone",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'PopupCenterMessageModalPanel_C'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.10"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetContext_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortGlobalUIContext'",
+          "ObjectPath": "/Script/FortniteUI"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetContext_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPartyContext'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateState",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'PopupCenterMessageModalPanel_C'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.10"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "NewState",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'ECenterPopupMessageStateEnum'",
+          "ObjectPath": "/Script/FortniteUI"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "CurrentMessage",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "LeaveButton_C",
+    "Name": "Button_Leave",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/SaveTheWorld/UI/Frontend/MainMenu/LeaveButton.LeaveButton_C'",
+    "Outer": {
+      "ObjectName": "WidgetTree'PopupCenterMessageModalPanel_C:WidgetTree'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.11"
+    },
+    "Template": {
+      "ObjectName": "LeaveButton_C'Default__LeaveButton_C'",
+      "ObjectPath": "/SaveTheWorld/UI/Frontend/MainMenu/LeaveButton.36"
+    },
+    "Properties": {
+      "Slot": {
+        "ObjectName": "VerticalBoxSlot'PopupCenterMessageModalPanel_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.9"
+      }
+    }
+  },
+  {
+    "Type": "Overlay",
+    "Name": "MessageOverlay",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Overlay'",
+    "Outer": {
+      "ObjectName": "WidgetTree'PopupCenterMessageModalPanel_C:WidgetTree'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.11"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "OverlaySlot'PopupCenterMessageModalPanel_C:WidgetTree.MessageOverlay.OverlaySlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.5"
+        }
+      ],
+      "bIsVariable": true,
+      "Visibility": "ESlateVisibility::Visible"
+    }
+  },
+  {
+    "Type": "OverlaySlot",
+    "Name": "OverlaySlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'OverlaySlot'",
+    "Outer": {
+      "ObjectName": "Overlay'PopupCenterMessageModalPanel_C:WidgetTree.MessageOverlay'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.4"
+    },
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "Overlay'PopupCenterMessageModalPanel_C:WidgetTree.MessageOverlay'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.4"
+      },
+      "Content": {
+        "ObjectName": "VerticalBox'PopupCenterMessageModalPanel_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.7"
+      }
+    }
+  },
+  {
+    "Type": "PopupCenterMessageModalPanel_C",
+    "Name": "Default__PopupCenterMessageModalPanel_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.PopupCenterMessageModalPanel_C'",
+    "Properties": {
+      "WaitingForPlayersText": {
+        "Namespace": "",
+        "Key": "2045662344A525EF21E379BE5D85E7C9",
+        "SourceString": "WAITING TO START...",
+        "LocalizedString": "WAITING TO START..."
+      },
+      "WaitingForOutpostOwnerText": {
+        "Namespace": "",
+        "Key": "9D0964B942675EF28413B2A7C49AE3CB",
+        "SourceString": "WAITING FOR STORM SHIELD OWNER",
+        "LocalizedString": "WAITING FOR STORM SHIELD OWNER"
+      },
+      "bConsumeAllActions": true,
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "VerticalBox",
+    "Name": "VerticalBox_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBox'",
+    "Outer": {
+      "ObjectName": "WidgetTree'PopupCenterMessageModalPanel_C:WidgetTree'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.11"
+    },
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "VerticalBoxSlot'PopupCenterMessageModalPanel_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.8"
+        },
+        {
+          "ObjectName": "VerticalBoxSlot'PopupCenterMessageModalPanel_C:WidgetTree.VerticalBox_0.VerticalBoxSlot_1'",
+          "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.9"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "OverlaySlot'PopupCenterMessageModalPanel_C:WidgetTree.MessageOverlay.OverlaySlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.5"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'PopupCenterMessageModalPanel_C:WidgetTree.VerticalBox_0'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.7"
+    },
+    "Properties": {
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "VerticalAlignment": "EVerticalAlignment::VAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'PopupCenterMessageModalPanel_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.7"
+      },
+      "Content": {
+        "ObjectName": "CommonTextBlock'PopupCenterMessageModalPanel_C:WidgetTree.CenterMessageText'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.0"
+      }
+    }
+  },
+  {
+    "Type": "VerticalBoxSlot",
+    "Name": "VerticalBoxSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'VerticalBoxSlot'",
+    "Outer": {
+      "ObjectName": "VerticalBox'PopupCenterMessageModalPanel_C:WidgetTree.VerticalBox_0'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.7"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 30.0
+      },
+      "HorizontalAlignment": "EHorizontalAlignment::HAlign_Center",
+      "Parent": {
+        "ObjectName": "VerticalBox'PopupCenterMessageModalPanel_C:WidgetTree.VerticalBox_0'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.7"
+      },
+      "Content": {
+        "ObjectName": "LeaveButton_C'PopupCenterMessageModalPanel_C:WidgetTree.Button_Leave'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.3"
+      }
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "PopupCenterMessageModalPanel_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'PopupCenterMessageModalPanel_C:WidgetTree'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.11"
+      },
+      "CookedPropertyGuids": [
+        {
+          "Key": "MatchTimerHandle",
+          "Value": "1AAE0545-4364F49F-3D4190A4-EDFFBD07"
+        },
+        {
+          "Key": "WaitingForOutpostOwnerText",
+          "Value": "7F702171-448FC2E3-A40440B8-3FA8CFE3"
+        },
+        {
+          "Key": "WaitingForPlayersText",
+          "Value": "0D577114-4F3E58D2-B36DFF98-05FC9FA2"
+        }
+      ]
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortPopUpCenterMessageModalPanel'",
+      "ObjectPath": "/Script/FortniteUI"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'PopupCenterMessageModalPanel_C:LeaveZone'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.1"
+      },
+      {
+        "ObjectName": "Function'PopupCenterMessageModalPanel_C:UpdateState'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.2"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "MessageOverlay",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Overlay'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CenterMessageText",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CommonTextBlock'",
+          "ObjectPath": "/Script/CommonUI"
+        }
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "WaitingForPlayersText",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "TextProperty",
+        "Name": "WaitingForOutpostOwnerText",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "UpdateState": {
+        "ObjectName": "Function'PopupCenterMessageModalPanel_C:UpdateState'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.2"
+      },
+      "LeaveZone": {
+        "ObjectName": "Function'PopupCenterMessageModalPanel_C:LeaveZone'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.1"
+      }
+    },
+    "ClassFlags": "CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "PopupCenterMessageModalPanel_C'Default__PopupCenterMessageModalPanel_C'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.6"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'PopupCenterMessageModalPanel_C'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.10"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "Overlay'PopupCenterMessageModalPanel_C:WidgetTree.MessageOverlay'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/PopupCenterMessageModalPanel.4"
+      }
+    }
+  }
+]

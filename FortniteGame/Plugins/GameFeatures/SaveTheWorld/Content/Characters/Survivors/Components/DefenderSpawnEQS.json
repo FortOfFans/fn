@@ -1,0 +1,110 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "DefenderSpawnEQS",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQuery'",
+    "Properties": {
+      "QueryName": "DefenderSpawnEQS",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption'DefenderSpawnEQS:EnvQueryOption_0'",
+          "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/DefenderSpawnEQS.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_OnCircle",
+    "Name": "EnvQueryGenerator_OnCircle_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryGenerator_OnCircle'",
+    "Outer": {
+      "ObjectName": "EnvQuery'DefenderSpawnEQS'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/DefenderSpawnEQS.0"
+    },
+    "Properties": {
+      "CircleRadius": {
+        "DefaultValue": 1024.0
+      },
+      "PointOnCircleSpacingMethod": "EPointOnCircleSpacingMethod::ByNumberOfPoints",
+      "TraceData": {
+        "VersionNum": 1,
+        "SerializedChannel": "ECollisionChannel::ECC_Visibility"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "SerializedChannel": "ECollisionChannel::ECC_Visibility"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryOption'",
+    "Outer": {
+      "ObjectName": "EnvQuery'DefenderSpawnEQS'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/DefenderSpawnEQS.0"
+    },
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_OnCircle'DefenderSpawnEQS:EnvQueryGenerator_OnCircle_0'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/DefenderSpawnEQS.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Dot'DefenderSpawnEQS:EnvQueryTest_Dot_0'",
+          "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/DefenderSpawnEQS.3"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Project'DefenderSpawnEQS:EnvQueryTest_Project_0'",
+          "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/DefenderSpawnEQS.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Dot",
+    "Name": "EnvQueryTest_Dot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryTest_Dot'",
+    "Outer": {
+      "ObjectName": "EnvQuery'DefenderSpawnEQS'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/DefenderSpawnEQS.0"
+    },
+    "Properties": {
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "VerNum": 2
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Project",
+    "Name": "EnvQueryTest_Project_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryTest_Project'",
+    "Outer": {
+      "ObjectName": "EnvQuery'DefenderSpawnEQS'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Components/DefenderSpawnEQS.0"
+    },
+    "Properties": {
+      "ProjectionData": {
+        "ProjectDown": 0.0,
+        "ProjectUp": 0.0,
+        "ExtentX": 35.0,
+        "ExtentZ": 75.0,
+        "TraceChannel": "ETraceTypeQuery::TraceTypeQuery9",
+        "SerializedChannel": "ECollisionChannel::ECC_GameTraceChannel10",
+        "TraceShape": "EEnvTraceShape::Capsule",
+        "TraceMode": "EEnvQueryTrace::GeometryByChannel"
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 2
+    }
+  }
+]

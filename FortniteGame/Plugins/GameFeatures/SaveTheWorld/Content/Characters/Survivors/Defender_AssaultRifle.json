@@ -1,0 +1,424 @@
+[
+  {
+    "Type": "AudioComponent",
+    "Name": "FeedbackAudioComp0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AudioComponent'",
+    "Outer": {
+      "ObjectName": "Defender_AssaultRifle_C'Default__Defender_AssaultRifle_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.3"
+    },
+    "Template": {
+      "ObjectName": "AudioComponent'Default__Defender_C:FeedbackAudioComp0'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.0"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__Defender_AssaultRifle_C:CollisionCylinder'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.2"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Defender_AssaultRifle_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'Defender_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.1"
+    },
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'Defender_AssaultRifle_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.15"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'Defender_AssaultRifle_C:InheritableComponentHandler'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.10"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Defender_AssaultRifle_C'Default__Defender_AssaultRifle_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "Defender_AssaultRifle_C'Default__Defender_AssaultRifle_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.3"
+    },
+    "Template": {
+      "ObjectName": "CapsuleComponent'Default__Defender_C:CollisionCylinder'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.3"
+    }
+  },
+  {
+    "Type": "Defender_AssaultRifle_C",
+    "Name": "Default__Defender_AssaultRifle_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.Defender_AssaultRifle_C'",
+    "Template": {
+      "ObjectName": "Defender_C'Default__Defender_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.4"
+    },
+    "Properties": {
+      "RequiredWeaponPickupTagQuery": {
+        "TagDictionary": [
+          {
+            "TagName": "weapon.ranged.assault"
+          },
+          {
+            "TagName": "Weapon.Ranged.SMG"
+          }
+        ],
+        "QueryTokenStream": [
+          0,
+          1,
+          1,
+          2,
+          0,
+          1
+        ],
+        "AutoDescription": " ANY( weapon.ranged.assault, Weapon.Ranged.SMG )"
+      },
+      "NoWeaponInCombatEventName": "NoAssaultRifleInCombat",
+      "NoWeaponOutOfCombatEventName": "NoAssaultRifleOutOfCombat",
+      "AppearanceOverrideEntries": [
+        {
+          "AppearanceName": "None",
+          "bIsFemale": true,
+          "SkeletalMesh": {
+            "AssetPathName": "/SaveTheWorld/Characters/Survivors/Female/Small/F_SML_Military_01/Meshes/F_SML_Military_01.F_SML_Military_01",
+            "SubPathString": ""
+          },
+          "FeedbackBank": {
+            "AssetPathName": "/SaveTheWorld/Characters/Feedback/Defender_Female_Feedback.Defender_Female_Feedback",
+            "SubPathString": ""
+          }
+        },
+        {
+          "AppearanceName": "Founder",
+          "bIsFemale": true,
+          "SkeletalMesh": {
+            "AssetPathName": "/SaveTheWorld/Characters/Survivors/Female/Small/F_SML_Starter_01/Meshes/F_SML_Starter_Epic.F_SML_Starter_Epic",
+            "SubPathString": ""
+          },
+          "FeedbackBank": {
+            "AssetPathName": "/SaveTheWorld/Characters/Feedback/Defender_Female_Feedback.Defender_Female_Feedback",
+            "SubPathString": ""
+          }
+        },
+        {
+          "AppearanceName": "MaleConstruction",
+          "bIsFemale": false,
+          "SkeletalMesh": {
+            "AssetPathName": "/SaveTheWorld/Characters/Survivors/Male/Small/M_SML_Construction_01/Meshes/M_SML_Construction_01.M_SML_Construction_01",
+            "SubPathString": ""
+          },
+          "FeedbackBank": {
+            "AssetPathName": "/STW_Sounds/Characters/Feedback/Defender_Male_Feedback.Defender_Male_Feedback",
+            "SubPathString": ""
+          }
+        }
+      ],
+      "AIPawnAbilitySystemComponent": {
+        "ObjectName": "FortAbilitySystemComponent'Default__Defender_AssaultRifle_C:AbilitySystemComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.4"
+      },
+      "SoundIndicatorComponent": {
+        "ObjectName": "FortSoundIndicatorComponent'Default__Defender_AssaultRifle_C:SoundIndicatorComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.8"
+      },
+      "PawnStatHandle": {
+        "RowName": "Survivor_Defend_AssaultRifle"
+      },
+      "SoundLibraryComponent": {
+        "ObjectName": "FortSoundLibraryComponent'Default__Defender_AssaultRifle_C:SoundLibraryComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.9"
+      },
+      "EmoteComponent": {
+        "ObjectName": "FortEmoteComponent'Default__Defender_AssaultRifle_C:FortEmoteComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.5"
+      },
+      "EmoteMusicClockComponent": {
+        "ObjectName": "MusicClockComponent'Default__Defender_AssaultRifle_C:EmoteMusicClockComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.11"
+      },
+      "VocalChords": [
+        {
+          "FeedbackAudioComponent": {
+            "ObjectName": "AudioComponent'Default__Defender_AssaultRifle_C:FeedbackAudioComp0'",
+            "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.0"
+          },
+          "ReplicatedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "PendingSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "QueuedSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          },
+          "CurrentSpokenLine": {
+            "Audio": null,
+            "AnimMontage": null,
+            "AnimSequence": null,
+            "Addressee": null,
+            "BroadcastFilter": "EFortFeedbackBroadcastFilter::FFBF_None_Max",
+            "Delay": 0.0,
+            "bInterruptCurrentLine": false,
+            "bCanBeInterrupted": false,
+            "bCanQue": false
+          }
+        }
+      ],
+      "AbilitySystemComponent": {
+        "ObjectName": "FortAbilitySystemComponent'Default__Defender_AssaultRifle_C:AbilitySystemComponent'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.4"
+      },
+      "GameplayTags": [
+        "NPC.CharacterType.Survivor.Defender.AssaultRifle"
+      ],
+      "Mesh": {
+        "ObjectName": "FortPooledSkelMeshComponent'Default__Defender_AssaultRifle_C:CharacterMesh0'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.7"
+      },
+      "CharacterMovement": {
+        "ObjectName": "FortMovementComp_AIChar'Default__Defender_AssaultRifle_C:CharMoveComp'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.6"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__Defender_AssaultRifle_C:CollisionCylinder'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.2"
+      },
+      "RootComponent": {
+        "ObjectName": "CapsuleComponent'Default__Defender_AssaultRifle_C:CollisionCylinder'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.2"
+      }
+    }
+  },
+  {
+    "Type": "FortAbilitySystemComponent",
+    "Name": "AbilitySystemComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortAbilitySystemComponent'",
+    "Outer": {
+      "ObjectName": "Defender_AssaultRifle_C'Default__Defender_AssaultRifle_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.3"
+    },
+    "Template": {
+      "ObjectName": "FortAbilitySystemComponent'Default__Defender_C:AbilitySystemComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.5"
+    },
+    "Properties": {
+      "ActiveGameplayCues": {
+        "Owner": {
+          "ObjectName": "FortAbilitySystemComponent'Default__Defender_AssaultRifle_C:AbilitySystemComponent'",
+          "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.4"
+        }
+      }
+    }
+  },
+  {
+    "Type": "FortEmoteComponent",
+    "Name": "FortEmoteComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortEmoteComponent'",
+    "Outer": {
+      "ObjectName": "Defender_AssaultRifle_C'Default__Defender_AssaultRifle_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.3"
+    },
+    "Template": {
+      "ObjectName": "FortEmoteComponent'Default__Defender_C:FortEmoteComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.7"
+    }
+  },
+  {
+    "Type": "FortMovementComp_AIChar",
+    "Name": "CharMoveComp",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortMovementComp_AIChar'",
+    "Outer": {
+      "ObjectName": "Defender_AssaultRifle_C'Default__Defender_AssaultRifle_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.3"
+    },
+    "Template": {
+      "ObjectName": "FortMovementComp_AIChar'Default__Defender_C:CharMoveComp'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.9"
+    }
+  },
+  {
+    "Type": "FortPooledSkelMeshComponent",
+    "Name": "CharacterMesh0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortPooledSkelMeshComponent'",
+    "Outer": {
+      "ObjectName": "Defender_AssaultRifle_C'Default__Defender_AssaultRifle_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.3"
+    },
+    "Template": {
+      "ObjectName": "FortPooledSkelMeshComponent'Default__Defender_C:CharacterMesh0'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.10"
+    },
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__Defender_AssaultRifle_C:CollisionCylinder'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.2"
+      }
+    }
+  },
+  {
+    "Type": "FortSoundIndicatorComponent",
+    "Name": "SoundIndicatorComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortSoundIndicatorComponent'",
+    "Outer": {
+      "ObjectName": "Defender_AssaultRifle_C'Default__Defender_AssaultRifle_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.3"
+    },
+    "Template": {
+      "ObjectName": "FortSoundIndicatorComponent'Default__Defender_C:SoundIndicatorComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.11"
+    }
+  },
+  {
+    "Type": "FortSoundLibraryComponent",
+    "Name": "SoundLibraryComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortSoundLibraryComponent'",
+    "Outer": {
+      "ObjectName": "Defender_AssaultRifle_C'Default__Defender_AssaultRifle_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.3"
+    },
+    "Template": {
+      "ObjectName": "FortSoundLibraryComponent'Default__Defender_C:SoundLibraryComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.12"
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'Defender_AssaultRifle_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.1"
+    }
+  },
+  {
+    "Type": "MusicClockComponent",
+    "Name": "EmoteMusicClockComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MusicClockComponent'",
+    "Outer": {
+      "ObjectName": "Defender_AssaultRifle_C'Default__Defender_AssaultRifle_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.3"
+    },
+    "Template": {
+      "ObjectName": "MusicClockComponent'Default__Defender_C:EmoteMusicClockComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.31"
+    }
+  },
+  {
+    "Type": "MusicTimerManager",
+    "Name": "MusicTimerManager_MusicClockComponent",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MusicTimerManager'",
+    "Outer": {
+      "ObjectName": "MusicClockComponent'Default__Defender_AssaultRifle_C:EmoteMusicClockComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.11"
+    },
+    "Template": {
+      "ObjectName": "MusicTimerManager'Default__Defender_C:EmoteMusicClockComponent.MusicTimerManager_MusicClockComponent'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.32"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'Defender_AssaultRifle_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'Defender_AssaultRifle_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.15"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'Defender_AssaultRifle_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.13"
+      },
+      "VariableGuid": "3DD53AD0-49E6024A-10371BA3-D136F1BD",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'Defender_AssaultRifle_C'",
+      "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.1"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'Defender_AssaultRifle_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender_AssaultRifle.14"
+      }
+    }
+  }
+]

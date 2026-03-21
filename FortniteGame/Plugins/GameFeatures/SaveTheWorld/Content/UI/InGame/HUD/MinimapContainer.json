@@ -1,0 +1,346 @@
+[
+  {
+    "Type": "Border",
+    "Name": "LandscapeMinimapBorder",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Border'",
+    "Outer": {
+      "ObjectName": "WidgetTree'MinimapContainer_C:WidgetTree'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.11"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 4.0,
+        "Bottom": 4.0
+      },
+      "Background": {
+        "ImageSize": {
+          "X": 264.0,
+          "Y": 264.0
+        },
+        "Margin": {
+          "Left": 0.5,
+          "Top": 0.597345,
+          "Right": 0.504425,
+          "Bottom": 0.5
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'minimap_Art_square'",
+          "ObjectPath": "/SaveTheWorld/Athena/HUD/Art/minimap_Art_square.0"
+        }
+      },
+      "Slots": [
+        {
+          "ObjectName": "BorderSlot'MinimapContainer_C:WidgetTree.LandscapeMinimapBorder.BorderSlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.1"
+        }
+      ],
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'MinimapContainer_C:WidgetTree.MinimapSwitcher.WidgetSwitcherSlot_1'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.10"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "BorderSlot",
+    "Name": "BorderSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BorderSlot'",
+    "Outer": {
+      "ObjectName": "Border'MinimapContainer_C:WidgetTree.LandscapeMinimapBorder'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.0"
+    },
+    "Properties": {
+      "Padding": {
+        "Top": 4.0,
+        "Bottom": 4.0
+      },
+      "Parent": {
+        "ObjectName": "Border'MinimapContainer_C:WidgetTree.LandscapeMinimapBorder'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.0"
+      },
+      "Content": {
+        "ObjectName": "FortCampaignMinimap'MinimapContainer_C:WidgetTree.LandscapeMinimap'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.3"
+      }
+    }
+  },
+  {
+    "Type": "CommonWidgetSwitcherLegacy",
+    "Name": "MinimapSwitcher",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CommonWidgetSwitcherLegacy'",
+    "Outer": {
+      "ObjectName": "WidgetTree'MinimapContainer_C:WidgetTree'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.11"
+    },
+    "Properties": {
+      "ActiveWidgetIndex": 1,
+      "Slots": [
+        {
+          "ObjectName": "WidgetSwitcherSlot'MinimapContainer_C:WidgetTree.MinimapSwitcher.WidgetSwitcherSlot_0'",
+          "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.9"
+        },
+        {
+          "ObjectName": "WidgetSwitcherSlot'MinimapContainer_C:WidgetTree.MinimapSwitcher.WidgetSwitcherSlot_1'",
+          "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FortCampaignMinimap",
+    "Name": "LandscapeMinimap",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortCampaignMinimap'",
+    "Outer": {
+      "ObjectName": "WidgetTree'MinimapContainer_C:WidgetTree'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.11"
+    },
+    "Properties": {
+      "DesiredSize": {
+        "X": 300.0,
+        "Y": 300.0
+      },
+      "Slot": {
+        "ObjectName": "BorderSlot'MinimapContainer_C:WidgetTree.LandscapeMinimapBorder.BorderSlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.1"
+      }
+    }
+  },
+  {
+    "Type": "FortLegacySlateBridgeWidget",
+    "Name": "NormalMinimap",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortLegacySlateBridgeWidget'",
+    "Outer": {
+      "ObjectName": "WidgetTree'MinimapContainer_C:WidgetTree'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.11"
+    },
+    "Properties": {
+      "ContainedWidgetType": "EFortLegacySlateWidget::Minimap",
+      "Slot": {
+        "ObjectName": "WidgetSwitcherSlot'MinimapContainer_C:WidgetTree.MinimapSwitcher.WidgetSwitcherSlot_0'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.9"
+      },
+      "bIsVariable": true
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Construct",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'MinimapContainer_C'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.8"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget:Construct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_MinimapContainer",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'MinimapContainer_C'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "MinimapContainer_C",
+    "Name": "Default__MinimapContainer_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/SaveTheWorld/UI/InGame/HUD/MinimapContainer.MinimapContainer_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "HUDElementTag": [
+        "HUD.TopRight.Minimap"
+      ],
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "MinimapContainer_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'MinimapContainer_C:WidgetTree'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.11"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'MinimapContainer_C:ExecuteUbergraph_MinimapContainer'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortHUDElementWidget'",
+      "ObjectPath": "/Script/FortniteUI"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'MinimapContainer_C:Construct'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.5"
+      },
+      {
+        "ObjectName": "Function'MinimapContainer_C:ExecuteUbergraph_MinimapContainer'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.6"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NormalMinimap",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FortLegacySlateBridgeWidget'",
+          "ObjectPath": "/Script/FortniteUI"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MinimapSwitcher",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CommonWidgetSwitcherLegacy'",
+          "ObjectPath": "/Script/CommonUILegacy"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LandscapeMinimapBorder",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Border'",
+          "ObjectPath": "/Script/UMG"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LandscapeMinimap",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | BlueprintReadOnly | DisableEditOnInstance | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FortCampaignMinimap'",
+          "ObjectPath": "/Script/FortniteUI"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_MinimapContainer": {
+        "ObjectName": "Function'MinimapContainer_C:ExecuteUbergraph_MinimapContainer'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.6"
+      },
+      "Construct": {
+        "ObjectName": "Function'MinimapContainer_C:Construct'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.5"
+      }
+    },
+    "ClassFlags": "CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "MinimapContainer_C'Default__MinimapContainer_C'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.7"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "CommonWidgetSwitcherLegacy'MinimapContainer_C:WidgetTree.MinimapSwitcher'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.2"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "CommonWidgetSwitcherLegacy'MinimapContainer_C:WidgetTree.MinimapSwitcher'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.2"
+      },
+      "Content": {
+        "ObjectName": "FortLegacySlateBridgeWidget'MinimapContainer_C:WidgetTree.NormalMinimap'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.4"
+      }
+    }
+  },
+  {
+    "Type": "WidgetSwitcherSlot",
+    "Name": "WidgetSwitcherSlot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetSwitcherSlot'",
+    "Outer": {
+      "ObjectName": "CommonWidgetSwitcherLegacy'MinimapContainer_C:WidgetTree.MinimapSwitcher'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.2"
+    },
+    "Properties": {
+      "Parent": {
+        "ObjectName": "CommonWidgetSwitcherLegacy'MinimapContainer_C:WidgetTree.MinimapSwitcher'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.2"
+      },
+      "Content": {
+        "ObjectName": "Border'MinimapContainer_C:WidgetTree.LandscapeMinimapBorder'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.0"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'MinimapContainer_C'",
+      "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.8"
+    },
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CommonWidgetSwitcherLegacy'MinimapContainer_C:WidgetTree.MinimapSwitcher'",
+        "ObjectPath": "/SaveTheWorld/UI/InGame/HUD/MinimapContainer.2"
+      }
+    }
+  }
+]

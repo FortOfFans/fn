@@ -2,8 +2,8 @@
   {
     "Type": "AthenaCharacterItemDefinition",
     "Name": "CID_Outlander_ZoneFragment",
-    "Class": "UScriptClass'AthenaCharacterItemDefinition'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AthenaCharacterItemDefinition'",
     "Properties": {
       "Gender": "EFortCustomGender::Female",
       "FrontendAnimMontageIdleOverride": {
@@ -21,7 +21,6 @@
         }
       ],
       "bIsOwnedByCampaignHero": true,
-      "Rarity": "EFortRarity::Mythic",
       "ItemName": {
         "Namespace": "",
         "Key": "DCA6740C4F7170A9B9C4D0B64F1E8C7B",
@@ -71,6 +70,9 @@
             "Item.Trait.Transient",
             "Item.Trait.SingleStack"
           ]
+        },
+        {
+          "Rarity": "EFortRarity::Mythic"
         }
       ]
     }
@@ -78,9 +80,12 @@
   {
     "Type": "FortCosmeticCharacterPartVariant",
     "Name": "F_SML_Outlander_CM01",
-    "Outer": "CID_Outlander_ZoneFragment",
-    "Class": "UScriptClass'FortCosmeticCharacterPartVariant'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortCosmeticCharacterPartVariant'",
+    "Outer": {
+      "ObjectName": "AthenaCharacterItemDefinition'CID_Outlander_ZoneFragment'",
+      "ObjectPath": "/SaveTheWorld/Heroes/Outlander/CosmeticCharacterItemDefinitions/CID_Outlander_ZoneFragment.0"
+    },
     "Properties": {
       "PartOptions": [
         {

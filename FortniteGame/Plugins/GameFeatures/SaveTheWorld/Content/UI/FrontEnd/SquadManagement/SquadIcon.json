@@ -2,15 +2,18 @@
   {
     "Type": "Image",
     "Name": "Icon",
-    "Outer": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Class": "UScriptClass'Image'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted"
+    "Outer": {
+      "ObjectName": "WidgetTree'SquadIcon_C:WidgetTree'",
+      "ObjectPath": "/SaveTheWorld/UI/Frontend/SquadManagement/SquadIcon.3"
+    }
   },
   {
     "Type": "SquadIcon_C",
     "Name": "Default__SquadIcon_C",
-    "Class": "WidgetBlueprintGeneratedClass'/SaveTheWorld/UI/Frontend/SquadManagement/SquadIcon.SquadIcon_C'",
     "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/SaveTheWorld/UI/Frontend/SquadManagement/SquadIcon.SquadIcon_C'",
     "Properties": {
       "ImageSize": "EFortBrushSize::Large",
       "bHasScriptImplementedTick": false,
@@ -20,8 +23,8 @@
   {
     "Type": "WidgetBlueprintGeneratedClass",
     "Name": "SquadIcon_C",
-    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
     "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'SquadIcon_C:WidgetTree'",
@@ -50,9 +53,12 @@
   {
     "Type": "WidgetTree",
     "Name": "WidgetTree",
-    "Outer": "SquadIcon_C",
-    "Class": "UScriptClass'WidgetTree'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'SquadIcon_C'",
+      "ObjectPath": "/SaveTheWorld/UI/Frontend/SquadManagement/SquadIcon.2"
+    },
     "Properties": {
       "RootWidget": {
         "ObjectName": "Image'SquadIcon_C:WidgetTree.Icon'",

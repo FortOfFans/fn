@@ -2,12 +2,12 @@
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "GAT_Alteration_Melee_OnDmgReceived_DmgBuff_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Super": {
       "ObjectName": "BlueprintGeneratedClass'GAT_GenericTriggeredAbility_C'",
       "ObjectPath": "/Game/Abilities/Player/Parents/GAT_GenericTriggeredAbility.0"
     },
-    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "UberGraphFunction": {
         "ObjectName": "Function'GAT_Alteration_Melee_OnDmgReceived_DmgBuff_C:ExecuteUbergraph_GAT_Alteration_Melee_OnDmgReceived_DmgBuff'",
@@ -76,9 +76,12 @@
   {
     "Type": "Function",
     "Name": "ExecuteUbergraph_GAT_Alteration_Melee_OnDmgReceived_DmgBuff",
-    "Outer": "GAT_Alteration_Melee_OnDmgReceived_DmgBuff_C",
-    "Class": "UScriptClass'Function'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAT_Alteration_Melee_OnDmgReceived_DmgBuff_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GAT_Alteration_Melee_OnDmgReceived_DmgBuff.0"
+    },
     "ChildProperties": [
       {
         "Type": "IntProperty",
@@ -139,12 +142,13 @@
         "Name": "CallFunc_ApplyGameplayEffectContainer_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 16,
-        "PropertyFlags": "ConstParm | ReferenceParm",
+        "PropertyFlags": "ConstParm | ReferenceParm | ContainsInstancedReference",
         "Inner": {
           "Type": "StructProperty",
           "Name": "CallFunc_ApplyGameplayEffectContainer_ReturnValue",
           "Flags": "RF_Public",
-          "ElementSize": 8,
+          "ElementSize": 16,
+          "PropertyFlags": "ContainsInstancedReference",
           "Struct": {
             "ObjectName": "Class'ActiveGameplayEffectHandle'",
             "ObjectPath": "/Script/GameplayAbilities"
@@ -193,13 +197,16 @@
   {
     "Type": "Function",
     "Name": "K2_ActivateAbilityFromEvent",
-    "Outer": "GAT_Alteration_Melee_OnDmgReceived_DmgBuff_C",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAT_Alteration_Melee_OnDmgReceived_DmgBuff_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GAT_Alteration_Melee_OnDmgReceived_DmgBuff.0"
+    },
     "Super": {
       "ObjectName": "Function'GAT_GenericTriggeredAbility_C:K2_ActivateAbilityFromEvent'",
       "ObjectPath": "/Game/Abilities/Player/Parents/GAT_GenericTriggeredAbility.2"
     },
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "ChildProperties": [
       {
         "Type": "StructProperty",
@@ -218,12 +225,12 @@
   {
     "Type": "GAT_Alteration_Melee_OnDmgReceived_DmgBuff_C",
     "Name": "Default__GAT_Alteration_Melee_OnDmgReceived_DmgBuff_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Class": "BlueprintGeneratedClass'/SaveTheWorld/Items/Alterations/Gameplay/GAT_Alteration_Melee_OnDmgReceived_DmgBuff.GAT_Alteration_Melee_OnDmgReceived_DmgBuff_C'",
     "Template": {
       "ObjectName": "GAT_GenericTriggeredAbility_C'Default__GAT_GenericTriggeredAbility_C'",
       "ObjectPath": "/Game/Abilities/Player/Parents/GAT_GenericTriggeredAbility.3"
     },
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "UberGraphFrame": {},
       "TQ_DmgSourceTags": {

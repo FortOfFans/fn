@@ -2,12 +2,12 @@
   {
     "Type": "BlueprintGeneratedClass",
     "Name": "GAT_Alteration_G_Base_OnDmgDealt_Apply_Effect_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Super": {
       "ObjectName": "BlueprintGeneratedClass'GAT_Alteration_Base_OnDamageDealt_C'",
       "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GAT_Alteration_Base_OnDamageDealt.0"
     },
-    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "UberGraphFunction": {
         "ObjectName": "Function'GAT_Alteration_G_Base_OnDmgDealt_Apply_Effect_C:ExecuteUbergraph_GAT_Alteration_G_Base_OnDmgDealt_Apply_Effect'",
@@ -78,13 +78,16 @@
   {
     "Type": "Function",
     "Name": "DoOnDmgDealtBehavior",
-    "Outer": "GAT_Alteration_G_Base_OnDmgDealt_Apply_Effect_C",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAT_Alteration_G_Base_OnDmgDealt_Apply_Effect_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GAT_Alteration_G_Base_OnDmgDealt_Apply_Effect.0"
+    },
     "Super": {
       "ObjectName": "Function'GAT_Alteration_Base_OnDamageDealt_C:DoOnDmgDealtBehavior'",
       "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GAT_Alteration_Base_OnDamageDealt.1"
     },
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "ChildProperties": [
       {
         "Type": "StructProperty",
@@ -103,9 +106,12 @@
   {
     "Type": "Function",
     "Name": "ExecuteUbergraph_GAT_Alteration_G_Base_OnDmgDealt_Apply_Effect",
-    "Outer": "GAT_Alteration_G_Base_OnDmgDealt_Apply_Effect_C",
-    "Class": "UScriptClass'Function'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAT_Alteration_G_Base_OnDmgDealt_Apply_Effect_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GAT_Alteration_G_Base_OnDmgDealt_Apply_Effect.0"
+    },
     "ChildProperties": [
       {
         "Type": "IntProperty",
@@ -161,12 +167,13 @@
         "Name": "CallFunc_ApplyGameplayEffectContainer_ReturnValue",
         "Flags": "RF_Public",
         "ElementSize": 16,
-        "PropertyFlags": "ConstParm | ReferenceParm",
+        "PropertyFlags": "ConstParm | ReferenceParm | ContainsInstancedReference",
         "Inner": {
           "Type": "StructProperty",
           "Name": "CallFunc_ApplyGameplayEffectContainer_ReturnValue",
           "Flags": "RF_Public",
-          "ElementSize": 8,
+          "ElementSize": 16,
+          "PropertyFlags": "ContainsInstancedReference",
           "Struct": {
             "ObjectName": "Class'ActiveGameplayEffectHandle'",
             "ObjectPath": "/Script/GameplayAbilities"
@@ -179,12 +186,12 @@
   {
     "Type": "GAT_Alteration_G_Base_OnDmgDealt_Apply_Effect_C",
     "Name": "Default__GAT_Alteration_G_Base_OnDmgDealt_Apply_Effect_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Class": "BlueprintGeneratedClass'/SaveTheWorld/Items/Alterations/Gameplay/GAT_Alteration_G_Base_OnDmgDealt_Apply_Effect.GAT_Alteration_G_Base_OnDmgDealt_Apply_Effect_C'",
     "Template": {
       "ObjectName": "GAT_Alteration_Base_OnDamageDealt_C'Default__GAT_Alteration_Base_OnDamageDealt_C'",
       "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GAT_Alteration_Base_OnDamageDealt.6"
     },
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "UberGraphFrame": {},
       "EffectContainers": {
@@ -258,6 +265,7 @@
                 "bExcludeAllAI": false,
                 "bExcludePawnNeutrals": false,
                 "bExcludePawnEnemies": false,
+                "bExcludePawnEnemiesKeepNeutrals": false,
                 "bExcludeNonPawnFriends": false,
                 "bExcludeNonPawnEnemies": false,
                 "bConsiderFriendlyFireWhenExcludingFriends": false,

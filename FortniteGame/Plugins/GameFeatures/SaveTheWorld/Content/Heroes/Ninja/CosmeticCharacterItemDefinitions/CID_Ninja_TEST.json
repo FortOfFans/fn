@@ -2,8 +2,8 @@
   {
     "Type": "AthenaCharacterItemDefinition",
     "Name": "CID_Ninja_TEST",
-    "Class": "UScriptClass'AthenaCharacterItemDefinition'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AthenaCharacterItemDefinition'",
     "Properties": {
       "ItemVariants": [
         {
@@ -12,7 +12,6 @@
         }
       ],
       "bIsOwnedByCampaignHero": true,
-      "Rarity": "EFortRarity::Epic",
       "ItemName": {
         "Namespace": "",
         "Key": "3E5C8B844CE5E536A04DCAB72CE6C0DB",
@@ -61,6 +60,9 @@
             "Item.Trait.Transient",
             "Item.Trait.SingleStack"
           ]
+        },
+        {
+          "Rarity": "EFortRarity::Epic"
         }
       ]
     }
@@ -68,9 +70,12 @@
   {
     "Type": "FortCosmeticCharacterPartVariant",
     "Name": "F_S_Ninja_Head_TEST",
-    "Outer": "CID_Ninja_TEST",
-    "Class": "UScriptClass'FortCosmeticCharacterPartVariant'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortCosmeticCharacterPartVariant'",
+    "Outer": {
+      "ObjectName": "AthenaCharacterItemDefinition'CID_Ninja_TEST'",
+      "ObjectPath": "/SaveTheWorld/Heroes/Ninja/CosmeticCharacterItemDefinitions/CID_Ninja_TEST.0"
+    },
     "Properties": {
       "PartOptions": [
         {

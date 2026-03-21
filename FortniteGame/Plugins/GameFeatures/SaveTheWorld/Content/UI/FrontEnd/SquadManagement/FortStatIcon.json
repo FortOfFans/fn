@@ -2,8 +2,8 @@
   {
     "Type": "FortStatIcon_C",
     "Name": "Default__FortStatIcon_C",
-    "Class": "WidgetBlueprintGeneratedClass'/SaveTheWorld/UI/Frontend/SquadManagement/FortStatIcon.FortStatIcon_C'",
     "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "WidgetBlueprintGeneratedClass'/SaveTheWorld/UI/Frontend/SquadManagement/FortStatIcon.FortStatIcon_C'",
     "Properties": {
       "Attribute": {
         "AttributeName": "Fortitude",
@@ -29,15 +29,18 @@
   {
     "Type": "Image",
     "Name": "Icon",
-    "Outer": "WidgetTree",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Class": "UScriptClass'Image'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted"
+    "Outer": {
+      "ObjectName": "WidgetTree'FortStatIcon_C:WidgetTree'",
+      "ObjectPath": "/SaveTheWorld/UI/Frontend/SquadManagement/FortStatIcon.3"
+    }
   },
   {
     "Type": "WidgetBlueprintGeneratedClass",
     "Name": "FortStatIcon_C",
-    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
     "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
     "Properties": {
       "WidgetTree": {
         "ObjectName": "WidgetTree'FortStatIcon_C:WidgetTree'",
@@ -66,9 +69,12 @@
   {
     "Type": "WidgetTree",
     "Name": "WidgetTree",
-    "Outer": "FortStatIcon_C",
-    "Class": "UScriptClass'WidgetTree'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'WidgetTree'",
+    "Outer": {
+      "ObjectName": "WidgetBlueprintGeneratedClass'FortStatIcon_C'",
+      "ObjectPath": "/SaveTheWorld/UI/Frontend/SquadManagement/FortStatIcon.2"
+    },
     "Properties": {
       "RootWidget": {
         "ObjectName": "Image'FortStatIcon_C:WidgetTree.Icon'",

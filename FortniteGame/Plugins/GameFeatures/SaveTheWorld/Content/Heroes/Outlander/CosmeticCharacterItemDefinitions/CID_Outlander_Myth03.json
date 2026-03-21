@@ -2,8 +2,8 @@
   {
     "Type": "AthenaCharacterItemDefinition",
     "Name": "CID_Outlander_Myth03",
-    "Class": "UScriptClass'AthenaCharacterItemDefinition'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AthenaCharacterItemDefinition'",
     "Properties": {
       "Gender": "EFortCustomGender::Female",
       "FrontendAnimMontageIdleOverride": {
@@ -21,7 +21,6 @@
         }
       ],
       "bIsOwnedByCampaignHero": true,
-      "Rarity": "EFortRarity::Mythic",
       "ItemName": {
         "Namespace": "",
         "Key": "28FA2CCD4E1FE9DC5100C08FA2137596",
@@ -71,6 +70,9 @@
             "Item.Trait.Transient",
             "Item.Trait.SingleStack"
           ]
+        },
+        {
+          "Rarity": "EFortRarity::Mythic"
         }
       ]
     }
@@ -78,9 +80,12 @@
   {
     "Type": "FortCosmeticCharacterPartVariant",
     "Name": "CP_Body_Commando_F_StarfishUniform",
-    "Outer": "CID_Outlander_Myth03",
-    "Class": "UScriptClass'FortCosmeticCharacterPartVariant'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortCosmeticCharacterPartVariant'",
+    "Outer": {
+      "ObjectName": "AthenaCharacterItemDefinition'CID_Outlander_Myth03'",
+      "ObjectPath": "/SaveTheWorld/Heroes/Outlander/CosmeticCharacterItemDefinitions/CID_Outlander_Myth03.0"
+    },
     "Properties": {
       "PartOptions": [
         {

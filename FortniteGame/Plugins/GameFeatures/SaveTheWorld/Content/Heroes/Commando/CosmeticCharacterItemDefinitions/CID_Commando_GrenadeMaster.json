@@ -2,8 +2,8 @@
   {
     "Type": "AthenaCharacterItemDefinition",
     "Name": "CID_Commando_GrenadeMaster",
-    "Class": "UScriptClass'AthenaCharacterItemDefinition'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AthenaCharacterItemDefinition'",
     "Properties": {
       "Gender": "EFortCustomGender::Female",
       "FrontendAnimMontageIdleOverride": {
@@ -21,7 +21,6 @@
         }
       ],
       "bIsOwnedByCampaignHero": true,
-      "Rarity": "EFortRarity::Mythic",
       "ItemName": {
         "Namespace": "",
         "Key": "CE3D52274BA624ADC8215EADD952A022",
@@ -71,6 +70,9 @@
             "Item.Trait.Transient",
             "Item.Trait.SingleStack"
           ]
+        },
+        {
+          "Rarity": "EFortRarity::Mythic"
         }
       ]
     }
@@ -78,9 +80,12 @@
   {
     "Type": "FortCosmeticCharacterPartVariant",
     "Name": "F_Med_Head1",
-    "Outer": "CID_Commando_GrenadeMaster",
-    "Class": "UScriptClass'FortCosmeticCharacterPartVariant'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortCosmeticCharacterPartVariant'",
+    "Outer": {
+      "ObjectName": "AthenaCharacterItemDefinition'CID_Commando_GrenadeMaster'",
+      "ObjectPath": "/SaveTheWorld/Heroes/Commando/CosmeticCharacterItemDefinitions/CID_Commando_GrenadeMaster.0"
+    },
     "Properties": {
       "PartOptions": [
         {

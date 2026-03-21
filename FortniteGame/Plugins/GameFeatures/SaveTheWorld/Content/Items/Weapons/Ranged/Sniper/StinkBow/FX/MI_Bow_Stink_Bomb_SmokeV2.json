@@ -2,32 +2,41 @@
   {
     "Type": "MaterialInstanceConstant",
     "Name": "MI_Bow_Stink_Bomb_SmokeV2",
-    "Class": "UScriptClass'MaterialInstanceConstant'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'MaterialInstanceConstant'",
     "Properties": {
       "Parent": {
         "ObjectName": "Material'M_SmokeV2_Lit'",
-        "ObjectPath": "/Game/Effects/Niagara/MasterMaterials/Smoke/Janus/M_SmokeV2_Lit.0"
+        "ObjectPath": "/Game/Effects/Materials/Smoke/M_SmokeV2_Lit.0"
       },
       "bHasStaticPermutationResource": true,
       "ScalarParameterValues": [
         {
           "ParameterInfo": {
-            "Name": "DepthFade_high",
+            "Name": "UseParticleColor",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 40.0,
-          "ExpressionGUID": "B4B30953-4C995B29-6B1663BF-B4AECAA2"
+          "ParameterValue": 1.0,
+          "ExpressionGUID": "3CCA8883-44DD382F-E35D89AB-892D218E"
         },
         {
           "ParameterInfo": {
-            "Name": "DepthFade_Low",
+            "Name": "IsShaderUnlit",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
-          "ParameterValue": 125.0,
-          "ExpressionGUID": "04073630-4DE59A08-60A7429D-42042D7A"
+          "ParameterValue": 1.0,
+          "ExpressionGUID": "F4EF0AE4-4BF2BBF1-8C59FB8B-C427143A"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "UseHDREmissive",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 1.0,
+          "ExpressionGUID": "1B0763FB-4541C397-FE471C87-9BE9CD23"
         },
         {
           "ParameterInfo": {
@@ -49,6 +58,24 @@
         },
         {
           "ParameterInfo": {
+            "Name": "DepthFade_Low",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 125.0,
+          "ExpressionGUID": "04073630-4DE59A08-60A7429D-42042D7A"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "DepthFade_high",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": 40.0,
+          "ExpressionGUID": "B4B30953-4C995B29-6B1663BF-B4AECAA2"
+        },
+        {
+          "ParameterInfo": {
             "Name": "NormalTexture",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
@@ -64,15 +91,6 @@
           },
           "ParameterValue": 1.0,
           "ExpressionGUID": "31D20E74-41175780-D6FEA69B-AB2179E0"
-        },
-        {
-          "ParameterInfo": {
-            "Name": "UseParticleColor",
-            "Association": "EMaterialParameterAssociation::GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": 1.0,
-          "ExpressionGUID": "3CCA8883-44DD382F-E35D89AB-892D218E"
         },
         {
           "ParameterInfo": {
@@ -99,6 +117,21 @@
             "Hex": "FEFFFF"
           },
           "ExpressionGUID": "26EF97A6-4F26273C-65DCC4BB-13F7741D"
+        },
+        {
+          "ParameterInfo": {
+            "Name": "Color Morning Multiplier",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          "ParameterValue": {
+            "R": 0.989583,
+            "G": 0.268012,
+            "B": 0.49289,
+            "A": 0.0,
+            "Hex": "FE8DBB"
+          },
+          "ExpressionGUID": "8E2CE9E4-4BF6D817-70DC63B9-3FE5C81F"
         },
         {
           "ParameterInfo": {
@@ -129,21 +162,6 @@
             "Hex": "CC939D"
           },
           "ExpressionGUID": "6E377A7C-423E6956-C7C6C589-2ACD2D82"
-        },
-        {
-          "ParameterInfo": {
-            "Name": "Color Morning Multiplier",
-            "Association": "EMaterialParameterAssociation::GlobalParameter",
-            "Index": -1
-          },
-          "ParameterValue": {
-            "R": 0.989583,
-            "G": 0.268012,
-            "B": 0.49289,
-            "A": 0.0,
-            "Hex": "FE8DBB"
-          },
-          "ExpressionGUID": "8E2CE9E4-4BF6D817-70DC63B9-3FE5C81F"
         },
         {
           "ParameterInfo": {
@@ -178,7 +196,7 @@
       "BasePropertyOverrides": {
         "BlendMode": "EBlendMode::BLEND_TranslucentGreyTransmittance",
         "OpacityMaskClipValue": 0.3333,
-        "UsageFlags": 4457474
+        "UsageFlags": 1026
       },
       "StaticParametersRuntime": {
         "StaticSwitchParameters": [
@@ -204,36 +222,42 @@
           }
         ]
       },
-      "TextureStreamingData": [
+      "ReferencedDefaultTextures": [
         {
-          "SamplingScale": 0.203125,
-          "UVChannelIndex": 0,
-          "TextureName": "RT4x4_1_Tex"
+          "ObjectName": "Texture2D'SphereRenderNormalsMap'",
+          "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/SphereRenderNormalsMap.0"
         },
         {
-          "SamplingScale": 0.203125,
-          "UVChannelIndex": 0,
-          "TextureName": "RT4x4_3_Tex"
+          "ObjectName": "Texture2D'Vector_OF'",
+          "ObjectPath": "/Game/Effects/Niagara/MasterMaterials/Smoke/Textures/Vector_OF.0"
         },
         {
-          "SamplingScale": 0.203125,
-          "UVChannelIndex": 0,
-          "TextureName": "RT4x4_4_Tex"
+          "ObjectName": "CurveLinearColorAtlas'CurveAtlas'",
+          "ObjectPath": "/Game/Effects/Niagara/MasterMaterials/Smoke/Textures/CurveAtlas.0"
         },
         {
-          "SamplingScale": 0.203125,
-          "UVChannelIndex": 0,
-          "TextureName": "RT4x4_5_Tex"
+          "ObjectName": "Texture2D'T_Blowing_Smoke_Pattern2_Tile_DISP'",
+          "ObjectPath": "/Game/Global/Textures/Default/Tileable_Patterns/T_Blowing_Smoke_Pattern2_Tile_DISP.0"
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "Texture2D'RT4x4_3_Tex'",
+          "ObjectPath": "/Game/Effects/Niagara/MasterMaterials/Smoke/Textures/NEW/RT4x4_3_Tex.0"
         },
         {
-          "SamplingScale": 1.0,
-          "UVChannelIndex": 0,
-          "TextureName": "SphereRenderNormalsMap"
+          "ObjectName": "Texture2D'RT4x4_1_Tex'",
+          "ObjectPath": "/Game/Effects/Niagara/MasterMaterials/Smoke/Textures/NEW/RT4x4_1_Tex.0"
         },
         {
-          "SamplingScale": 0.25,
-          "UVChannelIndex": 0,
-          "TextureName": "Vector_OF"
+          "ObjectName": "Texture2D'RT4x4_4_Tex'",
+          "ObjectPath": "/Game/Effects/Niagara/MasterMaterials/Smoke/Textures/NEW/RT4x4_4_Tex.0"
+        },
+        {
+          "ObjectName": "Texture2D'RT4x4_5_Tex'",
+          "ObjectPath": "/Game/Effects/Niagara/MasterMaterials/Smoke/Textures/NEW/RT4x4_5_Tex.0"
         }
       ],
       "bIncludedInBaseGame": true

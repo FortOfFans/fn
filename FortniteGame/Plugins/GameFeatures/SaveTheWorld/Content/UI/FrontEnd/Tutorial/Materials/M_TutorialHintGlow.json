@@ -2,14 +2,20 @@
   {
     "Type": "Material",
     "Name": "M_TutorialHintGlow",
-    "Class": "UScriptClass'Material'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Material'",
     "Properties": {
       "MaterialDomain": "EMaterialDomain::MD_UI",
       "BlendMode": "EBlendMode::BLEND_TranslucentGreyTransmittance",
       "bCanMaskedBeAssumedOpaque": true,
       "PixelDepthOffsetMode": "EPixelDepthOffsetMode::PDOM_Legacy",
-      "StateId": "4CC593ED-4D084B97-99F7C487-548BB3D4",
+      "StateId": "8B315E89-475E6F14-622E76BB-E3E13FEE",
+      "ReferencedDefaultTextures": [
+        {
+          "ObjectName": "Texture2D'ElectricityNoise_M'",
+          "ObjectPath": "/Game/Characters/Player/Male/Medium/Bodies/M_MED_Storm_Soldier/Textures/ElectricityNoise_M.0"
+        }
+      ],
       "bIncludedInBaseGame": true
     },
     "LoadedMaterialResources": [],
@@ -17,12 +23,57 @@
       "RuntimeEntries": {
         "ParameterInfoSet": [
           {
-            "Name": "Speed",
+            "Name": "SystemSpeed",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           },
           {
             "Name": "CornerRound",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "FlareStrength",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "WaveStrength",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "WaveFreq",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "InnerGlow",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "BoxSize",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "WavePinch",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "WaveOffset",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "PulseStrength",
+            "Association": "EMaterialParameterAssociation::GlobalParameter",
+            "Index": -1
+          },
+          {
+            "Name": "FadeStrength",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           }
@@ -31,12 +82,7 @@
       "RuntimeEntries[1]": {
         "ParameterInfoSet": [
           {
-            "Name": "Color",
-            "Association": "EMaterialParameterAssociation::GlobalParameter",
-            "Index": -1
-          },
-          {
-            "Name": "UVScaleTweak",
+            "Name": "ColorAndOpacity",
             "Association": "EMaterialParameterAssociation::GlobalParameter",
             "Index": -1
           }
@@ -68,32 +114,42 @@
       },
       "ScalarPrimitiveDataIndexValues": [
         -1,
-        -1
-      ],
-      "VectorPrimitiveDataIndexValues": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
         -1,
         -1
       ],
+      "VectorPrimitiveDataIndexValues": [
+        -1
+      ],
       "ScalarValues": [
-        0.5,
-        0.2
+        0.3,
+        0.2,
+        4.0,
+        0.25,
+        5.0,
+        0.0,
+        0.98,
+        1.0,
+        1.0,
+        4.0,
+        10.0
       ],
       "StaticSwitchValues": [],
       "DynamicSwitchValues": [],
       "VectorValues": [
         {
-          "R": 0.982251,
+          "R": 1.0,
           "G": 1.0,
-          "B": 0.026241,
+          "B": 1.0,
           "A": 1.0,
-          "Hex": "FDFF2D"
-        },
-        {
-          "R": 3.0,
-          "G": 0.0,
-          "B": 0.0,
-          "A": 1.0,
-          "Hex": "FF0000"
+          "Hex": "FFFFFF"
         }
       ],
       "DoubleVectorValues": [],
@@ -104,40 +160,18 @@
       "FontPageValues": [],
       "RuntimeVirtualTextureValues": [],
       "SparseVolumeTextureValues": [],
-      "ReferencedTextures": [],
       "ReferencedTextureCollections": [],
       "ReferencedExternalCodeExpressionClasses": [],
       "FunctionInfos": [
         {
-          "StateId": "6BB97146-49B75878-03A98399-9B3C01AF",
+          "StateId": "3B051300-406394E9-4ED3E69C-5606D9C5",
           "Function": {
-            "ObjectName": "MaterialFunction'VectorLength'",
-            "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/Utility/VectorLength.0"
-          }
-        },
-        {
-          "StateId": "6BB97146-49B75878-03A98399-9B3C01AF",
-          "Function": {
-            "ObjectName": "MaterialFunction'VectorLength'",
-            "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/Utility/VectorLength.0"
-          }
-        },
-        {
-          "StateId": "6BB97146-49B75878-03A98399-9B3C01AF",
-          "Function": {
-            "ObjectName": "MaterialFunction'VectorLength'",
-            "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/Utility/VectorLength.0"
-          }
-        },
-        {
-          "StateId": "41E48A6E-4C65ABBC-54009EA3-2611D5C6",
-          "Function": {
-            "ObjectName": "MaterialFunction'ObjectScale'",
-            "ObjectPath": "/Engine/Functions/Engine_MaterialFunctions02/WorldPositionOffset/V2/ObjectScale.0"
+            "ObjectName": "MaterialFunction'GetUserInterfaceUV'",
+            "ObjectPath": "/Engine/Functions/UserInterface/GetUserInterfaceUV.0"
           }
         }
       ],
-      "FunctionInfosStateCRC": 1462425667,
+      "FunctionInfosStateCRC": 3941386245,
       "ParameterCollectionInfos": [],
       "GrassTypes": [],
       "MaterialCacheTags": [],
@@ -169,6 +203,12 @@
       "bHasMeshPaintTexture": false,
       "bHasWorldPosition": false,
       "PropertyConnectedMask": 3
-    }
+    },
+    "ReferencedTextures": [
+      {
+        "ObjectName": "Texture2D'ElectricityNoise_M'",
+        "ObjectPath": "/Game/Characters/Player/Male/Medium/Bodies/M_MED_Storm_Soldier/Textures/ElectricityNoise_M.0"
+      }
+    ]
   }
 ]

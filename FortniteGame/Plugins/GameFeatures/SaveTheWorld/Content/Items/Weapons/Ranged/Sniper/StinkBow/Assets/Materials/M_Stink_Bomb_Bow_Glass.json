@@ -2,14 +2,15 @@
   {
     "Type": "Material",
     "Name": "M_Stink_Bomb_Bow_Glass",
-    "Class": "UScriptClass'Material'",
     "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Material'",
     "Properties": {
       "ShadingModel": "EMaterialShadingModel::MSM_Unlit",
       "ShadingModels": {
         "ShadingModelField": 1
       },
       "bUsedWithSkeletalMesh": true,
+      "bUsedWithMeshDeformer": true,
       "AllowTranslucentCustomDepthWrites": true,
       "bCanMaskedBeAssumedOpaque": true,
       "PixelDepthOffsetMode": "EPixelDepthOffsetMode::PDOM_Legacy",
@@ -29,6 +30,20 @@
           "SamplingScale": 1.0,
           "UVChannelIndex": 0,
           "TextureName": "T_StormCloudDetail01_N"
+        }
+      ],
+      "ReferencedDefaultTextures": [
+        {
+          "ObjectName": "Texture2D'T_StormCloudDetail01_M'",
+          "ObjectPath": "/Game/Global/Textures/Default/Tileable_Patterns/T_StormCloudDetail01_M.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_StormCloudDetail01_N'",
+          "ObjectPath": "/Game/Global/Textures/Default/Tileable_Patterns/T_StormCloudDetail01_N.0"
+        },
+        {
+          "ObjectName": "Texture2D'T_HexmapFog_01_Height_GS'",
+          "ObjectPath": "/Game/Environments/Hexmap/HexClouds/T_HexmapFog_01_Height_GS.0"
         }
       ],
       "bIncludedInBaseGame": true
@@ -188,24 +203,14 @@
       "FontPageValues": [],
       "RuntimeVirtualTextureValues": [],
       "SparseVolumeTextureValues": [],
-      "ReferencedTextures": [
-        {
-          "ObjectName": "Texture2D'T_StormCloudDetail01_M'",
-          "ObjectPath": "/Game/Global/Textures/Default/Tileable_Patterns/T_StormCloudDetail01_M.0"
-        },
-        {
-          "ObjectName": "Texture2D'T_StormCloudDetail01_N'",
-          "ObjectPath": "/Game/Global/Textures/Default/Tileable_Patterns/T_StormCloudDetail01_N.0"
-        },
-        {
-          "ObjectName": "Texture2D'T_HexmapFog_01_Height_GS'",
-          "ObjectPath": "/Game/Environments/Hexmap/HexClouds/T_HexmapFog_01_Height_GS.0"
-        }
-      ],
       "ReferencedTextureCollections": [],
       "ReferencedExternalCodeExpressionClasses": [
         {
           "ObjectName": "Class'MaterialExpressionCameraVectorWS'",
+          "ObjectPath": "/Script/Engine"
+        },
+        {
+          "ObjectName": "Class'MaterialExpressionDistanceCullFade'",
           "ObjectPath": "/Script/Engine"
         },
         {

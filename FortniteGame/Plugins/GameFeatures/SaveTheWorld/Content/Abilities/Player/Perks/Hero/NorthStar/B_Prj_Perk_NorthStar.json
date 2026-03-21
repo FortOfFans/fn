@@ -1,0 +1,781 @@
+[
+  {
+    "Type": "B_Prj_Perk_NorthStar_C",
+    "Name": "Default__B_Prj_Perk_NorthStar_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.B_Prj_Perk_NorthStar_C'",
+    "Template": {
+      "ObjectName": "B_Prj_Ninja_ThrowingStars_C'Default__B_Prj_Ninja_ThrowingStars_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/ThrowingStars/B_Prj_Ninja_ThrowingStars.0"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "ImpactNS": {
+        "ObjectName": "NiagaraSystem'NS_Icebolt_Prj_Impact'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/FX/NS_Icebolt_Prj_Impact.43"
+      },
+      "ImpactSoundCue": {
+        "ObjectName": "SoundCue'SFX_NorthStar_Impact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Impact_Cue.0"
+      },
+      "Cue_ImpactSound": {
+        "ObjectName": "SoundCue'SFX_NorthStar_Impact_Cue'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Impact_Cue.0"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "FortProjectileRootComponent'Default__B_Prj_Perk_NorthStar_C:CollisionCapsule0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.3"
+      },
+      "ProjectileMovementComponent": {
+        "ObjectName": "FortProjectileMovementComponent'Default__B_Prj_Perk_NorthStar_C:ProjectileComp0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.2"
+      },
+      "WaterInteractionComponent": {
+        "ObjectName": "FortWaterInteractionComponent'Default__B_Prj_Perk_NorthStar_C:WaterComponentName'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.4"
+      },
+      "CollisionComponent": {
+        "ObjectName": "FortProjectileRootComponent'Default__B_Prj_Perk_NorthStar_C:CollisionCapsule0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.3"
+      },
+      "RootComponent": {
+        "ObjectName": "FortProjectileRootComponent'Default__B_Prj_Perk_NorthStar_C:CollisionCapsule0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.3"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "B_Prj_Perk_NorthStar_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Ninja_ThrowingStars_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/ThrowingStars/B_Prj_Ninja_ThrowingStars.1"
+    },
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'B_Prj_Perk_NorthStar_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.13"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'B_Prj_Perk_NorthStar_C:InheritableComponentHandler'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.7"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'B_Prj_Perk_NorthStar_C:ExecuteUbergraph_B_Prj_Perk_NorthStar'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.5"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'B_Prj_Perk_NorthStar_C:ReceiveDestroyed'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.6"
+      },
+      {
+        "ObjectName": "Function'B_Prj_Perk_NorthStar_C:ExecuteUbergraph_B_Prj_Perk_NorthStar'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.5"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ImpactNS",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraSystem'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ImpactSoundCue",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'SoundCue'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_B_Prj_Perk_NorthStar": {
+        "ObjectName": "Function'B_Prj_Perk_NorthStar_C:ExecuteUbergraph_B_Prj_Perk_NorthStar'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.5"
+      },
+      "ReceiveDestroyed": {
+        "ObjectName": "Function'B_Prj_Perk_NorthStar_C:ReceiveDestroyed'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "B_Prj_Perk_NorthStar_C'Default__B_Prj_Perk_NorthStar_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "FortProjectileMovementComponent",
+    "Name": "ProjectileComp0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortProjectileMovementComponent'",
+    "Outer": {
+      "ObjectName": "B_Prj_Perk_NorthStar_C'Default__B_Prj_Perk_NorthStar_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.0"
+    },
+    "Template": {
+      "ObjectName": "FortProjectileMovementComponent'Default__B_Prj_Ninja_ThrowingStars_C:ProjectileComp0'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/ThrowingStars/B_Prj_Ninja_ThrowingStars.2"
+    }
+  },
+  {
+    "Type": "FortProjectileRootComponent",
+    "Name": "CollisionCapsule0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortProjectileRootComponent'",
+    "Outer": {
+      "ObjectName": "B_Prj_Perk_NorthStar_C'Default__B_Prj_Perk_NorthStar_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.0"
+    },
+    "Template": {
+      "ObjectName": "FortProjectileRootComponent'Default__B_Prj_Ninja_ThrowingStars_C:CollisionCapsule0'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/ThrowingStars/B_Prj_Ninja_ThrowingStars.3"
+    }
+  },
+  {
+    "Type": "FortWaterInteractionComponent",
+    "Name": "WaterComponentName",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortWaterInteractionComponent'",
+    "Outer": {
+      "ObjectName": "B_Prj_Perk_NorthStar_C'Default__B_Prj_Perk_NorthStar_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.0"
+    },
+    "Template": {
+      "ObjectName": "FortWaterInteractionComponent'Default__B_Prj_Ninja_ThrowingStars_C:WaterComponentName'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/ThrowingStars/B_Prj_Ninja_ThrowingStars.4"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_B_Prj_Perk_NorthStar",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Perk_NorthStar_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInstigator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_GameplayEventData",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "Struct": {
+          "ObjectName": "Class'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_VectorVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAtLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveDestroyed",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Perk_NorthStar_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.1"
+    },
+    "Super": {
+      "ObjectName": "Function'B_Prj_Ninja_ThrowingStars_C:ReceiveDestroyed'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/ThrowingStars/B_Prj_Ninja_ThrowingStars.14"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Perk_NorthStar_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.1"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ParticleSystemComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ParticleSystemComponent'B_Prj_Perk_NorthStar_C:ProjectilePS_GEN_VARIABLE'",
+            "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.9"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'B_Prj_Ninja_ThrowingStars_C'",
+              "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/ThrowingStars/B_Prj_Ninja_ThrowingStars.1"
+            },
+            "SCSVariableName": "ProjectilePS",
+            "AssociatedGuid": "ADA35617-00000000-00000000-00000000"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "RelativeRotation",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ParticleSystemComponent'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Roll",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'Rotator'",
+                  "ObjectPath": "/Script/CoreUObject"
+                }
+              },
+              {
+                "PropertyName": "PrimaryComponentTick",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ParticleSystemComponent'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "bStartWithTickEnabled",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ActorComponentTickFunction'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'B_Prj_Perk_NorthStar_C:StaticMeshComponent_2417__CA6E68C0'",
+            "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.14"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'B_Prj_Ninja_ThrowingStars_C'",
+              "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/ThrowingStars/B_Prj_Ninja_ThrowingStars.1"
+            },
+            "SCSVariableName": "Mesh",
+            "AssociatedGuid": "A733AD71-00000000-00000000-00000000"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [
+              {
+                "PropertyName": "BodyInstance",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'StaticMeshComponent'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ObjectType",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'BodyInstance'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "CollisionEnabled",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'BodyInstance'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "CollisionProfileName",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'BodyInstance'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "CollisionResponses",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'BodyInstance'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "ResponseArray",
+                "ArrayIndex": 1,
+                "PropertyScope": {
+                  "ObjectName": "Class'CollisionResponse'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Channel",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "Response",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'ResponseChannel'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "bAutoWeld",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'BodyInstance'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              },
+              {
+                "PropertyName": "bVisible",
+                "ArrayIndex": 0,
+                "PropertyScope": {
+                  "ObjectName": "Class'StaticMeshComponent'",
+                  "ObjectPath": "/Script/Engine"
+                }
+              }
+            ],
+            "bHasValidCookedData": true
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Perk_NorthStar_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.1"
+    },
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_Icebolt_Prj'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/FX/NS_Icebolt_Prj.33"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "DEBUG",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraBool'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.DEBUG",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "Class'NiagaraBool'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2,
+                "Flags": 0
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.DEBUG",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "Class'NiagaraBool'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2,
+              "Flags": 0
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "RelativeLocation": {
+        "X": -16.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ProjectilePS_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Perk_NorthStar_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.1"
+    },
+    "Template": {
+      "ObjectName": "ParticleSystemComponent'B_Prj_Ninja_ThrowingStars_C:ProjectilePS_GEN_VARIABLE'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/ThrowingStars/B_Prj_Ninja_ThrowingStars.15"
+    },
+    "Properties": {
+      "Template": null
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Perk_NorthStar_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'B_Prj_Perk_NorthStar_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.13"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'B_Prj_Perk_NorthStar_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.10"
+      },
+      "VariableGuid": "3FFF26C5-4B84B1B2-70C84CA5-A4709771",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'B_Prj_Perk_NorthStar_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.13"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'B_Prj_Perk_NorthStar_C:Niagara_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.8"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Asset",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraComponent'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "OverrideParameters",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraComponent'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "UserParameterRedirects",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "SortedParameterOffsets",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "ParameterData",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "None",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraUserRedirectionParameterStore'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "RelativeLocation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'NiagaraComponent'",
+              "ObjectPath": "/Script/Niagara"
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "CollisionCapsule0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "B9FD4902-40E97A86-165C1E91-37FF48CF",
+      "InternalVariableName": "Niagara"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Perk_NorthStar_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.1"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'B_Prj_Perk_NorthStar_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.12"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'B_Prj_Perk_NorthStar_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.12"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'B_Prj_Perk_NorthStar_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.11"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshComponent_2417__CA6E68C0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Perk_NorthStar_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/B_Prj_Perk_NorthStar.1"
+    },
+    "Template": {
+      "ObjectName": "StaticMeshComponent'B_Prj_Ninja_ThrowingStars_C:StaticMeshComponent_2417__CA6E68C0'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/ThrowingStars/B_Prj_Ninja_ThrowingStars.21"
+    },
+    "Properties": {
+      "StaticMesh": null,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  }
+]

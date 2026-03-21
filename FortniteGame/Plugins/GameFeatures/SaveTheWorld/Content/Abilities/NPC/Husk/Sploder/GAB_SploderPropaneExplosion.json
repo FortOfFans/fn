@@ -1,0 +1,1932 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GAB_SploderPropaneExplosion_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:ExecuteUbergraph_GAB_SploderPropaneExplosion'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortGameplayAbility'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:ApplyGEsToPropaneTank'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.1"
+      },
+      {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:Cancelled_7C7A20F144AB26061311C0B8204424ED'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.4"
+      },
+      {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:Targeted_7C7A20F144AB26061311C0B8204424ED'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.10"
+      },
+      {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:Cancelled_710DDB17459304F404C18AB89426DA80'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.3"
+      },
+      {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:Targeted_710DDB17459304F404C18AB89426DA80'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.9"
+      },
+      {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:Cancelled_EF4E5CFA4A83D9641D718BB56A0B2515'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.5"
+      },
+      {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:Targeted_EF4E5CFA4A83D9641D718BB56A0B2515'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.11"
+      },
+      {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:Cancelled_2BAA5D1045A4E2DDDF76368133070725'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.2"
+      },
+      {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:Targeted_2BAA5D1045A4E2DDDF76368133070725'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.8"
+      },
+      {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:K2_ActivateAbilityFromEvent'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.7"
+      },
+      {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:ExecuteUbergraph_GAB_SploderPropaneExplosion'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.6"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "SploderHoldingTank",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "TeamAffiliationBetweenDamageInstigatorAndTankOwner",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Enum": {
+          "ObjectName": "Class'EFortTeamAffiliation'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ExplodingPropaneTank",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'B_BGA_SploderPropaneTank_C'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/B_BGA_SploderPropaneTank.2"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SploderThatOwnedThisPropaneTank",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "EC_NPCAbilityAttackAOEExplosionInstigatedByOwningTeamHoldingExplosive",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "EC_NPCAbilityAttackAOEExplosionInstigatedByOwningTeamNotHoldingExplosive",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "EC_NPCAbilityAttackAOEExplosionInstigatedByOtherTeamHoldingExplosive",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "EC_NPCAbilityAttackAOEExplosionInstigatedByOtherTeamNotHoldingExplosive",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_GameplayEffectInstantDeath",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Propane TankToApplyEffectsTo",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'B_BGA_SploderPropaneTank_C'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/B_BGA_SploderPropaneTank.2"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "SuperTankHusksTag",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "SuperTankHusksEnvironmentDamageModifier",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GAB_SploderPropaneExplosion": {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:ExecuteUbergraph_GAB_SploderPropaneExplosion'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.6"
+      },
+      "K2_ActivateAbilityFromEvent": {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:K2_ActivateAbilityFromEvent'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.7"
+      },
+      "Targeted_2BAA5D1045A4E2DDDF76368133070725": {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:Targeted_2BAA5D1045A4E2DDDF76368133070725'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.8"
+      },
+      "Cancelled_2BAA5D1045A4E2DDDF76368133070725": {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:Cancelled_2BAA5D1045A4E2DDDF76368133070725'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.2"
+      },
+      "Targeted_EF4E5CFA4A83D9641D718BB56A0B2515": {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:Targeted_EF4E5CFA4A83D9641D718BB56A0B2515'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.11"
+      },
+      "Cancelled_EF4E5CFA4A83D9641D718BB56A0B2515": {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:Cancelled_EF4E5CFA4A83D9641D718BB56A0B2515'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.5"
+      },
+      "Targeted_710DDB17459304F404C18AB89426DA80": {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:Targeted_710DDB17459304F404C18AB89426DA80'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.9"
+      },
+      "Cancelled_710DDB17459304F404C18AB89426DA80": {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:Cancelled_710DDB17459304F404C18AB89426DA80'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.3"
+      },
+      "Targeted_7C7A20F144AB26061311C0B8204424ED": {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:Targeted_7C7A20F144AB26061311C0B8204424ED'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.10"
+      },
+      "Cancelled_7C7A20F144AB26061311C0B8204424ED": {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:Cancelled_7C7A20F144AB26061311C0B8204424ED'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.4"
+      },
+      "ApplyGEsToPropaneTank": {
+        "ObjectName": "Function'GAB_SploderPropaneExplosion_C:ApplyGEsToPropaneTank'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.1"
+      }
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GAB_SploderPropaneExplosion_C'Default__GAB_SploderPropaneExplosion_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.12"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ApplyGEsToPropaneTank",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SploderPropaneExplosion_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "NewParam",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'B_BGA_SploderPropaneTank_C'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/B_BGA_SploderPropaneTank.2"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAbilitySystemComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Cancelled_2BAA5D1045A4E2DDDF76368133070725",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SploderPropaneExplosion_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Cancelled_710DDB17459304F404C18AB89426DA80",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SploderPropaneExplosion_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Cancelled_7C7A20F144AB26061311C0B8204424ED",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SploderPropaneExplosion_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Cancelled_EF4E5CFA4A83D9641D718BB56A0B2515",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SploderPropaneExplosion_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GAB_SploderPropaneExplosion",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SploderPropaneExplosion_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitTargetSelectionDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_TargetData_5",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_ApplicationTag_5",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_TargetData_4",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_ApplicationTag_4",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitTargetSelectionDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_ApplyGameplayEffectContainer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "CallFunc_ApplyGameplayEffectContainer_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 16,
+          "PropertyFlags": "ContainsInstancedReference",
+          "Struct": {
+            "ObjectName": "Class'ActiveGameplayEffectHandle'",
+            "ObjectPath": "/Script/GameplayAbilities"
+          }
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_TargetData_3",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_ApplicationTag_3",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitTargetSelectionDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_TargetData_2",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_ApplicationTag_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_3",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitTargetSelectionDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable_3",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_ApplyGameplayEffectContainer_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "CallFunc_ApplyGameplayEffectContainer_ReturnValue_1",
+          "Flags": "RF_Public",
+          "ElementSize": 16,
+          "PropertyFlags": "ContainsInstancedReference",
+          "Struct": {
+            "ObjectName": "Class'ActiveGameplayEffectHandle'",
+            "ObjectPath": "/Script/GameplayAbilities"
+          }
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_TargetData_1",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_ApplicationTag_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_4",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitTargetSelectionDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_5",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitTargetSelectionDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable_4",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable_5",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_ApplyGameplayEffectContainer_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "CallFunc_ApplyGameplayEffectContainer_ReturnValue_2",
+          "Flags": "RF_Public",
+          "ElementSize": 16,
+          "PropertyFlags": "ContainsInstancedReference",
+          "Struct": {
+            "ObjectName": "Class'ActiveGameplayEffectHandle'",
+            "ObjectPath": "/Script/GameplayAbilities"
+          }
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_6",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitTargetSelectionDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_EventData",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_CommitAbility_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Pawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAbilitySystemComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetController_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_7",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_TargetData_7",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_ApplicationTag_7",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitTargetSelection_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortAbilityTask_WaitTargetSelection'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_8",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitTargetSelection_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortAbilityTask_WaitTargetSelection'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_9",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitTargetSelection_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortAbilityTask_WaitTargetSelection'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitTargetSelection_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortAbilityTask_WaitTargetSelection'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_10",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_11",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_7",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitTargetSelectionDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningActorFromActorInfo_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable_6",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsB_BGA_Sploder_Propane_Tank",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'B_BGA_SploderPropaneTank_C'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/B_BGA_SploderPropaneTank.2"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable_7",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_ApplyGameplayEffectContainer_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "CallFunc_ApplyGameplayEffectContainer_ReturnValue_3",
+          "Flags": "RF_Public",
+          "ElementSize": 16,
+          "PropertyFlags": "ContainsInstancedReference",
+          "Struct": {
+            "ObjectName": "Class'ActiveGameplayEffectHandle'",
+            "ObjectPath": "/Script/GameplayAbilities"
+          }
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_TargetData_6",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_ApplicationTag_6",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbilityFromEvent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SploderPropaneExplosion_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayAbility:K2_ActivateAbilityFromEvent'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "EventData",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Targeted_2BAA5D1045A4E2DDDF76368133070725",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SploderPropaneExplosion_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Targeted_710DDB17459304F404C18AB89426DA80",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SploderPropaneExplosion_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Targeted_7C7A20F144AB26061311C0B8204424ED",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SploderPropaneExplosion_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Targeted_EF4E5CFA4A83D9641D718BB56A0B2515",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SploderPropaneExplosion_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GAB_SploderPropaneExplosion_C",
+    "Name": "Default__GAB_SploderPropaneExplosion_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/NPC/Husk/Sploder/GAB_SploderPropaneExplosion.GAB_SploderPropaneExplosion_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "EC_NPCAbilityAttackAOEExplosionInstigatedByOwningTeamHoldingExplosive": {
+        "TagName": "NPC.Ability.Attack.AoE.Explosion.InstigatedBy.OwningTeam.HoldingExplosive"
+      },
+      "EC_NPCAbilityAttackAOEExplosionInstigatedByOwningTeamNotHoldingExplosive": {
+        "TagName": "NPC.Ability.Attack.AoE.Explosion.InstigatedBy.OwningTeam.NotHoldingExplosive"
+      },
+      "EC_NPCAbilityAttackAOEExplosionInstigatedByOtherTeamHoldingExplosive": {
+        "TagName": "NPC.Ability.Attack.AoE.Explosion.InstigatedBy.OtherTeam.HoldingExplosive"
+      },
+      "EC_NPCAbilityAttackAOEExplosionInstigatedByOtherTeamNotHoldingExplosive": {
+        "TagName": "NPC.Ability.Attack.AoE.Explosion.InstigatedBy.OtherTeam.NotHoldingExplosive"
+      },
+      "TC_GameplayEffectInstantDeath": {
+        "TagName": "Gameplay.Effect.InstantDeath"
+      },
+      "SuperTankHusksTag": [
+        "Abilities.GameplayModifiers.Phoenix.SuperHusks.Tank"
+      ],
+      "SuperTankHusksEnvironmentDamageModifier": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Phoenix_SuperHusks_Tank_IncreasedEnvironmentalDamage_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Phoenix_Modifiers/SuperHusks/TankHusks/GE_Phoenix_SuperHusks_Tank_IncreasedEnvironmentalDamage.0"
+      },
+      "ActivationType": "EFortGameplayAbilityActivation::Triggered",
+      "EffectContainers": {
+        "ApplicationTag": {
+          "TagName": "NPC.Ability.Attack.AoE.Explosion.InstigatedBy.OwningTeam.HoldingExplosive"
+        },
+        "TargetSelection": {
+          "List": [
+            {
+              "Shape": "EFortTargetSelectionShape::Sphere",
+              "CustomShapeComponentName": "",
+              "TestType": "EFortTargetSelectionTestType::Overlap",
+              "PrimarySource": "EFortAbilityTargetingSource::PawnForward",
+              "SecondarySource": "EFortAbilityTargetingSource::Max_None",
+              "Range": {
+                "Value": 640.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "HalfExtents": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "bAlignShapeEdgeToSourceLocation": false,
+              "ConeYawAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "ConePitchAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "ConeMinRadius": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "TargetFilter": {
+                "ActorTypeFilter": "EFortTargetSelectionFilter::Damageable",
+                "ActorClassFilter": null,
+                "bExcludeInstigator": true,
+                "bUseTrapsOwningPawnAsInstigator": false,
+                "bExcludeRequester": true,
+                "bExcludeAllAttachedToInstigator": false,
+                "bExcludeAthenaVehicleOfInstigator": false,
+                "bExcludeAllAttachedToRequester": false,
+                "bExcludeTargetsInEditMode": false,
+                "bExcludePawnFriends": false,
+                "bExcludeFriendlyAI": false,
+                "bIncludeRiddenAI": false,
+                "bExcludeAllAI": false,
+                "bExcludePawnNeutrals": false,
+                "bExcludePawnEnemies": false,
+                "bExcludePawnEnemiesKeepNeutrals": false,
+                "bExcludeNonPawnFriends": false,
+                "bExcludeNonPawnEnemies": false,
+                "bConsiderFriendlyFireWhenExcludingFriends": false,
+                "bExcludeDBNOPawns": false,
+                "bAllowDBNOOverride": false,
+                "bExcludeFallingPawns": false,
+                "bExcludeWaterVolumes": false,
+                "bExcludeWaterBodies": true,
+                "bExcludeAthenaVehicleOccupiedBySource": true,
+                "bExcludeAthenaVehicleUnoccupied": false,
+                "bExcludeAthenaVehicleOccupied": false,
+                "bExcludePassengersInSameVehicleAsSource": false,
+                "bExcludeAthenaVehicleFromObstructionChecks": false,
+                "bExcludeWithoutNavigationCorridor": false,
+                "bExcludeNonPlayerBuiltPieces": false,
+                "bExcludePlayerBuiltPieces": false,
+                "bExcludeNonBGABuildings": false,
+                "bExcludeNonPhysicsSimulatedBuildingActors": false,
+                "bExcludeNonBlockingHits": false,
+                "bExcludeProjectiles": false,
+                "bTraceComplexCollision": false,
+                "bExcludeLandscape": true,
+                "bExcludeLandscapeSplineActors": true,
+                "bNewtonPhysicsPropsBypassAthenaFilter": false,
+                "bConsiderPhysicsPawnsAsNonPlayerPawns": true,
+                "bForceIncludePhysicProp": false,
+                "ExclusionGameplayTags": []
+              },
+              "bExcludeObstructedByWorld": true,
+              "ExcludeObstructedByWorldOnlyForTargetActorClasses": [],
+              "bShouldAttachedActorsObstructTarget": true,
+              "ObstructionExclusionGameplayTags": [],
+              "bCreateHitResultWhenNoTargetsFound": false,
+              "bUseProjectileRotationForDamageZones": false,
+              "TargetSelectionUsage": "EFortAbilityTargetSelectionUsage::OnlyTargeting",
+              "MaxTargets": -1,
+              "bIncludeVehiclePassengersAsTargets": false
+            }
+          ],
+          "bUseWeaponRanges": false
+        },
+        "TargetGameplayEffectClasses": [
+          {
+            "ObjectName": "BlueprintGeneratedClass'GE_DirectCreatureDamage_DoNotDamageObjectives_C'",
+            "ObjectPath": "/Game/Abilities/NPC/Generic/GE_DirectCreatureDamage_DoNotDamageObjectives.1"
+          }
+        ]
+      },
+      "EffectContainers[1]": {
+        "ApplicationTag": {
+          "TagName": "NPC.Ability.Attack.AoE.Explosion.InstigatedBy.OwningTeam.NotHoldingExplosive"
+        },
+        "TargetSelection": {
+          "List": [
+            {
+              "Shape": "EFortTargetSelectionShape::Sphere",
+              "CustomShapeComponentName": "",
+              "TestType": "EFortTargetSelectionTestType::Overlap",
+              "PrimarySource": "EFortAbilityTargetingSource::PawnForward",
+              "SecondarySource": "EFortAbilityTargetingSource::Max_None",
+              "Range": {
+                "Value": 640.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "HalfExtents": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "bAlignShapeEdgeToSourceLocation": false,
+              "ConeYawAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "ConePitchAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "ConeMinRadius": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "TargetFilter": {
+                "ActorTypeFilter": "EFortTargetSelectionFilter::Damageable",
+                "ActorClassFilter": null,
+                "bExcludeInstigator": false,
+                "bUseTrapsOwningPawnAsInstigator": false,
+                "bExcludeRequester": false,
+                "bExcludeAllAttachedToInstigator": false,
+                "bExcludeAthenaVehicleOfInstigator": false,
+                "bExcludeAllAttachedToRequester": false,
+                "bExcludeTargetsInEditMode": false,
+                "bExcludePawnFriends": false,
+                "bExcludeFriendlyAI": false,
+                "bIncludeRiddenAI": false,
+                "bExcludeAllAI": false,
+                "bExcludePawnNeutrals": false,
+                "bExcludePawnEnemies": false,
+                "bExcludePawnEnemiesKeepNeutrals": false,
+                "bExcludeNonPawnFriends": false,
+                "bExcludeNonPawnEnemies": false,
+                "bConsiderFriendlyFireWhenExcludingFriends": false,
+                "bExcludeDBNOPawns": false,
+                "bAllowDBNOOverride": false,
+                "bExcludeFallingPawns": false,
+                "bExcludeWaterVolumes": false,
+                "bExcludeWaterBodies": true,
+                "bExcludeAthenaVehicleOccupiedBySource": true,
+                "bExcludeAthenaVehicleUnoccupied": false,
+                "bExcludeAthenaVehicleOccupied": false,
+                "bExcludePassengersInSameVehicleAsSource": false,
+                "bExcludeAthenaVehicleFromObstructionChecks": false,
+                "bExcludeWithoutNavigationCorridor": false,
+                "bExcludeNonPlayerBuiltPieces": false,
+                "bExcludePlayerBuiltPieces": false,
+                "bExcludeNonBGABuildings": false,
+                "bExcludeNonPhysicsSimulatedBuildingActors": false,
+                "bExcludeNonBlockingHits": false,
+                "bExcludeProjectiles": false,
+                "bTraceComplexCollision": false,
+                "bExcludeLandscape": true,
+                "bExcludeLandscapeSplineActors": true,
+                "bNewtonPhysicsPropsBypassAthenaFilter": false,
+                "bConsiderPhysicsPawnsAsNonPlayerPawns": true,
+                "bForceIncludePhysicProp": false,
+                "ExclusionGameplayTags": []
+              },
+              "bExcludeObstructedByWorld": true,
+              "ExcludeObstructedByWorldOnlyForTargetActorClasses": [],
+              "bShouldAttachedActorsObstructTarget": true,
+              "ObstructionExclusionGameplayTags": [],
+              "bCreateHitResultWhenNoTargetsFound": false,
+              "bUseProjectileRotationForDamageZones": false,
+              "TargetSelectionUsage": "EFortAbilityTargetSelectionUsage::OnlyTargeting",
+              "MaxTargets": -1,
+              "bIncludeVehiclePassengersAsTargets": false
+            }
+          ],
+          "bUseWeaponRanges": false
+        },
+        "TargetGameplayEffectClasses": [
+          {
+            "ObjectName": "BlueprintGeneratedClass'GE_DirectCreatureDamage_DoNotDamageObjectives_C'",
+            "ObjectPath": "/Game/Abilities/NPC/Generic/GE_DirectCreatureDamage_DoNotDamageObjectives.1"
+          }
+        ]
+      },
+      "EffectContainers[2]": {
+        "ApplicationTag": {
+          "TagName": "NPC.Ability.Attack.AoE.Explosion.InstigatedBy.OtherTeam.HoldingExplosive"
+        },
+        "TargetSelection": {
+          "List": [
+            {
+              "Shape": "EFortTargetSelectionShape::Sphere",
+              "CustomShapeComponentName": "",
+              "TestType": "EFortTargetSelectionTestType::Overlap",
+              "PrimarySource": "EFortAbilityTargetingSource::PawnForward",
+              "SecondarySource": "EFortAbilityTargetingSource::Max_None",
+              "Range": {
+                "Value": 640.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "HalfExtents": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "bAlignShapeEdgeToSourceLocation": false,
+              "ConeYawAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "ConePitchAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "ConeMinRadius": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "TargetFilter": {
+                "ActorTypeFilter": "EFortTargetSelectionFilter::Damageable",
+                "ActorClassFilter": null,
+                "bExcludeInstigator": true,
+                "bUseTrapsOwningPawnAsInstigator": false,
+                "bExcludeRequester": true,
+                "bExcludeAllAttachedToInstigator": false,
+                "bExcludeAthenaVehicleOfInstigator": false,
+                "bExcludeAllAttachedToRequester": false,
+                "bExcludeTargetsInEditMode": false,
+                "bExcludePawnFriends": false,
+                "bExcludeFriendlyAI": false,
+                "bIncludeRiddenAI": false,
+                "bExcludeAllAI": false,
+                "bExcludePawnNeutrals": false,
+                "bExcludePawnEnemies": true,
+                "bExcludePawnEnemiesKeepNeutrals": false,
+                "bExcludeNonPawnFriends": false,
+                "bExcludeNonPawnEnemies": false,
+                "bConsiderFriendlyFireWhenExcludingFriends": false,
+                "bExcludeDBNOPawns": false,
+                "bAllowDBNOOverride": false,
+                "bExcludeFallingPawns": false,
+                "bExcludeWaterVolumes": false,
+                "bExcludeWaterBodies": true,
+                "bExcludeAthenaVehicleOccupiedBySource": true,
+                "bExcludeAthenaVehicleUnoccupied": false,
+                "bExcludeAthenaVehicleOccupied": false,
+                "bExcludePassengersInSameVehicleAsSource": false,
+                "bExcludeAthenaVehicleFromObstructionChecks": false,
+                "bExcludeWithoutNavigationCorridor": false,
+                "bExcludeNonPlayerBuiltPieces": false,
+                "bExcludePlayerBuiltPieces": false,
+                "bExcludeNonBGABuildings": false,
+                "bExcludeNonPhysicsSimulatedBuildingActors": false,
+                "bExcludeNonBlockingHits": false,
+                "bExcludeProjectiles": false,
+                "bTraceComplexCollision": false,
+                "bExcludeLandscape": true,
+                "bExcludeLandscapeSplineActors": true,
+                "bNewtonPhysicsPropsBypassAthenaFilter": false,
+                "bConsiderPhysicsPawnsAsNonPlayerPawns": true,
+                "bForceIncludePhysicProp": false,
+                "ExclusionGameplayTags": []
+              },
+              "bExcludeObstructedByWorld": true,
+              "ExcludeObstructedByWorldOnlyForTargetActorClasses": [],
+              "bShouldAttachedActorsObstructTarget": true,
+              "ObstructionExclusionGameplayTags": [],
+              "bCreateHitResultWhenNoTargetsFound": false,
+              "bUseProjectileRotationForDamageZones": false,
+              "TargetSelectionUsage": "EFortAbilityTargetSelectionUsage::OnlyTargeting",
+              "MaxTargets": -1,
+              "bIncludeVehiclePassengersAsTargets": false
+            }
+          ],
+          "bUseWeaponRanges": false
+        },
+        "TargetGameplayEffectClasses": [
+          {
+            "ObjectName": "BlueprintGeneratedClass'GE_DirectCreatureDamage_DoNotDamageObjectives_C'",
+            "ObjectPath": "/Game/Abilities/NPC/Generic/GE_DirectCreatureDamage_DoNotDamageObjectives.1"
+          }
+        ]
+      },
+      "EffectContainers[3]": {
+        "ApplicationTag": {
+          "TagName": "NPC.Ability.Attack.AoE.Explosion.InstigatedBy.OtherTeam.NotHoldingExplosive"
+        },
+        "TargetSelection": {
+          "List": [
+            {
+              "Shape": "EFortTargetSelectionShape::Sphere",
+              "CustomShapeComponentName": "",
+              "TestType": "EFortTargetSelectionTestType::Overlap",
+              "PrimarySource": "EFortAbilityTargetingSource::PawnForward",
+              "SecondarySource": "EFortAbilityTargetingSource::Max_None",
+              "Range": {
+                "Value": 640.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "HalfExtents": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "bAlignShapeEdgeToSourceLocation": false,
+              "ConeYawAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "ConePitchAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "ConeMinRadius": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "TargetFilter": {
+                "ActorTypeFilter": "EFortTargetSelectionFilter::Damageable",
+                "ActorClassFilter": null,
+                "bExcludeInstigator": false,
+                "bUseTrapsOwningPawnAsInstigator": false,
+                "bExcludeRequester": false,
+                "bExcludeAllAttachedToInstigator": false,
+                "bExcludeAthenaVehicleOfInstigator": false,
+                "bExcludeAllAttachedToRequester": false,
+                "bExcludeTargetsInEditMode": false,
+                "bExcludePawnFriends": false,
+                "bExcludeFriendlyAI": false,
+                "bIncludeRiddenAI": false,
+                "bExcludeAllAI": false,
+                "bExcludePawnNeutrals": false,
+                "bExcludePawnEnemies": true,
+                "bExcludePawnEnemiesKeepNeutrals": false,
+                "bExcludeNonPawnFriends": false,
+                "bExcludeNonPawnEnemies": false,
+                "bConsiderFriendlyFireWhenExcludingFriends": false,
+                "bExcludeDBNOPawns": false,
+                "bAllowDBNOOverride": false,
+                "bExcludeFallingPawns": false,
+                "bExcludeWaterVolumes": false,
+                "bExcludeWaterBodies": true,
+                "bExcludeAthenaVehicleOccupiedBySource": true,
+                "bExcludeAthenaVehicleUnoccupied": false,
+                "bExcludeAthenaVehicleOccupied": false,
+                "bExcludePassengersInSameVehicleAsSource": false,
+                "bExcludeAthenaVehicleFromObstructionChecks": false,
+                "bExcludeWithoutNavigationCorridor": false,
+                "bExcludeNonPlayerBuiltPieces": false,
+                "bExcludePlayerBuiltPieces": false,
+                "bExcludeNonBGABuildings": false,
+                "bExcludeNonPhysicsSimulatedBuildingActors": false,
+                "bExcludeNonBlockingHits": false,
+                "bExcludeProjectiles": false,
+                "bTraceComplexCollision": false,
+                "bExcludeLandscape": true,
+                "bExcludeLandscapeSplineActors": true,
+                "bNewtonPhysicsPropsBypassAthenaFilter": false,
+                "bConsiderPhysicsPawnsAsNonPlayerPawns": true,
+                "bForceIncludePhysicProp": false,
+                "ExclusionGameplayTags": []
+              },
+              "bExcludeObstructedByWorld": true,
+              "ExcludeObstructedByWorldOnlyForTargetActorClasses": [],
+              "bShouldAttachedActorsObstructTarget": true,
+              "ObstructionExclusionGameplayTags": [],
+              "bCreateHitResultWhenNoTargetsFound": false,
+              "bUseProjectileRotationForDamageZones": false,
+              "TargetSelectionUsage": "EFortAbilityTargetSelectionUsage::OnlyTargeting",
+              "MaxTargets": -1,
+              "bIncludeVehiclePassengersAsTargets": false
+            }
+          ],
+          "bUseWeaponRanges": false
+        },
+        "TargetGameplayEffectClasses": [
+          {
+            "ObjectName": "BlueprintGeneratedClass'GE_DirectCreatureDamage_DoNotDamageObjectives_C'",
+            "ObjectPath": "/Game/Abilities/NPC/Generic/GE_DirectCreatureDamage_DoNotDamageObjectives.1"
+          }
+        ]
+      },
+      "DamageStatHandle": {
+        "DataTable": {
+          "ObjectName": "DataTable'NPCDamage'",
+          "ObjectPath": "/Game/Balance/DataTables/NPCDamage.0"
+        },
+        "RowName": "HuskSploderPropaneExplosion"
+      },
+      "InstancingPolicy": "EGameplayAbilityInstancingPolicy::InstancedPerActor",
+      "AbilityTriggers": [
+        {
+          "TriggerTag": {
+            "TagName": "NPC.Ability.Attack.AoE.Explosion"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        }
+      ]
+    }
+  }
+]

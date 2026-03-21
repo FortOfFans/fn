@@ -1,0 +1,471 @@
+[
+  {
+    "Type": "AssetTagsGameplayEffectComponent",
+    "Name": "AssetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AssetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Perk_H_BASEMD_HealOverTime_T01_C'Default__GE_Perk_H_BASEMD_HealOverTime_T01_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/BASEMD/GE_Perk_H_BASEMD_HealOverTime_T01.2"
+    },
+    "Template": {
+      "ObjectName": "AssetTagsGameplayEffectComponent'Default__GET_Heal_Hero_C:AssetTagsGameplayEffectComponent_0'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/Hero/GET_Heal_Hero.0"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Perk_H_BASEMD_HealOverTime_T01_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GET_Heal_Hero_C'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/Hero/GET_Heal_Hero.1"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_Perk_H_BASEMD_HealOverTime_T01_C'Default__GE_Perk_H_BASEMD_HealOverTime_T01_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/BASEMD/GE_Perk_H_BASEMD_HealOverTime_T01.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_Perk_H_BASEMD_HealOverTime_T01_C",
+    "Name": "Default__GE_Perk_H_BASEMD_HealOverTime_T01_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Perks/Hero/BASEMD/GE_Perk_H_BASEMD_HealOverTime_T01.GE_Perk_H_BASEMD_HealOverTime_T01_C'",
+    "Template": {
+      "ObjectName": "GET_Heal_Hero_C'Default__GET_Heal_Hero_C'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/Hero/GET_Heal_Hero.2"
+    },
+    "Properties": {
+      "DurationPolicy": "EGameplayEffectDurationType::HasDuration",
+      "DurationMagnitude": {
+        "ScalableFloatMagnitude": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+              "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+            },
+            "RowName": "Perk.BASEMD.T01.HealOverTime.Duration"
+          }
+        }
+      },
+      "Period": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+            "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+          },
+          "RowName": "Perk.BASEMD.T01.Period"
+        }
+      },
+      "PeriodicInhibitionPolicy": "EGameplayEffectPeriodInhibitionRemovedPolicy::ResetPeriod",
+      "Modifiers": [
+        {
+          "Attribute": {
+            "AttributeName": "Stamina",
+            "Attribute": {
+              "Path": [
+                "Stamina"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'FortPlayerAttrSet'",
+                "ObjectPath": "/Script/FortniteGame"
+              }
+            },
+            "AttributeOwner": {
+              "ObjectName": "Class'FortPlayerAttrSet'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          "ModifierOp": "EGameplayModOp::Additive",
+          "ModifierMagnitude": {
+            "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::ScalableFloat",
+            "ScalableFloatMagnitude": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+                  "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+                },
+                "RowName": "Perk.BASEMD.T01.EnergyRegen.Amount"
+              },
+              "RegistryType": {
+                "Name": "None"
+              }
+            },
+            "AttributeBasedMagnitude": {
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "BackingAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "",
+                  "Attribute": {
+                    "Path": [],
+                    "ResolvedOwner": null
+                  },
+                  "AttributeOwner": null
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": false
+              },
+              "AttributeCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              },
+              "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+              "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+              "SourceTagFilter": [],
+              "TargetTagFilter": []
+            },
+            "CustomMagnitude": {
+              "CalculationClassMagnitude": null,
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "FinalLookupCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              }
+            },
+            "SetByCallerMagnitude": {
+              "DataName": "None",
+              "DataTag": {
+                "TagName": "None"
+              }
+            }
+          },
+          "EvaluationChannelSettings": {
+            "Channel": "EGameplayModEvaluationChannel::Channel0"
+          },
+          "SourceTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "TargetTags": {
+            "RequireTags": [],
+            "IgnoreTags": [
+              "Abilities.Constructor.BASE.InBase"
+            ],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          }
+        }
+      ],
+      "Executions": [
+        {
+          "CalculationClass": {
+            "ObjectName": "Class'FortHealing'",
+            "ObjectPath": "/Script/FortniteGame"
+          },
+          "PassedInTags": [],
+          "CalculationModifiers": [
+            {
+              "CapturedAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "HealingSource",
+                  "Attribute": {
+                    "Path": [
+                      "HealingSource"
+                    ],
+                    "ResolvedOwner": {
+                      "ObjectName": "Class'FortHealthSet'",
+                      "ObjectPath": "/Script/FortniteGame"
+                    }
+                  },
+                  "AttributeOwner": {
+                    "ObjectName": "Class'FortHealthSet'",
+                    "ObjectPath": "/Script/FortniteGame"
+                  }
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": true
+              },
+              "TransientAggregatorIdentifier": {
+                "TagName": "None"
+              },
+              "AggregatorType": "EGameplayEffectScopedModifierAggregatorType::CapturedAttributeBacked",
+              "ModifierOp": "EGameplayModOp::Additive",
+              "ModifierMagnitude": {
+                "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::AttributeBased",
+                "ScalableFloatMagnitude": {
+                  "Value": 0.0,
+                  "Curve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  },
+                  "RegistryType": {
+                    "Name": "None"
+                  }
+                },
+                "AttributeBasedMagnitude": {
+                  "Coefficient": {
+                    "Value": 1.0,
+                    "Curve": {
+                      "CurveTable": {
+                        "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+                        "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+                      },
+                      "RowName": "Perk.BASEMD.T01.HealthRegen"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PreMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PostMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "BackingAttribute": {
+                    "AttributeToCapture": {
+                      "AttributeName": "HealingSourceBaseMultiplier",
+                      "Attribute": {
+                        "Path": [
+                          "HealingSourceBaseMultiplier"
+                        ],
+                        "ResolvedOwner": {
+                          "ObjectName": "Class'FortHealthSet'",
+                          "ObjectPath": "/Script/FortniteGame"
+                        }
+                      },
+                      "AttributeOwner": {
+                        "ObjectName": "Class'FortHealthSet'",
+                        "ObjectPath": "/Script/FortniteGame"
+                      }
+                    },
+                    "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                    "bSnapshot": false
+                  },
+                  "AttributeCurve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  },
+                  "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+                  "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+                  "SourceTagFilter": [],
+                  "TargetTagFilter": []
+                },
+                "CustomMagnitude": {
+                  "CalculationClassMagnitude": null,
+                  "Coefficient": {
+                    "Value": 1.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PreMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PostMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "FinalLookupCurve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  }
+                },
+                "SetByCallerMagnitude": {
+                  "DataName": "None",
+                  "DataTag": {
+                    "TagName": "None"
+                  }
+                }
+              },
+              "EvaluationChannelSettings": {
+                "Channel": "EGameplayModEvaluationChannel::Channel0"
+              },
+              "SourceTags": {
+                "RequireTags": [],
+                "IgnoreTags": [],
+                "TagQuery": {
+                  "TokenStreamVersion": 0,
+                  "TagDictionary": [],
+                  "QueryTokenStream": [],
+                  "UserDescription": "",
+                  "AutoDescription": ""
+                }
+              },
+              "TargetTags": {
+                "RequireTags": [],
+                "IgnoreTags": [
+                  "Abilities.Constructor.BASE.InBase"
+                ],
+                "TagQuery": {
+                  "TokenStreamVersion": 0,
+                  "TagDictionary": [],
+                  "QueryTokenStream": [],
+                  "UserDescription": "",
+                  "AutoDescription": ""
+                }
+              }
+            }
+          ],
+          "ConditionalGameplayEffects": []
+        }
+      ],
+      "GameplayCues": [
+        {
+          "MagnitudeAttribute": {
+            "AttributeName": "",
+            "Attribute": {
+              "Path": [],
+              "ResolvedOwner": null
+            },
+            "AttributeOwner": null
+          },
+          "MinLevel": 0.0,
+          "MaxLevel": 0.0,
+          "GameplayCueTags": [
+            "GameplayCue.Generic.AdrenalineRush.PeriodicHeal"
+          ]
+        }
+      ],
+      "OngoingTagRequirements": {
+        "IgnoreTags": [
+          "Gameplay.Status.DBNO",
+          "Abilities.Constructor.BASE.InBase"
+        ]
+      },
+      "GEComponents": [
+        {
+          "ObjectName": "TargetTagRequirementsGameplayEffectComponent'Default__GE_Perk_H_BASEMD_HealOverTime_T01_C:TargetTagRequirementsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/BASEMD/GE_Perk_H_BASEMD_HealOverTime_T01.3"
+        },
+        {
+          "ObjectName": "AssetTagsGameplayEffectComponent'Default__GE_Perk_H_BASEMD_HealOverTime_T01_C:AssetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/BASEMD/GE_Perk_H_BASEMD_HealOverTime_T01.0"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "TargetTagRequirementsGameplayEffectComponent",
+    "Name": "TargetTagRequirementsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TargetTagRequirementsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Perk_H_BASEMD_HealOverTime_T01_C'Default__GE_Perk_H_BASEMD_HealOverTime_T01_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/BASEMD/GE_Perk_H_BASEMD_HealOverTime_T01.2"
+    },
+    "Properties": {
+      "OngoingTagRequirements": {
+        "IgnoreTags": [
+          "Gameplay.Status.DBNO",
+          "Abilities.Constructor.BASE.InBase"
+        ]
+      }
+    }
+  }
+]

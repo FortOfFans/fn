@@ -1,0 +1,562 @@
+[
+  {
+    "Type": "AssetTagsGameplayEffectComponent",
+    "Name": "AssetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AssetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Perk_H_Hipshot_AssaultDamage_DamageMult_SMG_C'Default__GE_Perk_H_Hipshot_AssaultDamage_DamageMult_SMG_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Hipshot/GE_Perk_H_Hipshot_AssaultDamage_DamageMult_SMG.2"
+    },
+    "Template": {
+      "ObjectName": "AssetTagsGameplayEffectComponent'Default__GET_DamageMultiplier_Ranged_Hero_C:AssetTagsGameplayEffectComponent_0'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/Hero/GET_DamageMultiplier_Ranged_Hero.0"
+    },
+    "Properties": {
+      "InheritableAssetTags": {
+        "CombinedTags": [
+          "Asset.Gameplay.Mod.DamageMultiplier",
+          "Asset.Gameplay.Mod.DamageMultiplier.Weapon.Ranged",
+          "Asset.PerkEffect.HipshotAssaultDamage.DamageMultSMG"
+        ],
+        "Added": [
+          "Asset.PerkEffect.HipshotAssaultDamage.DamageMultSMG"
+        ]
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Perk_H_Hipshot_AssaultDamage_DamageMult_SMG_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GET_DamageMultiplier_Ranged_Hero_C'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/Hero/GET_DamageMultiplier_Ranged_Hero.1"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_Perk_H_Hipshot_AssaultDamage_DamageMult_SMG_C'Default__GE_Perk_H_Hipshot_AssaultDamage_DamageMult_SMG_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Hipshot/GE_Perk_H_Hipshot_AssaultDamage_DamageMult_SMG.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_Perk_H_Hipshot_AssaultDamage_DamageMult_SMG_C",
+    "Name": "Default__GE_Perk_H_Hipshot_AssaultDamage_DamageMult_SMG_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Perks/Hero/Hipshot/GE_Perk_H_Hipshot_AssaultDamage_DamageMult_SMG.GE_Perk_H_Hipshot_AssaultDamage_DamageMult_SMG_C'",
+    "Template": {
+      "ObjectName": "GET_DamageMultiplier_Ranged_Hero_C'Default__GET_DamageMultiplier_Ranged_Hero_C'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/Hero/GET_DamageMultiplier_Ranged_Hero.2"
+    },
+    "Properties": {
+      "Modifiers": [
+        {
+          "Attribute": {
+            "AttributeName": "OutgoingAbilityDamage",
+            "Attribute": {
+              "Path": [
+                "OutgoingAbilityDamage"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'FortDamageSet'",
+                "ObjectPath": "/Script/FortniteGame"
+              }
+            },
+            "AttributeOwner": {
+              "ObjectName": "Class'FortDamageSet'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          "ModifierOp": "EGameplayModOp::Multiplicitive",
+          "ModifierMagnitude": {
+            "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::ScalableFloat",
+            "ScalableFloatMagnitude": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+                  "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+                },
+                "RowName": "Perk.Hipshot.T01.PistolDamage"
+              },
+              "RegistryType": {
+                "Name": "None"
+              }
+            },
+            "AttributeBasedMagnitude": {
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "BackingAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "",
+                  "Attribute": {
+                    "Path": [],
+                    "ResolvedOwner": null
+                  },
+                  "AttributeOwner": null
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": false
+              },
+              "AttributeCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              },
+              "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+              "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+              "SourceTagFilter": [],
+              "TargetTagFilter": []
+            },
+            "CustomMagnitude": {
+              "CalculationClassMagnitude": null,
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "FinalLookupCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              }
+            },
+            "SetByCallerMagnitude": {
+              "DataName": "None",
+              "DataTag": {
+                "TagName": "None"
+              }
+            }
+          },
+          "EvaluationChannelSettings": {
+            "Channel": "EGameplayModEvaluationChannel::Channel0"
+          },
+          "SourceTags": {
+            "RequireTags": [
+              "Weapon.Ranged.SMG"
+            ],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "TargetTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          }
+        },
+        {
+          "Attribute": {
+            "AttributeName": "OutgoingAbilityDamage",
+            "Attribute": {
+              "Path": [
+                "OutgoingAbilityDamage"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'FortDamageSet'",
+                "ObjectPath": "/Script/FortniteGame"
+              }
+            },
+            "AttributeOwner": {
+              "ObjectName": "Class'FortDamageSet'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          "ModifierOp": "EGameplayModOp::Multiplicitive",
+          "ModifierMagnitude": {
+            "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::ScalableFloat",
+            "ScalableFloatMagnitude": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+                  "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+                },
+                "RowName": "Perk.Hipshot.T02.PistolDamage"
+              },
+              "RegistryType": {
+                "Name": "None"
+              }
+            },
+            "AttributeBasedMagnitude": {
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "BackingAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "",
+                  "Attribute": {
+                    "Path": [],
+                    "ResolvedOwner": null
+                  },
+                  "AttributeOwner": null
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": false
+              },
+              "AttributeCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              },
+              "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+              "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+              "SourceTagFilter": [],
+              "TargetTagFilter": []
+            },
+            "CustomMagnitude": {
+              "CalculationClassMagnitude": null,
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "FinalLookupCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              }
+            },
+            "SetByCallerMagnitude": {
+              "DataName": "None",
+              "DataTag": {
+                "TagName": "None"
+              }
+            }
+          },
+          "EvaluationChannelSettings": {
+            "Channel": "EGameplayModEvaluationChannel::Channel0"
+          },
+          "SourceTags": {
+            "RequireTags": [
+              "Granted.Perk.Hipshot.T02",
+              "Weapon.Ranged.SMG"
+            ],
+            "IgnoreTags": [
+              "Granted.Perk.AssaultDamage.T02"
+            ],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "TargetTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          }
+        },
+        {
+          "Attribute": {
+            "AttributeName": "OutgoingAbilityDamage",
+            "Attribute": {
+              "Path": [
+                "OutgoingAbilityDamage"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'FortDamageSet'",
+                "ObjectPath": "/Script/FortniteGame"
+              }
+            },
+            "AttributeOwner": {
+              "ObjectName": "Class'FortDamageSet'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          "ModifierOp": "EGameplayModOp::Multiplicitive",
+          "ModifierMagnitude": {
+            "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::ScalableFloat",
+            "ScalableFloatMagnitude": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+                  "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+                },
+                "RowName": "Perk.Hipshot.T02.PistolDamage"
+              },
+              "RegistryType": {
+                "Name": "None"
+              }
+            },
+            "AttributeBasedMagnitude": {
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "BackingAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "",
+                  "Attribute": {
+                    "Path": [],
+                    "ResolvedOwner": null
+                  },
+                  "AttributeOwner": null
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": false
+              },
+              "AttributeCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              },
+              "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+              "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+              "SourceTagFilter": [],
+              "TargetTagFilter": []
+            },
+            "CustomMagnitude": {
+              "CalculationClassMagnitude": null,
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "FinalLookupCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              }
+            },
+            "SetByCallerMagnitude": {
+              "DataName": "None",
+              "DataTag": {
+                "TagName": "None"
+              }
+            }
+          },
+          "EvaluationChannelSettings": {
+            "Channel": "EGameplayModEvaluationChannel::Channel0"
+          },
+          "SourceTags": {
+            "RequireTags": [
+              "Granted.Perk.AssaultDamage.T02",
+              "Weapon.Ranged.SMG"
+            ],
+            "IgnoreTags": [
+              "Granted.Perk.Hipshot.T02"
+            ],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "TargetTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          }
+        }
+      ],
+      "InheritableGameplayEffectTags": {
+        "CombinedTags": [
+          "Asset.Gameplay.Mod.DamageMultiplier",
+          "Asset.Gameplay.Mod.DamageMultiplier.Weapon.Ranged",
+          "Asset.PerkEffect.HipshotAssaultDamage.DamageMultSMG"
+        ],
+        "Added": [
+          "Asset.PerkEffect.HipshotAssaultDamage.DamageMultSMG"
+        ]
+      },
+      "StackingType": "EGameplayEffectStackingType::AggregateByTarget",
+      "StackLimitCount": 1,
+      "StackPeriodResetPolicy": "EGameplayEffectStackingPeriodPolicy::NeverReset",
+      "GEComponents": [
+        {
+          "ObjectName": "AssetTagsGameplayEffectComponent'Default__GE_Perk_H_Hipshot_AssaultDamage_DamageMult_SMG_C:AssetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Hipshot/GE_Perk_H_Hipshot_AssaultDamage_DamageMult_SMG.0"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,270 @@
+[
+  {
+    "Type": "AssetTagsGameplayEffectComponent",
+    "Name": "AssetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AssetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Constructor_CardioFeedbackLoopApplied_C'Default__GE_Constructor_CardioFeedbackLoopApplied_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Perks/CardioFeedbackLoop/GE_Constructor_CardioFeedbackLoopApplied.2"
+    },
+    "Properties": {
+      "InheritableAssetTags": {
+        "CombinedTags": [
+          "Abilities.Constructor.BASE.InBase"
+        ],
+        "Added": [
+          "Abilities.Constructor.BASE.InBase"
+        ]
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Constructor_CardioFeedbackLoopApplied_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayEffect'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_Constructor_CardioFeedbackLoopApplied_C'Default__GE_Constructor_CardioFeedbackLoopApplied_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Perks/CardioFeedbackLoop/GE_Constructor_CardioFeedbackLoopApplied.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_Constructor_CardioFeedbackLoopApplied_C",
+    "Name": "Default__GE_Constructor_CardioFeedbackLoopApplied_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Constructor/Perks/CardioFeedbackLoop/GE_Constructor_CardioFeedbackLoopApplied.GE_Constructor_CardioFeedbackLoopApplied_C'",
+    "Properties": {
+      "DurationPolicy": "EGameplayEffectDurationType::Infinite",
+      "Period": {
+        "Value": 3.0
+      },
+      "bExecutePeriodicEffectOnApplication": false,
+      "Executions": [
+        {
+          "CalculationClass": {
+            "ObjectName": "Class'FortHealing'",
+            "ObjectPath": "/Script/FortniteGame"
+          },
+          "PassedInTags": [],
+          "CalculationModifiers": [
+            {
+              "CapturedAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "HealingSource",
+                  "Attribute": {
+                    "Path": [
+                      "HealingSource"
+                    ],
+                    "ResolvedOwner": {
+                      "ObjectName": "Class'FortHealthSet'",
+                      "ObjectPath": "/Script/FortniteGame"
+                    }
+                  },
+                  "AttributeOwner": {
+                    "ObjectName": "Class'FortHealthSet'",
+                    "ObjectPath": "/Script/FortniteGame"
+                  }
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": true
+              },
+              "TransientAggregatorIdentifier": {
+                "TagName": "None"
+              },
+              "AggregatorType": "EGameplayEffectScopedModifierAggregatorType::CapturedAttributeBacked",
+              "ModifierOp": "EGameplayModOp::Division",
+              "ModifierMagnitude": {
+                "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::ScalableFloat",
+                "ScalableFloatMagnitude": {
+                  "Value": 0.1,
+                  "Curve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  },
+                  "RegistryType": {
+                    "Name": "None"
+                  }
+                },
+                "AttributeBasedMagnitude": {
+                  "Coefficient": {
+                    "Value": 1.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PreMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PostMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "BackingAttribute": {
+                    "AttributeToCapture": {
+                      "AttributeName": "",
+                      "Attribute": {
+                        "Path": [],
+                        "ResolvedOwner": null
+                      },
+                      "AttributeOwner": null
+                    },
+                    "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                    "bSnapshot": false
+                  },
+                  "AttributeCurve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  },
+                  "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+                  "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+                  "SourceTagFilter": [],
+                  "TargetTagFilter": []
+                },
+                "CustomMagnitude": {
+                  "CalculationClassMagnitude": null,
+                  "Coefficient": {
+                    "Value": 1.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PreMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PostMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "FinalLookupCurve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  }
+                },
+                "SetByCallerMagnitude": {
+                  "DataName": "None",
+                  "DataTag": {
+                    "TagName": "None"
+                  }
+                }
+              },
+              "EvaluationChannelSettings": {
+                "Channel": "EGameplayModEvaluationChannel::Channel0"
+              },
+              "SourceTags": {
+                "RequireTags": [],
+                "IgnoreTags": [],
+                "TagQuery": {
+                  "TokenStreamVersion": 0,
+                  "TagDictionary": [],
+                  "QueryTokenStream": [],
+                  "UserDescription": "",
+                  "AutoDescription": ""
+                }
+              },
+              "TargetTags": {
+                "RequireTags": [],
+                "IgnoreTags": [],
+                "TagQuery": {
+                  "TokenStreamVersion": 0,
+                  "TagDictionary": [],
+                  "QueryTokenStream": [],
+                  "UserDescription": "",
+                  "AutoDescription": ""
+                }
+              }
+            }
+          ],
+          "ConditionalGameplayEffects": []
+        }
+      ],
+      "GameplayCues": [
+        {
+          "MagnitudeAttribute": {
+            "AttributeName": "Health",
+            "Attribute": {
+              "Path": [
+                "Health"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'FortHealthSet'",
+                "ObjectPath": "/Script/FortniteGame"
+              }
+            },
+            "AttributeOwner": {
+              "ObjectName": "Class'FortHealthSet'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          "MinLevel": 0.0,
+          "MaxLevel": 0.0,
+          "GameplayCueTags": [
+            "GameplayCue.Generic.AdrenalineRush.PeriodicHeal"
+          ]
+        }
+      ],
+      "InheritableGameplayEffectTags": {
+        "CombinedTags": [
+          "Abilities.Constructor.BASE.InBase"
+        ],
+        "Added": [
+          "Abilities.Constructor.BASE.InBase"
+        ]
+      },
+      "GEComponents": [
+        {
+          "ObjectName": "AssetTagsGameplayEffectComponent'Default__GE_Constructor_CardioFeedbackLoopApplied_C:AssetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Perks/CardioFeedbackLoop/GE_Constructor_CardioFeedbackLoopApplied.0"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,1443 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GAB_SmasherMelee_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_AIBaseMelee_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Generic/GAB_AIBaseMelee.0"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'GAB_SmasherMelee_C:ExecuteUbergraph_GAB_SmasherMelee'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.3"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'GAB_SmasherMelee_C:Completed_D4EB604A4AFDAD65E3461A86287A3EFE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.2"
+      },
+      {
+        "ObjectName": "Function'GAB_SmasherMelee_C:Cancelled_D4EB604A4AFDAD65E3461A86287A3EFE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.1"
+      },
+      {
+        "ObjectName": "Function'GAB_SmasherMelee_C:Triggered_D4EB604A4AFDAD65E3461A86287A3EFE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.12"
+      },
+      {
+        "ObjectName": "Function'GAB_SmasherMelee_C:OnMoveFinished_6E0FFA2F4367D5F26D5F5CB20E78DEFC'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.10"
+      },
+      {
+        "ObjectName": "Function'GAB_SmasherMelee_C:OnRequestFailed_6E0FFA2F4367D5F26D5F5CB20E78DEFC'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.11"
+      },
+      {
+        "ObjectName": "Function'GAB_SmasherMelee_C:OnCancelled_6E0FFA2F4367D5F26D5F5CB20E78DEFC'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.7"
+      },
+      {
+        "ObjectName": "Function'GAB_SmasherMelee_C:OnInterrupted_6E0FFA2F4367D5F26D5F5CB20E78DEFC'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.9"
+      },
+      {
+        "ObjectName": "Function'GAB_SmasherMelee_C:OnComplete_6E0FFA2F4367D5F26D5F5CB20E78DEFC'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.8"
+      },
+      {
+        "ObjectName": "Function'GAB_SmasherMelee_C:K2_ActivateAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.4"
+      },
+      {
+        "ObjectName": "Function'GAB_SmasherMelee_C:MoveToLoop'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.6"
+      },
+      {
+        "ObjectName": "Function'GAB_SmasherMelee_C:K2_OnEndAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.5"
+      },
+      {
+        "ObjectName": "Function'GAB_SmasherMelee_C:ExecuteUbergraph_GAB_SmasherMelee'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.3"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "GE_SmasherMeleeSuccess",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "GE_SmasherMeleeFailure",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "AllHitActors",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "AllHitActors",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'Actor'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_NPCBehaviorProhibitsAbilityAttackMeleeBump",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_NPCBehaviorProhibitsAbilityAttackAny",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "AllHitActorsAfterRemovingInvalidTargets",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "AllHitActorsAfterRemovingInvalidTargets",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'Actor'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SmasherMove",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FortAbilityTask_MoveAI'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_ConstructorBullrushing",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GAB_SmasherMelee": {
+        "ObjectName": "Function'GAB_SmasherMelee_C:ExecuteUbergraph_GAB_SmasherMelee'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.3"
+      },
+      "K2_OnEndAbility": {
+        "ObjectName": "Function'GAB_SmasherMelee_C:K2_OnEndAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.5"
+      },
+      "MoveToLoop": {
+        "ObjectName": "Function'GAB_SmasherMelee_C:MoveToLoop'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.6"
+      },
+      "K2_ActivateAbility": {
+        "ObjectName": "Function'GAB_SmasherMelee_C:K2_ActivateAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.4"
+      },
+      "OnComplete_6E0FFA2F4367D5F26D5F5CB20E78DEFC": {
+        "ObjectName": "Function'GAB_SmasherMelee_C:OnComplete_6E0FFA2F4367D5F26D5F5CB20E78DEFC'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.8"
+      },
+      "OnInterrupted_6E0FFA2F4367D5F26D5F5CB20E78DEFC": {
+        "ObjectName": "Function'GAB_SmasherMelee_C:OnInterrupted_6E0FFA2F4367D5F26D5F5CB20E78DEFC'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.9"
+      },
+      "OnCancelled_6E0FFA2F4367D5F26D5F5CB20E78DEFC": {
+        "ObjectName": "Function'GAB_SmasherMelee_C:OnCancelled_6E0FFA2F4367D5F26D5F5CB20E78DEFC'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.7"
+      },
+      "OnRequestFailed_6E0FFA2F4367D5F26D5F5CB20E78DEFC": {
+        "ObjectName": "Function'GAB_SmasherMelee_C:OnRequestFailed_6E0FFA2F4367D5F26D5F5CB20E78DEFC'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.11"
+      },
+      "OnMoveFinished_6E0FFA2F4367D5F26D5F5CB20E78DEFC": {
+        "ObjectName": "Function'GAB_SmasherMelee_C:OnMoveFinished_6E0FFA2F4367D5F26D5F5CB20E78DEFC'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.10"
+      },
+      "Triggered_D4EB604A4AFDAD65E3461A86287A3EFE": {
+        "ObjectName": "Function'GAB_SmasherMelee_C:Triggered_D4EB604A4AFDAD65E3461A86287A3EFE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.12"
+      },
+      "Cancelled_D4EB604A4AFDAD65E3461A86287A3EFE": {
+        "ObjectName": "Function'GAB_SmasherMelee_C:Cancelled_D4EB604A4AFDAD65E3461A86287A3EFE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.1"
+      },
+      "Completed_D4EB604A4AFDAD65E3461A86287A3EFE": {
+        "ObjectName": "Function'GAB_SmasherMelee_C:Completed_D4EB604A4AFDAD65E3461A86287A3EFE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.2"
+      }
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GAB_SmasherMelee_C'Default__GAB_SmasherMelee_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.13"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Cancelled_D4EB604A4AFDAD65E3461A86287A3EFE",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SmasherMelee_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Completed_D4EB604A4AFDAD65E3461A86287A3EFE",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SmasherMelee_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GAB_SmasherMelee",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SmasherMelee_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_TargetData_2",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_ApplicationTag_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_CustomEvent_Result",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'EPathFollowingResult'",
+          "ObjectPath": "/Script/AIModule"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_AIController",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AIController'",
+          "ObjectPath": "/Script/AIModule"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'MoveTaskCompletedSignature__DelegateSignature'",
+          "ObjectPath": "/Script/AIModule"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'GameplayTask:GenericGameplayTaskDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/GameplayTasks"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'MoveAIDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_3",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'MoveAIDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_4",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'MoveAIDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_TargetDataHasActor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetDataCountFromTargetData_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Subtract_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_5",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitTargetSelectionDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_CommitAbility_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayMontageInfoAndWaitForTrigger_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortAbilityTask_PlayMontageWaitTarget'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BP_ApplyGameplayEffectToOwner_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'ActiveGameplayEffectHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BP_ApplyGameplayEffectToOwner_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'ActiveGameplayEffectHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAIAbilityTarget_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateMoveAITask_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortAbilityTask_MoveAI'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_ObjectObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bWasCancelled",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActivatingPawn_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActivatingPawn_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsSmasher_Pawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'SmasherPawn_C'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Smasher/Blueprints/SmasherPawn.2"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsSmasher_Pawn_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'SmasherPawn_C'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/Smasher/Blueprints/SmasherPawn.2"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_6",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitTargetSelectionDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BP_ApplyGameplayEffectToOwner_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'ActiveGameplayEffectHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetActorsFromTargetData_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetActorsFromTargetData_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'Actor'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_TargetData_1",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_ApplicationTag_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_7",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitTargetSelectionDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_AbilityTargetDataFromActorArray_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_ApplyGameplayEffectContainer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "CallFunc_ApplyGameplayEffectContainer_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 16,
+          "PropertyFlags": "ContainsInstancedReference",
+          "Struct": {
+            "ObjectName": "Class'ActiveGameplayEffectHandle'",
+            "ObjectPath": "/Script/GameplayAbilities"
+          }
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_RemoveItem_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Pawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAbilitySystemComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAIAbilityTarget_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_ObjectObject_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasMatchingGameplayTag_self_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasMatchingGameplayTag_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbility",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SmasherMelee_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.0"
+    },
+    "Super": {
+      "ObjectName": "Function'GAB_AIBaseMelee_C:K2_ActivateAbility'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Generic/GAB_AIBaseMelee.4"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_OnEndAbility",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SmasherMelee_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayAbility:K2_OnEndAbility'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bWasCancelled",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "MoveToLoop",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SmasherMelee_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCancelled_6E0FFA2F4367D5F26D5F5CB20E78DEFC",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SmasherMelee_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnComplete_6E0FFA2F4367D5F26D5F5CB20E78DEFC",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SmasherMelee_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInterrupted_6E0FFA2F4367D5F26D5F5CB20E78DEFC",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SmasherMelee_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnMoveFinished_6E0FFA2F4367D5F26D5F5CB20E78DEFC",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SmasherMelee_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "Result",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Class'EPathFollowingResult'",
+          "ObjectPath": "/Script/AIModule"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AIController",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'AIController'",
+          "ObjectPath": "/Script/AIModule"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRequestFailed_6E0FFA2F4367D5F26D5F5CB20E78DEFC",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SmasherMelee_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Triggered_D4EB604A4AFDAD65E3461A86287A3EFE",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_SmasherMelee_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GAB_SmasherMelee_C",
+    "Name": "Default__GAB_SmasherMelee_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/NPC/Smasher/GAB_SmasherMelee.GAB_SmasherMelee_C'",
+    "Template": {
+      "ObjectName": "GAB_AIBaseMelee_C'Default__GAB_AIBaseMelee_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Generic/GAB_AIBaseMelee.6"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "GE_SmasherMeleeSuccess": {
+        "ObjectName": "BlueprintGeneratedClass'GE_SmasherMeleeSuccess_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GE_SmasherMeleeSuccess.0"
+      },
+      "GE_SmasherMeleeFailure": {
+        "ObjectName": "BlueprintGeneratedClass'GE_SmasherMeleeFailure_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GE_SmasherMeleeFailure.1"
+      },
+      "TC_NPCBehaviorProhibitsAbilityAttackMeleeBump": [
+        "NPC.Behavior.Prohibits.Ability.Attack.Melee.Bump"
+      ],
+      "TC_NPCBehaviorProhibitsAbilityAttackAny": [
+        "NPC.Behavior.Prohibits.Ability.Attack.Any"
+      ],
+      "TC_ConstructorBullrushing": {
+        "TagName": "None"
+      },
+      "UseRotationRateModification": true,
+      "EffectContainers": {
+        "TargetSelection": {
+          "List": [
+            {
+              "Shape": "EFortTargetSelectionShape::Cone",
+              "CustomShapeComponentName": "",
+              "TestType": "EFortTargetSelectionTestType::Overlap",
+              "PrimarySource": "EFortAbilityTargetingSource::PawnForward",
+              "SecondarySource": "EFortAbilityTargetingSource::Max_None",
+              "Range": {
+                "Value": 300.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "HalfExtents": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "bAlignShapeEdgeToSourceLocation": false,
+              "ConeYawAngle": {
+                "Value": 40.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "ConePitchAngle": {
+                "Value": 40.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "ConeMinRadius": {
+                "Value": 50.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "TargetFilter": {
+                "ActorTypeFilter": "EFortTargetSelectionFilter::Damageable",
+                "ActorClassFilter": null,
+                "bExcludeInstigator": true,
+                "bUseTrapsOwningPawnAsInstigator": false,
+                "bExcludeRequester": true,
+                "bExcludeAllAttachedToInstigator": false,
+                "bExcludeAthenaVehicleOfInstigator": false,
+                "bExcludeAllAttachedToRequester": false,
+                "bExcludeTargetsInEditMode": false,
+                "bExcludePawnFriends": true,
+                "bExcludeFriendlyAI": false,
+                "bIncludeRiddenAI": false,
+                "bExcludeAllAI": false,
+                "bExcludePawnNeutrals": false,
+                "bExcludePawnEnemies": false,
+                "bExcludePawnEnemiesKeepNeutrals": false,
+                "bExcludeNonPawnFriends": false,
+                "bExcludeNonPawnEnemies": false,
+                "bConsiderFriendlyFireWhenExcludingFriends": false,
+                "bExcludeDBNOPawns": false,
+                "bAllowDBNOOverride": false,
+                "bExcludeFallingPawns": false,
+                "bExcludeWaterVolumes": false,
+                "bExcludeWaterBodies": true,
+                "bExcludeAthenaVehicleOccupiedBySource": true,
+                "bExcludeAthenaVehicleUnoccupied": false,
+                "bExcludeAthenaVehicleOccupied": false,
+                "bExcludePassengersInSameVehicleAsSource": false,
+                "bExcludeAthenaVehicleFromObstructionChecks": true,
+                "bExcludeWithoutNavigationCorridor": false,
+                "bExcludeNonPlayerBuiltPieces": false,
+                "bExcludePlayerBuiltPieces": false,
+                "bExcludeNonBGABuildings": false,
+                "bExcludeNonPhysicsSimulatedBuildingActors": false,
+                "bExcludeNonBlockingHits": false,
+                "bExcludeProjectiles": false,
+                "bTraceComplexCollision": false,
+                "bExcludeLandscape": true,
+                "bExcludeLandscapeSplineActors": true,
+                "bNewtonPhysicsPropsBypassAthenaFilter": false,
+                "bConsiderPhysicsPawnsAsNonPlayerPawns": true,
+                "bForceIncludePhysicProp": false,
+                "ExclusionGameplayTags": []
+              },
+              "bExcludeObstructedByWorld": true,
+              "ExcludeObstructedByWorldOnlyForTargetActorClasses": [],
+              "bShouldAttachedActorsObstructTarget": true,
+              "ObstructionExclusionGameplayTags": [],
+              "bCreateHitResultWhenNoTargetsFound": false,
+              "bUseProjectileRotationForDamageZones": false,
+              "TargetSelectionUsage": "EFortAbilityTargetSelectionUsage::BothTargetingAndCanHit",
+              "MaxTargets": -1,
+              "bIncludeVehiclePassengersAsTargets": false
+            }
+          ],
+          "bStopAtFirstSuccess": false,
+          "bUseWeaponRanges": false,
+          "bUseMaxYawAngleToTarget": true,
+          "MaxYawAngleToTarget": 60.0
+        },
+        "TargetGameplayEffectClasses": [
+          {
+            "ObjectName": "BlueprintGeneratedClass'GE_SmasherMeleeDamage_C'",
+            "ObjectPath": "/SaveTheWorld/Abilities/NPC/Smasher/GE_SmasherMeleeDamage.1"
+          }
+        ]
+      },
+      "DamageStatHandle": {
+        "RowName": "SmasherMelee"
+      },
+      "FireOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -65.0
+      },
+      "MaxYawAngleToFire": 20.0,
+      "GameplayAbilityBehaviorDistanceData": [
+        {
+          "DistanceDataTag": [
+            "NPC.Ability.MaxApproachRange"
+          ],
+          "Distance": 2000.0
+        },
+        {
+          "DistanceDataTag": [
+            "NPC.Ability.MaxPreferredRange"
+          ],
+          "Distance": 300.0
+        }
+      ],
+      "MontageInfo": {
+        "MontageToPlay": {
+          "ObjectName": "AnimMontage'SmasherMeleeMontage'",
+          "ObjectPath": "/SaveTheWorld/Animation/Game/Enemies/Smasher/Montages/SmasherMeleeMontage.0"
+        }
+      },
+      "AbilityTags": [
+        "NPC.Ability.Attack.Melee.Primary",
+        "Gameplay.DamageSource.NPCDirectAttack.Melee",
+        "Gameplay.Action.NPC.Intentional"
+      ],
+      "ActivationOwnedTags": [
+        "NPC.Ability.Attack.Melee",
+        "NPC.Ability.IsAttacking"
+      ]
+    }
+  }
+]

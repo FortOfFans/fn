@@ -1,0 +1,869 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GAB_DefenderTeleportOut_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'GAB_DefenderTeleportOut_C:ExecuteUbergraph_GAB_DefenderTeleportOut'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.3"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortGameplayAbility'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'GAB_DefenderTeleportOut_C:Completed_50776FD24FD2018ECF8A639C63CF78FD'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.2"
+      },
+      {
+        "ObjectName": "Function'GAB_DefenderTeleportOut_C:Cancelled_50776FD24FD2018ECF8A639C63CF78FD'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.1"
+      },
+      {
+        "ObjectName": "Function'GAB_DefenderTeleportOut_C:Triggered_50776FD24FD2018ECF8A639C63CF78FD'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.8"
+      },
+      {
+        "ObjectName": "Function'GAB_DefenderTeleportOut_C:OnFinish_B28F01814A0C99AE17678C879A72D408'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.6"
+      },
+      {
+        "ObjectName": "Function'GAB_DefenderTeleportOut_C:K2_OnEndAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.5"
+      },
+      {
+        "ObjectName": "Function'GAB_DefenderTeleportOut_C:SpawnDrone'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.7"
+      },
+      {
+        "ObjectName": "Function'GAB_DefenderTeleportOut_C:K2_ActivateAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.4"
+      },
+      {
+        "ObjectName": "Function'GAB_DefenderTeleportOut_C:ExecuteUbergraph_GAB_DefenderTeleportOut'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.3"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "BP_VictoryDrone",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MyTrap",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'Trap_Floor_Defender_Master_C'",
+          "ObjectPath": "/SaveTheWorld/Items/Traps/Blueprints/Defenders/Trap_Floor_Defender_Master.3"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Event_NPCAbilityNonAttackTeleportIn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "DroneLifespan",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "TeleportOutDefenderSpeechEvent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "DefenderTrapSupport Is Being Unsummoned",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "HasValidDefenderTrap",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GAB_DefenderTeleportOut": {
+        "ObjectName": "Function'GAB_DefenderTeleportOut_C:ExecuteUbergraph_GAB_DefenderTeleportOut'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.3"
+      },
+      "K2_ActivateAbility": {
+        "ObjectName": "Function'GAB_DefenderTeleportOut_C:K2_ActivateAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.4"
+      },
+      "SpawnDrone": {
+        "ObjectName": "Function'GAB_DefenderTeleportOut_C:SpawnDrone'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.7"
+      },
+      "K2_OnEndAbility": {
+        "ObjectName": "Function'GAB_DefenderTeleportOut_C:K2_OnEndAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.5"
+      },
+      "OnFinish_B28F01814A0C99AE17678C879A72D408": {
+        "ObjectName": "Function'GAB_DefenderTeleportOut_C:OnFinish_B28F01814A0C99AE17678C879A72D408'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.6"
+      },
+      "Triggered_50776FD24FD2018ECF8A639C63CF78FD": {
+        "ObjectName": "Function'GAB_DefenderTeleportOut_C:Triggered_50776FD24FD2018ECF8A639C63CF78FD'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.8"
+      },
+      "Cancelled_50776FD24FD2018ECF8A639C63CF78FD": {
+        "ObjectName": "Function'GAB_DefenderTeleportOut_C:Cancelled_50776FD24FD2018ECF8A639C63CF78FD'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.1"
+      },
+      "Completed_50776FD24FD2018ECF8A639C63CF78FD": {
+        "ObjectName": "Function'GAB_DefenderTeleportOut_C:Completed_50776FD24FD2018ECF8A639C63CF78FD'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.2"
+      }
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GAB_DefenderTeleportOut_C'Default__GAB_DefenderTeleportOut_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.9"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Cancelled_50776FD24FD2018ECF8A639C63CF78FD",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_DefenderTeleportOut_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Completed_50776FD24FD2018ECF8A639C63CF78FD",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_DefenderTeleportOut_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GAB_DefenderTeleportOut",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_DefenderTeleportOut_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitTargetSelectionDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_TargetData_2",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_ApplicationTag_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_TargetData_1",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_ApplicationTag_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitTargetSelectionDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitTargetSelectionDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_3",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitDelayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActivatingPawn_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActivatingPawn_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentRotation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeTransform_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 96,
+        "Struct": {
+          "ObjectName": "Class'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_PlayMontageInfoAndWaitForTrigger_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortAbilityTask_PlayMontageWaitTarget'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_FinishSpawningActor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActivatingPawn_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActivatingPawn_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActivatingPawn_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_CommitAbility_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bWasCancelled",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActivatingPawn_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDBNO_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitDelay_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AbilityTask_WaitDelay'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActivatingPawn_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActivatingPawn_ReturnValue_7",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsSurvivor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'Survivor_C'",
+          "ObjectPath": "/SaveTheWorld/Characters/Survivors/Survivor.1"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActivatingPawn_ReturnValue_8",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsDefender",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'Defender_C'",
+          "ObjectPath": "/SaveTheWorld/Characters/Survivors/Defender.1"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetCurrentPawn_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPlayerPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetLifeSpan_InLifespan_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_WaitDelay_Time_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbility",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_DefenderTeleportOut_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayAbility:K2_ActivateAbility'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_OnEndAbility",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_DefenderTeleportOut_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayAbility:K2_OnEndAbility'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bWasCancelled",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnFinish_B28F01814A0C99AE17678C879A72D408",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_DefenderTeleportOut_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SpawnDrone",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_DefenderTeleportOut_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Triggered_50776FD24FD2018ECF8A639C63CF78FD",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_DefenderTeleportOut_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "TargetData",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ApplicationTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GAB_DefenderTeleportOut_C",
+    "Name": "Default__GAB_DefenderTeleportOut_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/NPC/Survivors/GAB_DefenderTeleportOut.GAB_DefenderTeleportOut_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "BP_VictoryDrone": {
+        "ObjectName": "BlueprintGeneratedClass'BP_VictoryDrone_Defender_C'",
+        "ObjectPath": "/SaveTheWorld/Blueprints/Adventures/SpawnTeleporter/BP_VictoryDrone_Defender.0"
+      },
+      "Event_NPCAbilityNonAttackTeleportIn": {
+        "TagName": "NPC.Ability.NonAttack.TeleportIn"
+      },
+      "DroneLifespan": 2.0,
+      "TeleportOutDefenderSpeechEvent": "TeleportedOut",
+      "ActivationType": "EFortGameplayAbilityActivation::Triggered",
+      "bStopsAIBehaviorLogic": true,
+      "bStopsAIMovement": true,
+      "MontageInfo": {
+        "MontageToPlay": {
+          "ObjectName": "AnimMontage'Defender_Teleport_Out_Montage'",
+          "ObjectPath": "/SaveTheWorld/Animation/Game/Defender/Defender_Teleport_Out_Montage.0"
+        }
+      },
+      "AbilityTags": [
+        "NPC.Ability.NonAttack.TeleportOut",
+        "Gameplay.Action.NPC.TeleportOut"
+      ],
+      "InstancingPolicy": "EGameplayAbilityInstancingPolicy::InstancedPerActor",
+      "bRetriggerInstancedAbility": true,
+      "NetExecutionPolicy": "EGameplayAbilityNetExecutionPolicy::ServerOnly",
+      "AbilityTriggers": [
+        {
+          "TriggerTag": {
+            "TagName": "NPC.Ability.NonAttack.TeleportOut"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        }
+      ]
+    }
+  }
+]

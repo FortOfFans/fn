@@ -1,0 +1,818 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GAB_FlingerThrowHusk_BonusSkulls_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'GAB_FlingerThrowHusk_BonusSkulls_C:ExecuteUbergraph_GAB_FlingerThrowHusk_BonusSkulls'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Flinger/GAB_FlingerThrowHusk_BonusSkulls.1"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortGameplayAbility'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'GAB_FlingerThrowHusk_BonusSkulls_C:IncreaseAccuracyAndUpdateLastThrowTime'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Flinger/GAB_FlingerThrowHusk_BonusSkulls.2"
+      },
+      {
+        "ObjectName": "Function'GAB_FlingerThrowHusk_BonusSkulls_C:K2_ActivateAbilityFromEvent'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Flinger/GAB_FlingerThrowHusk_BonusSkulls.3"
+      },
+      {
+        "ObjectName": "Function'GAB_FlingerThrowHusk_BonusSkulls_C:ExecuteUbergraph_GAB_FlingerThrowHusk_BonusSkulls'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Flinger/GAB_FlingerThrowHusk_BonusSkulls.1"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CurrentAIAbilityTarget",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "LastThrowTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "TimeSinceLastThrowToResetThrowCount",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ProjectileSpeedDifficultyCurve",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'CurveTableRowHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "NewVar_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GAB_FlingerThrowHusk_BonusSkulls": {
+        "ObjectName": "Function'GAB_FlingerThrowHusk_BonusSkulls_C:ExecuteUbergraph_GAB_FlingerThrowHusk_BonusSkulls'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Flinger/GAB_FlingerThrowHusk_BonusSkulls.1"
+      },
+      "K2_ActivateAbilityFromEvent": {
+        "ObjectName": "Function'GAB_FlingerThrowHusk_BonusSkulls_C:K2_ActivateAbilityFromEvent'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Flinger/GAB_FlingerThrowHusk_BonusSkulls.3"
+      },
+      "IncreaseAccuracyAndUpdateLastThrowTime": {
+        "ObjectName": "Function'GAB_FlingerThrowHusk_BonusSkulls_C:IncreaseAccuracyAndUpdateLastThrowTime'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Flinger/GAB_FlingerThrowHusk_BonusSkulls.2"
+      }
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GAB_FlingerThrowHusk_BonusSkulls_C'Default__GAB_FlingerThrowHusk_BonusSkulls_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Flinger/GAB_FlingerThrowHusk_BonusSkulls.4"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GAB_FlingerThrowHusk_BonusSkulls",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_FlingerThrowHusk_BonusSkulls_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Flinger/GAB_FlingerThrowHusk_BonusSkulls.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_CommitAbility_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActivatingPawn_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetFireLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetProjectileInitialValues_outProjectileSpeed",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetProjectileInitialValues_outSpawnDirection",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetProjectileInitialValues_outProjectileGravity",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetProjectileInitialValues_HomingTarget",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeGameplayEffectContainerSpec_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "Struct": {
+          "ObjectName": "Class'FortGameplayEffectContainerSpec'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_GetGameTimeInSeconds_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameState_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'GameStateBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameState_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'GameStateBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Game_State_Zone",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortGameStateZone'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetGameDifficulty_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_EvaluateCurveTableRow_OutXY",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EvaluateCurveTableRow_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetProjectileInitialValues_outProjectileSpeed_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetProjectileInitialValues_outSpawnDirection_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetProjectileInitialValues_outProjectileGravity_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetProjectileInitialValues_HomingTarget_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Option_B___If_false__use_Option_A_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_EventData",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnProjectile_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortProjectileBase'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_B_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "K2Node_Select_Option_1_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SpawnProjectile_InitialSpeed_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "IncreaseAccuracyAndUpdateLastThrowTime",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_FlingerThrowHusk_BonusSkulls_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Flinger/GAB_FlingerThrowHusk_BonusSkulls.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbilityFromEvent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GAB_FlingerThrowHusk_BonusSkulls_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Flinger/GAB_FlingerThrowHusk_BonusSkulls.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayAbility:K2_ActivateAbilityFromEvent'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "EventData",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GAB_FlingerThrowHusk_BonusSkulls_C",
+    "Name": "Default__GAB_FlingerThrowHusk_BonusSkulls_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/NPC/Flinger/GAB_FlingerThrowHusk_BonusSkulls.GAB_FlingerThrowHusk_BonusSkulls_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "TimeSinceLastThrowToResetThrowCount": 5.0,
+      "ProjectileSpeedDifficultyCurve": {
+        "CurveTable": null,
+        "RowName": "None"
+      },
+      "NewVar_0": {},
+      "ActivationType": "EFortGameplayAbilityActivation::Triggered",
+      "EffectContainers": {
+        "ApplicationTag": {
+          "TagName": "Targeting.ApplicationTag.0"
+        },
+        "TargetSelection": {
+          "List": [
+            {
+              "Shape": "EFortTargetSelectionShape::Sphere",
+              "CustomShapeComponentName": "",
+              "TestType": "EFortTargetSelectionTestType::Ballistic",
+              "PrimarySource": "EFortAbilityTargetingSource::PawnForward",
+              "SecondarySource": "EFortAbilityTargetingSource::Max_None",
+              "Range": {
+                "Value": 5000.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "HalfExtents": {
+                "X": 10.0,
+                "Y": 10.0,
+                "Z": 10.0
+              },
+              "bAlignShapeEdgeToSourceLocation": false,
+              "ConeYawAngle": {
+                "Value": 20.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "ConePitchAngle": {
+                "Value": 20.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "ConeMinRadius": {
+                "Value": 10.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "TargetFilter": {
+                "ActorTypeFilter": "EFortTargetSelectionFilter::Damageable",
+                "ActorClassFilter": null,
+                "bExcludeInstigator": true,
+                "bUseTrapsOwningPawnAsInstigator": false,
+                "bExcludeRequester": true,
+                "bExcludeAllAttachedToInstigator": false,
+                "bExcludeAthenaVehicleOfInstigator": false,
+                "bExcludeAllAttachedToRequester": false,
+                "bExcludeTargetsInEditMode": false,
+                "bExcludePawnFriends": true,
+                "bExcludeFriendlyAI": false,
+                "bIncludeRiddenAI": false,
+                "bExcludeAllAI": false,
+                "bExcludePawnNeutrals": false,
+                "bExcludePawnEnemies": false,
+                "bExcludePawnEnemiesKeepNeutrals": false,
+                "bExcludeNonPawnFriends": false,
+                "bExcludeNonPawnEnemies": false,
+                "bConsiderFriendlyFireWhenExcludingFriends": false,
+                "bExcludeDBNOPawns": false,
+                "bAllowDBNOOverride": false,
+                "bExcludeFallingPawns": false,
+                "bExcludeWaterVolumes": false,
+                "bExcludeWaterBodies": true,
+                "bExcludeAthenaVehicleOccupiedBySource": true,
+                "bExcludeAthenaVehicleUnoccupied": false,
+                "bExcludeAthenaVehicleOccupied": false,
+                "bExcludePassengersInSameVehicleAsSource": false,
+                "bExcludeAthenaVehicleFromObstructionChecks": false,
+                "bExcludeWithoutNavigationCorridor": false,
+                "bExcludeNonPlayerBuiltPieces": false,
+                "bExcludePlayerBuiltPieces": false,
+                "bExcludeNonBGABuildings": false,
+                "bExcludeNonPhysicsSimulatedBuildingActors": false,
+                "bExcludeNonBlockingHits": true,
+                "bExcludeProjectiles": false,
+                "bTraceComplexCollision": false,
+                "bExcludeLandscape": true,
+                "bExcludeLandscapeSplineActors": true,
+                "bNewtonPhysicsPropsBypassAthenaFilter": false,
+                "bConsiderPhysicsPawnsAsNonPlayerPawns": true,
+                "bForceIncludePhysicProp": false,
+                "ExclusionGameplayTags": []
+              },
+              "bExcludeObstructedByWorld": false,
+              "ExcludeObstructedByWorldOnlyForTargetActorClasses": [],
+              "bShouldAttachedActorsObstructTarget": true,
+              "ObstructionExclusionGameplayTags": [],
+              "bCreateHitResultWhenNoTargetsFound": false,
+              "bUseProjectileRotationForDamageZones": false,
+              "TargetSelectionUsage": "EFortAbilityTargetSelectionUsage::OnlyCanHit",
+              "MaxTargets": 1,
+              "bIncludeVehiclePassengersAsTargets": false
+            },
+            {
+              "Shape": "EFortTargetSelectionShape::Sphere",
+              "CustomShapeComponentName": "",
+              "TestType": "EFortTargetSelectionTestType::Overlap",
+              "PrimarySource": "EFortAbilityTargetingSource::PawnForward",
+              "SecondarySource": "EFortAbilityTargetingSource::Max_None",
+              "Range": {
+                "Value": 200.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "HalfExtents": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "bAlignShapeEdgeToSourceLocation": false,
+              "ConeYawAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "ConePitchAngle": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "ConeMinRadius": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "TargetFilter": {
+                "ActorTypeFilter": "EFortTargetSelectionFilter::Damageable",
+                "ActorClassFilter": null,
+                "bExcludeInstigator": true,
+                "bUseTrapsOwningPawnAsInstigator": false,
+                "bExcludeRequester": true,
+                "bExcludeAllAttachedToInstigator": false,
+                "bExcludeAthenaVehicleOfInstigator": false,
+                "bExcludeAllAttachedToRequester": false,
+                "bExcludeTargetsInEditMode": false,
+                "bExcludePawnFriends": true,
+                "bExcludeFriendlyAI": false,
+                "bIncludeRiddenAI": false,
+                "bExcludeAllAI": false,
+                "bExcludePawnNeutrals": false,
+                "bExcludePawnEnemies": false,
+                "bExcludePawnEnemiesKeepNeutrals": false,
+                "bExcludeNonPawnFriends": false,
+                "bExcludeNonPawnEnemies": false,
+                "bConsiderFriendlyFireWhenExcludingFriends": false,
+                "bExcludeDBNOPawns": false,
+                "bAllowDBNOOverride": false,
+                "bExcludeFallingPawns": false,
+                "bExcludeWaterVolumes": false,
+                "bExcludeWaterBodies": true,
+                "bExcludeAthenaVehicleOccupiedBySource": true,
+                "bExcludeAthenaVehicleUnoccupied": false,
+                "bExcludeAthenaVehicleOccupied": false,
+                "bExcludePassengersInSameVehicleAsSource": false,
+                "bExcludeAthenaVehicleFromObstructionChecks": false,
+                "bExcludeWithoutNavigationCorridor": false,
+                "bExcludeNonPlayerBuiltPieces": false,
+                "bExcludePlayerBuiltPieces": false,
+                "bExcludeNonBGABuildings": false,
+                "bExcludeNonPhysicsSimulatedBuildingActors": false,
+                "bExcludeNonBlockingHits": false,
+                "bExcludeProjectiles": false,
+                "bTraceComplexCollision": false,
+                "bExcludeLandscape": true,
+                "bExcludeLandscapeSplineActors": true,
+                "bNewtonPhysicsPropsBypassAthenaFilter": false,
+                "bConsiderPhysicsPawnsAsNonPlayerPawns": true,
+                "bForceIncludePhysicProp": false,
+                "ExclusionGameplayTags": []
+              },
+              "bExcludeObstructedByWorld": true,
+              "ExcludeObstructedByWorldOnlyForTargetActorClasses": [],
+              "bShouldAttachedActorsObstructTarget": true,
+              "ObstructionExclusionGameplayTags": [],
+              "bCreateHitResultWhenNoTargetsFound": false,
+              "bUseProjectileRotationForDamageZones": false,
+              "TargetSelectionUsage": "EFortAbilityTargetSelectionUsage::OnlyTargeting",
+              "MaxTargets": -1,
+              "bIncludeVehiclePassengersAsTargets": false
+            }
+          ],
+          "bUseWeaponRanges": false,
+          "bUseMaxYawAngleToTarget": true,
+          "MaxYawAngleToTarget": 10.0
+        },
+        "TargetGameplayEffectClasses": [
+          {
+            "ObjectName": "BlueprintGeneratedClass'GE_DirectCreatureDamage_DamageObjectives_C'",
+            "ObjectPath": "/Game/Abilities/NPC/Generic/GE_DirectCreatureDamage_DamageObjectives.1"
+          }
+        ]
+      },
+      "ProjectileClass": {
+        "ObjectName": "BlueprintGeneratedClass'ProjectileHuskLobber_C'",
+        "ObjectPath": "/SaveTheWorld/Characters/Enemies/Husk/Blueprints/ProjectileHuskLobber.1"
+      },
+      "DamageStatHandle": {
+        "DataTable": {
+          "ObjectName": "DataTable'NPCDamage'",
+          "ObjectPath": "/Game/Balance/DataTables/NPCDamage.0"
+        },
+        "RowName": "FlingerProjectile"
+      },
+      "bStopsAIBehaviorLogic": true,
+      "bVerifyFireOffsetIsNotObstructedByWorldGeometry": true,
+      "FireOffset": {
+        "X": 150.0,
+        "Y": 25.0,
+        "Z": 215.0
+      },
+      "DesiredThrowAngle": 60.0,
+      "MaxYawAngleToFire": 45.0,
+      "bClampMaxYawAngleToFire": true,
+      "InitialAccuracyMax": 256.0,
+      "InitialAccuracyMin": 128.0,
+      "TargetAccuracyMax": 64.0,
+      "TargetAccuracyMin": 16.0,
+      "MinAccuracyDistance": 1000.0,
+      "MaxAccuracyDistance": 2000.0,
+      "AccuracyDistanceMultiplier": 2.0,
+      "GameplayAbilityBehaviorDistanceData": [
+        {
+          "DistanceDataTag": [
+            "NPC.Ability.PreferredRangeEQSDensity"
+          ],
+          "Distance": 500.0
+        },
+        {
+          "DistanceDataTag": [
+            "NPC.Ability.MinApproachRange"
+          ],
+          "Distance": 0.0
+        },
+        {
+          "DistanceDataTag": [
+            "NPC.Ability.MinActualRange"
+          ],
+          "Distance": 500.0
+        },
+        {
+          "DistanceDataTag": [
+            "NPC.Ability.MinPreferredRange"
+          ],
+          "Distance": 2000.0
+        },
+        {
+          "DistanceDataTag": [
+            "NPC.Ability.MinPreferredRangeEQS"
+          ],
+          "Distance": 2200.0
+        },
+        {
+          "DistanceDataTag": [
+            "NPC.Ability.MaxPreferredRangeEQS"
+          ],
+          "Distance": 4300.0
+        },
+        {
+          "DistanceDataTag": [
+            "NPC.Ability.MaxPreferredRange"
+          ],
+          "Distance": 4500.0
+        },
+        {
+          "DistanceDataTag": [
+            "NPC.Ability.MaxApproachRange"
+          ],
+          "Distance": 5500.0
+        }
+      ],
+      "MontageInfo": {
+        "MontageToPlay": {
+          "ObjectName": "AnimMontage'HuskThrowMontage'",
+          "ObjectPath": "/SaveTheWorld/Animation/Game/Enemies/HuskV2/Combat/HuskThrowMontage.0"
+        }
+      },
+      "AbilityTags": [
+        "Gameplay.Action.NPC.Intentional",
+        "Gameplay.DamageSource.NPCDirectAttack.Special"
+      ],
+      "InstancingPolicy": "EGameplayAbilityInstancingPolicy::InstancedPerActor",
+      "bRetriggerInstancedAbility": true,
+      "NetExecutionPolicy": "EGameplayAbilityNetExecutionPolicy::ServerInitiated",
+      "AbilityTriggers": [
+        {
+          "TriggerTag": {
+            "TagName": "NPC.Ability.Attack.Ranged.Flinger.ThrowAdditionalSkulls"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        }
+      ],
+      "ActivationOwnedTags": [
+        "NPC.Status.ControlResistance.Decreased"
+      ]
+    }
+  }
+]

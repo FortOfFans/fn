@@ -1,0 +1,96 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_GM_OnDmg_BuildingWeaken_Stack_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GAT_Alteration_G_Base_OnDmgDealt_Apply_Effect_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GAT_Alteration_G_Base_OnDmgDealt_Apply_Effect.0"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GA_GM_OnDmg_BuildingWeaken_Stack_C'Default__GA_GM_OnDmg_BuildingWeaken_Stack_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Mutations/Enemy/GA_GM_OnDmg_BuildingWeaken_Stack.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GA_GM_OnDmg_BuildingWeaken_Stack_C",
+    "Name": "Default__GA_GM_OnDmg_BuildingWeaken_Stack_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/GameplayModifiers/Mutations/Enemy/GA_GM_OnDmg_BuildingWeaken_Stack.GA_GM_OnDmg_BuildingWeaken_Stack_C'",
+    "Template": {
+      "ObjectName": "GAT_Alteration_G_Base_OnDmgDealt_Apply_Effect_C'Default__GAT_Alteration_G_Base_OnDmgDealt_Apply_Effect_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Alterations/Gameplay/GAT_Alteration_G_Base_OnDmgDealt_Apply_Effect.3"
+    },
+    "Properties": {
+      "TC_RequiredSourceTags": [
+        "NPC.Ability.Attack.Melee"
+      ],
+      "TQ_RequiredSourceTags": {
+        "TagDictionary": [
+          {
+            "TagName": "NPC.Ability.Attack"
+          }
+        ],
+        "QueryTokenStream": [
+          0,
+          1,
+          2,
+          1,
+          0
+        ],
+        "AutoDescription": " ALL( NPC.Ability.Attack )"
+      },
+      "TC_RequiredTargetTags": [
+        "Building.Resource"
+      ],
+      "TQ_Required Target Tags": {
+        "TagDictionary": [
+          {
+            "TagName": "Building.Resource"
+          }
+        ],
+        "QueryTokenStream": [
+          0,
+          1,
+          2,
+          1,
+          0
+        ],
+        "AutoDescription": " ALL( Building.Resource )"
+      },
+      "EffectContainers": {
+        "TargetGameplayEffectClasses": [
+          {
+            "ObjectName": "BlueprintGeneratedClass'GE_GM_BuildingWeakness_Stack_C'",
+            "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Mutations/Misc/GE_GM_BuildingWeakness_Stack.1"
+          }
+        ]
+      },
+      "bServerRespectsRemoteAbilityCancellation": false,
+      "NetExecutionPolicy": "EGameplayAbilityNetExecutionPolicy::ServerOnly",
+      "AbilityTriggers": [
+        {
+          "TriggerTag": {
+            "TagName": "Event.Damage.Dealt"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        }
+      ],
+      "SourceBlockedTags": [
+        "Abilities.generic.ReflectedDamage",
+        "Gameplay.Effect.TriggeredDamage"
+      ]
+    }
+  }
+]

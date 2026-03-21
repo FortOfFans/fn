@@ -1,0 +1,844 @@
+[
+  {
+    "Type": "B_Prj_Perk_PhaseCannon_C",
+    "Name": "Default__B_Prj_Perk_PhaseCannon_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.B_Prj_Perk_PhaseCannon_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "DeathHitLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "P_DeathFX": {
+        "ObjectName": "ParticleSystem'P_Prj_Dead'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/FX/P_Prj_Dead.132"
+      },
+      "bAddOwnerVelocity": false,
+      "CapsuleComponent": {
+        "ObjectName": "FortProjectileRootComponent'Default__B_Prj_Perk_PhaseCannon_C:CollisionCapsule0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.3"
+      },
+      "ProjectileMovementComponent": {
+        "ObjectName": "FortProjectileMovementComponent'Default__B_Prj_Perk_PhaseCannon_C:ProjectileComp0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.2"
+      },
+      "WaterInteractionComponent": {
+        "ObjectName": "FortWaterInteractionComponent'Default__B_Prj_Perk_PhaseCannon_C:WaterComponentName'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.4"
+      },
+      "bStopSimulatingOnHit": false,
+      "bDisableCollisionOnStop": true,
+      "bReplicateStopSimulationLocation": true,
+      "WeaponResponseType": "EFortBaseWeaponDamage::Combat",
+      "LifespanAfterKill": 1.0,
+      "CollisionComponent": {
+        "ObjectName": "FortProjectileRootComponent'Default__B_Prj_Perk_PhaseCannon_C:CollisionCapsule0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.3"
+      },
+      "InitialLifeSpan": 4.0,
+      "RootComponent": {
+        "ObjectName": "FortProjectileRootComponent'Default__B_Prj_Perk_PhaseCannon_C:CollisionCapsule0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.3"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "B_Prj_Perk_PhaseCannon_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "bHasCookedComponentInstancingData": true,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'B_Prj_Perk_PhaseCannon_C:SimpleConstructionScript_285'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.13"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'B_Prj_Perk_PhaseCannon_C:ExecuteUbergraph_B_Prj_Perk_PhaseCannon'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortProjectileBase'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'B_Prj_Perk_PhaseCannon_C:OnRep_HitLocation'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.6"
+      },
+      {
+        "ObjectName": "Function'B_Prj_Perk_PhaseCannon_C:OnStop'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.7"
+      },
+      {
+        "ObjectName": "Function'B_Prj_Perk_PhaseCannon_C:ExecuteUbergraph_B_Prj_Perk_PhaseCannon'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.5"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Projectile",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "DeathHitLocation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "P_DeathFX",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_B_Prj_Perk_PhaseCannon": {
+        "ObjectName": "Function'B_Prj_Perk_PhaseCannon_C:ExecuteUbergraph_B_Prj_Perk_PhaseCannon'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.5"
+      },
+      "OnStop": {
+        "ObjectName": "Function'B_Prj_Perk_PhaseCannon_C:OnStop'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.7"
+      },
+      "OnRep_HitLocation": {
+        "ObjectName": "Function'B_Prj_Perk_PhaseCannon_C:OnRep_HitLocation'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "B_Prj_Perk_PhaseCannon_C'Default__B_Prj_Perk_PhaseCannon_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "FortProjectileMovementComponent",
+    "Name": "ProjectileComp0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortProjectileMovementComponent'",
+    "Outer": {
+      "ObjectName": "B_Prj_Perk_PhaseCannon_C'Default__B_Prj_Perk_PhaseCannon_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.0"
+    },
+    "Properties": {
+      "InitialSpeed": 2000.0,
+      "bRotationFollowsVelocity": true,
+      "ProjectileGravityScale": 0.0,
+      "Bounciness": 0.8,
+      "Friction": 0.19999999,
+      "HomingAccelerationMagnitude": 2750.0,
+      "PlaneConstraintNormal": {
+        "X": 1.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "FortProjectileRootComponent",
+    "Name": "CollisionCapsule0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortProjectileRootComponent'",
+    "Outer": {
+      "ObjectName": "B_Prj_Perk_PhaseCannon_C'Default__B_Prj_Perk_PhaseCannon_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.0"
+    },
+    "Properties": {
+      "CapsuleHalfHeight": 40.0,
+      "CapsuleRadius": 40.0,
+      "ShapeColor": {
+        "B": 0,
+        "G": 0,
+        "R": 255,
+        "A": 255,
+        "Hex": "FF0000"
+      },
+      "bUseSystemDefaultObstacleAreaClass": false,
+      "AreaClassOverride": {
+        "ObjectName": "Class'FortMetaNavArea_Obstacles'",
+        "ObjectPath": "/Script/FortniteAI"
+      },
+      "BodyInstance": {
+        "CollisionProfileName": "FortProjectileOverlapPawns",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Pawn",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "FCC_Object_PawnAI",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "FCC_Object_ProjectileIgnoreAI",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "FCC_Object_Water",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            }
+          ]
+        },
+        "MassInKgOverride": 0.07832056
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 90.0
+      }
+    }
+  },
+  {
+    "Type": "FortWaterInteractionComponent",
+    "Name": "WaterComponentName",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortWaterInteractionComponent'",
+    "Outer": {
+      "ObjectName": "B_Prj_Perk_PhaseCannon_C'Default__B_Prj_Perk_PhaseCannon_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.0"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_B_Prj_Perk_PhaseCannon",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Perk_PhaseCannon_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSoundAtLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnEmitterAtLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Hit",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bBlockingHit",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bInitialOverlap",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Time",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Distance",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Location",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Normal",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactNormal",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_PhysMat",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PhysicalMaterial'",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_HitBoneName",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_BoneName",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_HitItem",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_ElementIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_FaceIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceStart",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceEnd",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRep_HitLocation",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Perk_PhaseCannon_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.1"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStop",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Perk_PhaseCannon_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.1"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortProjectileBase:OnStop'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "Hit",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "Projectile_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Perk_PhaseCannon_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.1"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'P_Prj_Body'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/FX/P_Prj_Body.103"
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent_53",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Perk_PhaseCannon_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'B_Prj_Perk_PhaseCannon_C:SimpleConstructionScript_285'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.13"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'B_Prj_Perk_PhaseCannon_C:Projectile_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.8"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Template",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ParticleSystemComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "PrimaryComponentTick",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ParticleSystemComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bStartWithTickEnabled",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ActorComponentTickFunction'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "CollisionCapsule0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "ADA35617-00000000-00000000-00000000",
+      "InternalVariableName": "Projectile"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'B_Prj_Perk_PhaseCannon_C:SimpleConstructionScript_285'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.13"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'B_Prj_Perk_PhaseCannon_C:StaticMeshComponent_2417__CA6E68C0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.14"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "BodyInstance",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'StaticMeshComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ObjectType",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'BodyInstance'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "CollisionEnabled",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'BodyInstance'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "CollisionProfileName",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'BodyInstance'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "CollisionResponses",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'BodyInstance'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'CollisionResponse'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'CollisionResponse'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 1,
+            "PropertyScope": {
+              "ObjectName": "Class'CollisionResponse'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bAutoWeld",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'BodyInstance'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bVisible",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'StaticMeshComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "CollisionCapsule0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "A733AD71-00000000-00000000-00000000",
+      "InternalVariableName": "Mesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_58",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'B_Prj_Perk_PhaseCannon_C:SimpleConstructionScript_285'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.13"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'B_Prj_Perk_PhaseCannon_C:SceneComponent_53'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.9"
+      },
+      "VariableGuid": "4D3A059E-00000000-00000000-00000000",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_285",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Perk_PhaseCannon_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.1"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'B_Prj_Perk_PhaseCannon_C:SimpleConstructionScript_285.SCS_Node_10'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.10"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Prj_Perk_PhaseCannon_C:SimpleConstructionScript_285.SCS_Node_5'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.11"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'B_Prj_Perk_PhaseCannon_C:SimpleConstructionScript_285.SCS_Node_10'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.10"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Prj_Perk_PhaseCannon_C:SimpleConstructionScript_285.SCS_Node_5'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.11"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'B_Prj_Perk_PhaseCannon_C:SimpleConstructionScript_285.SCS_Node_58'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.12"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshComponent_2417__CA6E68C0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Perk_PhaseCannon_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PhaseCannon/B_Prj_Perk_PhaseCannon.1"
+    },
+    "Properties": {
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        },
+        "bAutoWeld": false
+      },
+      "bVisible": false
+    }
+  }
+]

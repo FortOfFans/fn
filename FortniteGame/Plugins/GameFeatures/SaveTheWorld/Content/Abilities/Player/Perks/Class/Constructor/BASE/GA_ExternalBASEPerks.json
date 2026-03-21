@@ -1,0 +1,2041 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_ExternalBASEPerks_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GAT_PassiveAbility_C'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_PassiveAbility.0"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:ExecuteUbergraph_GA_ExternalBASEPerks'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.7"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:CheckForPerks'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.5"
+      },
+      {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:CalcGhoulishMagnitude'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.4"
+      },
+      {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:OnChange_F352B8474E962AD44900EB8ED29CE788'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.10"
+      },
+      {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:Added_EC66BB5A482479765AC01DBE87CF5F6B'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.3"
+      },
+      {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:Added_78CC5EC84FC421148BBBC19E9D665DC5'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.1"
+      },
+      {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:Removed_B0F1E44440695F820EF85CBA070E88B1'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.12"
+      },
+      {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:Added_CD799DFC4D123487B67E03BBE943E9B6'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.2"
+      },
+      {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:Removed_1AD741FF46B1E2C00F9792B1620B622D'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.11"
+      },
+      {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:K2_ActivateAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.9"
+      },
+      {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:CheckSaurianFight'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.6"
+      },
+      {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:FailedToActivatePassiveAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.8"
+      },
+      {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:ExecuteUbergraph_GA_ExternalBASEPerks'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.7"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Att_Health",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 72,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayAttribute'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "GE_GhoulishCackle_DamageMult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Att_MaxHealth",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 72,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayAttribute'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "SF_GhoulishCackle_DamageCap",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'ScalableFloat'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_GhoulishCackle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "GhoulishCackle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_GnarlyPop",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_GnarlyElim",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_BringinDownTheHouse",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_ShredTheGnar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_Fumblerooski",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Gnarly",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_GoinCoconuts_T01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "GoinCoconutsT01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "GE_Gnarly_DamageMult_Fragment",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "GE_Gnarly_DamageMult_Player",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_GoinCoconuts_T02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "GoinCoconutsT02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "GE_GoinCoconuts_T01_DamageMult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "GE_GoinCoconuts_T02_DamageMult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PlayerPawnConstructor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'PlayerPawn_Constructor_C'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Pawns/PlayerPawn_Constructor.1"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "SaurianFight_T01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_SaurianFight_DamageMult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "GE_SaurianFight_T02_DamageMult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "SaurianFight_T02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "SaurianFightHandle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'ActiveGameplayEffectHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_SaurianFight_T01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "GE_SaurianFight_T01_DamageMult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_SaurianFight_T02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_ExternalBASEPerks": {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:ExecuteUbergraph_GA_ExternalBASEPerks'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.7"
+      },
+      "FailedToActivatePassiveAbility": {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:FailedToActivatePassiveAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.8"
+      },
+      "CheckSaurianFight": {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:CheckSaurianFight'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.6"
+      },
+      "K2_ActivateAbility": {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:K2_ActivateAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.9"
+      },
+      "Removed_1AD741FF46B1E2C00F9792B1620B622D": {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:Removed_1AD741FF46B1E2C00F9792B1620B622D'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.11"
+      },
+      "Added_CD799DFC4D123487B67E03BBE943E9B6": {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:Added_CD799DFC4D123487B67E03BBE943E9B6'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.2"
+      },
+      "Removed_B0F1E44440695F820EF85CBA070E88B1": {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:Removed_B0F1E44440695F820EF85CBA070E88B1'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.12"
+      },
+      "Added_78CC5EC84FC421148BBBC19E9D665DC5": {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:Added_78CC5EC84FC421148BBBC19E9D665DC5'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.1"
+      },
+      "Added_EC66BB5A482479765AC01DBE87CF5F6B": {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:Added_EC66BB5A482479765AC01DBE87CF5F6B'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.3"
+      },
+      "OnChange_F352B8474E962AD44900EB8ED29CE788": {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:OnChange_F352B8474E962AD44900EB8ED29CE788'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.10"
+      },
+      "CalcGhoulishMagnitude": {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:CalcGhoulishMagnitude'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.4"
+      },
+      "CheckForPerks": {
+        "ObjectName": "Function'GA_ExternalBASEPerks_C:CheckForPerks'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.5"
+      }
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GA_ExternalBASEPerks_C'Default__GA_ExternalBASEPerks_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.13"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "Added_78CC5EC84FC421148BBBC19E9D665DC5",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_ExternalBASEPerks_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Added_CD799DFC4D123487B67E03BBE943E9B6",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_ExternalBASEPerks_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Added_EC66BB5A482479765AC01DBE87CF5F6B",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_ExternalBASEPerks_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CalcGhoulishMagnitude",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_ExternalBASEPerks_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "DoubleProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActivatingPawn_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetFloatAttribute_bSuccessfullyFoundAttribute",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetFloatAttribute_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetFloatAttribute_bSuccessfullyFoundAttribute_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetFloatAttribute_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Subtract_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FClamp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FClamp_Max_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Subtract_DoubleDouble_B_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Subtract_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Divide_DoubleDouble_B_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "CheckForPerks",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_ExternalBASEPerks_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "HavePerks",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActivatingPawn_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsPlayer_Pawn_Constructor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'PlayerPawn_Constructor_C'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Pawns/PlayerPawn_Constructor.1"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAbilitySystemComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput_3",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput_4",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput_5",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput_6",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput_7",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue_7",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput_8",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue_8",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput_9",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue_9",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue_7",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_BlueprintPure"
+  },
+  {
+    "Type": "Function",
+    "Name": "CheckSaurianFight",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_ExternalBASEPerks_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_ExternalBASEPerks",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_ExternalBASEPerks_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitGameplayTagDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitGameplayTagRemove_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AbilityTask_WaitGameplayTagRemoved'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitGameplayTagDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitGameplayTagDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitForAttributeChange_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AbilityTask_WaitAttributeChange'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeOutgoingGameplayEffectSpec_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectSpecHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeOutgoingGameplayEffectSpec_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectSpecHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_CalcGhoulishMagnitude_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_CalcGhoulishMagnitude_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_AssignTagSetByCallerMagnitude_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectSpecHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_AssignTagSetByCallerMagnitude_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectSpecHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CheckForPerks_HavePerks",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeOutgoingGameplayEffectSpec_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectSpecHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActivatingPawn_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_3",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitGameplayTagDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAbilitySystemComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActivatingPawn_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetGameplayEffectCount_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitGameplayTagAdd_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AbilityTask_WaitGameplayTagAdded'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_SetStackCount_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectSpecHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetActivatingPawn_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitGameplayTagAdd_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AbilityTask_WaitGameplayTagAdded'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSavedBASE2_BASE",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'B_Perk_C_Constructor_BASE_C'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/B_Perk_C_Constructor_BASE.6"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_AbilityTargetDataFromActor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_K2_ApplyGameplayEffectSpecToTarget_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "CallFunc_K2_ApplyGameplayEffectSpecToTarget_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 16,
+          "PropertyFlags": "ContainsInstancedReference",
+          "Struct": {
+            "ObjectName": "Class'ActiveGameplayEffectHandle'",
+            "ObjectPath": "/Script/GameplayAbilities"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSavedBASE2_BASE_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'B_Perk_C_Constructor_BASE_C'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/B_Perk_C_Constructor_BASE.6"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_AbilityTargetDataFromActor_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_K2_ApplyGameplayEffectSpecToTarget_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "CallFunc_K2_ApplyGameplayEffectSpecToTarget_ReturnValue_1",
+          "Flags": "RF_Public",
+          "ElementSize": 16,
+          "PropertyFlags": "ContainsInstancedReference",
+          "Struct": {
+            "ObjectName": "Class'ActiveGameplayEffectHandle'",
+            "ObjectPath": "/Script/GameplayAbilities"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSavedBASE2_BASE_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'B_Perk_C_Constructor_BASE_C'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/B_Perk_C_Constructor_BASE.6"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSavedBASE2_BASE_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'B_Perk_C_Constructor_BASE_C'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/B_Perk_C_Constructor_BASE.6"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_AbilityTargetDataFromActor_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_K2_ApplyGameplayEffectSpecToTarget_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "CallFunc_K2_ApplyGameplayEffectSpecToTarget_ReturnValue_2",
+          "Flags": "RF_Public",
+          "ElementSize": 16,
+          "PropertyFlags": "ContainsInstancedReference",
+          "Struct": {
+            "ObjectName": "Class'ActiveGameplayEffectHandle'",
+            "ObjectPath": "/Script/GameplayAbilities"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAbilitySystemComponent_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_RemoveActiveEffectsWithGrantedTags_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetSavedBASE2_BASE_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'B_Perk_C_Constructor_BASE_C'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/B_Perk_C_Constructor_BASE.6"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeLiteralGameplayTagContainer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAbilitySystemComponent_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_AbilityTargetDataFromActor_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_RemoveActiveEffectsWithGrantedTags_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningActorFromActorInfo_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwner_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitGameplayTagAdd_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AbilityTask_WaitGameplayTagAdded'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAbilitySystemComponent_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_4",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitAttributeChangeDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningActorFromActorInfo_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwner_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitGameplayTagRemove_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AbilityTask_WaitGameplayTagRemoved'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_7",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BP_ApplyGameplayEffectToOwner_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'ActiveGameplayEffectHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BP_ApplyGameplayEffectToOwner_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'ActiveGameplayEffectHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_5",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitGameplayTagDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "K2Node_Select_Default_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_ActorInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityActorInfo'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "CallFunc_BP_ApplyGameplayEffectToTarget_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 16,
+          "PropertyFlags": "ContainsInstancedReference",
+          "Struct": {
+            "ObjectName": "Class'ActiveGameplayEffectHandle'",
+            "ObjectPath": "/Script/GameplayAbilities"
+          }
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_AssignTagSetByCallerMagnitude_Magnitude_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_AssignTagSetByCallerMagnitude_Magnitude_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "FailedToActivatePassiveAbility",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_ExternalBASEPerks_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortGameplayAbility:FailedToActivatePassiveAbility'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ActorInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityActorInfo'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbility",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_ExternalBASEPerks_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayAbility:K2_ActivateAbility'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnChange_F352B8474E962AD44900EB8ED29CE788",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_ExternalBASEPerks_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Removed_1AD741FF46B1E2C00F9792B1620B622D",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_ExternalBASEPerks_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Removed_B0F1E44440695F820EF85CBA070E88B1",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_ExternalBASEPerks_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GA_ExternalBASEPerks_C",
+    "Name": "Default__GA_ExternalBASEPerks_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Perks/Class/Constructor/BASE/GA_ExternalBASEPerks.GA_ExternalBASEPerks_C'",
+    "Template": {
+      "ObjectName": "GAT_PassiveAbility_C'Default__GAT_PassiveAbility_C'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_PassiveAbility.1"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "Att_Health": {
+        "AttributeName": "Health",
+        "Attribute": {
+          "Path": [
+            "Health"
+          ],
+          "ResolvedOwner": {
+            "ObjectName": "Class'FortHealthSet'",
+            "ObjectPath": "/Script/FortniteGame"
+          }
+        },
+        "AttributeOwner": {
+          "ObjectName": "Class'FortHealthSet'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      "GE_GhoulishCackle_DamageMult": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Perk_H_GhoulishCackle_DamageMult_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/GhoulishCackle/GE_Perk_H_GhoulishCackle_DamageMult.0"
+      },
+      "Att_MaxHealth": {
+        "AttributeName": "MaxHealth",
+        "Attribute": {
+          "Path": [
+            "MaxHealth"
+          ],
+          "ResolvedOwner": {
+            "ObjectName": "Class'FortHealthSet'",
+            "ObjectPath": "/Script/FortniteGame"
+          }
+        },
+        "AttributeOwner": {
+          "ObjectName": "Class'FortHealthSet'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      "SF_GhoulishCackle_DamageCap": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+            "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+          },
+          "RowName": "Perk.GhoulishCackle.T01.DamageMult"
+        },
+        "RegistryType": {
+          "Name": "None"
+        }
+      },
+      "TC_GhoulishCackle": [
+        "Granted.Perk.GhoulishCackle.T01"
+      ],
+      "TC_GnarlyPop": [
+        "Granted.Perk.GnarlyPop.T01"
+      ],
+      "TC_GnarlyElim": [
+        "Granted.Perk.GnarlyElimination.T01"
+      ],
+      "TC_BringinDownTheHouse": [
+        "Granted.Perk.BringinDownTheHouse.T01"
+      ],
+      "TC_ShredTheGnar": [
+        "Granted.Perk.ShredTheGnar.T01"
+      ],
+      "TC_Fumblerooski": [
+        "Granted.Perk.Fumblerooski.T01"
+      ],
+      "TC_GoinCoconuts_T01": [
+        "Granted.Perk.GoinBananas.T01"
+      ],
+      "GE_Gnarly_DamageMult_Fragment": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Gnarly_DamageMult_Fragment_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GE_Gnarly_DamageMult_Fragment.1"
+      },
+      "GE_Gnarly_DamageMult_Player": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Gnarly_DamageMult_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GE_Gnarly_DamageMult.2"
+      },
+      "TC_GoinCoconuts_T02": [],
+      "GE_GoinCoconuts_T01_DamageMult": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Perk_H_GoinBananas_DamageMult_T01_Fragment_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/GoinBananas/GE_Perk_H_GoinBananas_DamageMult_T01_Fragment.1"
+      },
+      "GE_GoinCoconuts_T02_DamageMult": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Perk_H_GoinBananas_DamageMult_T02_Fragment_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/GoinBananas/GE_Perk_H_GoinBananas_DamageMult_T02_Fragment.1"
+      },
+      "TC_SaurianFight_DamageMult": [
+        "Granted.PerkEffect.SaurianFight.DamageMult"
+      ],
+      "GE_SaurianFight_T02_DamageMult": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Perk_H_SaurianFight_T02_DamageMult_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/SaurianFight/GE_Perk_H_SaurianFight_T02_DamageMult.1"
+      },
+      "SaurianFightHandle": {
+        "WeakOwningASC": null,
+        "Handle": -1,
+        "bPassedFiltersAndWasExecuted": false
+      },
+      "TC_SaurianFight_T01": [
+        "Granted.Perk.SaurianFight.T01"
+      ],
+      "GE_SaurianFight_T01_DamageMult": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Perk_H_SaurianFight_T01_DamageMult_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/SaurianFight/GE_Perk_H_SaurianFight_T01_DamageMult.1"
+      },
+      "TC_SaurianFight_T02": [
+        "Granted.Perk.SaurianFight.T02"
+      ],
+      "NetExecutionPolicy": "EGameplayAbilityNetExecutionPolicy::ServerOnly"
+    }
+  }
+]

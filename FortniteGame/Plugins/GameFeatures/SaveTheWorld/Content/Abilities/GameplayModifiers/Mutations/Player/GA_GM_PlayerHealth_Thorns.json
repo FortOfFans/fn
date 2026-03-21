@@ -1,0 +1,144 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_GM_PlayerHealth_Thorns_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GA_GM_OnDmgReceived_Base_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/GA_GM_OnDmgReceived_Base.0"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'GA_GM_PlayerHealth_Thorns_C:DoOnDmgReceivedBehavior'",
+        "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Mutations/Player/GA_GM_PlayerHealth_Thorns.1"
+      }
+    ],
+    "FuncMap": {
+      "DoOnDmgReceivedBehavior": {
+        "ObjectName": "Function'GA_GM_PlayerHealth_Thorns_C:DoOnDmgReceivedBehavior'",
+        "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Mutations/Player/GA_GM_PlayerHealth_Thorns.1"
+      }
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GA_GM_PlayerHealth_Thorns_C'Default__GA_GM_PlayerHealth_Thorns_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Mutations/Player/GA_GM_PlayerHealth_Thorns.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "DoOnDmgReceivedBehavior",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_GM_PlayerHealth_Thorns_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Mutations/Player/GA_GM_PlayerHealth_Thorns.0"
+    },
+    "Super": {
+      "ObjectName": "Function'GA_GM_OnDmgReceived_Base_C:DoOnDmgReceivedBehavior'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/GA_GM_OnDmgReceived_Base.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "EventData",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_AbilityTargetDataFromActor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityTargetDataHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_ApplyGameplayEffectContainer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "CallFunc_ApplyGameplayEffectContainer_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 16,
+          "PropertyFlags": "ContainsInstancedReference",
+          "Struct": {
+            "ObjectName": "Class'ActiveGameplayEffectHandle'",
+            "ObjectPath": "/Script/GameplayAbilities"
+          }
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GA_GM_PlayerHealth_Thorns_C",
+    "Name": "Default__GA_GM_PlayerHealth_Thorns_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/GameplayModifiers/Mutations/Player/GA_GM_PlayerHealth_Thorns.GA_GM_PlayerHealth_Thorns_C'",
+    "Template": {
+      "ObjectName": "GA_GM_OnDmgReceived_Base_C'Default__GA_GM_OnDmgReceived_Base_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/GA_GM_OnDmgReceived_Base.5"
+    },
+    "Properties": {
+      "SourceTagQuery": {
+        "TagDictionary": [
+          {
+            "TagName": "NPC.Ability.Attack.Melee"
+          }
+        ],
+        "QueryTokenStream": [
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "AutoDescription": " ANY( NPC.Ability.Attack.Melee )"
+      },
+      "EffectContainers": {
+        "TargetGameplayEffectClasses": [
+          {
+            "ObjectName": "BlueprintGeneratedClass'GE_GM_ThornsDamage_C'",
+            "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Mutations/Enemy/GE_GM_ThornsDamage.1"
+          }
+        ]
+      },
+      "DamageStatHandle": {
+        "DataTable": {
+          "ObjectName": "DataTable'GameplayModifierDamage'",
+          "ObjectPath": "/Game/Balance/DataTables/GameplayModifierDamage.0"
+        },
+        "RowName": "GE_Player_ThornsDamage"
+      },
+      "AbilityTriggers": [
+        {
+          "TriggerTag": {
+            "TagName": "Event.Damage.Received"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        }
+      ]
+    }
+  }
+]

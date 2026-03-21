@@ -1,0 +1,101 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQS_TeleportToFixNavigationToGoal",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQuery'",
+    "Properties": {
+      "QueryName": "EQS_TeleportToFixNavigationToGoal",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption'EQS_TeleportToFixNavigationToGoal:EnvQueryOption_1'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/BaseAbilities/EQS_TeleportToFixNavigationToGoal.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_PathingGrid",
+    "Name": "EnvQueryGenerator_PathingGrid_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryGenerator_PathingGrid'",
+    "Outer": {
+      "ObjectName": "EnvQuery'EQS_TeleportToFixNavigationToGoal'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/BaseAbilities/EQS_TeleportToFixNavigationToGoal.0"
+    },
+    "Properties": {
+      "PathToItem": {
+        "DefaultValue": false
+      },
+      "GridSize": {
+        "DefaultValue": 2000.0
+      },
+      "SpaceBetween": {
+        "DefaultValue": 200.0
+      },
+      "GenerateAround": {
+        "ObjectName": "Class'FortQueryContext_Goal'",
+        "ObjectPath": "/Script/FortniteAIServer"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "SerializedChannel": "ECollisionChannel::ECC_Visibility"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryOption'",
+    "Outer": {
+      "ObjectName": "EnvQuery'EQS_TeleportToFixNavigationToGoal'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/BaseAbilities/EQS_TeleportToFixNavigationToGoal.0"
+    },
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_PathingGrid'EQS_TeleportToFixNavigationToGoal:EnvQueryGenerator_PathingGrid_0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/BaseAbilities/EQS_TeleportToFixNavigationToGoal.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Pathfinding'EQS_TeleportToFixNavigationToGoal:EnvQueryTest_Pathfinding_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/BaseAbilities/EQS_TeleportToFixNavigationToGoal.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Pathfinding",
+    "Name": "EnvQueryTest_Pathfinding_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryTest_Pathfinding'",
+    "Outer": {
+      "ObjectName": "EnvQuery'EQS_TeleportToFixNavigationToGoal'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/BaseAbilities/EQS_TeleportToFixNavigationToGoal.0"
+    },
+    "Properties": {
+      "TestMode": "EEnvTestPathfinding::PathLength",
+      "Context": {
+        "ObjectName": "Class'FortQueryContext_Goal'",
+        "ObjectPath": "/Script/FortniteAIServer"
+      },
+      "PathFromContext": {
+        "DefaultValue": false
+      },
+      "FilterType": "EEnvTestFilterType::Range",
+      "FloatValueMin": {
+        "DefaultValue": 250.0
+      },
+      "FloatValueMax": {
+        "DefaultValue": 6000.0
+      },
+      "ScoringEquation": "EEnvTestScoreEquation::Linear",
+      "ClampMinType": "EEnvQueryTestClamping::FilterThreshold",
+      "ClampMaxType": "EEnvQueryTestClamping::FilterThreshold",
+      "bWorkOnFloatValues": true,
+      "VerNum": 2
+    }
+  }
+]

@@ -1,0 +1,2651 @@
+[
+  {
+    "Type": "AudioComponent",
+    "Name": "Danger_Danger_turret_hover_loop_Cue_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AudioComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Danger_Danger_turret_hover_loop_Cue'",
+        "ObjectPath": "/SaveTheWorld/Sounds/Fort_Gadgets/HoverTurret/DangerDanger_Bot/Danger_Danger_turret_hover_loop_Cue.0"
+      }
+    }
+  },
+  {
+    "Type": "BGA_Perk_L_DangerDanger_Robot_C",
+    "Name": "Default__BGA_Perk_L_DangerDanger_Robot_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.BGA_Perk_L_DangerDanger_Robot_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "FiringEvent": {
+        "Handle": 0
+      },
+      "Bot_Explode": {
+        "ObjectName": "ParticleSystem'P_BotTurret_DeathExplosion_01'",
+        "ObjectPath": "/SaveTheWorld/Gadgets/Assets/Bot_Turret/Effects/P_BotTurret_DeathExplosion_01.256"
+      },
+      "ChargeUp": {
+        "TagName": "GameplayCue.Perk.DangerDanger.ChargeUp"
+      },
+      "LookAtRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "PlayerRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "CurrentRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "SpawnSound_VO": {
+        "ObjectName": "SoundCue'DANGERDANGER_2019_Spawn_Dialogue_Cue'",
+        "ObjectPath": "/STW_Sounds/Sounds/Fort_Human_VO/DangerDanger/DANGERDANGER_2019_Spawn_Dialogue_Cue.0"
+      },
+      "IdleSound": {
+        "ObjectName": "SoundCue'DANGERDANGER_2019_Idle_Dialogue_Cue'",
+        "ObjectPath": "/STW_Sounds/Sounds/Fort_Human_VO/DangerDanger/DANGERDANGER_2019_Idle_Dialogue_Cue.0"
+      },
+      "DeathSound_VO": {
+        "ObjectName": "SoundCue'DANGERDANGER_2019_Exit_Dialogue_Cue'",
+        "ObjectPath": "/STW_Sounds/Sounds/Fort_Human_VO/DangerDanger/DANGERDANGER_2019_Exit_Dialogue_Cue.0"
+      },
+      "FireSound": {
+        "ObjectName": "SoundCue'DANGERDANGER_2019_Engage_Dialogue_Cue'",
+        "ObjectPath": "/STW_Sounds/Sounds/Fort_Human_VO/DangerDanger/DANGERDANGER_2019_Engage_Dialogue_Cue.0"
+      },
+      "RotationUpdateTick": 0.10000000149011612,
+      "RotationUpdateHandle": {
+        "Handle": 0
+      },
+      "DelayBeforeTargetReset": 1.0,
+      "Laser": {
+        "TagName": "GameplayCue.Perk.DangerDanger.Laser"
+      },
+      "FireRate": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+            "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+          },
+          "RowName": "Perk.DangerDanger.T01.FireRate"
+        },
+        "RegistryType": {
+          "Name": "None"
+        }
+      },
+      "LoopingIdleSoundTime": 20.0,
+      "DelayBeforeFireSound": 0.25,
+      "Charge_Montage": {
+        "ObjectName": "AnimMontage'RetroSciFi_Robot_Charge_M'",
+        "ObjectPath": "/SaveTheWorld/Animation/Game/Gadgets/RetroSciFi_Robot/RetroSciFi_Robot_Charge_M.0"
+      },
+      "Fire_Montage": {
+        "ObjectName": "AnimMontage'RetroSciFi_Robot_Fire_M'",
+        "ObjectPath": "/SaveTheWorld/Animation/Game/Gadgets/RetroSciFi_Robot/RetroSciFi_Robot_Fire_M.0"
+      },
+      "IdleSoundHandle": {
+        "Handle": 0
+      },
+      "RetargetTimeDivisor": 3.0,
+      "VarianceSoundTime": 10.0,
+      "DeathSound_SFX": {
+        "ObjectName": "SoundCue'Danger_Danger_Turret_Death_Explo_Cue'",
+        "ObjectPath": "/SaveTheWorld/Sounds/Fort_Gadgets/HoverTurret/DangerDanger_Bot/Danger_Danger_Turret_Death_Explo_Cue.0"
+      },
+      "InherentAbilitySets": {
+        "ObjectName": "FortAbilitySet'GAS_Perk_L_DangerDanger_Robot'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/GAS_Perk_L_DangerDanger_Robot.0"
+      },
+      "bCanBeSavedInCreativeVolume": false,
+      "Team": "EFortTeam::HumanCampaign",
+      "TeamIndex": 1,
+      "PrimaryActorTick": {
+        "TickInterval": 0.2
+      }
+    },
+    "SerializedSparseClassDataStruct": "UScriptClass'BuildingGameplayActorClassData'",
+    "SerializedSparseClassData": {
+      "NavigationLinkSoftClass": {
+        "AssetPathName": "",
+        "SubPathString": ""
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BGA_Perk_L_DangerDanger_Robot_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "NumReplicatedProperties": 2,
+      "bHasCookedComponentInstancingData": true,
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BGA_Perk_L_DangerDanger_Robot_C:Timeline_0_Template'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.48"
+        },
+        {
+          "ObjectName": "TimelineTemplate'BGA_Perk_L_DangerDanger_Robot_C:Timeline_1_Template'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.49"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BGA_Perk_L_DangerDanger_Robot_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.45"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:ExecuteUbergraph_BGA_Perk_L_DangerDanger_Robot'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'BuildingGameplayActor'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:AttachToInstigatorPawn'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.5"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:Timeline_0__FinishedFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.35"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:Timeline_0__UpdateFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.36"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:Timeline_1__FinishedFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.37"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:Timeline_1__UpdateFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.38"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:OnNotifyEnd_0846406C4FB01737DE2791AA356C1210'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.22"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:OnNotifyBegin_0846406C4FB01737DE2791AA356C1210'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.20"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:OnInterrupted_0846406C4FB01737DE2791AA356C1210'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.18"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:OnBlendOut_0846406C4FB01737DE2791AA356C1210'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.14"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:OnCompleted_0846406C4FB01737DE2791AA356C1210'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.16"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:OnNotifyEnd_19C8415040E030690E0A7A8AB4AC4161'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.23"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:OnNotifyBegin_19C8415040E030690E0A7A8AB4AC4161'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.21"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:OnInterrupted_19C8415040E030690E0A7A8AB4AC4161'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.19"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:OnBlendOut_19C8415040E030690E0A7A8AB4AC4161'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.15"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:OnCompleted_19C8415040E030690E0A7A8AB4AC4161'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.17"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:ReceiveBeginPlay'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.27"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:SetTarget'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.34"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:FireEvent'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.9"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:ExecuteFire'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.6"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:ResetFireTimer'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.29"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:UpdateBotMovement'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.39"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:IdleSounds'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.10"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:ResetTarget'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.32"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:RobotDied'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.33"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:PlayChargeMontage'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.25"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:InvalidTarget'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.12"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:InvalidRetargeting'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.11"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:ResetIdleSoundsTimer'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.31"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:ExecuteMontage'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.7"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:NoValidTarget'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.13"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:ResetIdleDoOnce'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.30"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:PlayIdleSound'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.26"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:PlayAttackSound'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.24"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:ResetAttackSoundDoOnce'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.28"
+      },
+      {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:ExecuteUbergraph_BGA_Perk_L_DangerDanger_Robot'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.8"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Danger_Danger_turret_hover_loop_Cue",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SpringArm",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SpringArmComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SkeletalMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_1_LerpAlpha_DC10E74A4F77219E7E28C7B8300088E4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_1__Direction_DC10E74A4F77219E7E28C7B8300088E4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_0_LerpAlpha_7A2539234DCDFB4C8BAB8A98B3583CAC",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_0__Direction_7A2539234DCDFB4C8BAB8A98B3583CAC",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "InstigatorPawn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Target",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FortAIPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "FiringEvent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Bot_Explode",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ChargeUp",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "LookAtRotation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "PlayerRotation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CurrentRotation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SpawnSound_VO",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'SoundBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "IdleSound",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'SoundBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DeathSound_VO",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'SoundBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FireSound",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'SoundBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "RotationUpdateTick",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "RotationUpdateHandle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "DelayBeforeTargetReset",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Laser",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "FireRate",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'ScalableFloat'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "LoopingIdleSoundTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "DelayBeforeFireSound",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Charge_Montage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'AnimMontage'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Fire_Montage",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'AnimMontage'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "IdleSoundHandle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "RetargetTimeDivisor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "VarianceSoundTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DeathSound_SFX",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'SoundBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "RecentlyFired",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "FiringChance",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BGA_Perk_L_DangerDanger_Robot": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:ExecuteUbergraph_BGA_Perk_L_DangerDanger_Robot'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.8"
+      },
+      "ResetAttackSoundDoOnce": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:ResetAttackSoundDoOnce'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.28"
+      },
+      "PlayAttackSound": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:PlayAttackSound'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.24"
+      },
+      "PlayIdleSound": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:PlayIdleSound'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.26"
+      },
+      "ResetIdleDoOnce": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:ResetIdleDoOnce'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.30"
+      },
+      "NoValidTarget": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:NoValidTarget'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.13"
+      },
+      "ExecuteMontage": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:ExecuteMontage'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.7"
+      },
+      "ResetIdleSoundsTimer": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:ResetIdleSoundsTimer'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.31"
+      },
+      "InvalidRetargeting": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:InvalidRetargeting'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.11"
+      },
+      "InvalidTarget": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:InvalidTarget'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.12"
+      },
+      "PlayChargeMontage": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:PlayChargeMontage'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.25"
+      },
+      "RobotDied": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:RobotDied'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.33"
+      },
+      "ResetTarget": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:ResetTarget'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.32"
+      },
+      "IdleSounds": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:IdleSounds'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.10"
+      },
+      "UpdateBotMovement": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:UpdateBotMovement'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.39"
+      },
+      "ResetFireTimer": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:ResetFireTimer'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.29"
+      },
+      "ExecuteFire": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:ExecuteFire'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.6"
+      },
+      "FireEvent": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:FireEvent'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.9"
+      },
+      "SetTarget": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:SetTarget'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.34"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:ReceiveBeginPlay'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.27"
+      },
+      "OnCompleted_19C8415040E030690E0A7A8AB4AC4161": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:OnCompleted_19C8415040E030690E0A7A8AB4AC4161'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.17"
+      },
+      "OnBlendOut_19C8415040E030690E0A7A8AB4AC4161": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:OnBlendOut_19C8415040E030690E0A7A8AB4AC4161'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.15"
+      },
+      "OnInterrupted_19C8415040E030690E0A7A8AB4AC4161": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:OnInterrupted_19C8415040E030690E0A7A8AB4AC4161'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.19"
+      },
+      "OnNotifyBegin_19C8415040E030690E0A7A8AB4AC4161": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:OnNotifyBegin_19C8415040E030690E0A7A8AB4AC4161'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.21"
+      },
+      "OnNotifyEnd_19C8415040E030690E0A7A8AB4AC4161": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:OnNotifyEnd_19C8415040E030690E0A7A8AB4AC4161'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.23"
+      },
+      "OnCompleted_0846406C4FB01737DE2791AA356C1210": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:OnCompleted_0846406C4FB01737DE2791AA356C1210'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.16"
+      },
+      "OnBlendOut_0846406C4FB01737DE2791AA356C1210": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:OnBlendOut_0846406C4FB01737DE2791AA356C1210'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.14"
+      },
+      "OnInterrupted_0846406C4FB01737DE2791AA356C1210": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:OnInterrupted_0846406C4FB01737DE2791AA356C1210'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.18"
+      },
+      "OnNotifyBegin_0846406C4FB01737DE2791AA356C1210": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:OnNotifyBegin_0846406C4FB01737DE2791AA356C1210'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.20"
+      },
+      "OnNotifyEnd_0846406C4FB01737DE2791AA356C1210": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:OnNotifyEnd_0846406C4FB01737DE2791AA356C1210'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.22"
+      },
+      "Timeline_1__UpdateFunc": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:Timeline_1__UpdateFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.38"
+      },
+      "Timeline_1__FinishedFunc": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:Timeline_1__FinishedFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.37"
+      },
+      "Timeline_0__UpdateFunc": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:Timeline_0__UpdateFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.36"
+      },
+      "Timeline_0__FinishedFunc": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:Timeline_0__FinishedFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.35"
+      },
+      "AttachToInstigatorPawn": {
+        "ObjectName": "Function'BGA_Perk_L_DangerDanger_Robot_C:AttachToInstigatorPawn'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.5"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BGA_Perk_L_DangerDanger_Robot_C'Default__BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_1",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 1.7207208,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 1.7207208,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.25,
+            "Value": 0.5,
+            "ArriveTangent": 1.9608626,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 1.960862,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.5,
+            "Value": 1.0,
+            "ArriveTangent": 2.1656613,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 2.1656575,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_1_3",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 1.9173812,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 1.91738,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.25,
+            "Value": 0.5,
+            "ArriveTangent": 2.1714797,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 2.1714802,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.5,
+            "Value": 1.0,
+            "ArriveTangent": 2.4572895,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 2.457288,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AttachToInstigatorPawn",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_AttachToComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteFire",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteMontage",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BGA_Perk_L_DangerDanger_Robot",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_7",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_6",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_5",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Temp_name_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_3",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_4",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_3",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_4",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_5",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_6",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_7",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "Temp_name_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "Temp_real_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_8",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_IsClosed_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Has_Been_Initd_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Target",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortAIPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ObjectObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_NotEqual_ObjectObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetSocketLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeGameplayCueParameters_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 224,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'GameplayCueParameters'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_8",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_9",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentRotation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnEmitterAtLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_CustomEvent_NotifyName_9",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetSocketLocation_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_10",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'OnMontagePlayDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentRotation_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_11",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_RLerp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetInstigator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Player_Pawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPlayerPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentRotation_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_FindLookAtRotation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldRotation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateProxyObjectForPlayMontage_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayMontageCallbackProxy'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateProxyObjectForPlayMontage_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayMontageCallbackProxy'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_RLerp_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldRotation_SweepHitResult_1",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_12",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_13",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_Time_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_Time_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_Time_ImplicitCast_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Delay_Duration_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Divide_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_Time_ImplicitCast_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_Time_ImplicitCast_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_InitialStartDelayVariance_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "FireEvent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "IdleSounds",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "InvalidRetargeting",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "InvalidTarget",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "NoValidTarget",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlendOut_0846406C4FB01737DE2791AA356C1210",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBlendOut_19C8415040E030690E0A7A8AB4AC4161",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCompleted_0846406C4FB01737DE2791AA356C1210",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCompleted_19C8415040E030690E0A7A8AB4AC4161",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInterrupted_0846406C4FB01737DE2791AA356C1210",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInterrupted_19C8415040E030690E0A7A8AB4AC4161",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyBegin_0846406C4FB01737DE2791AA356C1210",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyBegin_19C8415040E030690E0A7A8AB4AC4161",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyEnd_0846406C4FB01737DE2791AA356C1210",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotifyEnd_19C8415040E030690E0A7A8AB4AC4161",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "NotifyName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayAttackSound",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayChargeMontage",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayIdleSound",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetAttackSoundDoOnce",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetFireTimer",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetIdleDoOnce",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetIdleSoundsTimer",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ResetTarget",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "RobotDied",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_Net | FUNC_NetMulticast | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetTarget",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Target",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'FortAIPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_0__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_0__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_1__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_1__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateBotMovement",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BGA_Perk_L_DangerDanger_Robot_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.45"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BGA_Perk_L_DangerDanger_Robot_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.40"
+      },
+      "VariableGuid": "182093F8-4D563F16-43431EAA-B0396EA6",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BGA_Perk_L_DangerDanger_Robot_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.45"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BGA_Perk_L_DangerDanger_Robot_C:SkeletalMesh_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.46"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "AnimClass",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SkeletalMeshComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ClothingSimulationFactory",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SkeletalMeshComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "SkeletalMesh",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SkeletalMeshComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "SkinnedAsset",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SkeletalMeshComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "RelativeRotation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SkeletalMeshComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Yaw",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Rotator'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "3C05709C-4DBCCEA9-2D7CFD9B-E79D772E",
+      "InternalVariableName": "SkeletalMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BGA_Perk_L_DangerDanger_Robot_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.45"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SpringArmComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SpringArmComponent'BGA_Perk_L_DangerDanger_Robot_C:SpringArm_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.47"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "TargetArmLength",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SpringArmComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "SocketOffset",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SpringArmComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Y",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "ProbeSize",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SpringArmComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bEnableCameraLag",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SpringArmComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bEnableCameraRotationLag",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SpringArmComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "CameraLagSpeed",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SpringArmComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "CameraRotationLagSpeed",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SpringArmComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "CameraLagMaxDistance",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'SpringArmComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BGA_Perk_L_DangerDanger_Robot_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BGA_Perk_L_DangerDanger_Robot_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.44"
+        }
+      ],
+      "VariableGuid": "16ECFE2A-4A16890C-66A8BFBF-99D5C5DF",
+      "InternalVariableName": "SpringArm"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'BGA_Perk_L_DangerDanger_Robot_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.45"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'BGA_Perk_L_DangerDanger_Robot_C:Danger_Danger_turret_hover_loop_Cue_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.0"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Sound",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "VariableGuid": "2D075604-496895A5-6F8B7193-71078E17",
+      "InternalVariableName": "Danger_Danger_turret_hover_loop_Cue"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BGA_Perk_L_DangerDanger_Robot_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.43"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BGA_Perk_L_DangerDanger_Robot_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BGA_Perk_L_DangerDanger_Robot_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.43"
+        },
+        {
+          "ObjectName": "SCS_Node'BGA_Perk_L_DangerDanger_Robot_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.44"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BGA_Perk_L_DangerDanger_Robot_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.41"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SkeletalMesh_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'RetroSciFi_Robot_AnimBP_C'",
+        "ObjectPath": "/SaveTheWorld/Animation/Game/Gadgets/RetroSciFi_Robot/RetroSciFi_Robot_AnimBP.0"
+      },
+      "ClothingSimulationFactory": {
+        "ObjectName": "Class'ClothingSimulationFactoryNv'",
+        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'Retro_Sci_Fi_Robot_Gadget'",
+        "ObjectPath": "/SaveTheWorld/Gadgets/Assets/Retro_Sci_Fi_Robot/Meshes/Retro_Sci_Fi_Robot_Gadget.0"
+      },
+      "SkinnedAsset": {
+        "ObjectName": "SkeletalMesh'Retro_Sci_Fi_Robot_Gadget'",
+        "ObjectPath": "/SaveTheWorld/Gadgets/Assets/Retro_Sci_Fi_Robot/Meshes/Retro_Sci_Fi_Robot_Gadget.0"
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SpringArmComponent",
+    "Name": "SpringArm_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SpringArmComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "Properties": {
+      "TargetArmLength": 22.5,
+      "SocketOffset": {
+        "X": -20.0,
+        "Y": -54.0,
+        "Z": 30.0
+      },
+      "ProbeSize": 32.0,
+      "bEnableCameraLag": true,
+      "bEnableCameraRotationLag": true,
+      "CameraLagSpeed": 4.0,
+      "CameraRotationLagSpeed": 4.0,
+      "CameraLagMaxDistance": 64.0
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_0_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "Properties": {
+      "TimelineLength": 0.5,
+      "bReplicated": true,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BGA_Perk_L_DangerDanger_Robot_C:CurveFloat_1'",
+            "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.3"
+          },
+          "PropertyName": "Timeline_0_LerpAlpha_7A2539234DCDFB4C8BAB8A98B3583CAC",
+          "TrackName": "LerpAlpha",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "7A253923-4DCDFB4C-8BAB8A98-B3583CAC",
+      "VariableName": "Timeline_0",
+      "DirectionPropertyName": "Timeline_0__Direction_7A2539234DCDFB4C8BAB8A98B3583CAC",
+      "UpdateFunctionName": "Timeline_0__UpdateFunc",
+      "FinishedFunctionName": "Timeline_0__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_1_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'BGA_Perk_L_DangerDanger_Robot_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.2"
+    },
+    "Properties": {
+      "TimelineLength": 0.5,
+      "bReplicated": true,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BGA_Perk_L_DangerDanger_Robot_C:CurveFloat_1_3'",
+            "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DangerDanger/BGA_Perk_L_DangerDanger_Robot.4"
+          },
+          "PropertyName": "Timeline_1_LerpAlpha_DC10E74A4F77219E7E28C7B8300088E4",
+          "TrackName": "LerpAlpha",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "DC10E74A-4F77219E-7E28C7B8-300088E4",
+      "VariableName": "Timeline_1",
+      "DirectionPropertyName": "Timeline_1__Direction_DC10E74A4F77219E7E28C7B8300088E4",
+      "UpdateFunctionName": "Timeline_1__UpdateFunc",
+      "FinishedFunctionName": "Timeline_1__FinishedFunc"
+    }
+  }
+]

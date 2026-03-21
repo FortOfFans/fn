@@ -1,0 +1,254 @@
+[
+  {
+    "Type": "AssetTagsGameplayEffectComponent",
+    "Name": "AssetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AssetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Constructor_GoinConstructor_RefundStamina_C'Default__GE_Constructor_GoinConstructor_RefundStamina_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GE_Constructor_GoinConstructor_RefundStamina.2"
+    },
+    "Template": {
+      "ObjectName": "AssetTagsGameplayEffectComponent'Default__GET_Alteration_Cooldown_C:AssetTagsGameplayEffectComponent_0'",
+      "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GET_Alteration_Cooldown.0"
+    },
+    "Properties": {
+      "InheritableAssetTags": {
+        "CombinedTags": [
+          "Gameplay.Mod.Cooldown",
+          "Asset.Gameplay.Mod.StaminaGrant",
+          "Gameplay.Mod.Stamina",
+          "Abilities.Constructor.GoinConstructor.Deactivate"
+        ],
+        "Added": [
+          "Asset.Gameplay.Mod.StaminaGrant",
+          "Gameplay.Mod.Stamina",
+          "Abilities.Constructor.GoinConstructor.Deactivate"
+        ]
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Constructor_GoinConstructor_RefundStamina_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GET_Alteration_Cooldown_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GET_Alteration_Cooldown.1"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_Constructor_GoinConstructor_RefundStamina_C'Default__GE_Constructor_GoinConstructor_RefundStamina_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GE_Constructor_GoinConstructor_RefundStamina.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_Constructor_GoinConstructor_RefundStamina_C",
+    "Name": "Default__GE_Constructor_GoinConstructor_RefundStamina_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GE_Constructor_GoinConstructor_RefundStamina.GE_Constructor_GoinConstructor_RefundStamina_C'",
+    "Template": {
+      "ObjectName": "GET_Alteration_Cooldown_C'Default__GET_Alteration_Cooldown_C'",
+      "ObjectPath": "/SaveTheWorld/Items/Alteration_v2/ParentAssets/GET_Alteration_Cooldown.2"
+    },
+    "Properties": {
+      "DurationPolicy": "EGameplayEffectDurationType::Instant",
+      "DurationMagnitude": {
+        "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::SetByCaller",
+        "ScalableFloatMagnitude": {
+          "Value": 0.0
+        },
+        "SetByCallerMagnitude": {
+          "DataTag": {
+            "TagName": "SetByCaller.Duration"
+          }
+        }
+      },
+      "Modifiers": [
+        {
+          "Attribute": {
+            "AttributeName": "Stamina",
+            "Attribute": {
+              "Path": [
+                "Stamina"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'FortPlayerAttrSet'",
+                "ObjectPath": "/Script/FortniteGame"
+              }
+            },
+            "AttributeOwner": {
+              "ObjectName": "Class'FortPlayerAttrSet'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          "ModifierOp": "EGameplayModOp::Additive",
+          "ModifierMagnitude": {
+            "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::SetByCaller",
+            "ScalableFloatMagnitude": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": "None"
+              },
+              "RegistryType": {
+                "Name": "None"
+              }
+            },
+            "AttributeBasedMagnitude": {
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "BackingAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "",
+                  "Attribute": {
+                    "Path": [],
+                    "ResolvedOwner": null
+                  },
+                  "AttributeOwner": null
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": false
+              },
+              "AttributeCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              },
+              "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+              "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+              "SourceTagFilter": [],
+              "TargetTagFilter": []
+            },
+            "CustomMagnitude": {
+              "CalculationClassMagnitude": null,
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "FinalLookupCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              }
+            },
+            "SetByCallerMagnitude": {
+              "DataName": "None",
+              "DataTag": {
+                "TagName": "None"
+              }
+            }
+          },
+          "EvaluationChannelSettings": {
+            "Channel": "EGameplayModEvaluationChannel::Channel0"
+          },
+          "SourceTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "TargetTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          }
+        }
+      ],
+      "InheritableGameplayEffectTags": {
+        "CombinedTags": [
+          "Gameplay.Mod.Cooldown",
+          "Asset.Gameplay.Mod.StaminaGrant",
+          "Gameplay.Mod.Stamina",
+          "Abilities.Constructor.GoinConstructor.Deactivate"
+        ],
+        "Added": [
+          "Asset.Gameplay.Mod.StaminaGrant",
+          "Gameplay.Mod.Stamina",
+          "Abilities.Constructor.GoinConstructor.Deactivate"
+        ]
+      },
+      "StackingType": "EGameplayEffectStackingType::None",
+      "StackLimitCount": 0,
+      "GEComponents": [
+        {
+          "ObjectName": "AssetTagsGameplayEffectComponent'Default__GE_Constructor_GoinConstructor_RefundStamina_C:AssetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Constructor/Actives/GoinConstructor/GE_Constructor_GoinConstructor_RefundStamina.0"
+        }
+      ]
+    }
+  }
+]

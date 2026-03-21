@@ -1,0 +1,66 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_UG_Miniboss_OnDmg_BuildingWeaken_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GA_GM_OnDmg_BuildingWeaken_Stack_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Mutations/Enemy/GA_GM_OnDmg_BuildingWeaken_Stack.0"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GA_UG_Miniboss_OnDmg_BuildingWeaken_C'Default__GA_UG_Miniboss_OnDmg_BuildingWeaken_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_Miniboss_OnDmg_BuildingWeaken.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GA_UG_Miniboss_OnDmg_BuildingWeaken_C",
+    "Name": "Default__GA_UG_Miniboss_OnDmg_BuildingWeaken_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GA_UG_Miniboss_OnDmg_BuildingWeaken.GA_UG_Miniboss_OnDmg_BuildingWeaken_C'",
+    "Template": {
+      "ObjectName": "GA_GM_OnDmg_BuildingWeaken_Stack_C'Default__GA_GM_OnDmg_BuildingWeaken_Stack_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Mutations/Enemy/GA_GM_OnDmg_BuildingWeaken_Stack.1"
+    },
+    "Properties": {
+      "TC_RequiredSourceTags": [
+        "Gameplay.DamageSource.NPCDirectAttack"
+      ],
+      "EffectContainers": {
+        "TargetGameplayEffectClasses": [
+          {
+            "ObjectName": "BlueprintGeneratedClass'GE_UG_Miniboss_BuildingWeakness_C'",
+            "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GE_UG_Miniboss_BuildingWeakness.1"
+          }
+        ]
+      },
+      "bServerRespectsRemoteAbilityCancellation": true,
+      "NetExecutionPolicy": "EGameplayAbilityNetExecutionPolicy::ServerInitiated",
+      "AbilityTriggers": [
+        {
+          "TriggerTag": {
+            "TagName": "Event.Damage.Dealt"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        },
+        {
+          "TriggerTag": {
+            "TagName": "Event.Damage.Shielded"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        }
+      ],
+      "SourceBlockedTags": []
+    }
+  }
+]

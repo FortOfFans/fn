@@ -1,0 +1,255 @@
+[
+  {
+    "Type": "AssetTagsGameplayEffectComponent",
+    "Name": "AssetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AssetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Perk_L_ViolentInspiration_DamageMult_Parent_C'Default__GE_Perk_L_ViolentInspiration_DamageMult_Parent_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/ViolentInspiration/GE_Perk_L_ViolentInspiration_DamageMult_Parent.2"
+    },
+    "Template": {
+      "ObjectName": "AssetTagsGameplayEffectComponent'Default__GET_DamageMultiplier_Weapon_Hero_C:AssetTagsGameplayEffectComponent_0'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/Hero/GET_DamageMultiplier_Weapon_Hero.0"
+    },
+    "Properties": {
+      "InheritableAssetTags": {
+        "CombinedTags": [
+          "Asset.Gameplay.Mod.DamageMultiplier",
+          "Asset.Gameplay.Mod.DamageMultiplier.Weapon",
+          "Asset.PerkEffect.ViolentInspiration.DamageMult"
+        ],
+        "Added": [
+          "Asset.Gameplay.Mod.DamageMultiplier.Weapon",
+          "Asset.PerkEffect.ViolentInspiration.DamageMult"
+        ]
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Perk_L_ViolentInspiration_DamageMult_Parent_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GET_DamageMultiplier_Weapon_Hero_C'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/Hero/GET_DamageMultiplier_Weapon_Hero.1"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_Perk_L_ViolentInspiration_DamageMult_Parent_C'Default__GE_Perk_L_ViolentInspiration_DamageMult_Parent_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/ViolentInspiration/GE_Perk_L_ViolentInspiration_DamageMult_Parent.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_Perk_L_ViolentInspiration_DamageMult_Parent_C",
+    "Name": "Default__GE_Perk_L_ViolentInspiration_DamageMult_Parent_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Perks/Leader/ViolentInspiration/GE_Perk_L_ViolentInspiration_DamageMult_Parent.GE_Perk_L_ViolentInspiration_DamageMult_Parent_C'",
+    "Template": {
+      "ObjectName": "GET_DamageMultiplier_Weapon_Hero_C'Default__GET_DamageMultiplier_Weapon_Hero_C'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/Hero/GET_DamageMultiplier_Weapon_Hero.2"
+    },
+    "Properties": {
+      "DurationPolicy": "EGameplayEffectDurationType::HasDuration",
+      "DurationMagnitude": {
+        "ScalableFloatMagnitude": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+              "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+            },
+            "RowName": "Perk.ViolentInspiration.T01.Duration"
+          }
+        }
+      },
+      "Modifiers": [
+        {
+          "Attribute": {
+            "AttributeName": "OutgoingAbilityDamage",
+            "Attribute": {
+              "Path": [
+                "OutgoingAbilityDamage"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'FortDamageSet'",
+                "ObjectPath": "/Script/FortniteGame"
+              }
+            },
+            "AttributeOwner": {
+              "ObjectName": "Class'FortDamageSet'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          "ModifierOp": "EGameplayModOp::Multiplicitive",
+          "ModifierMagnitude": {
+            "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::ScalableFloat",
+            "ScalableFloatMagnitude": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+                  "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+                },
+                "RowName": "Perk.ViolentInspiration.T01.DamageMultPerStack"
+              },
+              "RegistryType": {
+                "Name": "None"
+              }
+            },
+            "AttributeBasedMagnitude": {
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "BackingAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "",
+                  "Attribute": {
+                    "Path": [],
+                    "ResolvedOwner": null
+                  },
+                  "AttributeOwner": null
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": false
+              },
+              "AttributeCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              },
+              "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+              "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+              "SourceTagFilter": [],
+              "TargetTagFilter": []
+            },
+            "CustomMagnitude": {
+              "CalculationClassMagnitude": null,
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "FinalLookupCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              }
+            },
+            "SetByCallerMagnitude": {
+              "DataName": "None",
+              "DataTag": {
+                "TagName": "None"
+              }
+            }
+          },
+          "EvaluationChannelSettings": {
+            "Channel": "EGameplayModEvaluationChannel::Channel0"
+          },
+          "SourceTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "TargetTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          }
+        }
+      ],
+      "InheritableGameplayEffectTags": {
+        "CombinedTags": [
+          "Asset.Gameplay.Mod.DamageMultiplier",
+          "Asset.Gameplay.Mod.DamageMultiplier.Weapon",
+          "Asset.PerkEffect.ViolentInspiration.DamageMult"
+        ],
+        "Added": [
+          "Asset.Gameplay.Mod.DamageMultiplier.Weapon",
+          "Asset.PerkEffect.ViolentInspiration.DamageMult"
+        ]
+      },
+      "StackingType": "EGameplayEffectStackingType::AggregateByTarget",
+      "StackLimitCount": 1,
+      "StackPeriodResetPolicy": "EGameplayEffectStackingPeriodPolicy::NeverReset",
+      "GEComponents": [
+        {
+          "ObjectName": "AssetTagsGameplayEffectComponent'Default__GE_Perk_L_ViolentInspiration_DamageMult_Parent_C:AssetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/ViolentInspiration/GE_Perk_L_ViolentInspiration_DamageMult_Parent.0"
+        }
+      ]
+    }
+  }
+]

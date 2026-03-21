@@ -1,0 +1,584 @@
+[
+  {
+    "Type": "AOE_Ninja_SmokeBomb_Cloud_Heal_C",
+    "Name": "Default__AOE_Ninja_SmokeBomb_Cloud_Heal_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.AOE_Ninja_SmokeBomb_Cloud_Heal_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AOELifespan": 6.0,
+      "TouchingActorsEffectApplicationUpdateTime": 1.0,
+      "bIgnoreInstigatorCollision": false,
+      "bCanBeDamaged": false,
+      "InitialLifeSpan": 5.0
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "AOE_Ninja_SmokeBomb_Cloud_Heal_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "NumReplicatedProperties": 2,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'AOE_Ninja_SmokeBomb_Cloud_Heal_C:SimpleConstructionScript_1'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.16"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'AOE_Ninja_SmokeBomb_Cloud_Heal_C:ExecuteUbergraph_AOE_Ninja_SmokeBomb_Cloud_Heal'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortAreaOfEffectCloud'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'AOE_Ninja_SmokeBomb_Cloud_Heal_C:OnRep_AOERadius'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.6"
+      },
+      {
+        "ObjectName": "Function'AOE_Ninja_SmokeBomb_Cloud_Heal_C:OnRep_AOELifespan'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.5"
+      },
+      {
+        "ObjectName": "Function'AOE_Ninja_SmokeBomb_Cloud_Heal_C:OnRep_Lifespan'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.7"
+      },
+      {
+        "ObjectName": "Function'AOE_Ninja_SmokeBomb_Cloud_Heal_C:ReceiveBeginPlay'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.8"
+      },
+      {
+        "ObjectName": "Function'AOE_Ninja_SmokeBomb_Cloud_Heal_C:BuffedSmokeBomb'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.3"
+      },
+      {
+        "ObjectName": "Function'AOE_Ninja_SmokeBomb_Cloud_Heal_C:ExecuteUbergraph_AOE_Ninja_SmokeBomb_Cloud_Heal'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SmokePP",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PostProcessComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SmokePersist",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Capsule1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'CapsuleComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "AOELifespan",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance | RepNotify",
+        "RepNotifyFunc": "OnRep_AOELifespan"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "AOERadius",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance | RepNotify",
+        "RepNotifyFunc": "OnRep_AOERadius"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_AOE_Ninja_SmokeBomb_Cloud_Heal": {
+        "ObjectName": "Function'AOE_Ninja_SmokeBomb_Cloud_Heal_C:ExecuteUbergraph_AOE_Ninja_SmokeBomb_Cloud_Heal'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.4"
+      },
+      "BuffedSmokeBomb": {
+        "ObjectName": "Function'AOE_Ninja_SmokeBomb_Cloud_Heal_C:BuffedSmokeBomb'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.3"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'AOE_Ninja_SmokeBomb_Cloud_Heal_C:ReceiveBeginPlay'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.8"
+      },
+      "OnRep_Lifespan": {
+        "ObjectName": "Function'AOE_Ninja_SmokeBomb_Cloud_Heal_C:OnRep_Lifespan'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.7"
+      },
+      "OnRep_AOELifespan": {
+        "ObjectName": "Function'AOE_Ninja_SmokeBomb_Cloud_Heal_C:OnRep_AOELifespan'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.5"
+      },
+      "OnRep_AOERadius": {
+        "ObjectName": "Function'AOE_Ninja_SmokeBomb_Cloud_Heal_C:OnRep_AOERadius'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "AOE_Ninja_SmokeBomb_Cloud_Heal_C'Default__AOE_Ninja_SmokeBomb_Cloud_Heal_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.0"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CapsuleComponent_2",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'AOE_Ninja_SmokeBomb_Cloud_Heal_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.1"
+    },
+    "Properties": {
+      "CapsuleHalfHeight": 260.0,
+      "CapsuleRadius": 260.0,
+      "bUseSystemDefaultObstacleAreaClass": false,
+      "AreaClassOverride": {
+        "ObjectName": "Class'FortMetaNavArea_Obstacles'",
+        "ObjectPath": "/Script/FortniteAI"
+      },
+      "BodyInstance": {
+        "CollisionProfileName": "FortTriggerOnlyPawns",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "FCC_Object_PawnAI",
+              "Response": "ECollisionResponse::ECR_Overlap"
+            },
+            {
+              "Channel": "FCC_Trace_WeaponWorldMulti",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "FCC_Object_Water",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        },
+        "MassInKgOverride": 4469.391
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "BuffedSmokeBomb",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'AOE_Ninja_SmokeBomb_Cloud_Heal_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "DoubleProperty",
+        "Name": "AOELifespan",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "AOERadius",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_AOE_Ninja_SmokeBomb_Cloud_Heal",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'AOE_Ninja_SmokeBomb_Cloud_Heal_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "K2Node_CustomEvent_AOELifespan",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "K2Node_CustomEvent_AOERadius",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRep_AOELifespan",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'AOE_Ninja_SmokeBomb_Cloud_Heal_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetLifeSpan_InLifespan_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRep_AOERadius",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'AOE_Ninja_SmokeBomb_Cloud_Heal_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetCapsuleRadius_Radius_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetCapsuleHalfHeight_HalfHeight_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRep_Lifespan",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'AOE_Ninja_SmokeBomb_Cloud_Heal_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetCapsuleRadius_Radius_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetCapsuleHalfHeight_HalfHeight_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'AOE_Ninja_SmokeBomb_Cloud_Heal_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.1"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystemComponent_1303",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'AOE_Ninja_SmokeBomb_Cloud_Heal_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.1"
+    },
+    "Properties": {
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "PostProcessComponent",
+    "Name": "SmokePP_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PostProcessComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'AOE_Ninja_SmokeBomb_Cloud_Heal_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.1"
+    },
+    "Properties": {
+      "Settings": {
+        "bOverride_ColorContrast": true,
+        "bOverride_ColorGamma": true,
+        "bOverride_ColorGain": true,
+        "ColorContrast": {
+          "X": 0.4,
+          "Y": 0.4,
+          "Z": 0.4,
+          "W": 1.0
+        },
+        "ColorGamma": {
+          "X": 0.7,
+          "Y": 0.7,
+          "Z": 0.7,
+          "W": 1.0
+        },
+        "ColorGain": {
+          "X": 1.8,
+          "Y": 1.8,
+          "Z": 1.8,
+          "W": 1.0
+        },
+        "AutoExposureBiasBackup": 1.0,
+        "WeightedBlendables": {
+          "Array": [
+            {
+              "Weight": 1.0,
+              "Object": {
+                "ObjectName": "Material'M_Ninja_Smokebomb_PP_01'",
+                "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/M_Ninja_Smokebomb_PP_01.0"
+              }
+            }
+          ]
+        }
+      },
+      "BlendWeight": 0.0
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent_3",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'AOE_Ninja_SmokeBomb_Cloud_Heal_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'AOE_Ninja_SmokeBomb_Cloud_Heal_C:SimpleConstructionScript_1'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.16"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'AOE_Ninja_SmokeBomb_Cloud_Heal_C:SceneComponent_3'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.11"
+      },
+      "VariableGuid": "4D3A059E-00000000-00000000-00000000",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'AOE_Ninja_SmokeBomb_Cloud_Heal_C:SimpleConstructionScript_1'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.16"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'CapsuleComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "CapsuleComponent'AOE_Ninja_SmokeBomb_Cloud_Heal_C:CapsuleComponent_2'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.2"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'AOE_Ninja_SmokeBomb_Cloud_Heal_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.14"
+        },
+        {
+          "ObjectName": "SCS_Node'AOE_Ninja_SmokeBomb_Cloud_Heal_C:SimpleConstructionScript_1.SCS_Node_4'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.15"
+        }
+      ],
+      "VariableGuid": "60F4ECD6-00000000-00000000-00000000",
+      "InternalVariableName": "Capsule1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'AOE_Ninja_SmokeBomb_Cloud_Heal_C:SimpleConstructionScript_1'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.16"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'AOE_Ninja_SmokeBomb_Cloud_Heal_C:ParticleSystemComponent_1303'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.9"
+      },
+      "VariableGuid": "92E248D3-00000000-00000000-00000000",
+      "InternalVariableName": "SmokePersist"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'AOE_Ninja_SmokeBomb_Cloud_Heal_C:SimpleConstructionScript_1'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.16"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PostProcessComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PostProcessComponent'AOE_Ninja_SmokeBomb_Cloud_Heal_C:SmokePP_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.10"
+      },
+      "VariableGuid": "34CE0579-4B9E7D2D-9CA2779B-049508BA",
+      "InternalVariableName": "SmokePP"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'AOE_Ninja_SmokeBomb_Cloud_Heal_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.1"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'AOE_Ninja_SmokeBomb_Cloud_Heal_C:SimpleConstructionScript_1.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.13"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'AOE_Ninja_SmokeBomb_Cloud_Heal_C:SimpleConstructionScript_1.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.13"
+        },
+        {
+          "ObjectName": "SCS_Node'AOE_Ninja_SmokeBomb_Cloud_Heal_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.14"
+        },
+        {
+          "ObjectName": "SCS_Node'AOE_Ninja_SmokeBomb_Cloud_Heal_C:SimpleConstructionScript_1.SCS_Node_4'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.15"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'AOE_Ninja_SmokeBomb_Cloud_Heal_C:SimpleConstructionScript_1.SCS_Node_1'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/AOE_Ninja_SmokeBomb_Cloud_Heal.12"
+      }
+    }
+  }
+]

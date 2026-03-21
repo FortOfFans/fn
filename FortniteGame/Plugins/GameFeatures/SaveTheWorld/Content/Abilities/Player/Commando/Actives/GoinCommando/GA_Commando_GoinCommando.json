@@ -1,0 +1,1629 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_Commando_GoinCommando_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GAT_CommandoActiveAbility_C'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_CommandoActiveAbility.0"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:ExecuteUbergraph_GA_Commando_GoinCommando'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.5"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:SetupShootyMcShootsAlot'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.10"
+      },
+      {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:ActiveAbilitySetup'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.2"
+      },
+      {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:SetupAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.9"
+      },
+      {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:EventReceived_FE4E84144CB69CA963F55C98B1B1BFD4'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.4"
+      },
+      {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:AbilityComplete'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.1"
+      },
+      {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:K2_OnEndAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.7"
+      },
+      {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:K2_ActivateAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.6"
+      },
+      {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:EnableInterrupt'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.3"
+      },
+      {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:OnActiveAbilityInputRetriggered'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.8"
+      },
+      {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:ExecuteUbergraph_GA_Commando_GoinCommando'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.5"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "AbilityDuration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_AintDoneYet",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "UpgradeDuration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_BoomStick",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "GE_GoinCommandoActive",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "AintDoneYet",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "BoomStick",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_EasyOperation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_GoinAgain",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_IfItBleeds",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "EasyOperation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "GoinAgain",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IfItBleeds",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WeaponDefDefault",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FortWeaponRangedItemDefinition'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WeaponDefBoomStick",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FortWeaponRangedItemDefinition'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "Cam_Out",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'FortCameraMode'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "F_CameraPulseDelay",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FF_Start Feedback",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ForceFeedbackEffect'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "F_IntroCamShakeScale",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "CamShake_GoinCommando",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'LegacyCameraShake'",
+          "ObjectPath": "/Script/EngineCameras"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "T_AintDoneYet_T01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "T_AintDoneYet_T02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "SF_AintDoneYetT01_Duration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'ScalableFloat'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "SF_AintDoneYetT02_Duration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'ScalableFloat'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "SF_AbilityDuration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'ScalableFloat'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "T_Boomstick_T02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "T_ShootyMcShootsAlot_T01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "AintDoneYet_T01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "AintDoneYet_T02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "T_Event_Activate",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "T_Event_Deactivate",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Timer_AbilityDuration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Boomstick_T02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ShootyMcShootsAlot_T01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "GE_ShootyMcShootsAlot_DurationPerStack",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'GameplayEffect'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Row_ShootyMcShootsAlot_DurationPerStack",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'ScalableFloat'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "InterruptReady",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "Delay_Before_Ability_Can_Be_Interrupted",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_Commando_GoinCommando": {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:ExecuteUbergraph_GA_Commando_GoinCommando'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.5"
+      },
+      "OnActiveAbilityInputRetriggered": {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:OnActiveAbilityInputRetriggered'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.8"
+      },
+      "EnableInterrupt": {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:EnableInterrupt'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.3"
+      },
+      "K2_ActivateAbility": {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:K2_ActivateAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.6"
+      },
+      "K2_OnEndAbility": {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:K2_OnEndAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.7"
+      },
+      "AbilityComplete": {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:AbilityComplete'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.1"
+      },
+      "EventReceived_FE4E84144CB69CA963F55C98B1B1BFD4": {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:EventReceived_FE4E84144CB69CA963F55C98B1B1BFD4'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.4"
+      },
+      "SetupAbility": {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:SetupAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.9"
+      },
+      "ActiveAbilitySetup": {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:ActiveAbilitySetup'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.2"
+      },
+      "SetupShootyMcShootsAlot": {
+        "ObjectName": "Function'GA_Commando_GoinCommando_C:SetupShootyMcShootsAlot'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.10"
+      }
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GA_Commando_GoinCommando_C'Default__GA_Commando_GoinCommando_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.11"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AbilityComplete",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Commando_GoinCommando_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ActiveAbilitySetup",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Commando_GoinCommando_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.0"
+    },
+    "Super": {
+      "ObjectName": "Function'GAT_ActiveAbility_C:ActiveAbilitySetup'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_ActiveAbility.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "AbilitySystemIn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AbilitySystemOut",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_ActiveAbilitySetup_AbilitySystemOut",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_DoesTagAssetInterfaceHaveTag_TagContainerInterface_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_DoesTagAssetInterfaceHaveTag_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_DoesTagAssetInterfaceHaveTag_TagContainerInterface_CastInput_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_DoesTagAssetInterfaceHaveTag_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortWeaponItemDefinition'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_DoesTagAssetInterfaceHaveTag_TagContainerInterface_CastInput_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_DoesTagAssetInterfaceHaveTag_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_DoesTagAssetInterfaceHaveTag_TagContainerInterface_CastInput_3",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_DoesTagAssetInterfaceHaveTag_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "K2Node_Select_Default_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "K2Node_VariableSet_AbilityDuration_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_A_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_B_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_B_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_B_ImplicitCast_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EnableInterrupt",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Commando_GoinCommando_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EventReceived_FE4E84144CB69CA963F55C98B1B1BFD4",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Commando_GoinCommando_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "Payload",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_Commando_GoinCommando",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Commando_GoinCommando_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_Payload",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "Struct": {
+          "ObjectName": "Class'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Temp_struct_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "Struct": {
+          "ObjectName": "Class'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_WaitGameplayEvent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AbilityTask_WaitGameplayEvent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAbilitySystemComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeOutgoingGameplayEffectSpec_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectSpecHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_ActiveAbilitySetup_AbilitySystemOut",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_ApplyGameplayEffectSpecToOwner_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'ActiveGameplayEffectHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "SignatureFunction": {
+          "ObjectName": "Class'WaitGameplayEventDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetController_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Controller'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Player_Controller",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPlayerController'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_bWasCancelled",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CommitAbilityWithEvent_Passed",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_GameplayEventData",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "Struct": {
+          "ObjectName": "Class'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Delay_Duration_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_ClientStartCameraShake_Scale_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_Time_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_MakeStruct_EventMagnitude_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_Time_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbility",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Commando_GoinCommando_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.0"
+    },
+    "Super": {
+      "ObjectName": "Function'GAT_CommandoActiveAbility_C:K2_ActivateAbility'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_CommandoActiveAbility.2"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_OnEndAbility",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Commando_GoinCommando_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.0"
+    },
+    "Super": {
+      "ObjectName": "Function'GAT_ActiveAbility_Hero_C:K2_OnEndAbility'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_ActiveAbility_Hero.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "bWasCancelled",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnActiveAbilityInputRetriggered",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Commando_GoinCommando_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortGameplayAbility:OnActiveAbilityInputRetriggered'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetupAbility",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Commando_GoinCommando_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "AbilitySystem",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortWeaponRangedItemDefinition'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput_3",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "K2Node_Select_Default_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput_4",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetupShootyMcShootsAlot",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Commando_GoinCommando_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAbilitySystemComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetGameplayEffectCount_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_IntFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_IntFloat_B_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GA_Commando_GoinCommando_C",
+    "Name": "Default__GA_Commando_GoinCommando_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GA_Commando_GoinCommando.GA_Commando_GoinCommando_C'",
+    "Template": {
+      "ObjectName": "GAT_CommandoActiveAbility_C'Default__GAT_CommandoActiveAbility_C'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_CommandoActiveAbility.3"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "AbilityDuration": 10.0,
+      "TC_AintDoneYet": [
+        "Abilities.Commando.AintDoneYet"
+      ],
+      "UpgradeDuration": 15.0,
+      "TC_BoomStick": [
+        "Abilities.Commando.Boomstick"
+      ],
+      "GE_GoinCommandoActive": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Commando_GoinCommandoActive_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GE_Commando_GoinCommandoActive.2"
+      },
+      "TC_EasyOperation": [],
+      "TC_GoinAgain": [],
+      "TC_IfItBleeds": [
+        "Abilities.Commando.IfItBleeds"
+      ],
+      "WeaponDefDefault": {
+        "ObjectName": "FortWeaponRangedItemDefinition'GoinCommandoWeapon'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GoinCommandoWeapon.0"
+      },
+      "WeaponDefBoomStick": {
+        "ObjectName": "FortWeaponRangedItemDefinition'GoinCommandoWeapon_Boomstick'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GoinCommandoWeapon_Boomstick.0"
+      },
+      "Cam_Out": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Commando_GoinCommando_Camera_Out_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/BP_Commando_GoinCommando_Camera_Out.0"
+      },
+      "F_CameraPulseDelay": 0.6000000238418579,
+      "FF_Start Feedback": {
+        "ObjectName": "ForceFeedbackEffect'FF_Commando_GoinCommando_AbilityStart'",
+        "ObjectPath": "/SaveTheWorld/Weapons/ForceFeedback/FF_Commando_GoinCommando_AbilityStart.0"
+      },
+      "F_IntroCamShakeScale": 0.75,
+      "CamShake_GoinCommando": {
+        "ObjectName": "BlueprintGeneratedClass'B_Commando_GoinCommando_Start_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/B_Commando_GoinCommando_Start.1"
+      },
+      "T_AintDoneYet_T01": {
+        "TagName": "Granted.Perk.AintDoneYet.T01"
+      },
+      "T_AintDoneYet_T02": {
+        "TagName": "Granted.Perk.AintDoneYet.T02"
+      },
+      "SF_AintDoneYetT01_Duration": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+            "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+          },
+          "RowName": "Perk.AintDoneYet.T01.Duration"
+        },
+        "RegistryType": {
+          "Name": "None"
+        }
+      },
+      "SF_AintDoneYetT02_Duration": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+            "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+          },
+          "RowName": "Perk.AintDoneYet.T02.Duration"
+        },
+        "RegistryType": {
+          "Name": "None"
+        }
+      },
+      "SF_AbilityDuration": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+            "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+          },
+          "RowName": "Ability.Commando.GoinCommando.Duration"
+        },
+        "RegistryType": {
+          "Name": "None"
+        }
+      },
+      "T_Boomstick_T02": {
+        "TagName": "Granted.Perk.Boomstick.T02"
+      },
+      "T_ShootyMcShootsAlot_T01": {
+        "TagName": "Granted.Perk.ShootyMcShootsAlot.T01"
+      },
+      "T_Event_Activate": {
+        "TagName": "Event.Ability.Commando.GoinCommando.Activate"
+      },
+      "T_Event_Deactivate": {
+        "TagName": "Event.Ability.Commando.GoinCommando.Deactivate"
+      },
+      "Timer_AbilityDuration": {
+        "Handle": 0
+      },
+      "GE_ShootyMcShootsAlot_DurationPerStack": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Perk_L_ShootyMcShootsAlot_DurationPerStack_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/ShootyMcShootsAlot/GE_Perk_L_ShootyMcShootsAlot_DurationPerStack.1"
+      },
+      "Row_ShootyMcShootsAlot_DurationPerStack": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+            "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+          },
+          "RowName": "Perk.ShootyMcShootsAlot.T01.DurationPerStack"
+        },
+        "RegistryType": {
+          "Name": "None"
+        }
+      },
+      "Delay_Before_Ability_Can_Be_Interrupted": 4.0,
+      "EffectContainers": {
+        "ApplicationTag": {
+          "TagName": "Abilities.Commando.GoinCommando.Effect1"
+        }
+      },
+      "EffectContainers[1]": {
+        "ApplicationTag": {
+          "TagName": "Abilities.Commando.GoinCommando.Effect2"
+        }
+      },
+      "EffectContainers[2]": {
+        "ApplicationTag": {
+          "TagName": "Abilities.Commando.GoinCommando.Effect3"
+        }
+      },
+      "EffectContainers[3]": {
+        "ApplicationTag": {
+          "TagName": "Abilities.Commando.GoinCommando.Effect4"
+        }
+      },
+      "Costs": [
+        {
+          "ItemDefinition": null,
+          "bRequireWeaponInInventory": true,
+          "CostValue": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": {
+                "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+                "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+              },
+              "RowName": "Ability.Commando.GoinCommando.Cost"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "bOnlyApplyCostOnHit": false
+        }
+      ],
+      "AbilityWeapon": {
+        "ObjectName": "FortWeaponRangedItemDefinition'GoinCommandoWeapon'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GoinCommandoWeapon.0"
+      },
+      "Tooltip": {
+        "ObjectName": "BlueprintGeneratedClass'TT_Commando_GoinCommando_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/TT_Commando_GoinCommando.0"
+      },
+      "AbilityTags": [
+        "Abilities.Commando.GoinCommando",
+        "Gameplay.Action.Player.AbilityWeapon",
+        "Ability.Commando.GoinCommando",
+        "Ability.DamageSource.Ranged"
+      ],
+      "CooldownGameplayEffectClass": {
+        "ObjectName": "BlueprintGeneratedClass'GE_Commando_GoinCommandoCooldown_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Commando/Actives/GoinCommando/GE_Commando_GoinCommandoCooldown.1"
+      },
+      "BlockAbilitiesWithTag": [
+        "Gameplay.Action.Player.Hurdle"
+      ],
+      "ActivationOwnedTags": [
+        "Riding.Player.BlockRiding",
+        "Granted.BoostedJump.Blocked",
+        "Granted.RollLanding.Blocked",
+        "Granted.WallJump.Blocked",
+        "Granted.WallStick.Blocked"
+      ]
+    }
+  }
+]

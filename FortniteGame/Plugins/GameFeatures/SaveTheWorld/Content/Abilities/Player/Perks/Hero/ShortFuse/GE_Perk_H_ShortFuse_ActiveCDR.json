@@ -1,0 +1,255 @@
+[
+  {
+    "Type": "AssetTagsGameplayEffectComponent",
+    "Name": "AssetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AssetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Perk_H_ShortFuse_ActiveCDR_C'Default__GE_Perk_H_ShortFuse_ActiveCDR_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/ShortFuse/GE_Perk_H_ShortFuse_ActiveCDR.2"
+    },
+    "Template": {
+      "ObjectName": "AssetTagsGameplayEffectComponent'Default__GET_ActiveCooldownReduction_Hero_C:AssetTagsGameplayEffectComponent_0'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/Hero/GET_ActiveCooldownReduction_Hero.0"
+    },
+    "Properties": {
+      "InheritableAssetTags": {
+        "CombinedTags": [
+          "Asset.Gameplay.Mod.ActiveCooldownReduction",
+          "Asset.PerkEffect.ShortFuse.ActiveCDR"
+        ],
+        "Added": [
+          "Asset.PerkEffect.ShortFuse.ActiveCDR"
+        ]
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Perk_H_ShortFuse_ActiveCDR_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GET_ActiveCooldownReduction_Hero_C'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/Hero/GET_ActiveCooldownReduction_Hero.1"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_Perk_H_ShortFuse_ActiveCDR_C'Default__GE_Perk_H_ShortFuse_ActiveCDR_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/ShortFuse/GE_Perk_H_ShortFuse_ActiveCDR.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_Perk_H_ShortFuse_ActiveCDR_C",
+    "Name": "Default__GE_Perk_H_ShortFuse_ActiveCDR_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Perks/Hero/ShortFuse/GE_Perk_H_ShortFuse_ActiveCDR.GE_Perk_H_ShortFuse_ActiveCDR_C'",
+    "Template": {
+      "ObjectName": "GET_ActiveCooldownReduction_Hero_C'Default__GET_ActiveCooldownReduction_Hero_C'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/Hero/GET_ActiveCooldownReduction_Hero.2"
+    },
+    "Properties": {
+      "Executions": [
+        {
+          "CalculationClass": {
+            "ObjectName": "Class'FortActiveDurationExecutionCalculation'",
+            "ObjectPath": "/Script/FortniteGame"
+          },
+          "PassedInTags": [],
+          "CalculationModifiers": [
+            {
+              "CapturedAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "ActiveEffectDuration",
+                  "Attribute": {
+                    "Path": [
+                      "ActiveEffectDuration"
+                    ],
+                    "ResolvedOwner": {
+                      "ObjectName": "Class'FortPlayerAttrSet'",
+                      "ObjectPath": "/Script/FortniteGame"
+                    }
+                  },
+                  "AttributeOwner": {
+                    "ObjectName": "Class'FortPlayerAttrSet'",
+                    "ObjectPath": "/Script/FortniteGame"
+                  }
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Target",
+                "bSnapshot": true
+              },
+              "TransientAggregatorIdentifier": {
+                "TagName": "None"
+              },
+              "AggregatorType": "EGameplayEffectScopedModifierAggregatorType::CapturedAttributeBacked",
+              "ModifierOp": "EGameplayModOp::Multiplicitive",
+              "ModifierMagnitude": {
+                "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::ScalableFloat",
+                "ScalableFloatMagnitude": {
+                  "Value": 1.0,
+                  "Curve": {
+                    "CurveTable": {
+                      "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+                      "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+                    },
+                    "RowName": "Perk.ShortFuse.T01.CDRMult"
+                  },
+                  "RegistryType": {
+                    "Name": "None"
+                  }
+                },
+                "AttributeBasedMagnitude": {
+                  "Coefficient": {
+                    "Value": 1.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PreMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PostMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "BackingAttribute": {
+                    "AttributeToCapture": {
+                      "AttributeName": "",
+                      "Attribute": {
+                        "Path": [],
+                        "ResolvedOwner": null
+                      },
+                      "AttributeOwner": null
+                    },
+                    "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                    "bSnapshot": false
+                  },
+                  "AttributeCurve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  },
+                  "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+                  "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+                  "SourceTagFilter": [],
+                  "TargetTagFilter": []
+                },
+                "CustomMagnitude": {
+                  "CalculationClassMagnitude": null,
+                  "Coefficient": {
+                    "Value": 1.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PreMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PostMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "FinalLookupCurve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  }
+                },
+                "SetByCallerMagnitude": {
+                  "DataName": "None",
+                  "DataTag": {
+                    "TagName": "None"
+                  }
+                }
+              },
+              "EvaluationChannelSettings": {
+                "Channel": "EGameplayModEvaluationChannel::Channel0"
+              },
+              "SourceTags": {
+                "RequireTags": [],
+                "IgnoreTags": [],
+                "TagQuery": {
+                  "TokenStreamVersion": 0,
+                  "TagDictionary": [],
+                  "QueryTokenStream": [],
+                  "UserDescription": "",
+                  "AutoDescription": ""
+                }
+              },
+              "TargetTags": {
+                "RequireTags": [
+                  "Asset.Cooldown.Commando.Shockwave"
+                ],
+                "IgnoreTags": [],
+                "TagQuery": {
+                  "TokenStreamVersion": 0,
+                  "TagDictionary": [],
+                  "QueryTokenStream": [],
+                  "UserDescription": "",
+                  "AutoDescription": ""
+                }
+              }
+            }
+          ],
+          "ConditionalGameplayEffects": []
+        }
+      ],
+      "InheritableGameplayEffectTags": {
+        "CombinedTags": [
+          "Asset.Gameplay.Mod.ActiveCooldownReduction",
+          "Asset.PerkEffect.ShortFuse.ActiveCDR"
+        ],
+        "Added": [
+          "Asset.PerkEffect.ShortFuse.ActiveCDR"
+        ]
+      },
+      "GEComponents": [
+        {
+          "ObjectName": "AssetTagsGameplayEffectComponent'Default__GE_Perk_H_ShortFuse_ActiveCDR_C:AssetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/ShortFuse/GE_Perk_H_ShortFuse_ActiveCDR.0"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,558 @@
+[
+  {
+    "Type": "AbilitiesGameplayEffectComponent",
+    "Name": "AbilitiesGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AbilitiesGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Perk_H_NorthStar_Freeze_C'Default__GE_Perk_H_NorthStar_Freeze_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/GE_Perk_H_NorthStar_Freeze.3"
+    },
+    "Properties": {
+      "GrantAbilityConfigs": [
+        {
+          "Ability": {
+            "ObjectName": "BlueprintGeneratedClass'GA_Perk_H_NorthStar_VictimMark_C'",
+            "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/GA_Perk_H_NorthStar_VictimMark.0"
+          },
+          "LevelScalableFloat": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "InputID": -1,
+          "RemovalPolicy": "EGameplayEffectGrantedAbilityRemovePolicy::RemoveAbilityOnEnd"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "AssetTagsGameplayEffectComponent",
+    "Name": "AssetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AssetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Perk_H_NorthStar_Freeze_C'Default__GE_Perk_H_NorthStar_Freeze_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/GE_Perk_H_NorthStar_Freeze.3"
+    },
+    "Template": {
+      "ObjectName": "AssetTagsGameplayEffectComponent'Default__GET_Freeze_Trap_C:AssetTagsGameplayEffectComponent_0'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/Trap/GET_Freeze_Trap.0"
+    },
+    "Properties": {
+      "InheritableAssetTags": {
+        "CombinedTags": [
+          "Gameplay.Effect.Negative",
+          "Gameplay.Effect.Frozen",
+          "Abilities.Ninja.Perks.NorthStar.Marked"
+        ],
+        "Added": [
+          "Gameplay.Effect.Negative",
+          "Gameplay.Effect.Frozen",
+          "Abilities.Ninja.Perks.NorthStar.Marked"
+        ]
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Perk_H_NorthStar_Freeze_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GET_Freeze_Trap_C'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/Trap/GET_Freeze_Trap.1"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_Perk_H_NorthStar_Freeze_C'Default__GE_Perk_H_NorthStar_Freeze_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/GE_Perk_H_NorthStar_Freeze.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_Perk_H_NorthStar_Freeze_C",
+    "Name": "Default__GE_Perk_H_NorthStar_Freeze_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/GE_Perk_H_NorthStar_Freeze.GE_Perk_H_NorthStar_Freeze_C'",
+    "Template": {
+      "ObjectName": "GET_Freeze_Trap_C'Default__GET_Freeze_Trap_C'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/Trap/GET_Freeze_Trap.2"
+    },
+    "Properties": {
+      "DurationMagnitude": {
+        "ScalableFloatMagnitude": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+              "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+            },
+            "RowName": "Perk.NorthStar.FreezeDuration"
+          }
+        }
+      },
+      "Modifiers": [
+        {
+          "Attribute": {
+            "AttributeName": "SpeedMultiplier",
+            "Attribute": {
+              "Path": [
+                "SpeedMultiplier"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'FortMovementSet'",
+                "ObjectPath": "/Script/FortniteGame"
+              }
+            },
+            "AttributeOwner": {
+              "ObjectName": "Class'FortMovementSet'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          "ModifierOp": "EGameplayModOp::Override",
+          "ModifierMagnitude": {
+            "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::ScalableFloat",
+            "ScalableFloatMagnitude": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": "None"
+              },
+              "RegistryType": {
+                "Name": "None"
+              }
+            },
+            "AttributeBasedMagnitude": {
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "BackingAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "",
+                  "Attribute": {
+                    "Path": [],
+                    "ResolvedOwner": null
+                  },
+                  "AttributeOwner": null
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": false
+              },
+              "AttributeCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              },
+              "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+              "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+              "SourceTagFilter": [],
+              "TargetTagFilter": []
+            },
+            "CustomMagnitude": {
+              "CalculationClassMagnitude": null,
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "FinalLookupCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              }
+            },
+            "SetByCallerMagnitude": {
+              "DataName": "None",
+              "DataTag": {
+                "TagName": "None"
+              }
+            }
+          },
+          "EvaluationChannelSettings": {
+            "Channel": "EGameplayModEvaluationChannel::Channel0"
+          },
+          "SourceTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "TargetTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          }
+        },
+        {
+          "Attribute": {
+            "AttributeName": "DamageVulnerability",
+            "Attribute": {
+              "Path": [
+                "DamageVulnerability"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'FortHealthSet'",
+                "ObjectPath": "/Script/FortniteGame"
+              }
+            },
+            "AttributeOwner": {
+              "ObjectName": "Class'FortHealthSet'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          "ModifierOp": "EGameplayModOp::Additive",
+          "ModifierMagnitude": {
+            "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::ScalableFloat",
+            "ScalableFloatMagnitude": {
+              "Value": 0.25,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": "None"
+              },
+              "RegistryType": {
+                "Name": "None"
+              }
+            },
+            "AttributeBasedMagnitude": {
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "BackingAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "",
+                  "Attribute": {
+                    "Path": [],
+                    "ResolvedOwner": null
+                  },
+                  "AttributeOwner": null
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": false
+              },
+              "AttributeCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              },
+              "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+              "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+              "SourceTagFilter": [],
+              "TargetTagFilter": []
+            },
+            "CustomMagnitude": {
+              "CalculationClassMagnitude": null,
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "FinalLookupCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              }
+            },
+            "SetByCallerMagnitude": {
+              "DataName": "None",
+              "DataTag": {
+                "TagName": "None"
+              }
+            }
+          },
+          "EvaluationChannelSettings": {
+            "Channel": "EGameplayModEvaluationChannel::Channel0"
+          },
+          "SourceTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "TargetTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          }
+        }
+      ],
+      "GameplayCues": [
+        {
+          "MagnitudeAttribute": {
+            "AttributeName": "",
+            "Attribute": {
+              "Path": [],
+              "ResolvedOwner": null
+            },
+            "AttributeOwner": null
+          },
+          "MinLevel": 0.0,
+          "MaxLevel": 0.0,
+          "GameplayCueTags": [
+            "GameplayCue.Abilities.Perks.Ninja.NorthStar.MarkedFX"
+          ]
+        },
+        {
+          "MagnitudeAttribute": {
+            "AttributeName": "",
+            "Attribute": {
+              "Path": [],
+              "ResolvedOwner": null
+            },
+            "AttributeOwner": null
+          },
+          "MinLevel": 0.0,
+          "MaxLevel": 0.0,
+          "GameplayCueTags": [
+            "GameplayCue.Abilities.Perks.Ninja.NorthStar.FrozenFX"
+          ]
+        }
+      ],
+      "InheritableGameplayEffectTags": {
+        "CombinedTags": [
+          "Gameplay.Effect.Negative",
+          "Gameplay.Effect.Frozen",
+          "Abilities.Ninja.Perks.NorthStar.Marked"
+        ],
+        "Added": [
+          "Gameplay.Effect.Negative",
+          "Gameplay.Effect.Frozen",
+          "Abilities.Ninja.Perks.NorthStar.Marked"
+        ]
+      },
+      "InheritableOwnedTagsContainer": {
+        "CombinedTags": [
+          "Gameplay.Status.Frozen",
+          "Abilities.Ninja.Perks.NorthStar.Marked"
+        ],
+        "Added": [
+          "Gameplay.Status.Frozen",
+          "Abilities.Ninja.Perks.NorthStar.Marked"
+        ]
+      },
+      "ApplicationTagRequirements": {
+        "IgnoreTags": [
+          "Athena.Faction.STW.Tamed",
+          "NPC.GoalSelection.Wildlife.Tamed",
+          "Athena.Faction.STW.AnimalFriend",
+          "NPC.CharacterType.Survivor",
+          "Class.IsCommando",
+          "Class.IsConstructor",
+          "Class.IsNinja",
+          "Class.IsOutlander",
+          "NPC.CharacterType.Boss",
+          "NPC.CharacterType.MiniBoss"
+        ]
+      },
+      "GEComponents": [
+        {
+          "ObjectName": "AssetTagsGameplayEffectComponent'Default__GE_Perk_H_NorthStar_Freeze_C:AssetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/GE_Perk_H_NorthStar_Freeze.1"
+        },
+        {
+          "ObjectName": "TargetTagRequirementsGameplayEffectComponent'Default__GE_Perk_H_NorthStar_Freeze_C:TargetTagRequirementsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/GE_Perk_H_NorthStar_Freeze.4"
+        },
+        {
+          "ObjectName": "TargetTagsGameplayEffectComponent'Default__GE_Perk_H_NorthStar_Freeze_C:TargetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/GE_Perk_H_NorthStar_Freeze.5"
+        },
+        {
+          "ObjectName": "AbilitiesGameplayEffectComponent'Default__GE_Perk_H_NorthStar_Freeze_C:AbilitiesGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/GE_Perk_H_NorthStar_Freeze.0"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "TargetTagRequirementsGameplayEffectComponent",
+    "Name": "TargetTagRequirementsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TargetTagRequirementsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Perk_H_NorthStar_Freeze_C'Default__GE_Perk_H_NorthStar_Freeze_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/GE_Perk_H_NorthStar_Freeze.3"
+    },
+    "Template": {
+      "ObjectName": "TargetTagRequirementsGameplayEffectComponent'Default__GET_Freeze_Trap_C:TargetTagRequirementsGameplayEffectComponent_0'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/Trap/GET_Freeze_Trap.3"
+    },
+    "Properties": {
+      "ApplicationTagRequirements": {
+        "IgnoreTags": [
+          "Athena.Faction.STW.Tamed",
+          "NPC.GoalSelection.Wildlife.Tamed",
+          "Athena.Faction.STW.AnimalFriend",
+          "NPC.CharacterType.Survivor",
+          "Class.IsCommando",
+          "Class.IsConstructor",
+          "Class.IsNinja",
+          "Class.IsOutlander",
+          "NPC.CharacterType.Boss",
+          "NPC.CharacterType.MiniBoss"
+        ]
+      }
+    }
+  },
+  {
+    "Type": "TargetTagsGameplayEffectComponent",
+    "Name": "TargetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TargetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Perk_H_NorthStar_Freeze_C'Default__GE_Perk_H_NorthStar_Freeze_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/GE_Perk_H_NorthStar_Freeze.3"
+    },
+    "Template": {
+      "ObjectName": "TargetTagsGameplayEffectComponent'Default__GET_Freeze_Trap_C:TargetTagsGameplayEffectComponent_0'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/Trap/GET_Freeze_Trap.4"
+    },
+    "Properties": {
+      "InheritableGrantedTagsContainer": {
+        "CombinedTags": [
+          "Gameplay.Status.Frozen",
+          "Abilities.Ninja.Perks.NorthStar.Marked"
+        ],
+        "Added": [
+          "Gameplay.Status.Frozen",
+          "Abilities.Ninja.Perks.NorthStar.Marked"
+        ]
+      }
+    }
+  }
+]

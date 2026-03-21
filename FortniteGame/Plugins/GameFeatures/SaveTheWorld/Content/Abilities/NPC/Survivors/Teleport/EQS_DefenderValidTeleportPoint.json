@@ -1,0 +1,406 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQS_DefenderValidTeleportPoint",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQuery'",
+    "Properties": {
+      "QueryName": "EQS_DefenderValidTeleportPoint",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption'EQS_DefenderValidTeleportPoint:EnvQueryOption_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.3"
+        },
+        {
+          "ObjectName": "EnvQueryOption'EQS_DefenderValidTeleportPoint:EnvQueryOption_1'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.4"
+        },
+        {
+          "ObjectName": "EnvQueryOption'EQS_DefenderValidTeleportPoint:EnvQueryOption_28'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_Donut",
+    "Name": "EnvQueryGenerator_Donut_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryGenerator_Donut'",
+    "Outer": {
+      "ObjectName": "EnvQuery'EQS_DefenderValidTeleportPoint'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.0"
+    },
+    "Properties": {
+      "InnerRadius": {
+        "DefaultValue": 200.0
+      },
+      "OuterRadius": {
+        "DefaultValue": 512.0
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "PostProjectionVerticalOffset": 128.0,
+        "SerializedChannel": "ECollisionChannel::ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_SimpleGrid",
+    "Name": "EnvQueryGenerator_SimpleGrid_12",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryGenerator_SimpleGrid'",
+    "Outer": {
+      "ObjectName": "EnvQuery'EQS_DefenderValidTeleportPoint'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.0"
+    },
+    "Properties": {
+      "SpaceBetween": {
+        "DefaultValue": 250.0
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "NavigationFilter": {
+          "ObjectName": "Class'RecastFilter_UseDefaultArea'",
+          "ObjectPath": "/Script/NavigationSystem"
+        },
+        "ProjectDown": 115.0,
+        "ProjectUp": 115.0,
+        "ExtentX": 10.0,
+        "SerializedChannel": "ECollisionChannel::ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::None"
+      },
+      "bAutoSortTests": false,
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryOption'",
+    "Outer": {
+      "ObjectName": "EnvQuery'EQS_DefenderValidTeleportPoint'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.0"
+    },
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_Donut'EQS_DefenderValidTeleportPoint:EnvQueryGenerator_Donut_0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Distance'EQS_DefenderValidTeleportPoint:EnvQueryTest_Distance_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.6"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Dot'EQS_DefenderValidTeleportPoint:EnvQueryTest_Dot_2'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.12"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryOption'",
+    "Outer": {
+      "ObjectName": "EnvQuery'EQS_DefenderValidTeleportPoint'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.0"
+    },
+    "Properties": {
+      "Generator": {
+        "ObjectName": "FortQueryGenerator_PointsFromNavGraph'EQS_DefenderValidTeleportPoint:FortQueryGenerator_PointsFromNavGraph_0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.15"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Distance'EQS_DefenderValidTeleportPoint:EnvQueryTest_Distance_1'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.7"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Dot'EQS_DefenderValidTeleportPoint:EnvQueryTest_Dot_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_28",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryOption'",
+    "Outer": {
+      "ObjectName": "EnvQuery'EQS_DefenderValidTeleportPoint'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.0"
+    },
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_SimpleGrid'EQS_DefenderValidTeleportPoint:EnvQueryGenerator_SimpleGrid_12'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.2"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_Distance'EQS_DefenderValidTeleportPoint:EnvQueryTest_Distance_6'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.9"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Project'EQS_DefenderValidTeleportPoint:EnvQueryTest_Project_5'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.14"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Distance'EQS_DefenderValidTeleportPoint:EnvQueryTest_Distance_3'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.8"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Dot'EQS_DefenderValidTeleportPoint:EnvQueryTest_Dot_1'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.11"
+        },
+        {
+          "ObjectName": "EnvQueryTest_Pathfinding'EQS_DefenderValidTeleportPoint:EnvQueryTest_Pathfinding_3'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.13"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryTest_Distance'",
+    "Outer": {
+      "ObjectName": "EnvQuery'EQS_DefenderValidTeleportPoint'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.0"
+    },
+    "Properties": {
+      "TestMode": "EEnvTestDistance::Distance2D",
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "FloatValueMin": {
+        "DefaultValue": 200.0
+      },
+      "FloatValueMax": {
+        "DefaultValue": 500.0
+      },
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "VerNum": 2
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryTest_Distance'",
+    "Outer": {
+      "ObjectName": "EnvQuery'EQS_DefenderValidTeleportPoint'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.0"
+    },
+    "Properties": {
+      "TestMode": "EEnvTestDistance::Distance2D",
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "FloatValueMin": {
+        "DefaultValue": 200.0
+      },
+      "FloatValueMax": {
+        "DefaultValue": 500.0
+      },
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "VerNum": 2
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryTest_Distance'",
+    "Outer": {
+      "ObjectName": "EnvQuery'EQS_DefenderValidTeleportPoint'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.0"
+    },
+    "Properties": {
+      "TestMode": "EEnvTestDistance::Distance2D",
+      "TestOrder": 3,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "FloatValueMin": {
+        "DefaultValue": 200.0
+      },
+      "FloatValueMax": {
+        "DefaultValue": 500.0
+      },
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "VerNum": 2
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Distance",
+    "Name": "EnvQueryTest_Distance_6",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryTest_Distance'",
+    "Outer": {
+      "ObjectName": "EnvQuery'EQS_DefenderValidTeleportPoint'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.0"
+    },
+    "Properties": {
+      "TestMode": "EEnvTestDistance::Distance2D",
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FloatValueMin": {
+        "DefaultValue": 100.0
+      },
+      "FloatValueMax": {
+        "DefaultValue": 500.0
+      },
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "VerNum": 2
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Dot",
+    "Name": "EnvQueryTest_Dot_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryTest_Dot'",
+    "Outer": {
+      "ObjectName": "EnvQuery'EQS_DefenderValidTeleportPoint'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.0"
+    },
+    "Properties": {
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "FloatValueMin": {
+        "DefaultValue": 0.5
+      },
+      "FloatValueMax": {
+        "DefaultValue": 1.0
+      },
+      "ScoringEquation": "EEnvTestScoreEquation::Square",
+      "ScoringFactor": {
+        "DefaultValue": 2.0
+      },
+      "VerNum": 2
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Dot",
+    "Name": "EnvQueryTest_Dot_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryTest_Dot'",
+    "Outer": {
+      "ObjectName": "EnvQuery'EQS_DefenderValidTeleportPoint'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.0"
+    },
+    "Properties": {
+      "TestOrder": 4,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "FloatValueMax": {
+        "DefaultValue": -1.0
+      },
+      "ScoringEquation": "EEnvTestScoreEquation::Square",
+      "VerNum": 2
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Dot",
+    "Name": "EnvQueryTest_Dot_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryTest_Dot'",
+    "Outer": {
+      "ObjectName": "EnvQuery'EQS_DefenderValidTeleportPoint'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.0"
+    },
+    "Properties": {
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "FloatValueMin": {
+        "DefaultValue": 0.5
+      },
+      "FloatValueMax": {
+        "DefaultValue": 1.0
+      },
+      "ScoringEquation": "EEnvTestScoreEquation::Square",
+      "ScoringFactor": {
+        "DefaultValue": 2.0
+      },
+      "VerNum": 2
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Pathfinding",
+    "Name": "EnvQueryTest_Pathfinding_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryTest_Pathfinding'",
+    "Outer": {
+      "ObjectName": "EnvQuery'EQS_DefenderValidTeleportPoint'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.0"
+    },
+    "Properties": {
+      "TestMode": "EEnvTestPathfinding::PathLength",
+      "PathFromContext": {
+        "DefaultValue": false
+      },
+      "TestOrder": 5,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FilterType": "EEnvTestFilterType::Maximum",
+      "ScoringEquation": "EEnvTestScoreEquation::Linear",
+      "ScoringFactor": {
+        "DefaultValue": 0.0
+      },
+      "bWorkOnFloatValues": true,
+      "VerNum": 2
+    }
+  },
+  {
+    "Type": "EnvQueryTest_Project",
+    "Name": "EnvQueryTest_Project_5",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'EnvQueryTest_Project'",
+    "Outer": {
+      "ObjectName": "EnvQuery'EQS_DefenderValidTeleportPoint'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.0"
+    },
+    "Properties": {
+      "ProjectionData": {
+        "ProjectDown": 400.0,
+        "ProjectUp": 115.0,
+        "ExtentX": 35.0,
+        "ExtentZ": 75.0,
+        "PostProjectionVerticalOffset": 50.0,
+        "TraceChannel": "ETraceTypeQuery::TraceTypeQuery10",
+        "SerializedChannel": "ECollisionChannel::ECC_GameTraceChannel11",
+        "TraceMode": "EEnvQueryTrace::GeometryByChannel",
+        "bTraceComplex": true
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "VerNum": 2
+    }
+  },
+  {
+    "Type": "FortQueryGenerator_PointsFromNavGraph",
+    "Name": "FortQueryGenerator_PointsFromNavGraph_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortQueryGenerator_PointsFromNavGraph'",
+    "Outer": {
+      "ObjectName": "EnvQuery'EQS_DefenderValidTeleportPoint'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/Survivors/Teleport/EQS_DefenderValidTeleportPoint.0"
+    },
+    "Properties": {
+      "MinPathDistance": {
+        "DefaultValue": 100.0
+      },
+      "MaxPathDistance": {
+        "DefaultValue": 1500.0
+      },
+      "bOnlyFlatSurface": false,
+      "bUseHeightCheck": false,
+      "bFilterAllowBuildings": true,
+      "bFilterAllowClimbup": false,
+      "bFilterAllowSmash": false,
+      "ProjectionData": {
+        "VersionNum": 1,
+        "SerializedChannel": "ECollisionChannel::ECC_Visibility"
+      },
+      "VerNum": 1
+    }
+  }
+]

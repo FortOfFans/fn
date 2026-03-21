@@ -1,0 +1,680 @@
+[
+  {
+    "Type": "AssetTagsGameplayEffectComponent",
+    "Name": "AssetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AssetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Perk_H_PokingHoles_Ice_C'Default__GE_Perk_H_PokingHoles_Ice_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PokingHoles/GE_Perk_H_PokingHoles_Ice.2"
+    },
+    "Template": {
+      "ObjectName": "AssetTagsGameplayEffectComponent'Default__GET_PeriodicIceDamage_C:AssetTagsGameplayEffectComponent_0'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_PeriodicIceDamage.0"
+    },
+    "Properties": {
+      "InheritableAssetTags": {
+        "CombinedTags": [
+          "Gameplay.Damage",
+          "Gameplay.Effect.Periodic",
+          "Gameplay.Effect.Negative",
+          "Gameplay.Status.Afflicted",
+          "Gameplay.Damage.Elemental",
+          "Gameplay.Damage.Elemental.Ice",
+          "Asset.PerkEffect.PokingHoles.Affliction"
+        ],
+        "Added": [
+          "Asset.PerkEffect.PokingHoles.Affliction"
+        ]
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Perk_H_PokingHoles_Ice_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GET_PeriodicIceDamage_C'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_PeriodicIceDamage.1"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_Perk_H_PokingHoles_Ice_C'Default__GE_Perk_H_PokingHoles_Ice_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PokingHoles/GE_Perk_H_PokingHoles_Ice.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_Perk_H_PokingHoles_Ice_C",
+    "Name": "Default__GE_Perk_H_PokingHoles_Ice_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Perks/Hero/PokingHoles/GE_Perk_H_PokingHoles_Ice.GE_Perk_H_PokingHoles_Ice_C'",
+    "Template": {
+      "ObjectName": "GET_PeriodicIceDamage_C'Default__GET_PeriodicIceDamage_C'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_PeriodicIceDamage.2"
+    },
+    "Properties": {
+      "DurationMagnitude": {
+        "ScalableFloatMagnitude": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+              "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+            },
+            "RowName": "Perk.PokingHoles.T02.AfflictionDuration"
+          }
+        }
+      },
+      "Period": {
+        "Value": 1.0
+      },
+      "bExecutePeriodicEffectOnApplication": false,
+      "Executions": [
+        {
+          "CalculationClass": {
+            "ObjectName": "Class'FortDamageFormulaExecutionCalculation'",
+            "ObjectPath": "/Script/FortniteGame"
+          },
+          "PassedInTags": [],
+          "CalculationModifiers": [
+            {
+              "CapturedAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "OutgoingBaseImpactDamage",
+                  "Attribute": {
+                    "Path": [
+                      "OutgoingBaseImpactDamage"
+                    ],
+                    "ResolvedOwner": {
+                      "ObjectName": "Class'FortDamageSet'",
+                      "ObjectPath": "/Script/FortniteGame"
+                    }
+                  },
+                  "AttributeOwner": {
+                    "ObjectName": "Class'FortDamageSet'",
+                    "ObjectPath": "/Script/FortniteGame"
+                  }
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": true
+              },
+              "TransientAggregatorIdentifier": {
+                "TagName": "None"
+              },
+              "AggregatorType": "EGameplayEffectScopedModifierAggregatorType::CapturedAttributeBacked",
+              "ModifierOp": "EGameplayModOp::Override",
+              "ModifierMagnitude": {
+                "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::ScalableFloat",
+                "ScalableFloatMagnitude": {
+                  "Value": 0.0,
+                  "Curve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  },
+                  "RegistryType": {
+                    "Name": "None"
+                  }
+                },
+                "AttributeBasedMagnitude": {
+                  "Coefficient": {
+                    "Value": 1.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PreMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PostMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "BackingAttribute": {
+                    "AttributeToCapture": {
+                      "AttributeName": "",
+                      "Attribute": {
+                        "Path": [],
+                        "ResolvedOwner": null
+                      },
+                      "AttributeOwner": null
+                    },
+                    "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                    "bSnapshot": false
+                  },
+                  "AttributeCurve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  },
+                  "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+                  "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+                  "SourceTagFilter": [],
+                  "TargetTagFilter": []
+                },
+                "CustomMagnitude": {
+                  "CalculationClassMagnitude": null,
+                  "Coefficient": {
+                    "Value": 1.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PreMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PostMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "FinalLookupCurve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  }
+                },
+                "SetByCallerMagnitude": {
+                  "DataName": "None",
+                  "DataTag": {
+                    "TagName": "None"
+                  }
+                }
+              },
+              "EvaluationChannelSettings": {
+                "Channel": "EGameplayModEvaluationChannel::Channel0"
+              },
+              "SourceTags": {
+                "RequireTags": [],
+                "IgnoreTags": [],
+                "TagQuery": {
+                  "TokenStreamVersion": 0,
+                  "TagDictionary": [],
+                  "QueryTokenStream": [],
+                  "UserDescription": "",
+                  "AutoDescription": ""
+                }
+              },
+              "TargetTags": {
+                "RequireTags": [],
+                "IgnoreTags": [],
+                "TagQuery": {
+                  "TokenStreamVersion": 0,
+                  "TagDictionary": [],
+                  "QueryTokenStream": [],
+                  "UserDescription": "",
+                  "AutoDescription": ""
+                }
+              }
+            },
+            {
+              "CapturedAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "ZoneCritMultiplier",
+                  "Attribute": {
+                    "Path": [
+                      "ZoneCritMultiplier"
+                    ],
+                    "ResolvedOwner": {
+                      "ObjectName": "Class'FortDamageSet'",
+                      "ObjectPath": "/Script/FortniteGame"
+                    }
+                  },
+                  "AttributeOwner": {
+                    "ObjectName": "Class'FortDamageSet'",
+                    "ObjectPath": "/Script/FortniteGame"
+                  }
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": true
+              },
+              "TransientAggregatorIdentifier": {
+                "TagName": "None"
+              },
+              "AggregatorType": "EGameplayEffectScopedModifierAggregatorType::CapturedAttributeBacked",
+              "ModifierOp": "EGameplayModOp::Override",
+              "ModifierMagnitude": {
+                "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::ScalableFloat",
+                "ScalableFloatMagnitude": {
+                  "Value": 1.0,
+                  "Curve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  },
+                  "RegistryType": {
+                    "Name": "None"
+                  }
+                },
+                "AttributeBasedMagnitude": {
+                  "Coefficient": {
+                    "Value": 1.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PreMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PostMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "BackingAttribute": {
+                    "AttributeToCapture": {
+                      "AttributeName": "",
+                      "Attribute": {
+                        "Path": [],
+                        "ResolvedOwner": null
+                      },
+                      "AttributeOwner": null
+                    },
+                    "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                    "bSnapshot": false
+                  },
+                  "AttributeCurve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  },
+                  "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+                  "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+                  "SourceTagFilter": [],
+                  "TargetTagFilter": []
+                },
+                "CustomMagnitude": {
+                  "CalculationClassMagnitude": null,
+                  "Coefficient": {
+                    "Value": 1.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PreMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PostMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "FinalLookupCurve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  }
+                },
+                "SetByCallerMagnitude": {
+                  "DataName": "None",
+                  "DataTag": {
+                    "TagName": "None"
+                  }
+                }
+              },
+              "EvaluationChannelSettings": {
+                "Channel": "EGameplayModEvaluationChannel::Channel0"
+              },
+              "SourceTags": {
+                "RequireTags": [],
+                "IgnoreTags": [],
+                "TagQuery": {
+                  "TokenStreamVersion": 0,
+                  "TagDictionary": [],
+                  "QueryTokenStream": [],
+                  "UserDescription": "",
+                  "AutoDescription": ""
+                }
+              },
+              "TargetTags": {
+                "RequireTags": [],
+                "IgnoreTags": [],
+                "TagQuery": {
+                  "TokenStreamVersion": 0,
+                  "TagDictionary": [],
+                  "QueryTokenStream": [],
+                  "UserDescription": "",
+                  "AutoDescription": ""
+                }
+              }
+            },
+            {
+              "CapturedAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "OutgoingAbilityDamage",
+                  "Attribute": {
+                    "Path": [
+                      "OutgoingAbilityDamage"
+                    ],
+                    "ResolvedOwner": {
+                      "ObjectName": "Class'FortDamageSet'",
+                      "ObjectPath": "/Script/FortniteGame"
+                    }
+                  },
+                  "AttributeOwner": {
+                    "ObjectName": "Class'FortDamageSet'",
+                    "ObjectPath": "/Script/FortniteGame"
+                  }
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": true
+              },
+              "TransientAggregatorIdentifier": {
+                "TagName": "None"
+              },
+              "AggregatorType": "EGameplayEffectScopedModifierAggregatorType::CapturedAttributeBacked",
+              "ModifierOp": "EGameplayModOp::Additive",
+              "ModifierMagnitude": {
+                "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::SetByCaller",
+                "ScalableFloatMagnitude": {
+                  "Value": 0.0,
+                  "Curve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  },
+                  "RegistryType": {
+                    "Name": "None"
+                  }
+                },
+                "AttributeBasedMagnitude": {
+                  "Coefficient": {
+                    "Value": 1.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PreMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PostMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "BackingAttribute": {
+                    "AttributeToCapture": {
+                      "AttributeName": "",
+                      "Attribute": {
+                        "Path": [],
+                        "ResolvedOwner": null
+                      },
+                      "AttributeOwner": null
+                    },
+                    "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                    "bSnapshot": false
+                  },
+                  "AttributeCurve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  },
+                  "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+                  "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+                  "SourceTagFilter": [],
+                  "TargetTagFilter": []
+                },
+                "CustomMagnitude": {
+                  "CalculationClassMagnitude": null,
+                  "Coefficient": {
+                    "Value": 1.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PreMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PostMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "FinalLookupCurve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  }
+                },
+                "SetByCallerMagnitude": {
+                  "DataName": "None",
+                  "DataTag": {
+                    "TagName": "SetByCaller.AbilityDamage"
+                  }
+                }
+              },
+              "EvaluationChannelSettings": {
+                "Channel": "EGameplayModEvaluationChannel::Channel0"
+              },
+              "SourceTags": {
+                "RequireTags": [],
+                "IgnoreTags": [],
+                "TagQuery": {
+                  "TokenStreamVersion": 0,
+                  "TagDictionary": [],
+                  "QueryTokenStream": [],
+                  "UserDescription": "",
+                  "AutoDescription": ""
+                }
+              },
+              "TargetTags": {
+                "RequireTags": [],
+                "IgnoreTags": [],
+                "TagQuery": {
+                  "TokenStreamVersion": 0,
+                  "TagDictionary": [],
+                  "QueryTokenStream": [],
+                  "UserDescription": "",
+                  "AutoDescription": ""
+                }
+              }
+            }
+          ],
+          "ConditionalGameplayEffects": []
+        }
+      ],
+      "GameplayCues": [
+        {
+          "MagnitudeAttribute": {
+            "AttributeName": "Damage",
+            "Attribute": {
+              "Path": [
+                "Damage"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'FortHealthSet'",
+                "ObjectPath": "/Script/FortniteGame"
+              }
+            },
+            "AttributeOwner": {
+              "ObjectName": "Class'FortHealthSet'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          "MinLevel": 0.0,
+          "MaxLevel": 0.0,
+          "GameplayCueTags": [
+            "GameplayCue.Damage.Elemental.Ice",
+            "GameplayCue.Elemental.Ice.IceFX"
+          ]
+        }
+      ],
+      "InheritableGameplayEffectTags": {
+        "CombinedTags": [
+          "Gameplay.Damage",
+          "Gameplay.Effect.Periodic",
+          "Gameplay.Effect.Negative",
+          "Gameplay.Status.Afflicted",
+          "Gameplay.Damage.Elemental",
+          "Gameplay.Damage.Elemental.Ice",
+          "Asset.PerkEffect.PokingHoles.Affliction"
+        ],
+        "Added": [
+          "Asset.PerkEffect.PokingHoles.Affliction"
+        ]
+      },
+      "InheritableOwnedTagsContainer": {
+        "CombinedTags": [
+          "Gameplay.Status.Afflicted",
+          "Gameplay.Status.Afflicted.Elemental.Ice",
+          "Granted.PerkEffect.PokingHoles.Affliction"
+        ],
+        "Added": [
+          "Granted.PerkEffect.PokingHoles.Affliction"
+        ]
+      },
+      "GEComponents": [
+        {
+          "ObjectName": "AssetTagsGameplayEffectComponent'Default__GE_Perk_H_PokingHoles_Ice_C:AssetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PokingHoles/GE_Perk_H_PokingHoles_Ice.0"
+        },
+        {
+          "ObjectName": "TargetTagRequirementsGameplayEffectComponent'Default__GE_Perk_H_PokingHoles_Ice_C:TargetTagRequirementsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PokingHoles/GE_Perk_H_PokingHoles_Ice.3"
+        },
+        {
+          "ObjectName": "TargetTagsGameplayEffectComponent'Default__GE_Perk_H_PokingHoles_Ice_C:TargetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PokingHoles/GE_Perk_H_PokingHoles_Ice.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "TargetTagRequirementsGameplayEffectComponent",
+    "Name": "TargetTagRequirementsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TargetTagRequirementsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Perk_H_PokingHoles_Ice_C'Default__GE_Perk_H_PokingHoles_Ice_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PokingHoles/GE_Perk_H_PokingHoles_Ice.2"
+    },
+    "Template": {
+      "ObjectName": "TargetTagRequirementsGameplayEffectComponent'Default__GET_PeriodicIceDamage_C:TargetTagRequirementsGameplayEffectComponent_0'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_PeriodicIceDamage.3"
+    }
+  },
+  {
+    "Type": "TargetTagsGameplayEffectComponent",
+    "Name": "TargetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TargetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Perk_H_PokingHoles_Ice_C'Default__GE_Perk_H_PokingHoles_Ice_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/PokingHoles/GE_Perk_H_PokingHoles_Ice.2"
+    },
+    "Template": {
+      "ObjectName": "TargetTagsGameplayEffectComponent'Default__GET_PeriodicIceDamage_C:TargetTagsGameplayEffectComponent_0'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_PeriodicIceDamage.4"
+    },
+    "Properties": {
+      "InheritableGrantedTagsContainer": {
+        "CombinedTags": [
+          "Gameplay.Status.Afflicted",
+          "Gameplay.Status.Afflicted.Elemental.Ice",
+          "Granted.PerkEffect.PokingHoles.Affliction"
+        ],
+        "Added": [
+          "Granted.PerkEffect.PokingHoles.Affliction"
+        ]
+      }
+    }
+  }
+]

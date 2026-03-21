@@ -1,0 +1,1067 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_Perk_H_DeadDrop_T01_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GAT_GenericTriggeredAbility_Perk_C'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_GenericTriggeredAbility_Perk.0"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'GA_Perk_H_DeadDrop_T01_C:ExecuteUbergraph_GA_Perk_H_DeadDrop_T01'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/DeadDrop/GA_Perk_H_DeadDrop_T01.2"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'GA_Perk_H_DeadDrop_T01_C:CheckQuota'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/DeadDrop/GA_Perk_H_DeadDrop_T01.1"
+      },
+      {
+        "ObjectName": "Function'GA_Perk_H_DeadDrop_T01_C:TriggeredAbilitySetup'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/DeadDrop/GA_Perk_H_DeadDrop_T01.5"
+      },
+      {
+        "ObjectName": "Function'GA_Perk_H_DeadDrop_T01_C:K2_ShouldAbilityRespondToEvent'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/DeadDrop/GA_Perk_H_DeadDrop_T01.4"
+      },
+      {
+        "ObjectName": "Function'GA_Perk_H_DeadDrop_T01_C:K2_ActivateAbilityFromEvent'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/DeadDrop/GA_Perk_H_DeadDrop_T01.3"
+      },
+      {
+        "ObjectName": "Function'GA_Perk_H_DeadDrop_T01_C:ExecuteUbergraph_GA_Perk_H_DeadDrop_T01'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/DeadDrop/GA_Perk_H_DeadDrop_T01.2"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_HarvestResources",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_AMC",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_Building",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "LootTierMap",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 80,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "KeyProp": {
+          "Type": "NameProperty",
+          "Name": "LootTierMap",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        },
+        "ValueProp": {
+          "Type": "NameProperty",
+          "Name": "LootTierMap_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "StreakBreakerMaxValue",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "T01_ChanceToDrop",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'ScalableFloat'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "T02_ChanceToDrop",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 56,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'ScalableFloat'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_T02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "HasT02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "DestructionQuota",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "DestructionQuota",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_Perk_H_DeadDrop_T01": {
+        "ObjectName": "Function'GA_Perk_H_DeadDrop_T01_C:ExecuteUbergraph_GA_Perk_H_DeadDrop_T01'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/DeadDrop/GA_Perk_H_DeadDrop_T01.2"
+      },
+      "K2_ActivateAbilityFromEvent": {
+        "ObjectName": "Function'GA_Perk_H_DeadDrop_T01_C:K2_ActivateAbilityFromEvent'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/DeadDrop/GA_Perk_H_DeadDrop_T01.3"
+      },
+      "K2_ShouldAbilityRespondToEvent": {
+        "ObjectName": "Function'GA_Perk_H_DeadDrop_T01_C:K2_ShouldAbilityRespondToEvent'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/DeadDrop/GA_Perk_H_DeadDrop_T01.4"
+      },
+      "TriggeredAbilitySetup": {
+        "ObjectName": "Function'GA_Perk_H_DeadDrop_T01_C:TriggeredAbilitySetup'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/DeadDrop/GA_Perk_H_DeadDrop_T01.5"
+      },
+      "CheckQuota": {
+        "ObjectName": "Function'GA_Perk_H_DeadDrop_T01_C:CheckQuota'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/DeadDrop/GA_Perk_H_DeadDrop_T01.1"
+      }
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GA_Perk_H_DeadDrop_T01_C'Default__GA_Perk_H_DeadDrop_T01_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/DeadDrop/GA_Perk_H_DeadDrop_T01.6"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "CheckQuota",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Perk_H_DeadDrop_T01_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/DeadDrop/GA_Perk_H_DeadDrop_T01.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "TierGroupName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Temp_bool_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Conv_NameToString_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_Contains_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Conv_StringToName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_Select_Default",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_Perk_H_DeadDrop_T01",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Perk_H_DeadDrop_T01_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/DeadDrop/GA_Perk_H_DeadDrop_T01.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetFortPlayerControllerFromActor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPlayerController'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetLootLevel_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_EventData",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBuilding_Prop",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'BuildingProp'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_FindDestructionLootTier_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAbilitySystemComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_GetDestructionLootTierGroup_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_TriggeredAbilitySetup_AbilitySystemOut",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_CheckQuota_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasDestructionLoot_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_PickLootDrops_OutLootToDrop",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "CallFunc_PickLootDrops_OutLootToDrop",
+          "Flags": "RF_Public",
+          "ElementSize": 344,
+          "Struct": {
+            "ObjectName": "Class'FortItemEntry'",
+            "ObjectPath": "/Script/FortniteGame"
+          }
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_PickLootDrops_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 344,
+        "Struct": {
+          "ObjectName": "Class'FortItemEntry'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakFortItemEntry_ItemDefinition",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'ItemDefinitionBase'",
+          "ObjectPath": "/Script/ItemizationCoreRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakFortItemEntry_ItemGuid",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'Guid'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakFortItemEntry_Count",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakFortItemEntry_Level",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakFortItemEntry_LoadedAmmo",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakFortItemEntry_PhantomReserveAmmo",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_World_Item_Definition",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortWorldItemDefinition'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GiveItemToInventoryOwner_InventoryOwner_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'FortInventoryOwnerInterface'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GiveItemToInventoryOwner_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm",
+        "PropertyClass": {
+          "ObjectName": "Class'FortWorldItem'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_CheckStreak_StreakCount",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CheckStreak_StreakMaxed",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_EvaluatePerkTierBalanceValue_Balance_Value",
+        "Flags": "RF_Public",
+        "ElementSize": 56,
+        "Struct": {
+          "ObjectName": "Class'ScalableFloat'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Temp_int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetValueAtLevel_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_CalcStreakBreakerThreshold_Streak_Breaker_Threshold",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_CalcStreakBreakerThreshold_PROC_Chance__0_1__ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_B_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbilityFromEvent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Perk_H_DeadDrop_T01_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/DeadDrop/GA_Perk_H_DeadDrop_T01.0"
+    },
+    "Super": {
+      "ObjectName": "Function'GAT_GenericTriggeredAbility_Perk_C:K2_ActivateAbilityFromEvent'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_GenericTriggeredAbility_Perk.7"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "EventData",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Struct": {
+          "ObjectName": "Class'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ShouldAbilityRespondToEvent",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Perk_H_DeadDrop_T01_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/DeadDrop/GA_Perk_H_DeadDrop_T01.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayAbility:K2_ShouldAbilityRespondToEvent'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ActorInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'GameplayAbilityActorInfo'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Payload",
+        "Flags": "RF_Public",
+        "ElementSize": 184,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'GameplayEventData'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllTags_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllTags_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_OnSameTeam_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllTags_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "TriggeredAbilitySetup",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_Perk_H_DeadDrop_T01_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/DeadDrop/GA_Perk_H_DeadDrop_T01.0"
+    },
+    "Super": {
+      "ObjectName": "Function'GAT_TriggeredAbility_C:TriggeredAbilitySetup'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_TriggeredAbility.5"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "AbilitySystemIn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "AbilitySystemOut",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_TriggeredAbilitySetup_AbilitySystemOut",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GA_Perk_H_DeadDrop_T01_C",
+    "Name": "Default__GA_Perk_H_DeadDrop_T01_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Perks/Hero/DeadDrop/GA_Perk_H_DeadDrop_T01.GA_Perk_H_DeadDrop_T01_C'",
+    "Template": {
+      "ObjectName": "GAT_GenericTriggeredAbility_Perk_C'Default__GAT_GenericTriggeredAbility_Perk_C'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_GenericTriggeredAbility_Perk.9"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "TC_HarvestResources": [
+        "Gameplay.Effect.HarvestResources"
+      ],
+      "TC_AMC": [
+        "Asset.AbilityGroup.Hero.Outlander.AntiMaterialCharge"
+      ],
+      "TC_Building": [
+        "Building"
+      ],
+      "LootTierMap": [
+        {
+          "Key": "Destruction_Crystal",
+          "Value": "Destruction_Crystal_BonusAMC"
+        },
+        {
+          "Key": "Destruction_DogHouse",
+          "Value": "Destruction_DogHouse_BonusAMC"
+        },
+        {
+          "Key": "Destruction_Gnome",
+          "Value": "Destruction_Gnome_BonusAMC"
+        },
+        {
+          "Key": "Destruction_MechanicalHigh",
+          "Value": "Destruction_Mechanical_BonusAMC"
+        },
+        {
+          "Key": "Destruction_MechanicalLow",
+          "Value": "Destruction_Mechanical_BonusAMC"
+        },
+        {
+          "Key": "Destruction_MechanicalMedium",
+          "Value": "Destruction_Mechanical_BonusAMC"
+        },
+        {
+          "Key": "Destruction_Mushroom",
+          "Value": "Destruction_Mushroom_BonusAMC"
+        },
+        {
+          "Key": "Destruction_Ore_MetalHigh",
+          "Value": "Destruction_Ore_Metal_BonusAMC"
+        },
+        {
+          "Key": "Destruction_Ore_MetalLow",
+          "Value": "Destruction_Ore_Metal_BonusAMC"
+        },
+        {
+          "Key": "Destruction_Ore_MetalMedium",
+          "Value": "Destruction_Ore_Metal_BonusAMC"
+        },
+        {
+          "Key": "Destruction_CopperHigh",
+          "Value": "Destruction_Copper_BonusAMC"
+        },
+        {
+          "Key": "Destruction_CopperMedium",
+          "Value": "Destruction_Copper_BonusAMC"
+        },
+        {
+          "Key": "Destruction_OreHigh",
+          "Value": "Destruction_OreHigh"
+        },
+        {
+          "Key": "Destruction_OreMedium",
+          "Value": "Destruction_OreMedium"
+        },
+        {
+          "Key": "Destruction_RefinedMetalHigh",
+          "Value": "Destruction_RefinedMetal_BonusAMC"
+        },
+        {
+          "Key": "Destruction_RefinedMetalLow",
+          "Value": "Destruction_RefinedMetal_BonusAMC"
+        },
+        {
+          "Key": "Destruction_RefinedMetalMedium",
+          "Value": "Destruction_RefinedMetal_BonusAMC"
+        },
+        {
+          "Key": "Destruction_RefinedStoneHigh",
+          "Value": "Destruction_RefinedStone_BonusAMC"
+        },
+        {
+          "Key": "Destruction_RefinedStoneLow",
+          "Value": "Destruction_RefinedStone_BonusAMC"
+        },
+        {
+          "Key": "Destruction_RefinedStoneMedium",
+          "Value": "Destruction_RefinedStone_BonusAMC"
+        },
+        {
+          "Key": "Destruction_RefinedWoodHigh",
+          "Value": "Destruction_RefinedWood_BonusAMC"
+        },
+        {
+          "Key": "Destruction_RefinedWoodLow",
+          "Value": "Destruction_RefinedWood_BonusAMC"
+        },
+        {
+          "Key": "Destruction_RefinedWoodMedium",
+          "Value": "Destruction_RefinedWood_BonusAMC"
+        },
+        {
+          "Key": "Destruction_StoneHigh",
+          "Value": "Destruction_Stone_BonusAMC"
+        },
+        {
+          "Key": "Destruction_StoneLow",
+          "Value": "Destruction_Stone_BonusAMC"
+        },
+        {
+          "Key": "Destruction_StoneMedium",
+          "Value": "Destruction_Stone_BonusAMC"
+        },
+        {
+          "Key": "Destruction_TreeHigh",
+          "Value": "Destruction_Tree_BonusAMC"
+        },
+        {
+          "Key": "Destruction_TreeLow",
+          "Value": "Destruction_Tree_BonusAMC"
+        },
+        {
+          "Key": "Destruction_TreeMedium",
+          "Value": "Destruction_Tree_BonusAMC"
+        }
+      ],
+      "T01_ChanceToDrop": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+            "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+          },
+          "RowName": "Perk.DeadDrop.T01.ProcChance"
+        },
+        "RegistryType": {
+          "Name": "None"
+        }
+      },
+      "T02_ChanceToDrop": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+            "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+          },
+          "RowName": "Perk.DeadDrop.T02.ProcChance"
+        },
+        "RegistryType": {
+          "Name": "None"
+        }
+      },
+      "TC_T02": [
+        "Granted.Perk.DeadDrop.T02"
+      ],
+      "DestructionQuota": [
+        "Destruction_OreMedium",
+        "Destruction_OreHigh"
+      ],
+      "AbilityTriggers": [
+        {
+          "TriggerTag": {
+            "TagName": "Event.Damage.Killed"
+          },
+          "TriggerSource": "EGameplayAbilityTriggerSource::GameplayEvent"
+        }
+      ]
+    }
+  }
+]

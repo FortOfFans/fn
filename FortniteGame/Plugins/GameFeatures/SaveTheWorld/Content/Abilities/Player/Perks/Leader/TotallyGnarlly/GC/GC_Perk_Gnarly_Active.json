@@ -1,0 +1,379 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GC_Perk_Gnarly_Active_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'GC_Perk_Gnarly_Active_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GC/GC_Perk_Gnarly_Active.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortGameplayCueNotify_Loop'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "TC_GnarlyActive",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "GC_Self",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ApplicationBurstFX",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 344,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'FortBurstEffectData'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GC_Perk_Gnarly_Active_C'Default__GC_Perk_Gnarly_Active_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GC/GC_Perk_Gnarly_Active.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GC_Perk_Gnarly_Active_C",
+    "Name": "Default__GC_Perk_Gnarly_Active_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GC/GC_Perk_Gnarly_Active.GC_Perk_Gnarly_Active_C'",
+    "Properties": {
+      "TC_GnarlyActive": [
+        "Granted.PerkEffect.TotallyGnarly.Active"
+      ],
+      "GC_Self": {
+        "TagName": "GameplayCue.Perk.Gnarly.Active"
+      },
+      "ApplicationBurstFX": {
+        "BurstParticles": [
+          {
+            "Condition": {
+              "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+              "AllowedSurfaces": [],
+              "DisallowedSurfaces": [],
+              "ChanceToPlay": 1.0,
+              "Significance": "EParticleSignificanceLevel::High",
+              "RequiredDetailMode": 0,
+              "bRequireVisible": false
+            },
+            "Attachment": {
+              "SocketName": "None",
+              "AttachType": "EFortGameplayCueAttachType::DoNotAttach",
+              "bAttachToWeapon": false,
+              "bAttachToHitResult": false,
+              "bUseUnsmoothedNetworkPosition": false,
+              "bIgnoreLocation": false,
+              "bIgnoreScale": true,
+              "bIgnoreRotation": false,
+              "OverrideLocation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "OverrideScale": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "OverrideRotation": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            "FXType": "EFXType::GenericAnimNotify",
+            "NiagaraSystem": null,
+            "ParticleSystem": {
+              "ObjectName": "ParticleSystem'P_GnarlyBuff_Rings'",
+              "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/FX/P_GnarlyBuff_Rings.38"
+            },
+            "bUseComponentPool": true,
+            "bCastShadow": false,
+            "bOverrideCondition": false,
+            "bOverrideAttachment": false
+          }
+        ],
+        "BurstSounds": [],
+        "BurstCameraShake": {
+          "Shake": null,
+          "Scale": 1.0,
+          "PlaySpace": "ECameraShakePlaySpace::CameraLocal",
+          "UserPlaySpaceRotation": {
+            "Pitch": 0.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "bAlwaysPlayOnTarget": true,
+          "bCalculateUserPlaySpaceRotationFromLocation": false,
+          "bCancelOnRemove": false,
+          "Falloff": {
+            "InnerRadius": 0.0,
+            "OuterRadius": 0.0
+          }
+        },
+        "BurstCameraLensEffect": {
+          "CameraLensEffect": null,
+          "Falloff": {
+            "InnerRadius": 0.0,
+            "OuterRadius": 0.0
+          },
+          "bAlwaysPlayOnTarget": true,
+          "bCancelOnRemove": false,
+          "bPooled": false
+        },
+        "BurstForceFeedbackEffect": {
+          "ForceFeedbackEffect": null,
+          "EffectRadius": 100.0,
+          "FarForceFeedbackEffect": null,
+          "FarEffectRadius": 0.0,
+          "EffectTag": "None",
+          "bAlwaysPlayOnTarget": true
+        },
+        "BurstDecal": {
+          "Condition": {
+            "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+            "AllowedSurfaces": [],
+            "DisallowedSurfaces": [],
+            "ChanceToPlay": 1.0,
+            "Significance": "EParticleSignificanceLevel::High",
+            "RequiredDetailMode": 0,
+            "bRequireVisible": false
+          },
+          "Attachment": {
+            "SocketName": "None",
+            "AttachType": "EFortGameplayCueAttachType::DoNotAttach",
+            "bAttachToWeapon": false,
+            "bAttachToHitResult": false,
+            "bUseUnsmoothedNetworkPosition": false,
+            "bIgnoreLocation": false,
+            "bIgnoreScale": true,
+            "bIgnoreRotation": false,
+            "OverrideLocation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "OverrideScale": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            },
+            "OverrideRotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            }
+          },
+          "bOverrideCondition": false,
+          "bOverrideAttachment": false,
+          "bOverrideFadeOut": false,
+          "Decal": null,
+          "FadeOutStartDelay": 0.0,
+          "FadeOutDuration": 0.0
+        },
+        "bCancelSoundsOnRemove": false,
+        "bCancelParticlesOnRemove": false
+      },
+      "ApplicationBurst": {
+        "BurstParticles": [
+          {
+            "Condition": {
+              "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+              "AllowedSurfaces": [],
+              "DisallowedSurfaces": [],
+              "ChanceToPlay": 1.0,
+              "Significance": "EParticleSignificanceLevel::High",
+              "RequiredDetailMode": 0,
+              "bRequireVisible": false
+            },
+            "Attachment": {
+              "SocketName": "FX_Chest",
+              "AttachType": "EFortGameplayCueAttachType::AttachToTarget",
+              "bAttachToWeapon": false,
+              "bAttachToHitResult": false,
+              "bUseUnsmoothedNetworkPosition": false,
+              "bIgnoreLocation": false,
+              "bIgnoreScale": true,
+              "bIgnoreRotation": true,
+              "OverrideLocation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0
+              },
+              "OverrideScale": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              },
+              "OverrideRotation": {
+                "Pitch": 0.0,
+                "Yaw": 0.0,
+                "Roll": 0.0
+              }
+            },
+            "FXType": "EFXType::GenericAnimNotify",
+            "NiagaraSystem": null,
+            "ParticleSystem": {
+              "ObjectName": "ParticleSystem'P_GnarlyBuff_Rings'",
+              "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/FX/P_GnarlyBuff_Rings.38"
+            },
+            "bUseComponentPool": true,
+            "bCastShadow": false,
+            "bOverrideCondition": false,
+            "bOverrideAttachment": true
+          }
+        ]
+      },
+      "LoopingParticles": [
+        {
+          "Condition": {
+            "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+            "AllowedSurfaces": [],
+            "DisallowedSurfaces": [],
+            "ChanceToPlay": 1.0,
+            "Significance": "EParticleSignificanceLevel::High",
+            "RequiredDetailMode": 0,
+            "bRequireVisible": false
+          },
+          "Attachment": {
+            "SocketName": "FX_Chest",
+            "AttachType": "EFortGameplayCueAttachType::AttachToTarget",
+            "bAttachToWeapon": false,
+            "bAttachToHitResult": false,
+            "bUseUnsmoothedNetworkPosition": false,
+            "bIgnoreLocation": false,
+            "bIgnoreScale": true,
+            "bIgnoreRotation": true,
+            "OverrideLocation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "OverrideScale": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            },
+            "OverrideRotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            }
+          },
+          "FXType": "EFXType::GenericAnimNotify",
+          "NiagaraSystem": null,
+          "ParticleSystem": {
+            "ObjectName": "ParticleSystem'P_GnarlyBuff_Persistent'",
+            "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/FX/P_GnarlyBuff_Persistent.57"
+          },
+          "bUseComponentPool": true,
+          "bCastShadow": false,
+          "bOverrideCondition": false,
+          "bOverrideAttachment": true
+        }
+      ],
+      "DefaultAttachment": {
+        "AttachType": "EFortGameplayCueAttachType::AttachToTarget"
+      },
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Perk.Gnarly.Active"
+      },
+      "GameplayCueName": "GameplayCue.Perk.Gnarly.Active",
+      "NumPreallocatedInstances": 0,
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__GC_Perk_Gnarly_Active_C:RootComponent'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GC/GC_Perk_Gnarly_Active.2"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RootComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "GC_Perk_Gnarly_Active_C'Default__GC_Perk_Gnarly_Active_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GC/GC_Perk_Gnarly_Active.1"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GC_Perk_Gnarly_Active_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GC/GC_Perk_Gnarly_Active.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'GC_Perk_Gnarly_Active_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GC/GC_Perk_Gnarly_Active.5"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'GC_Perk_Gnarly_Active_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GC/GC_Perk_Gnarly_Active.3"
+      },
+      "VariableGuid": "C2A635A4-4925A8D7-A5D90C9F-99FB1F05",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GC_Perk_Gnarly_Active_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GC/GC_Perk_Gnarly_Active.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'GC_Perk_Gnarly_Active_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GC/GC_Perk_Gnarly_Active.4"
+      }
+    }
+  }
+]

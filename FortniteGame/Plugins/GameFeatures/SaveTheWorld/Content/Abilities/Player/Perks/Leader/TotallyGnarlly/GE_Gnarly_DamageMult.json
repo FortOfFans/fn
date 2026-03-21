@@ -1,0 +1,653 @@
+[
+  {
+    "Type": "AdditionalEffectsGameplayEffectComponent",
+    "Name": "AdditionalEffectsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AdditionalEffectsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Gnarly_DamageMult_C'Default__GE_Gnarly_DamageMult_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GE_Gnarly_DamageMult.3"
+    },
+    "Properties": {
+      "OnApplicationGameplayEffects": [
+        {
+          "EffectClass": {
+            "ObjectName": "BlueprintGeneratedClass'GE_Perk_L_TotallyGnarly_T01_C'",
+            "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GE_Perk_L_TotallyGnarly_T01.1"
+          },
+          "RequiredSourceTags": [
+            "Granted.Perk.TotallyGnarly.T01"
+          ]
+        },
+        {
+          "EffectClass": {
+            "ObjectName": "BlueprintGeneratedClass'GE_Gnarly_CueContainer_C'",
+            "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GE_Gnarly_CueContainer.1"
+          },
+          "RequiredSourceTags": []
+        }
+      ]
+    }
+  },
+  {
+    "Type": "AssetTagsGameplayEffectComponent",
+    "Name": "AssetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AssetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Gnarly_DamageMult_C'Default__GE_Gnarly_DamageMult_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GE_Gnarly_DamageMult.3"
+    },
+    "Template": {
+      "ObjectName": "AssetTagsGameplayEffectComponent'Default__GET_DamageMultiplier_Ability_Hero_C:AssetTagsGameplayEffectComponent_0'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/Hero/GET_DamageMultiplier_Ability_Hero.0"
+    },
+    "Properties": {
+      "InheritableAssetTags": {
+        "CombinedTags": [
+          "Asset.Gameplay.Mod.DamageMultiplier",
+          "Asset.Gameplay.Mod.DamageMultiplier.Ability",
+          "Asset.PerkEffect.TotallyGnarly.Active"
+        ],
+        "Added": [
+          "Asset.PerkEffect.TotallyGnarly.Active"
+        ]
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Gnarly_DamageMult_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GET_DamageMultiplier_Ability_Hero_C'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/Hero/GET_DamageMultiplier_Ability_Hero.1"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_Gnarly_DamageMult_C'Default__GE_Gnarly_DamageMult_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GE_Gnarly_DamageMult.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_Gnarly_DamageMult_C",
+    "Name": "Default__GE_Gnarly_DamageMult_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GE_Gnarly_DamageMult.GE_Gnarly_DamageMult_C'",
+    "Template": {
+      "ObjectName": "GET_DamageMultiplier_Ability_Hero_C'Default__GET_DamageMultiplier_Ability_Hero_C'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/Hero/GET_DamageMultiplier_Ability_Hero.2"
+    },
+    "Properties": {
+      "DurationPolicy": "EGameplayEffectDurationType::HasDuration",
+      "DurationMagnitude": {
+        "ScalableFloatMagnitude": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+              "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+            },
+            "RowName": "Perk.Gnarly.T01.Duration.Stack"
+          }
+        }
+      },
+      "Modifiers": [
+        {
+          "Attribute": {
+            "AttributeName": "WeaponRateOfFire",
+            "Attribute": {
+              "Path": [
+                "WeaponRateOfFire"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'FortWeaponAttrSet'",
+                "ObjectPath": "/Script/FortniteGame"
+              }
+            },
+            "AttributeOwner": {
+              "ObjectName": "Class'FortWeaponAttrSet'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          "ModifierOp": "EGameplayModOp::Multiplicitive",
+          "ModifierMagnitude": {
+            "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::ScalableFloat",
+            "ScalableFloatMagnitude": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+                  "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+                },
+                "RowName": "Perk.Gnarly.T01.AttackSpeedMult"
+              },
+              "RegistryType": {
+                "Name": "None"
+              }
+            },
+            "AttributeBasedMagnitude": {
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "BackingAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "",
+                  "Attribute": {
+                    "Path": [],
+                    "ResolvedOwner": null
+                  },
+                  "AttributeOwner": null
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": false
+              },
+              "AttributeCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              },
+              "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+              "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+              "SourceTagFilter": [],
+              "TargetTagFilter": []
+            },
+            "CustomMagnitude": {
+              "CalculationClassMagnitude": null,
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "FinalLookupCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              }
+            },
+            "SetByCallerMagnitude": {
+              "DataName": "None",
+              "DataTag": {
+                "TagName": "None"
+              }
+            }
+          },
+          "EvaluationChannelSettings": {
+            "Channel": "EGameplayModEvaluationChannel::Channel0"
+          },
+          "SourceTags": {
+            "RequireTags": [
+              "Weapon.Melee"
+            ],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "TargetTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          }
+        },
+        {
+          "Attribute": {
+            "AttributeName": "OutgoingAbilityDamage",
+            "Attribute": {
+              "Path": [
+                "OutgoingAbilityDamage"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'FortDamageSet'",
+                "ObjectPath": "/Script/FortniteGame"
+              }
+            },
+            "AttributeOwner": {
+              "ObjectName": "Class'FortDamageSet'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          "ModifierOp": "EGameplayModOp::Multiplicitive",
+          "ModifierMagnitude": {
+            "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::ScalableFloat",
+            "ScalableFloatMagnitude": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+                  "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+                },
+                "RowName": "Perk.Gnarly.T01.DamageMult"
+              },
+              "RegistryType": {
+                "Name": "None"
+              }
+            },
+            "AttributeBasedMagnitude": {
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "BackingAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "",
+                  "Attribute": {
+                    "Path": [],
+                    "ResolvedOwner": null
+                  },
+                  "AttributeOwner": null
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": false
+              },
+              "AttributeCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              },
+              "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+              "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+              "SourceTagFilter": [],
+              "TargetTagFilter": []
+            },
+            "CustomMagnitude": {
+              "CalculationClassMagnitude": null,
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "FinalLookupCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              }
+            },
+            "SetByCallerMagnitude": {
+              "DataName": "None",
+              "DataTag": {
+                "TagName": "None"
+              }
+            }
+          },
+          "EvaluationChannelSettings": {
+            "Channel": "EGameplayModEvaluationChannel::Channel0"
+          },
+          "SourceTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "TargetTags": {
+            "RequireTags": [
+              "NPC.CharacterType"
+            ],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          }
+        },
+        {
+          "Attribute": {
+            "AttributeName": "CritRating",
+            "Attribute": {
+              "Path": [
+                "CritRating"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'FortDamageSet'",
+                "ObjectPath": "/Script/FortniteGame"
+              }
+            },
+            "AttributeOwner": {
+              "ObjectName": "Class'FortDamageSet'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          "ModifierOp": "EGameplayModOp::Additive",
+          "ModifierMagnitude": {
+            "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::ScalableFloat",
+            "ScalableFloatMagnitude": {
+              "Value": 1.0,
+              "Curve": {
+                "CurveTable": {
+                  "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+                  "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+                },
+                "RowName": "Perk.Leader.TotallyGnarly.T01.CritRating"
+              },
+              "RegistryType": {
+                "Name": "None"
+              }
+            },
+            "AttributeBasedMagnitude": {
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "BackingAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "",
+                  "Attribute": {
+                    "Path": [],
+                    "ResolvedOwner": null
+                  },
+                  "AttributeOwner": null
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": false
+              },
+              "AttributeCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              },
+              "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+              "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+              "SourceTagFilter": [],
+              "TargetTagFilter": []
+            },
+            "CustomMagnitude": {
+              "CalculationClassMagnitude": null,
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "FinalLookupCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              }
+            },
+            "SetByCallerMagnitude": {
+              "DataName": "None",
+              "DataTag": {
+                "TagName": "None"
+              }
+            }
+          },
+          "EvaluationChannelSettings": {
+            "Channel": "EGameplayModEvaluationChannel::Channel0"
+          },
+          "SourceTags": {
+            "RequireTags": [
+              "Granted.Perk.TotallyGnarly.T01"
+            ],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "TargetTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          }
+        }
+      ],
+      "ConditionalGameplayEffects": [
+        {
+          "EffectClass": {
+            "ObjectName": "BlueprintGeneratedClass'GE_Perk_L_TotallyGnarly_T01_C'",
+            "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GE_Perk_L_TotallyGnarly_T01.1"
+          },
+          "RequiredSourceTags": [
+            "Granted.Perk.TotallyGnarly.T01"
+          ]
+        },
+        {
+          "EffectClass": {
+            "ObjectName": "BlueprintGeneratedClass'GE_Gnarly_CueContainer_C'",
+            "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GE_Gnarly_CueContainer.1"
+          },
+          "RequiredSourceTags": []
+        }
+      ],
+      "InheritableGameplayEffectTags": {
+        "CombinedTags": [
+          "Asset.Gameplay.Mod.DamageMultiplier",
+          "Asset.Gameplay.Mod.DamageMultiplier.Ability",
+          "Asset.PerkEffect.TotallyGnarly.Active"
+        ],
+        "Added": [
+          "Asset.PerkEffect.TotallyGnarly.Active"
+        ]
+      },
+      "InheritableOwnedTagsContainer": {
+        "CombinedTags": [
+          "Granted.PerkEffect.TotallyGnarly.Active"
+        ],
+        "Added": [
+          "Granted.PerkEffect.TotallyGnarly.Active"
+        ]
+      },
+      "StackingType": "EGameplayEffectStackingType::AggregateByTarget",
+      "StackLimitCount": 8,
+      "StackExpirationPolicy": "EGameplayEffectStackingExpirationPolicy::RemoveSingleStackAndRefreshDuration",
+      "GEComponents": [
+        {
+          "ObjectName": "AssetTagsGameplayEffectComponent'Default__GE_Gnarly_DamageMult_C:AssetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GE_Gnarly_DamageMult.1"
+        },
+        {
+          "ObjectName": "AdditionalEffectsGameplayEffectComponent'Default__GE_Gnarly_DamageMult_C:AdditionalEffectsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GE_Gnarly_DamageMult.0"
+        },
+        {
+          "ObjectName": "TargetTagsGameplayEffectComponent'Default__GE_Gnarly_DamageMult_C:TargetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GE_Gnarly_DamageMult.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "TargetTagsGameplayEffectComponent",
+    "Name": "TargetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TargetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Gnarly_DamageMult_C'Default__GE_Gnarly_DamageMult_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/TotallyGnarlly/GE_Gnarly_DamageMult.3"
+    },
+    "Properties": {
+      "InheritableGrantedTagsContainer": {
+        "CombinedTags": [
+          "Granted.PerkEffect.TotallyGnarly.Active"
+        ],
+        "Added": [
+          "Granted.PerkEffect.TotallyGnarly.Active"
+        ]
+      }
+    }
+  }
+]

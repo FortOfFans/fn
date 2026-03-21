@@ -1,0 +1,688 @@
+[
+  {
+    "Type": "AudioComponent",
+    "Name": "AudioComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AudioComponent'",
+    "Outer": {
+      "ObjectName": "GCN_RiftStaminaDrain_C'Default__GCN_RiftStaminaDrain_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.5"
+    },
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'Elemental_ElectricLoop_Player_Cue'",
+        "ObjectPath": "/STW_Sounds/Sounds/Fort_GamePlay_Sounds/Elemental_Layers/Elemental_ElectricLoop_Player_Cue.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ParticleSystemComponent'Default__GCN_RiftStaminaDrain_C:ParticleSystemComponent'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.6"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GCN_RiftStaminaDrain_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'GCN_RiftStaminaDrain_C:SimpleConstructionScript_1'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.10"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortGameplayCueNotify_Looping'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'GCN_RiftStaminaDrain_C:OnWhileActiveParticleSystemDeactivate'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.3"
+      },
+      {
+        "ObjectName": "Function'GCN_RiftStaminaDrain_C:OnWhileActiveParticleSystemActivate'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.2"
+      },
+      {
+        "ObjectName": "Function'GCN_RiftStaminaDrain_C:UserConstructionScript'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.4"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_DtB_StaminaDrainPlayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DrainMeshMaterial",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DrainBeamMaterial",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "DrainLocationOffset",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FuncMap": {
+      "UserConstructionScript": {
+        "ObjectName": "Function'GCN_RiftStaminaDrain_C:UserConstructionScript'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.4"
+      },
+      "OnWhileActiveParticleSystemActivate": {
+        "ObjectName": "Function'GCN_RiftStaminaDrain_C:OnWhileActiveParticleSystemActivate'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.2"
+      },
+      "OnWhileActiveParticleSystemDeactivate": {
+        "ObjectName": "Function'GCN_RiftStaminaDrain_C:OnWhileActiveParticleSystemDeactivate'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GCN_RiftStaminaDrain_C'Default__GCN_RiftStaminaDrain_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.5"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "OnWhileActiveParticleSystemActivate",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GCN_RiftStaminaDrain_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.1"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortGameplayCueNotify_Looping:OnWhileActiveParticleSystemActivate'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "WhileActiveParticleSysComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Parameters",
+        "Flags": "RF_Public",
+        "ElementSize": 224,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'GameplayCueParameters'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_NormalizedMagnitude",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_RawMagnitude",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_EffectContext",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'GameplayEffectContextHandle'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_MatchedTagName",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_OriginalTag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_AggregatedSourceTags",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_AggregatedTargetTags",
+        "Flags": "RF_Public",
+        "ElementSize": 32,
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_Location",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_Normal",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_Instigator",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_EffectCauser",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_SourceObject",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_PhysicalMaterial",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PhysicalMaterial'",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_GameplayEffectLevel",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_AbilityLevel",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_TargetAttachComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakGameplayCueParameters_bReplicateLocationWhenUsingMinimalRepProxy",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_EffectContextGetEffectCauser_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsB_Dt_B_Floating_Rift",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'B_DtB_FloatingRift_C'",
+          "ObjectPath": "/SaveTheWorld/Missions/Primary/DeliverTheBomb/Props/B_DtB_FloatingRift.4"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Conv_VectorToLinearColor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Conv_VectorToLinearColor_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnWhileActiveParticleSystemDeactivate",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GCN_RiftStaminaDrain_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.1"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortGameplayCueNotify_Looping:OnWhileActiveParticleSystemDeactivate'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "WhileActiveParticleSysComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Parameters",
+        "Flags": "RF_Public",
+        "ElementSize": 224,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'GameplayCueParameters'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GCN_RiftStaminaDrain_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.1"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:UserConstructionScript'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GCN_RiftStaminaDrain_C",
+    "Name": "Default__GCN_RiftStaminaDrain_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.GCN_RiftStaminaDrain_C'",
+    "Properties": {
+      "DrainLocationOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 400.0
+      },
+      "AttachPoint": "FX_Chest",
+      "AudioComponent": {
+        "ObjectName": "AudioComponent'Default__GCN_RiftStaminaDrain_C:AudioComponent'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.0"
+      },
+      "ParticleSystemComponent": {
+        "ObjectName": "ParticleSystemComponent'Default__GCN_RiftStaminaDrain_C:ParticleSystemComponent'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.6"
+      },
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Activities.Abilities.Rift.StaminaDrain"
+      },
+      "GameplayCueName": "GameplayCue.Activities.Abilities.Rift.StaminaDrain",
+      "RootComponent": {
+        "ObjectName": "ParticleSystemComponent'Default__GCN_RiftStaminaDrain_C:ParticleSystemComponent'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.6"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystemComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "GCN_RiftStaminaDrain_C'Default__GCN_RiftStaminaDrain_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.5"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'P_DtBStaminaDrain'",
+        "ObjectPath": "/SaveTheWorld/Missions/Primary/DeliverTheBomb/Particles/P_DtBStaminaDrain.14"
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent_3",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GCN_RiftStaminaDrain_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'GCN_RiftStaminaDrain_C:SimpleConstructionScript_1'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.10"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'GCN_RiftStaminaDrain_C:SceneComponent_3'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.7"
+      },
+      "VariableGuid": "56BC9799-C494E6E6-321D4295-7D5EB316",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'GCN_RiftStaminaDrain_C:SimpleConstructionScript_1'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.10"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'GCN_RiftStaminaDrain_C:SM_DtB_StaminaDrainPlayer_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.11"
+      },
+      "ParentComponentOrVariableName": "ParticleSystemComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "0174A3EB-43C6F226-4B550F88-D128FB7E",
+      "InternalVariableName": "SM_DtB_StaminaDrainPlayer"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GCN_RiftStaminaDrain_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.1"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'GCN_RiftStaminaDrain_C:SimpleConstructionScript_1.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.9"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'GCN_RiftStaminaDrain_C:SimpleConstructionScript_1.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.9"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'GCN_RiftStaminaDrain_C:SimpleConstructionScript_1.SCS_Node_1'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.8"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_DtB_StaminaDrainPlayer_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GCN_RiftStaminaDrain_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Mission/GCN_RiftStaminaDrain.1"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_DtB_StaminaDrainPlayer'",
+        "ObjectPath": "/SaveTheWorld/Missions/Primary/DeliverTheBomb/Meshes/SM_DtB_StaminaDrainPlayer.1"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'M_StaminaDrainPlayer'",
+          "ObjectPath": "/SaveTheWorld/Missions/Primary/DeliverTheBomb/Materials/M_StaminaDrainPlayer.0"
+        }
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "Custom",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
+  }
+]

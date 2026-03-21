@@ -1,0 +1,3435 @@
+[
+  {
+    "Type": "AudioComponent",
+    "Name": "AudioComponent_902",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AudioComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'StormKing_Projectile_Cue'",
+        "ObjectPath": "/SaveTheWorld/Sounds/Fort_Monster_Storm_King/SFX/StormKing_Projectile_Cue.0"
+      }
+    }
+  },
+  {
+    "Type": "B_Prj_Melee_Hammer_MeteorSlam_Meteor_C",
+    "Name": "Default__B_Prj_Melee_Hammer_MeteorSlam_Meteor_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Rocket_Projectile_Explosion_Sound": {
+        "ObjectName": "SoundCue'StormKing_Projectile_Explosion_Cue'",
+        "ObjectPath": "/Game/Sounds/Fort_Monster_Storm_King/SFX/StormKing_Projectile_Explosion_Cue.0"
+      },
+      "StopLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "StopRotZ": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "Rocket_Projectile_Explosion_Water_Sound": {
+        "ObjectName": "SoundCue'StormKing_Projectile_Explosion_Cue'",
+        "ObjectPath": "/Game/Sounds/Fort_Monster_Storm_King/SFX/StormKing_Projectile_Explosion_Cue.0"
+      },
+      "RocketSpinRate": 10.0,
+      "Explosion Impact Offset": 10.0,
+      "RocketSpin": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "DecalLocation": {
+        "X": 0.1,
+        "Y": 0.1,
+        "Z": 0.1
+      },
+      "ProjectileTrailTemplate": {
+        "ObjectName": "ParticleSystem'P_Hammer_Stormking_MeteorTrail'",
+        "ObjectPath": "/SaveTheWorld/Weapons/FORT_Melee/Effects/Stormking_Hammer/P_Hammer_Stormking_MeteorTrail.124"
+      },
+      "ExplosionForceFeedbackNear": {
+        "ObjectName": "ForceFeedbackEffect'FF_Generic_Explosion_Near'",
+        "ObjectPath": "/Game/Weapons/ForceFeedback/Explosions/FF_Generic_Explosion_Near.0"
+      },
+      "ExplosionForceFeedbackFar": {
+        "ObjectName": "ForceFeedbackEffect'FF_Generic_Explosion_Far'",
+        "ObjectPath": "/Game/Weapons/ForceFeedback/Explosions/FF_Generic_Explosion_Far.0"
+      },
+      "ProjectileSpawnLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "CameraShake": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Camera_Shake_DUDEBRO_RockThrow_C'",
+        "ObjectPath": "/Game/Effects/Fort_Effects/Camera_Effects/BP_Camera_Shake_DUDEBRO_RockThrow.0"
+      },
+      "CameraShakeInnerRadius": 600.0,
+      "CameraShakeOuterRadius": 1200.0,
+      "PhysMatWater": {
+        "ObjectName": "PhysicalMaterial'Water'",
+        "ObjectPath": "/Game/FortressPhysicalMaterials/Water.0"
+      },
+      "MeteorScaleStart": {
+        "X": 0.05,
+        "Y": 0.05,
+        "Z": 0.05
+      },
+      "MeteorScaleFinish": {
+        "X": 0.5,
+        "Y": 0.5,
+        "Z": 0.5
+      },
+      "MeteorTrailScale": {
+        "X": 0.5,
+        "Y": 0.5,
+        "Z": 0.5
+      },
+      "MeteorSpawnFXScale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "bAddOwnerVelocity": false,
+      "CapsuleComponent": {
+        "ObjectName": "FortProjectileRootComponent'Default__B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:CollisionCapsule0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.8"
+      },
+      "ProjectileMovementComponent": {
+        "ObjectName": "FortProjectileMovementComponent'Default__B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:ProjectileComp0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.7"
+      },
+      "WaterInteractionComponent": {
+        "ObjectName": "FortWaterInteractionComponent'Default__B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:WaterComponentName'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.9"
+      },
+      "CollisionComponent": {
+        "ObjectName": "FortProjectileRootComponent'Default__B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:CollisionCapsule0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.8"
+      },
+      "RootComponent": {
+        "ObjectName": "FortProjectileRootComponent'Default__B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:CollisionCapsule0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.8"
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "B_Prj_Melee_Hammer_MeteorSlam_Meteor_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "NumReplicatedProperties": 2,
+      "bHasCookedComponentInstancingData": true,
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:PPFader_Template'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.38"
+        },
+        {
+          "ObjectName": "TimelineTemplate'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:Timeline_0_Template'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.39"
+        },
+        {
+          "ObjectName": "TimelineTemplate'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:Timeline_1_Template'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.40"
+        },
+        {
+          "ObjectName": "TimelineTemplate'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:Timeline_2_Template'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.41"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:SimpleConstructionScript_0__57659476'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.36"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:ExecuteUbergraph_B_Prj_Melee_Hammer_MeteorSlam_Meteor'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.11"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortProjectileBase'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:UserConstructionScript'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.27"
+      },
+      {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:PPFader__FinishedFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.16"
+      },
+      {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:PPFader__UpdateFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.17"
+      },
+      {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:Timeline_0__FinishedFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.21"
+      },
+      {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:Timeline_0__UpdateFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.22"
+      },
+      {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:Timeline_1__FinishedFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.23"
+      },
+      {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:Timeline_1__UpdateFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.24"
+      },
+      {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:Timeline_2__FinishedFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.25"
+      },
+      {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:Timeline_2__UpdateFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.26"
+      },
+      {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:OnExploded'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.14"
+      },
+      {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:ReceiveTick'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.20"
+      },
+      {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:FuseTimerMax'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.12"
+      },
+      {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:ReceiveDestroyed'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.19"
+      },
+      {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:ReceiveBeginPlay'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.18"
+      },
+      {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:OnStop'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.15"
+      },
+      {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:OnBounce'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.13"
+      },
+      {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:CustomEvent_2'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.10"
+      },
+      {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:ExecuteUbergraph_B_Prj_Melee_Hammer_MeteorSlam_Meteor'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.11"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RockFireMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PP_Explode",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PostProcessComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Rocket_AudioComponent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_2_Fade_359423E64268435CC8CB64AA92F6F366",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_2__Direction_359423E64268435CC8CB64AA92F6F366",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_1_RockSize_ACBB11054E1519AB94689F9DB7C6452F",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_1__Direction_ACBB11054E1519AB94689F9DB7C6452F",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Timeline_0_Fade_1E7B25C0466AE2AFA7B84EA248C9084A",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Timeline_0__Direction_1E7B25C0466AE2AFA7B84EA248C9084A",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Timeline_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "PPFader_PPFade_CAD761E3417BD878BC69618C08DAE534",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "PPFader__Direction_CAD761E3417BD878BC69618C08DAE534",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PPFader",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Ribbon_Trail_PSC",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Water_Explosion_PSC",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Ribbon_Trail_PS",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Water_Explosion_PS",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Explosion_Generic_PS",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Explosion_Generic_PSC",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Rocket_Projectile_Explosion_Sound",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'SoundBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "StopLocation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Explosion_Flesh_Damage_PS",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "StopRotZ",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Explosion_Flesh_Damage_PSC",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Rocket_Projectile_Explosion_Water_Sound",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'SoundBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RocketTrailPS",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "Tick Delta",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "RocketSpinRate",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "Explosion Impact Offset",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "RocketSpin",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "TimerMaxReached?",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "DecalLocation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ProjectileTrailTemplate",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystem'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "SurfaceType",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Enum": {
+          "ObjectName": "Class'EPhysicalSurface'",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ExplosionForceFeedbackNear",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ForceFeedbackEffect'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ExplosionForceFeedbackFar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'ForceFeedbackEffect'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "ElementType",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'ElementalEnum'",
+          "ObjectPath": "/Game/Characters/Enemies/Husk/Materials/ElementalEnum.0"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ProjectileSpawnLocation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "CameraShake",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'LegacyCameraShake'",
+          "ObjectPath": "/Script/EngineCameras"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CameraShakeInnerRadius",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CameraShakeOuterRadius",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DecalImpact",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PhysMatWater",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'PhysicalMaterial'",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "MeteorScaleStart",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "MeteorScaleFinish",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "MeteorTrailScale",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "MeteorSpawnFXScale",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_B_Prj_Melee_Hammer_MeteorSlam_Meteor": {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:ExecuteUbergraph_B_Prj_Melee_Hammer_MeteorSlam_Meteor'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.11"
+      },
+      "CustomEvent_2": {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:CustomEvent_2'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.10"
+      },
+      "OnBounce": {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:OnBounce'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.13"
+      },
+      "OnStop": {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:OnStop'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.15"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:ReceiveBeginPlay'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.18"
+      },
+      "ReceiveDestroyed": {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:ReceiveDestroyed'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.19"
+      },
+      "FuseTimerMax": {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:FuseTimerMax'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.12"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:ReceiveTick'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.20"
+      },
+      "OnExploded": {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:OnExploded'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.14"
+      },
+      "Timeline_2__UpdateFunc": {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:Timeline_2__UpdateFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.26"
+      },
+      "Timeline_2__FinishedFunc": {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:Timeline_2__FinishedFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.25"
+      },
+      "Timeline_1__UpdateFunc": {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:Timeline_1__UpdateFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.24"
+      },
+      "Timeline_1__FinishedFunc": {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:Timeline_1__FinishedFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.23"
+      },
+      "Timeline_0__UpdateFunc": {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:Timeline_0__UpdateFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.22"
+      },
+      "Timeline_0__FinishedFunc": {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:Timeline_0__FinishedFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.21"
+      },
+      "PPFader__UpdateFunc": {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:PPFader__UpdateFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.17"
+      },
+      "PPFader__FinishedFunc": {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:PPFader__FinishedFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.16"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:UserConstructionScript'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.27"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'Default__B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 15.941108,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 15.941094,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.15015185,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 0.0,
+            "ArriveTangent": -3.7774823,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -3.7775013,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0_1",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.017794803,
+            "Value": 0.3,
+            "ArriveTangent": -0.9969599,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -0.99696076,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.9,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0_2",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.017794803,
+            "Value": 0.3,
+            "ArriveTangent": -0.9969599,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -0.99696076,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.9,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_1",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.00646317,
+            "Value": 0.5059528,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0034479,
+            "Value": 1.001515,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "FortProjectileMovementComponent",
+    "Name": "ProjectileComp0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortProjectileMovementComponent'",
+    "Outer": {
+      "ObjectName": "B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'Default__B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.1"
+    },
+    "Properties": {
+      "bRotationFollowsVelocity": true,
+      "Bounciness": 0.4,
+      "Friction": 0.6
+    }
+  },
+  {
+    "Type": "FortProjectileRootComponent",
+    "Name": "CollisionCapsule0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortProjectileRootComponent'",
+    "Outer": {
+      "ObjectName": "B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'Default__B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.1"
+    },
+    "Properties": {
+      "CapsuleHalfHeight": 6.0,
+      "CapsuleRadius": 6.0,
+      "ShapeColor": {
+        "B": 0,
+        "G": 0,
+        "R": 255,
+        "A": 255,
+        "Hex": "FF0000"
+      },
+      "bUseSystemDefaultObstacleAreaClass": false,
+      "AreaClassOverride": {
+        "ObjectName": "Class'FortMetaNavArea_Obstacles'",
+        "ObjectPath": "/Script/FortniteAI"
+      },
+      "bReturnMaterialOnMove": true,
+      "BodyInstance": {
+        "MassInKgOverride": 0.9276809
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 90.0
+      }
+    }
+  },
+  {
+    "Type": "FortWaterInteractionComponent",
+    "Name": "WaterComponentName",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'FortWaterInteractionComponent'",
+    "Outer": {
+      "ObjectName": "B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'Default__B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.1"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "CustomEvent_2",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "HitActors",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "HitActors",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'Actor'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "HitResults",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "HitResults",
+          "Flags": "RF_Public",
+          "ElementSize": 264,
+          "PropertyFlags": "ContainsInstancedReference",
+          "Struct": {
+            "ObjectName": "Class'HitResult'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_B_Prj_Melee_Hammer_MeteorSlam_Meteor",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "Temp_object_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "Temp_object_Variable",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'Actor'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "Temp_object_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "Temp_object_Variable_1",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'Actor'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_Event_HitActors_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_Event_HitActors_1",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'Actor'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_Event_HitResults_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "K2Node_Event_HitResults_1",
+          "Flags": "RF_Public",
+          "ElementSize": 264,
+          "PropertyFlags": "ContainsInstancedReference",
+          "Struct": {
+            "ObjectName": "Class'HitResult'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Roll",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Pitch",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Yaw",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsBeingKilled_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Multiply_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotator_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_ComposeRotators_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_RandomFloatInRange_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotator_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_AddLocalRotation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsActive_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Hit_1",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_Event_Hit",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bBlockingHit",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bInitialOverlap",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Time",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Distance",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Location",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Normal",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactNormal",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_PhysMat",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PhysicalMaterial'",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_HitBoneName",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_BoneName",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_HitItem",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_ElementIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_FaceIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceStart",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceEnd",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Multiply_VectorFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotFromZ_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentRotation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_AddLocalRotation_SweepHitResult_1",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwner_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnEmitterAtLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnEmitterAtLocation_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnEmitterAtLocation_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnDecalAtLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Subtract_VectorVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_LineTraceSingle_OutHit",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LineTraceSingle_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bBlockingHit_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bInitialOverlap_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Time_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Distance_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Location_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactPoint_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Normal_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactNormal_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_PhysMat_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PhysicalMaterial'",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitActor_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitComponent_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_HitBoneName_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_BoneName_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_HitItem_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_ElementIndex_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_FaceIndex_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceStart_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceEnd_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Conv_VectorToRotator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnEmitterAtLocation_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ObjectObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_Event_HitActors",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_Event_HitActors",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'Actor'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_Event_HitResults",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "K2Node_Event_HitResults",
+          "Flags": "RF_Public",
+          "ElementSize": 264,
+          "PropertyFlags": "ContainsInstancedReference",
+          "Struct": {
+            "ObjectName": "Class'HitResult'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Subtract_VectorVector_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_LineTraceSingle_OutHit_1",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LineTraceSingle_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bBlockingHit_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bInitialOverlap_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Time_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Distance_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Location_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactPoint_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Normal_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactNormal_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_PhysMat_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PhysicalMaterial'",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitActor_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitComponent_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_HitBoneName_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_BoneName_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_HitItem_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_ElementIndex_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_FaceIndex_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceStart_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceEnd_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Subtract_VectorVector_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnEmitterAtLocation_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnDecalAtLocation_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'DecalComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnEmitterAtLocation_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_ObjectObject_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_VLerp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnEmitterAtLocation_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnEmitterAtLocation_ReturnValue_7",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSoundAttached_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentLocation_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldLocation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_MakeRotator_Pitch_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "K2Node_VariableSet_Tick_Delta_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_MakeRotator_Roll_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_MakeRotator_Roll_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_PlayWorldCameraShake_InnerRadius_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_PlayWorldCameraShake_OuterRadius_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "FuseTimerMax",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBounce",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortProjectileBase:OnBounce'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "Hit",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnExploded",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortGameplayEffectDeliveryActor:OnExploded'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ArrayProperty",
+        "Name": "HitActors",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "HitActors",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'Actor'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "HitResults",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "HitResults",
+          "Flags": "RF_Public",
+          "ElementSize": 264,
+          "PropertyFlags": "ContainsInstancedReference",
+          "Struct": {
+            "ObjectName": "Class'HitResult'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStop",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortProjectileBase:OnStop'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "Hit",
+        "Flags": "RF_Public",
+        "ElementSize": 264,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "Class'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PPFader__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PPFader__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveDestroyed",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveDestroyed'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:ReceiveTick'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_0__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_0__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_1__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_1__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_2__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Timeline_2__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:UserConstructionScript'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwner_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsDUDEBRO_Pawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'DUDEBRO_Pawn_C'",
+          "ObjectPath": "/SaveTheWorld/Characters/Enemies/DUDEBRO/Blueprints/DUDEBRO_Pawn.11"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "RockFireMesh_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'P_Hammer_Stormking_Meteor'",
+        "ObjectPath": "/SaveTheWorld/Weapons/FORT_Melee/Effects/Stormking_Hammer/P_Hammer_Stormking_Meteor.33"
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": -90.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "PostProcessComponent",
+    "Name": "PP_Explode_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PostProcessComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "Properties": {
+      "Settings": {
+        "bOverride_ColorContrast": true,
+        "bOverride_SceneColorTint": true,
+        "ColorSaturation": {
+          "X": 1.5,
+          "Y": 1.5,
+          "Z": 2.0,
+          "W": 1.0
+        },
+        "ColorContrast": {
+          "X": 2.0,
+          "Y": 2.0,
+          "Z": 2.0,
+          "W": 1.0
+        },
+        "SceneColorTint": {
+          "R": 10.0,
+          "G": 5.111391,
+          "B": 1.457167,
+          "A": 0.0,
+          "Hex": "FFFFFF"
+        },
+        "AutoExposureBiasBackup": 1.0
+      },
+      "BlendRadius": 700.0,
+      "BlendWeight": 0.0,
+      "bUnbound": false,
+      "RelativeScale3D": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": 100.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent_2756",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:SimpleConstructionScript_0__57659476'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'AudioComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "AudioComponent'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:AudioComponent_902'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.0"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Sound",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'AudioComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "CollisionCapsule0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "643C0869-4B843CED-0CBCF49A-BFC5CF41",
+      "InternalVariableName": "Rocket_AudioComponent"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:SimpleConstructionScript_0__57659476'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PostProcessComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PostProcessComponent'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:PP_Explode_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.29"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Settings",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bOverride_ColorContrast",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bOverride_SceneColorTint",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ColorSaturation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector4'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Y",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector4'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector4'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "ColorContrast",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector4'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Y",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector4'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector4'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "SceneColorTint",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "R",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'LinearColor'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "G",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'LinearColor'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "B",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'LinearColor'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "A",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'LinearColor'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "AutoExposureBiasBackup",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessSettings'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "BlendRadius",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "BlendWeight",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bUnbound",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "RelativeScale3D",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'PostProcessComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "X",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Y",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "Z",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Vector'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "CollisionCapsule0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "F25BAC5E-45FE3130-ECEB4980-4018CEC8",
+      "InternalVariableName": "PP_Explode"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2760",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:SimpleConstructionScript_0__57659476'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:SceneComponent_2756'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.30"
+      },
+      "VariableGuid": "4D3A059E-00000000-00000000-00000000",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:SimpleConstructionScript_0__57659476'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:RockFireMesh_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.28"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "Template",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ParticleSystemComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "RelativeRotation",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ParticleSystemComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Roll",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'Rotator'",
+              "ObjectPath": "/Script/CoreUObject"
+            }
+          },
+          {
+            "PropertyName": "PrimaryComponentTick",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ParticleSystemComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "bStartWithTickEnabled",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ActorComponentTickFunction'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "CollisionCapsule0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "9AF68844-427970C8-DCF73C8D-F5B6FC3F",
+      "InternalVariableName": "RockFireMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:SimpleConstructionScript_0__57659476'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.36"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:Mesh_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.37"
+      },
+      "CookedComponentInstancingData": {
+        "ChangedPropertyList": [
+          {
+            "PropertyName": "bGenerateOverlapEvents",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'StaticMeshComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "CanCharacterStepUpOn",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'StaticMeshComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "BodyInstance",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'StaticMeshComponent'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ObjectType",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'BodyInstance'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "CollisionEnabled",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'BodyInstance'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "CollisionProfileName",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'BodyInstance'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "CollisionResponses",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'BodyInstance'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'CollisionResponse'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'CollisionResponse'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "ResponseArray",
+            "ArrayIndex": 1,
+            "PropertyScope": {
+              "ObjectName": "Class'CollisionResponse'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Channel",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          },
+          {
+            "PropertyName": "Response",
+            "ArrayIndex": 0,
+            "PropertyScope": {
+              "ObjectName": "Class'ResponseChannel'",
+              "ObjectPath": "/Script/Engine"
+            }
+          }
+        ],
+        "bHasValidCookedData": true
+      },
+      "ParentComponentOrVariableName": "CollisionCapsule0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "78CA4024-411FB3E3-D5415B99-0DFDC673",
+      "InternalVariableName": "Mesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0__57659476",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:SimpleConstructionScript_0__57659476.SCS_Node_1'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.31"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:SimpleConstructionScript_0__57659476.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.32"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:SimpleConstructionScript_0__57659476.SCS_Node_7'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.35"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:SimpleConstructionScript_0__57659476.SCS_Node_3'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.34"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:SimpleConstructionScript_0__57659476.SCS_Node_1'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.31"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:SimpleConstructionScript_0__57659476.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.32"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:SimpleConstructionScript_0__57659476.SCS_Node_7'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.35"
+        },
+        {
+          "ObjectName": "SCS_Node'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:SimpleConstructionScript_0__57659476.SCS_Node_3'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.34"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:SimpleConstructionScript_0__57659476.SCS_Node_2760'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.33"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "Properties": {
+      "bGenerateOverlapEvents": false,
+      "CanCharacterStepUpOn": "ECanBeCharacterBase::ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "PPFader_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:CurveFloat_0'",
+            "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.3"
+          },
+          "PropertyName": "PPFader_PPFade_CAD761E3417BD878BC69618C08DAE534",
+          "TrackName": "PPFade",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "CAD761E3-417BD878-BC69618C-08DAE534",
+      "VariableName": "PPFader",
+      "DirectionPropertyName": "PPFader__Direction_CAD761E3417BD878BC69618C08DAE534",
+      "UpdateFunctionName": "PPFader__UpdateFunc",
+      "FinishedFunctionName": "PPFader__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_0_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:CurveFloat_0_1'",
+            "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.4"
+          },
+          "PropertyName": "Timeline_0_Fade_1E7B25C0466AE2AFA7B84EA248C9084A",
+          "TrackName": "Fade",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "1E7B25C0-466AE2AF-A7B84EA2-48C9084A",
+      "VariableName": "Timeline_0",
+      "DirectionPropertyName": "Timeline_0__Direction_1E7B25C0466AE2AFA7B84EA248C9084A",
+      "UpdateFunctionName": "Timeline_0__UpdateFunc",
+      "FinishedFunctionName": "Timeline_0__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_1_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "Properties": {
+      "TimelineLength": 2.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:CurveFloat_1'",
+            "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.6"
+          },
+          "PropertyName": "Timeline_1_RockSize_ACBB11054E1519AB94689F9DB7C6452F",
+          "TrackName": "RockSize",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "ACBB1105-4E1519AB-94689F9D-B7C6452F",
+      "VariableName": "Timeline_1",
+      "DirectionPropertyName": "Timeline_1__Direction_ACBB11054E1519AB94689F9DB7C6452F",
+      "UpdateFunctionName": "Timeline_1__UpdateFunc",
+      "FinishedFunctionName": "Timeline_1__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Timeline_2_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.2"
+    },
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'B_Prj_Melee_Hammer_MeteorSlam_Meteor_C:CurveFloat_0_2'",
+            "ObjectPath": "/SaveTheWorld/Abilities/Weapons/Melee/Hammer/B_Prj_Melee_Hammer_MeteorSlam_Meteor.5"
+          },
+          "PropertyName": "Timeline_2_Fade_359423E64268435CC8CB64AA92F6F366",
+          "TrackName": "Fade",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "359423E6-4268435C-C8CB64AA-92F6F366",
+      "VariableName": "Timeline_2",
+      "DirectionPropertyName": "Timeline_2__Direction_359423E64268435CC8CB64AA92F6F366",
+      "UpdateFunctionName": "Timeline_2__UpdateFunc",
+      "FinishedFunctionName": "Timeline_2__FinishedFunc"
+    }
+  }
+]

@@ -1,0 +1,1033 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GM_UG_AOECloud_RangedResistBuff_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GM_UG_EnemyAOECloud_Base_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/GM_UG_EnemyAOECloud_Base.0"
+    },
+    "Properties": {
+      "NumReplicatedProperties": 1,
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'GM_UG_AOECloud_RangedResistBuff_C:FaderTL_Template'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.21"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'GM_UG_AOECloud_RangedResistBuff_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.19"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'GM_UG_AOECloud_RangedResistBuff_C:InheritableComponentHandler'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.12"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'GM_UG_AOECloud_RangedResistBuff_C:ExecuteUbergraph_GM_UG_AOECloud_RangedResistBuff'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.3"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'GM_UG_AOECloud_RangedResistBuff_C:OnRep_OnHitWeaponLocation'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.7"
+      },
+      {
+        "ObjectName": "Function'GM_UG_AOECloud_RangedResistBuff_C:UserConstructionScript'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.9"
+      },
+      {
+        "ObjectName": "Function'GM_UG_AOECloud_RangedResistBuff_C:FaderTL__FinishedFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.4"
+      },
+      {
+        "ObjectName": "Function'GM_UG_AOECloud_RangedResistBuff_C:FaderTL__UpdateFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.5"
+      },
+      {
+        "ObjectName": "Function'GM_UG_AOECloud_RangedResistBuff_C:ReceiveBeginPlay'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.8"
+      },
+      {
+        "ObjectName": "Function'GM_UG_AOECloud_RangedResistBuff_C:DestroyActorWithDelay'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.2"
+      },
+      {
+        "ObjectName": "Function'GM_UG_AOECloud_RangedResistBuff_C:OnRangedWeaponHit'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.6"
+      },
+      {
+        "ObjectName": "Function'GM_UG_AOECloud_RangedResistBuff_C:WiggleMeshVolume'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.10"
+      },
+      {
+        "ObjectName": "Function'GM_UG_AOECloud_RangedResistBuff_C:ExecuteUbergraph_GM_UG_AOECloud_RangedResistBuff'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.3"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MeshVolume",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "PostProcessVolume",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'PostProcessComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "FaderTL_Fade_C36EB5EF4E3C75B8297762B6F8CF5CBD",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "FaderTL__Direction_C36EB5EF4E3C75B8297762B6F8CF5CBD",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Class'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "FaderTL",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mesh Volume MID",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "WiggleTransitionLengthIn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "WiggleTransitionLengthOut",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "WiggleDuration",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "OnHitWeaponLocation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnInstance | RepNotify",
+        "RepNotifyFunc": "OnRep_OnHitWeaponLocation",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "SphereRadius",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "ActorPositionOffset",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 24,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GM_UG_AOECloud_RangedResistBuff": {
+        "ObjectName": "Function'GM_UG_AOECloud_RangedResistBuff_C:ExecuteUbergraph_GM_UG_AOECloud_RangedResistBuff'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.3"
+      },
+      "WiggleMeshVolume": {
+        "ObjectName": "Function'GM_UG_AOECloud_RangedResistBuff_C:WiggleMeshVolume'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.10"
+      },
+      "OnRangedWeaponHit": {
+        "ObjectName": "Function'GM_UG_AOECloud_RangedResistBuff_C:OnRangedWeaponHit'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.6"
+      },
+      "DestroyActorWithDelay": {
+        "ObjectName": "Function'GM_UG_AOECloud_RangedResistBuff_C:DestroyActorWithDelay'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.2"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'GM_UG_AOECloud_RangedResistBuff_C:ReceiveBeginPlay'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.8"
+      },
+      "FaderTL__UpdateFunc": {
+        "ObjectName": "Function'GM_UG_AOECloud_RangedResistBuff_C:FaderTL__UpdateFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.5"
+      },
+      "FaderTL__FinishedFunc": {
+        "ObjectName": "Function'GM_UG_AOECloud_RangedResistBuff_C:FaderTL__FinishedFunc'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.4"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function'GM_UG_AOECloud_RangedResistBuff_C:UserConstructionScript'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.9"
+      },
+      "OnRep_OnHitWeaponLocation": {
+        "ObjectName": "Function'GM_UG_AOECloud_RangedResistBuff_C:OnRep_OnHitWeaponLocation'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.7"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GM_UG_AOECloud_RangedResistBuff_C'Default__GM_UG_AOECloud_RangedResistBuff_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.11"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'CurveFloat'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GM_UG_AOECloud_RangedResistBuff_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.0"
+    },
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "DestroyActorWithDelay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GM_UG_AOECloud_RangedResistBuff_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.0"
+    },
+    "Super": {
+      "ObjectName": "Function'GM_UG_EnemyAOECloud_Base_C:DestroyActorWithDelay'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/GM_UG_EnemyAOECloud_Base.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "DoubleProperty",
+        "Name": "Delay",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GM_UG_AOECloud_RangedResistBuff",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GM_UG_AOECloud_RangedResistBuff_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Subtract_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "K2Node_Event_Delay",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FMax_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Divide_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_WeaponLocation",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_GetGameTimeInSeconds_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_GetGameTimeInSeconds_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Add_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_VectorVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Subtract_VectorVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotFromX_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Normal_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_VSize_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Multiply_VectorFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LessEqual_DoubleDouble_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnEmitterAtLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ParticleSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_Subtract_DoubleDouble_B_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_VariableSet_BlendWeight_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetPlayRate_NewRate_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "FaderTL__FinishedFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GM_UG_AOECloud_RangedResistBuff_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "FaderTL__UpdateFunc",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GM_UG_AOECloud_RangedResistBuff_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRangedWeaponHit",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GM_UG_AOECloud_RangedResistBuff_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "WeaponLocation",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRep_OnHitWeaponLocation",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GM_UG_AOECloud_RangedResistBuff_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GM_UG_AOECloud_RangedResistBuff_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.0"
+    },
+    "Super": {
+      "ObjectName": "Function'GM_UG_EnemyAOECloud_Base_C:ReceiveBeginPlay'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/GM_UG_EnemyAOECloud_Base.5"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GM_UG_AOECloud_RangedResistBuff_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.0"
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor:UserConstructionScript'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDedicatedServer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Conv_DoubleToVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "Class'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "K2Node_VariableSet_SphereRadius_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_SetScalarParameterValue_Value_ImplicitCast_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "WiggleMeshVolume",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GM_UG_AOECloud_RangedResistBuff_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.0"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GM_UG_AOECloud_RangedResistBuff_C",
+    "Name": "Default__GM_UG_AOECloud_RangedResistBuff_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.GM_UG_AOECloud_RangedResistBuff_C'",
+    "Template": {
+      "ObjectName": "GM_UG_EnemyAOECloud_Base_C'Default__GM_UG_EnemyAOECloud_Base_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/GM_UG_EnemyAOECloud_Base.6"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "WiggleTransitionLengthIn": 0.05999999865889549,
+      "WiggleTransitionLengthOut": 0.10000000149011612,
+      "WiggleDuration": 0.15000000596046448,
+      "OnHitWeaponLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "ActorPositionOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 60.0
+      },
+      "Effect To Remove": {
+        "ObjectName": "BlueprintGeneratedClass'GE_UG_RangeResist_InVolume_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GE_UG_RangeResist_InVolume.0"
+      },
+      "In AOE Status Tag": {
+        "TagName": "GameplayModifier.Enemy.Status.InAOE.RangedResist"
+      },
+      "In AOE Status Tag Effect": {
+        "ObjectName": "BlueprintGeneratedClass'GE_UG_RangeResist_InVolume_Tagging_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GE_UG_RangeResist_InVolume_Tagging.0"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GM_UG_AOECloud_RangedResistBuff_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.0"
+    },
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'ParticleSystemComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "ParticleSystemComponent'GM_UG_AOECloud_RangedResistBuff_C:ParticleSystem_GEN_VARIABLE'",
+            "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.13"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'GM_UG_EnemyAOECloud_Base_C'",
+              "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/GM_UG_EnemyAOECloud_Base.0"
+            },
+            "SCSVariableName": "ParticleSystem",
+            "AssociatedGuid": "C4EF30C3-42E8DC40-58804FB6-DF8F7CFF"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystem_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GM_UG_AOECloud_RangedResistBuff_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.0"
+    },
+    "Template": {
+      "ObjectName": "ParticleSystemComponent'GM_UG_EnemyAOECloud_Base_C:ParticleSystem_GEN_VARIABLE'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Base/GM_UG_EnemyAOECloud_Base.7"
+    },
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'P_SmokeScreen_Volume_01'",
+        "ObjectPath": "/SaveTheWorld/Effects/Fort_Effects/Mutators/Effects/P_SmokeScreen_Volume_01.56"
+      }
+    }
+  },
+  {
+    "Type": "PostProcessComponent",
+    "Name": "PostProcessVolume_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'PostProcessComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GM_UG_AOECloud_RangedResistBuff_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.0"
+    },
+    "Properties": {
+      "Settings": {
+        "bOverride_ColorContrast": true,
+        "bOverride_ColorGamma": true,
+        "bOverride_ColorSaturationShadows": true,
+        "bOverride_SceneColorTint": true,
+        "bOverride_VignetteIntensity": true,
+        "ColorContrast": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.5
+        },
+        "ColorGamma": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.5
+        },
+        "ColorGain": {
+          "X": 2.0,
+          "Y": 2.0,
+          "Z": 2.0,
+          "W": 1.0
+        },
+        "ColorSaturationShadows": {
+          "X": 1.544275,
+          "Y": 1.530076,
+          "Z": 2.0,
+          "W": 2.0
+        },
+        "SceneColorTint": {
+          "R": 0.808891,
+          "G": 0.423122,
+          "B": 2.0,
+          "A": 1.0,
+          "Hex": "E9AEFF"
+        },
+        "AutoExposureBiasBackup": 1.0,
+        "VignetteIntensity": 1.0
+      },
+      "Priority": 50.0,
+      "BlendRadius": 150.0,
+      "BlendWeight": 0.0,
+      "bUnbound": false
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GM_UG_AOECloud_RangedResistBuff_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'GM_UG_AOECloud_RangedResistBuff_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.19"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'GM_UG_AOECloud_RangedResistBuff_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.15"
+      },
+      "VariableGuid": "ACA24EEF-4540A4C6-2F358BB5-D18DED19",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'GM_UG_AOECloud_RangedResistBuff_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.19"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PostProcessComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PostProcessComponent'GM_UG_AOECloud_RangedResistBuff_C:PostProcessVolume_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.14"
+      },
+      "ParentComponentOrVariableName": "AOE Volume",
+      "ParentComponentOwnerClassName": "GM_UG_EnemyAOECloud_Base_C",
+      "VariableGuid": "B1FCBCDA-4D66ED92-E5DBF8B9-3B7CDCD5",
+      "InternalVariableName": "PostProcessVolume"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'GM_UG_AOECloud_RangedResistBuff_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.19"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'GM_UG_AOECloud_RangedResistBuff_C:MeshVolume_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.20"
+      },
+      "ParentComponentOrVariableName": "AOE Volume",
+      "ParentComponentOwnerClassName": "GM_UG_EnemyAOECloud_Base_C",
+      "VariableGuid": "8D437683-406161F8-4FBFE485-1AFD449F",
+      "InternalVariableName": "MeshVolume"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GM_UG_AOECloud_RangedResistBuff_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.0"
+    },
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'GM_UG_AOECloud_RangedResistBuff_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.17"
+        },
+        {
+          "ObjectName": "SCS_Node'GM_UG_AOECloud_RangedResistBuff_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.18"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'GM_UG_AOECloud_RangedResistBuff_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.17"
+        },
+        {
+          "ObjectName": "SCS_Node'GM_UG_AOECloud_RangedResistBuff_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.18"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'GM_UG_AOECloud_RangedResistBuff_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.16"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "MeshVolume_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GM_UG_AOECloud_RangedResistBuff_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.0"
+    },
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Sm_Outlander_GravitySphere_01'",
+        "ObjectPath": "/Game/CharClasses/Outlander/Gadgets/GravitySphere/Meshes/Sm_Outlander_GravitySphere_01.1"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'M_SmokeScreen_Volume_01'",
+          "ObjectPath": "/SaveTheWorld/Effects/Fort_Effects/Mutators/Materials/M_SmokeScreen_Volume_01.0"
+        }
+      ],
+      "CastShadow": false,
+      "TranslucencySortPriority": 1,
+      "BodyInstance": {
+        "ObjectType": "ECollisionChannel::ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECollisionResponse::ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "FaderTL_Template",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GM_UG_AOECloud_RangedResistBuff_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.0"
+    },
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'GM_UG_AOECloud_RangedResistBuff_C:CurveFloat_0'",
+            "ObjectPath": "/SaveTheWorld/Abilities/NPC/MiniBoss/Abilities/GM_UG_AOECloud_RangedResistBuff.1"
+          },
+          "PropertyName": "FaderTL_Fade_C36EB5EF4E3C75B8297762B6F8CF5CBD",
+          "TrackName": "Fade",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "C36EB5EF-4E3C75B8-297762B6-F8CF5CBD",
+      "VariableName": "FaderTL",
+      "DirectionPropertyName": "FaderTL__Direction_C36EB5EF4E3C75B8297762B6F8CF5CBD",
+      "UpdateFunctionName": "FaderTL__UpdateFunc",
+      "FinishedFunctionName": "FaderTL__FinishedFunc"
+    }
+  }
+]

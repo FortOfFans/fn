@@ -1,0 +1,107 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_DUDEBRO_Summon_Cooldown_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayEffect'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_DUDEBRO_Summon_Cooldown_C'Default__GE_DUDEBRO_Summon_Cooldown_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/DUDEBRO/Cooldowns/GE_DUDEBRO_Summon_Cooldown.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "ChanceToApplyGameplayEffectComponent",
+    "Name": "ChanceToApplyGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'ChanceToApplyGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_DUDEBRO_Summon_Cooldown_C'Default__GE_DUDEBRO_Summon_Cooldown_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/DUDEBRO/Cooldowns/GE_DUDEBRO_Summon_Cooldown.2"
+    },
+    "Properties": {
+      "ChanceToApplyToTarget": {
+        "Value": 1.0,
+        "Curve": {
+          "CurveTable": {
+            "ObjectName": "CurveTable'NPCMiscCurves'",
+            "ObjectPath": "/Game/Balance/DataTables/NPCMiscCurves.0"
+          },
+          "RowName": "DUDEBROSummonCooldownChance"
+        }
+      }
+    }
+  },
+  {
+    "Type": "GE_DUDEBRO_Summon_Cooldown_C",
+    "Name": "Default__GE_DUDEBRO_Summon_Cooldown_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/NPC/DUDEBRO/Cooldowns/GE_DUDEBRO_Summon_Cooldown.GE_DUDEBRO_Summon_Cooldown_C'",
+    "Properties": {
+      "DurationPolicy": "EGameplayEffectDurationType::HasDuration",
+      "DurationMagnitude": {
+        "ScalableFloatMagnitude": {
+          "Value": 1.0,
+          "Curve": {
+            "CurveTable": {
+              "ObjectName": "CurveTable'NPCMiscCurves'",
+              "ObjectPath": "/Game/Balance/DataTables/NPCMiscCurves.0"
+            },
+            "RowName": "DUDEBROSummonCooldown"
+          }
+        }
+      },
+      "InheritableOwnedTagsContainer": {
+        "CombinedTags": [
+          "NPC.Cooldown.Ability.Attack.Summon.Minions"
+        ],
+        "Added": [
+          "NPC.Cooldown.Ability.Attack.Summon.Minions"
+        ]
+      },
+      "GEComponents": [
+        {
+          "ObjectName": "ChanceToApplyGameplayEffectComponent'Default__GE_DUDEBRO_Summon_Cooldown_C:ChanceToApplyGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/DUDEBRO/Cooldowns/GE_DUDEBRO_Summon_Cooldown.1"
+        },
+        {
+          "ObjectName": "TargetTagsGameplayEffectComponent'Default__GE_DUDEBRO_Summon_Cooldown_C:TargetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/NPC/DUDEBRO/Cooldowns/GE_DUDEBRO_Summon_Cooldown.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "TargetTagsGameplayEffectComponent",
+    "Name": "TargetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TargetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_DUDEBRO_Summon_Cooldown_C'Default__GE_DUDEBRO_Summon_Cooldown_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/NPC/DUDEBRO/Cooldowns/GE_DUDEBRO_Summon_Cooldown.2"
+    },
+    "Properties": {
+      "InheritableGrantedTagsContainer": {
+        "CombinedTags": [
+          "NPC.Cooldown.Ability.Attack.Summon.Minions"
+        ],
+        "Added": [
+          "NPC.Cooldown.Ability.Attack.Summon.Minions"
+        ]
+      }
+    }
+  }
+]

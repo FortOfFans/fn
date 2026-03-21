@@ -1,0 +1,926 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GA_SupplyDrop_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GAT_GenericActiveAbilityNoCommit_C'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_GenericActiveAbilityNoCommit.0"
+    },
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'GA_SupplyDrop_C:ExecuteUbergraph_GA_SupplyDrop'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.1"
+      }
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'GA_SupplyDrop_C:SetTierFiveData'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.4"
+      },
+      {
+        "ObjectName": "Function'GA_SupplyDrop_C:SetTierFourData'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.5"
+      },
+      {
+        "ObjectName": "Function'GA_SupplyDrop_C:SetTierThreeData'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.7"
+      },
+      {
+        "ObjectName": "Function'GA_SupplyDrop_C:SetTierTwoData'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.8"
+      },
+      {
+        "ObjectName": "Function'GA_SupplyDrop_C:SetTierOneData'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.6"
+      },
+      {
+        "ObjectName": "Function'GA_SupplyDrop_C:Setup_Ability'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.9"
+      },
+      {
+        "ObjectName": "Function'GA_SupplyDrop_C:GetAttributeValue'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.2"
+      },
+      {
+        "ObjectName": "Function'GA_SupplyDrop_C:K2_ActivateAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.3"
+      },
+      {
+        "ObjectName": "Function'GA_SupplyDrop_C:ExecuteUbergraph_GA_SupplyDrop'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.1"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "Class'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "EventActivation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTag'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "AbilityMultiplier",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_CoreResourceUpgrade1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_CoreResourceUpgrade2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_RandomItemUpgrade1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_RandomItemUpgrade2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TC_RandomItemUpgrade3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "UnlockTiers",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 5,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'SupplyDropUnlocks'",
+          "ObjectPath": "/Game/Abilities/Player/Generic/Gadgets/SupplyDrop/SupplyDropUnlocks.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "WoodCount",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "MetalCount",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "StoneCount",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "WoodItems",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "StoneItems",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "MetalItems",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CraftingItems",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bTraps",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_GA_SupplyDrop": {
+        "ObjectName": "Function'GA_SupplyDrop_C:ExecuteUbergraph_GA_SupplyDrop'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.1"
+      },
+      "K2_ActivateAbility": {
+        "ObjectName": "Function'GA_SupplyDrop_C:K2_ActivateAbility'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.3"
+      },
+      "GetAttributeValue": {
+        "ObjectName": "Function'GA_SupplyDrop_C:GetAttributeValue'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.2"
+      },
+      "Setup_Ability": {
+        "ObjectName": "Function'GA_SupplyDrop_C:Setup_Ability'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.9"
+      },
+      "SetTierOneData": {
+        "ObjectName": "Function'GA_SupplyDrop_C:SetTierOneData'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.6"
+      },
+      "SetTierTwoData": {
+        "ObjectName": "Function'GA_SupplyDrop_C:SetTierTwoData'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.8"
+      },
+      "SetTierThreeData": {
+        "ObjectName": "Function'GA_SupplyDrop_C:SetTierThreeData'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.7"
+      },
+      "SetTierFourData": {
+        "ObjectName": "Function'GA_SupplyDrop_C:SetTierFourData'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.5"
+      },
+      "SetTierFiveData": {
+        "ObjectName": "Function'GA_SupplyDrop_C:SetTierFiveData'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.4"
+      }
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GA_SupplyDrop_C'Default__GA_SupplyDrop_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.10"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_GA_SupplyDrop",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_SupplyDrop_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAvatarActorFromActorInfo_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Pawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_CommitAbility_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Ability_Deco_Tool",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'FortAbilityDecoTool'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetSpawnParameters_OutSpawnParamters",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "Class'AbilityToolSpawnParameters'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_AbilitySpawnDeco_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'BuildingActor'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsB_Supply_Drop_Placement",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'B_SupplyDropPlacement_C'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/B_SupplyDropPlacement.4"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAuthority_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAbilitySystemComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetAttributeValue",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_SupplyDrop_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetAbilitySystemComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsFort_Ability_System_Component",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'FortAbilitySystemComponent'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_FindAttributeInformation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "Struct": {
+          "ObjectName": "Class'AttributeInfo'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetAttributeMagnitude_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_FFloor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DoubleProperty",
+        "Name": "CallFunc_FFloor_A_ImplicitCast",
+        "Flags": "RF_Public",
+        "ElementSize": 8
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "K2_ActivateAbility",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_SupplyDrop_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.0"
+    },
+    "Super": {
+      "ObjectName": "Function'GAT_GenericActiveAbilityNoCommit_C:K2_ActivateAbility'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_GenericActiveAbilityNoCommit.2"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetTierFiveData",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_SupplyDrop_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Condition",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetTierFourData",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_SupplyDrop_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Condition",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetTierOneData",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_SupplyDrop_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Condition",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetTierThreeData",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_SupplyDrop_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Condition",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetTierTwoData",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_SupplyDrop_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "Conditions",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Setup_Ability",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'Function'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GA_SupplyDrop_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "AbilitySystemComponentRef",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AbilitySystemComponent'",
+          "ObjectPath": "/Script/GameplayAbilities"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput_3",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_TagContainerInterface_CastInput_4",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'GameplayTagAssetInterface'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_HasAllMatchingGameplayTags_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SupplyDropUnlocks",
+        "Flags": "RF_Public",
+        "ElementSize": 5,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'SupplyDropUnlocks'",
+          "ObjectPath": "/Game/Abilities/Player/Generic/Gadgets/SupplyDrop/SupplyDropUnlocks.0"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "GA_SupplyDrop_C",
+    "Name": "Default__GA_SupplyDrop_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GA_SupplyDrop.GA_SupplyDrop_C'",
+    "Template": {
+      "ObjectName": "GAT_GenericActiveAbilityNoCommit_C'Default__GAT_GenericActiveAbilityNoCommit_C'",
+      "ObjectPath": "/Game/Abilities/Player/Parents/GAT_GenericActiveAbilityNoCommit.3"
+    },
+    "Properties": {
+      "UberGraphFrame": {},
+      "EventActivation": {
+        "TagName": "Abilities.Generic.SupplyDrop.Activate"
+      },
+      "AbilityMultiplier": 1,
+      "TC_CoreResourceUpgrade1": [
+        "Abilities.generic.SupplyDrop.CoreResourceUpgrade1"
+      ],
+      "TC_CoreResourceUpgrade2": [
+        "Abilities.generic.SupplyDrop.CoreResourceUpgrade2"
+      ],
+      "TC_RandomItemUpgrade1": [
+        "Abilities.generic.SupplyDrop.RandomItemDropUpgrade1"
+      ],
+      "TC_RandomItemUpgrade2": [
+        "Abilities.generic.SupplyDrop.RandomItemDropUpgrade2"
+      ],
+      "TC_RandomItemUpgrade3": [
+        "Abilities.generic.SupplyDrop.RandomItemDropUpgrade3"
+      ],
+      "UnlockTiers": {
+        "TierOne_5_9D1EB309486DD183FED684B8EEAF54B7": false,
+        "TierTwo_6_58AB58B441DB6EDC4FEA21ABD0C17475": false,
+        "TierThree_7_F54FF5FC4D92FACF83CB69B88043A65F": false,
+        "TierFour_8_6C40909A4282BD0806479A8DD34449EB": false,
+        "TierFive_9_0B433AC44B7DBA126B7872BD5EC513DA": false
+      },
+      "WoodCount": 60,
+      "MetalCount": 60,
+      "StoneCount": 60,
+      "bStartWithCooldown": true,
+      "Tooltip": {
+        "ObjectName": "BlueprintGeneratedClass'TT_SupplyDrop_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/TT_SupplyDrop.0"
+      },
+      "AbilityTags": [
+        "Abilities.Generic.SupplyDrop",
+        "Gameplay.Action.Player.Instant",
+        "Gameplay.Action.RestrictedAbility"
+      ],
+      "InstancingPolicy": "EGameplayAbilityInstancingPolicy::InstancedPerExecution",
+      "CooldownGameplayEffectClass": {
+        "ObjectName": "BlueprintGeneratedClass'GE_SupplyDrop_Cooldown_C'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Generic/Gadgets/SupplyDrop/GE_SupplyDrop_Cooldown.1"
+      },
+      "ActivationBlockedTags": [
+        "Abilities.Constructor.BullRush.Charging",
+        "Granted.Status.AbilityBlock"
+      ]
+    }
+  }
+]

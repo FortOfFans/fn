@@ -1,0 +1,318 @@
+[
+  {
+    "Type": "AssetTagsGameplayEffectComponent",
+    "Name": "AssetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AssetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Perk_L_DimMak_ShieldRegen_C'Default__GE_Perk_L_DimMak_ShieldRegen_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DimMak/GE_Perk_L_DimMak_ShieldRegen.2"
+    },
+    "Template": {
+      "ObjectName": "AssetTagsGameplayEffectComponent'Default__GET_PeriodicShieldRegen_Hero_C:AssetTagsGameplayEffectComponent_0'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/Hero/GET_PeriodicShieldRegen_Hero.0"
+    },
+    "Properties": {
+      "InheritableAssetTags": {
+        "CombinedTags": [
+          "Gameplay.Effect.Periodic",
+          "Gameplay.Effect.Positive",
+          "Asset.Gameplay.Mod.PeriodicShieldRegen",
+          "Asset.PerkEffect.DimMak.ShieldRegen"
+        ],
+        "Added": [
+          "Gameplay.Effect.Periodic",
+          "Gameplay.Effect.Positive",
+          "Asset.Gameplay.Mod.PeriodicShieldRegen",
+          "Asset.PerkEffect.DimMak.ShieldRegen"
+        ]
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Perk_L_DimMak_ShieldRegen_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GET_PeriodicShieldRegen_Hero_C'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/Hero/GET_PeriodicShieldRegen_Hero.1"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_Perk_L_DimMak_ShieldRegen_C'Default__GE_Perk_L_DimMak_ShieldRegen_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DimMak/GE_Perk_L_DimMak_ShieldRegen.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_Perk_L_DimMak_ShieldRegen_C",
+    "Name": "Default__GE_Perk_L_DimMak_ShieldRegen_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Perks/Leader/DimMak/GE_Perk_L_DimMak_ShieldRegen.GE_Perk_L_DimMak_ShieldRegen_C'",
+    "Template": {
+      "ObjectName": "GET_PeriodicShieldRegen_Hero_C'Default__GET_PeriodicShieldRegen_Hero_C'",
+      "ObjectPath": "/SaveTheWorld/GameplayEffectTemplates/Hero/GET_PeriodicShieldRegen_Hero.2"
+    },
+    "Properties": {
+      "DurationPolicy": "EGameplayEffectDurationType::Infinite",
+      "DurationMagnitude": {
+        "ScalableFloatMagnitude": {
+          "Value": 10.0
+        }
+      },
+      "Modifiers": [
+        {
+          "Attribute": {
+            "AttributeName": "CurrentShield",
+            "Attribute": {
+              "Path": [
+                "CurrentShield"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'FortHealthSet'",
+                "ObjectPath": "/Script/FortniteGame"
+              }
+            },
+            "AttributeOwner": {
+              "ObjectName": "Class'FortHealthSet'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          "ModifierOp": "EGameplayModOp::Additive",
+          "ModifierMagnitude": {
+            "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::AttributeBased",
+            "ScalableFloatMagnitude": {
+              "Value": 0.0,
+              "Curve": {
+                "CurveTable": null,
+                "RowName": "None"
+              },
+              "RegistryType": {
+                "Name": "None"
+              }
+            },
+            "AttributeBasedMagnitude": {
+              "Coefficient": {
+                "Value": 0.1,
+                "Curve": {
+                  "CurveTable": {
+                    "ObjectName": "CurveTable'CombatEffects_HeroAbilities'",
+                    "ObjectPath": "/Game/Balance/DataTables/CombatEffects_HeroAbilities.0"
+                  },
+                  "RowName": "Perk.DimMak.T01.ShieldHealPercentPerSecond"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "BackingAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "Shield",
+                  "Attribute": {
+                    "Path": [
+                      "Shield"
+                    ],
+                    "ResolvedOwner": {
+                      "ObjectName": "Class'FortHealthSet'",
+                      "ObjectPath": "/Script/FortniteGame"
+                    }
+                  },
+                  "AttributeOwner": {
+                    "ObjectName": "Class'FortHealthSet'",
+                    "ObjectPath": "/Script/FortniteGame"
+                  }
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Target",
+                "bSnapshot": false
+              },
+              "AttributeCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              },
+              "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+              "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+              "SourceTagFilter": [],
+              "TargetTagFilter": []
+            },
+            "CustomMagnitude": {
+              "CalculationClassMagnitude": null,
+              "Coefficient": {
+                "Value": 1.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PreMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "PostMultiplyAdditiveValue": {
+                "Value": 0.0,
+                "Curve": {
+                  "CurveTable": null,
+                  "RowName": "None"
+                },
+                "RegistryType": {
+                  "Name": "None"
+                }
+              },
+              "FinalLookupCurve": {
+                "CurveTable": null,
+                "RowName": "None"
+              }
+            },
+            "SetByCallerMagnitude": {
+              "DataName": "None",
+              "DataTag": {
+                "TagName": "None"
+              }
+            }
+          },
+          "EvaluationChannelSettings": {
+            "Channel": "EGameplayModEvaluationChannel::Channel0"
+          },
+          "SourceTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          },
+          "TargetTags": {
+            "RequireTags": [],
+            "IgnoreTags": [],
+            "TagQuery": {
+              "TokenStreamVersion": 0,
+              "TagDictionary": [],
+              "QueryTokenStream": [],
+              "UserDescription": "",
+              "AutoDescription": ""
+            }
+          }
+        }
+      ],
+      "GameplayCues": [],
+      "InheritableGameplayEffectTags": {
+        "CombinedTags": [
+          "Gameplay.Effect.Periodic",
+          "Gameplay.Effect.Positive",
+          "Asset.Gameplay.Mod.PeriodicShieldRegen",
+          "Asset.PerkEffect.DimMak.ShieldRegen"
+        ],
+        "Added": [
+          "Gameplay.Effect.Periodic",
+          "Gameplay.Effect.Positive",
+          "Asset.Gameplay.Mod.PeriodicShieldRegen",
+          "Asset.PerkEffect.DimMak.ShieldRegen"
+        ]
+      },
+      "InheritableOwnedTagsContainer": {
+        "CombinedTags": [
+          "Granted.PerkEffect.DimMak.ShieldRegen"
+        ],
+        "Added": [
+          "Granted.PerkEffect.DimMak.ShieldRegen"
+        ]
+      },
+      "OngoingTagRequirements": {
+        "RequireTags": [
+          "Granted.PerkEffect.Ninja.ShadowStance.Active"
+        ]
+      },
+      "GEComponents": [
+        {
+          "ObjectName": "AssetTagsGameplayEffectComponent'Default__GE_Perk_L_DimMak_ShieldRegen_C:AssetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DimMak/GE_Perk_L_DimMak_ShieldRegen.0"
+        },
+        {
+          "ObjectName": "TargetTagRequirementsGameplayEffectComponent'Default__GE_Perk_L_DimMak_ShieldRegen_C:TargetTagRequirementsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DimMak/GE_Perk_L_DimMak_ShieldRegen.3"
+        },
+        {
+          "ObjectName": "TargetTagsGameplayEffectComponent'Default__GE_Perk_L_DimMak_ShieldRegen_C:TargetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DimMak/GE_Perk_L_DimMak_ShieldRegen.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "TargetTagRequirementsGameplayEffectComponent",
+    "Name": "TargetTagRequirementsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TargetTagRequirementsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Perk_L_DimMak_ShieldRegen_C'Default__GE_Perk_L_DimMak_ShieldRegen_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DimMak/GE_Perk_L_DimMak_ShieldRegen.2"
+    },
+    "Properties": {
+      "OngoingTagRequirements": {
+        "RequireTags": [
+          "Granted.PerkEffect.Ninja.ShadowStance.Active"
+        ]
+      }
+    }
+  },
+  {
+    "Type": "TargetTagsGameplayEffectComponent",
+    "Name": "TargetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TargetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Perk_L_DimMak_ShieldRegen_C'Default__GE_Perk_L_DimMak_ShieldRegen_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Leader/DimMak/GE_Perk_L_DimMak_ShieldRegen.2"
+    },
+    "Properties": {
+      "InheritableGrantedTagsContainer": {
+        "CombinedTags": [
+          "Granted.PerkEffect.DimMak.ShieldRegen"
+        ],
+        "Added": [
+          "Granted.PerkEffect.DimMak.ShieldRegen"
+        ]
+      }
+    }
+  }
+]

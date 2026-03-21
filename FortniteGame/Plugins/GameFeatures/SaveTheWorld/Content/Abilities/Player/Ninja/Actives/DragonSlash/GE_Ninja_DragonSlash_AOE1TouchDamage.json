@@ -1,0 +1,452 @@
+[
+  {
+    "Type": "AssetTagsGameplayEffectComponent",
+    "Name": "AssetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AssetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Ninja_DragonSlash_AOE1TouchDamage_C'Default__GE_Ninja_DragonSlash_AOE1TouchDamage_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/DragonSlash/GE_Ninja_DragonSlash_AOE1TouchDamage.2"
+    },
+    "Template": {
+      "ObjectName": "AssetTagsGameplayEffectComponent'Default__GET_DirectEnergyDamage_C:AssetTagsGameplayEffectComponent_0'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_DirectEnergyDamage.0"
+    },
+    "Properties": {
+      "InheritableAssetTags": {
+        "CombinedTags": [
+          "Gameplay.Damage",
+          "Gameplay.Effect.Instant",
+          "Gameplay.Damage.Physical",
+          "Gameplay.Damage.Physical.Energy",
+          "Abilities.Ninja.TailOfTheDragon.Damage"
+        ],
+        "Added": [
+          "Abilities.Ninja.TailOfTheDragon.Damage"
+        ]
+      }
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Ninja_DragonSlash_AOE1TouchDamage_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GET_DirectEnergyDamage_C'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_DirectEnergyDamage.1"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_Ninja_DragonSlash_AOE1TouchDamage_C'Default__GE_Ninja_DragonSlash_AOE1TouchDamage_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/DragonSlash/GE_Ninja_DragonSlash_AOE1TouchDamage.2"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_Ninja_DragonSlash_AOE1TouchDamage_C",
+    "Name": "Default__GE_Ninja_DragonSlash_AOE1TouchDamage_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Ninja/Actives/DragonSlash/GE_Ninja_DragonSlash_AOE1TouchDamage.GE_Ninja_DragonSlash_AOE1TouchDamage_C'",
+    "Template": {
+      "ObjectName": "GET_DirectEnergyDamage_C'Default__GET_DirectEnergyDamage_C'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_DirectEnergyDamage.2"
+    },
+    "Properties": {
+      "Executions": [
+        {
+          "CalculationClass": {
+            "ObjectName": "Class'FortDamageFormulaExecutionCalculation'",
+            "ObjectPath": "/Script/FortniteGame"
+          },
+          "PassedInTags": [],
+          "CalculationModifiers": [
+            {
+              "CapturedAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "OutgoingAbilityDamage",
+                  "Attribute": {
+                    "Path": [
+                      "OutgoingAbilityDamage"
+                    ],
+                    "ResolvedOwner": {
+                      "ObjectName": "Class'FortDamageSet'",
+                      "ObjectPath": "/Script/FortniteGame"
+                    }
+                  },
+                  "AttributeOwner": {
+                    "ObjectName": "Class'FortDamageSet'",
+                    "ObjectPath": "/Script/FortniteGame"
+                  }
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": true
+              },
+              "TransientAggregatorIdentifier": {
+                "TagName": "None"
+              },
+              "AggregatorType": "EGameplayEffectScopedModifierAggregatorType::CapturedAttributeBacked",
+              "ModifierOp": "EGameplayModOp::Multiplicitive",
+              "ModifierMagnitude": {
+                "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::ScalableFloat",
+                "ScalableFloatMagnitude": {
+                  "Value": 0.105,
+                  "Curve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  },
+                  "RegistryType": {
+                    "Name": "None"
+                  }
+                },
+                "AttributeBasedMagnitude": {
+                  "Coefficient": {
+                    "Value": 1.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PreMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PostMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "BackingAttribute": {
+                    "AttributeToCapture": {
+                      "AttributeName": "",
+                      "Attribute": {
+                        "Path": [],
+                        "ResolvedOwner": null
+                      },
+                      "AttributeOwner": null
+                    },
+                    "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                    "bSnapshot": false
+                  },
+                  "AttributeCurve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  },
+                  "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+                  "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+                  "SourceTagFilter": [],
+                  "TargetTagFilter": []
+                },
+                "CustomMagnitude": {
+                  "CalculationClassMagnitude": null,
+                  "Coefficient": {
+                    "Value": 1.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PreMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PostMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "FinalLookupCurve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  }
+                },
+                "SetByCallerMagnitude": {
+                  "DataName": "None",
+                  "DataTag": {
+                    "TagName": "None"
+                  }
+                }
+              },
+              "EvaluationChannelSettings": {
+                "Channel": "EGameplayModEvaluationChannel::Channel0"
+              },
+              "SourceTags": {
+                "RequireTags": [],
+                "IgnoreTags": [],
+                "TagQuery": {
+                  "TokenStreamVersion": 0,
+                  "TagDictionary": [],
+                  "QueryTokenStream": [],
+                  "UserDescription": "",
+                  "AutoDescription": ""
+                }
+              },
+              "TargetTags": {
+                "RequireTags": [],
+                "IgnoreTags": [],
+                "TagQuery": {
+                  "TokenStreamVersion": 0,
+                  "TagDictionary": [],
+                  "QueryTokenStream": [],
+                  "UserDescription": "",
+                  "AutoDescription": ""
+                }
+              }
+            },
+            {
+              "CapturedAttribute": {
+                "AttributeToCapture": {
+                  "AttributeName": "DiceCritChance",
+                  "Attribute": {
+                    "Path": [
+                      "DiceCritChance"
+                    ],
+                    "ResolvedOwner": {
+                      "ObjectName": "Class'FortDamageSet'",
+                      "ObjectPath": "/Script/FortniteGame"
+                    }
+                  },
+                  "AttributeOwner": {
+                    "ObjectName": "Class'FortDamageSet'",
+                    "ObjectPath": "/Script/FortniteGame"
+                  }
+                },
+                "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                "bSnapshot": true
+              },
+              "TransientAggregatorIdentifier": {
+                "TagName": "None"
+              },
+              "AggregatorType": "EGameplayEffectScopedModifierAggregatorType::CapturedAttributeBacked",
+              "ModifierOp": "EGameplayModOp::Override",
+              "ModifierMagnitude": {
+                "MagnitudeCalculationType": "EGameplayEffectMagnitudeCalculation::ScalableFloat",
+                "ScalableFloatMagnitude": {
+                  "Value": 0.0,
+                  "Curve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  },
+                  "RegistryType": {
+                    "Name": "None"
+                  }
+                },
+                "AttributeBasedMagnitude": {
+                  "Coefficient": {
+                    "Value": 1.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PreMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PostMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "BackingAttribute": {
+                    "AttributeToCapture": {
+                      "AttributeName": "",
+                      "Attribute": {
+                        "Path": [],
+                        "ResolvedOwner": null
+                      },
+                      "AttributeOwner": null
+                    },
+                    "AttributeSource": "EGameplayEffectAttributeCaptureSource::Source",
+                    "bSnapshot": false
+                  },
+                  "AttributeCurve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  },
+                  "AttributeCalculationType": "EAttributeBasedFloatCalculationType::AttributeMagnitude",
+                  "FinalChannel": "EGameplayModEvaluationChannel::Channel0",
+                  "SourceTagFilter": [],
+                  "TargetTagFilter": []
+                },
+                "CustomMagnitude": {
+                  "CalculationClassMagnitude": null,
+                  "Coefficient": {
+                    "Value": 1.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PreMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "PostMultiplyAdditiveValue": {
+                    "Value": 0.0,
+                    "Curve": {
+                      "CurveTable": null,
+                      "RowName": "None"
+                    },
+                    "RegistryType": {
+                      "Name": "None"
+                    }
+                  },
+                  "FinalLookupCurve": {
+                    "CurveTable": null,
+                    "RowName": "None"
+                  }
+                },
+                "SetByCallerMagnitude": {
+                  "DataName": "None",
+                  "DataTag": {
+                    "TagName": "None"
+                  }
+                }
+              },
+              "EvaluationChannelSettings": {
+                "Channel": "EGameplayModEvaluationChannel::Channel0"
+              },
+              "SourceTags": {
+                "RequireTags": [],
+                "IgnoreTags": [],
+                "TagQuery": {
+                  "TokenStreamVersion": 0,
+                  "TagDictionary": [],
+                  "QueryTokenStream": [],
+                  "UserDescription": "",
+                  "AutoDescription": ""
+                }
+              },
+              "TargetTags": {
+                "RequireTags": [],
+                "IgnoreTags": [],
+                "TagQuery": {
+                  "TokenStreamVersion": 0,
+                  "TagDictionary": [],
+                  "QueryTokenStream": [],
+                  "UserDescription": "",
+                  "AutoDescription": ""
+                }
+              }
+            }
+          ],
+          "ConditionalGameplayEffects": [
+            {
+              "EffectClass": {
+                "ObjectName": "BlueprintGeneratedClass'GE_Ninja_SmokeBomb_CloudSnare_C'",
+                "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/SmokeBomb/GE_Ninja_SmokeBomb_CloudSnare.1"
+              },
+              "RequiredSourceTags": []
+            }
+          ]
+        }
+      ],
+      "InheritableGameplayEffectTags": {
+        "CombinedTags": [
+          "Gameplay.Damage",
+          "Gameplay.Effect.Instant",
+          "Gameplay.Damage.Physical",
+          "Gameplay.Damage.Physical.Energy",
+          "Abilities.Ninja.TailOfTheDragon.Damage"
+        ],
+        "Added": [
+          "Abilities.Ninja.TailOfTheDragon.Damage"
+        ]
+      },
+      "ApplicationTagRequirements": {
+        "IgnoreTags": [
+          "Abilities.Ninja.Debuffs.TailOfTheDragon.ReEntryBuffer",
+          "Abilities.Ninja.Debuffs.TailOfTheDragon.AOE"
+        ]
+      },
+      "GEComponents": [
+        {
+          "ObjectName": "AssetTagsGameplayEffectComponent'Default__GE_Ninja_DragonSlash_AOE1TouchDamage_C:AssetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/DragonSlash/GE_Ninja_DragonSlash_AOE1TouchDamage.0"
+        },
+        {
+          "ObjectName": "TargetTagRequirementsGameplayEffectComponent'Default__GE_Ninja_DragonSlash_AOE1TouchDamage_C:TargetTagRequirementsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/DragonSlash/GE_Ninja_DragonSlash_AOE1TouchDamage.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "TargetTagRequirementsGameplayEffectComponent",
+    "Name": "TargetTagRequirementsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TargetTagRequirementsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Ninja_DragonSlash_AOE1TouchDamage_C'Default__GE_Ninja_DragonSlash_AOE1TouchDamage_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Ninja/Actives/DragonSlash/GE_Ninja_DragonSlash_AOE1TouchDamage.2"
+    },
+    "Properties": {
+      "ApplicationTagRequirements": {
+        "IgnoreTags": [
+          "Abilities.Ninja.Debuffs.TailOfTheDragon.ReEntryBuffer",
+          "Abilities.Ninja.Debuffs.TailOfTheDragon.AOE"
+        ]
+      }
+    }
+  }
+]

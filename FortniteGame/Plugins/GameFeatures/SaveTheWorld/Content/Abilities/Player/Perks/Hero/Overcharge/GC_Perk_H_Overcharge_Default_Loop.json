@@ -1,0 +1,291 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GC_Perk_H_Overcharge_Default_Loop_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'GC_Perk_H_Overcharge_Default_Loop_C:SimpleConstructionScript_0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Overcharge/GC_Perk_H_Overcharge_Default_Loop.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortGameplayCueNotify_Loop'",
+      "ObjectPath": "/Script/FortniteGame"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "As Fort Player Pawn",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'FortPlayerPawn'",
+          "ObjectPath": "/Script/FortniteGame"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MyParticleSystem",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'FXSystemComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MySound",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'AudioComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TimerHandle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Tag Container",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 32,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "Class'GameplayTagContainer'",
+          "ObjectPath": "/Script/GameplayTags"
+        }
+      },
+      {
+        "Type": "SetProperty",
+        "Name": "NewVar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 80,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "ElementProp": {
+          "Type": "ObjectProperty",
+          "Name": "NewVar",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "UObjectWrapper",
+          "PropertyClass": {
+            "ObjectName": "Class'FortWeapon'",
+            "ObjectPath": "/Script/FortniteGame"
+          }
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GC_Perk_H_Overcharge_Default_Loop_C'Default__GC_Perk_H_Overcharge_Default_Loop_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Overcharge/GC_Perk_H_Overcharge_Default_Loop.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GC_Perk_H_Overcharge_Default_Loop_C",
+    "Name": "Default__GC_Perk_H_Overcharge_Default_Loop_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Perks/Hero/Overcharge/GC_Perk_H_Overcharge_Default_Loop.GC_Perk_H_Overcharge_Default_Loop_C'",
+    "Properties": {
+      "TimerHandle": {
+        "Handle": 0
+      },
+      "Tag Container": [
+        "Abilities.Constructor.GoinConstructor.Weapon"
+      ],
+      "DefaultLoopingAttachment": {
+        "SocketName": "root",
+        "bAttachToWeapon": true
+      },
+      "LoopingParticles": [
+        {
+          "Condition": {
+            "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+            "AllowedSurfaces": [],
+            "DisallowedSurfaces": [],
+            "ChanceToPlay": 1.0,
+            "Significance": "EParticleSignificanceLevel::High",
+            "RequiredDetailMode": 0,
+            "bRequireVisible": false
+          },
+          "Attachment": {
+            "SocketName": "Anim",
+            "AttachType": "EFortGameplayCueAttachType::AttachToTarget",
+            "bAttachToWeapon": true,
+            "bAttachToHitResult": false,
+            "bUseUnsmoothedNetworkPosition": false,
+            "bIgnoreLocation": false,
+            "bIgnoreScale": true,
+            "bIgnoreRotation": false,
+            "OverrideLocation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "OverrideScale": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            },
+            "OverrideRotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            }
+          },
+          "FXType": "EFXType::GenericAnimNotify",
+          "NiagaraSystem": {
+            "ObjectName": "NiagaraSystem'NS_Perk_H_Overcharge_Hammer_IdleYellow'",
+            "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Overcharge/VFX/NS_Perk_H_Overcharge_Hammer_IdleYellow.28"
+          },
+          "ParticleSystem": null,
+          "bUseComponentPool": true,
+          "bCastShadow": false,
+          "bOverrideCondition": false,
+          "bOverrideAttachment": true
+        }
+      ],
+      "LoopingSounds": [
+        {
+          "LoopingSoundFadeOutDuration": 0.5,
+          "LoopingSoundVolumeLevel": 0.0,
+          "Condition": {
+            "SourceCondition": "EFortGameplayCueSourceCondition::AnySource",
+            "AllowedSurfaces": [],
+            "DisallowedSurfaces": [],
+            "ChanceToPlay": 1.0,
+            "Significance": "EParticleSignificanceLevel::High",
+            "RequiredDetailMode": 0,
+            "bRequireVisible": false
+          },
+          "Attachment": {
+            "SocketName": "root",
+            "AttachType": "EFortGameplayCueAttachType::AttachToTarget",
+            "bAttachToWeapon": true,
+            "bAttachToHitResult": false,
+            "bUseUnsmoothedNetworkPosition": false,
+            "bIgnoreLocation": false,
+            "bIgnoreScale": true,
+            "bIgnoreRotation": false,
+            "OverrideLocation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "OverrideScale": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            },
+            "OverrideRotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            }
+          },
+          "SoundCue": {
+            "ObjectName": "SoundCue'SFX_Perk_H_Overcharge_Idle'",
+            "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Overcharge/SFX/SFX_Perk_H_Overcharge_Idle.0"
+          },
+          "SoundLibraryTag": {
+            "TagName": "None"
+          },
+          "SoundLibraryContextClass": null,
+          "DelayBeforePlayInSeconds": 0.0,
+          "bOverrideCondition": false,
+          "bOverrideAttachment": true
+        }
+      ],
+      "GameplayCueTag": {
+        "TagName": "GameplayCue.Abilities.Perks.Constructor.Overcharge.Idle"
+      },
+      "GameplayCueName": "GameplayCue.Abilities.Perks.Constructor.Overcharge.Idle",
+      "IsOverride": false,
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__GC_Perk_H_Overcharge_Default_Loop_C:RootComponent'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Overcharge/GC_Perk_H_Overcharge_Default_Loop.2"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RootComponent",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "GC_Perk_H_Overcharge_Default_Loop_C'Default__GC_Perk_H_Overcharge_Default_Loop_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Overcharge/GC_Perk_H_Overcharge_Default_Loop.1"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SceneComponent'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GC_Perk_H_Overcharge_Default_Loop_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Overcharge/GC_Perk_H_Overcharge_Default_Loop.0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SCS_Node'",
+    "Outer": {
+      "ObjectName": "SimpleConstructionScript'GC_Perk_H_Overcharge_Default_Loop_C:SimpleConstructionScript_0'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Overcharge/GC_Perk_H_Overcharge_Default_Loop.5"
+    },
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'GC_Perk_H_Overcharge_Default_Loop_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Overcharge/GC_Perk_H_Overcharge_Default_Loop.3"
+      },
+      "VariableGuid": "7EE495CB-4CF38D5D-52077EA0-E51B0790",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Outer": {
+      "ObjectName": "BlueprintGeneratedClass'GC_Perk_H_Overcharge_Default_Loop_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Overcharge/GC_Perk_H_Overcharge_Default_Loop.0"
+    },
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'GC_Perk_H_Overcharge_Default_Loop_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Overcharge/GC_Perk_H_Overcharge_Default_Loop.4"
+      }
+    }
+  }
+]

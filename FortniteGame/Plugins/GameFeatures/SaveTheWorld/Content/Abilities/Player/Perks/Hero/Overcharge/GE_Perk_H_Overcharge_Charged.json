@@ -1,0 +1,211 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Perk_H_Overcharge_Charged_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayEffect'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_Perk_H_Overcharge_Charged_C'Default__GE_Perk_H_Overcharge_Charged_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Overcharge/GE_Perk_H_Overcharge_Charged.1"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_Perk_H_Overcharge_Charged_C",
+    "Name": "Default__GE_Perk_H_Overcharge_Charged_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Player/Perks/Hero/Overcharge/GE_Perk_H_Overcharge_Charged.GE_Perk_H_Overcharge_Charged_C'",
+    "Properties": {
+      "DurationPolicy": "EGameplayEffectDurationType::Infinite",
+      "Executions": [
+        {
+          "CalculationClass": null,
+          "PassedInTags": [],
+          "CalculationModifiers": [],
+          "ConditionalGameplayEffects": [
+            {
+              "EffectClass": null,
+              "RequiredSourceTags": [
+                "Granted.Perk.Overcharge.T02"
+              ]
+            },
+            {
+              "EffectClass": null,
+              "RequiredSourceTags": [
+                "Granted.Perk.Overcharge.T02"
+              ]
+            }
+          ]
+        }
+      ],
+      "RoutineExpirationEffectClasses": [
+        null
+      ],
+      "bRequireModifierSuccessToTriggerCues": false,
+      "bSuppressStackingCues": true,
+      "GameplayCues": [
+        {
+          "MagnitudeAttribute": {
+            "AttributeName": "",
+            "Attribute": {
+              "Path": [],
+              "ResolvedOwner": null
+            },
+            "AttributeOwner": null
+          },
+          "MinLevel": 0.0,
+          "MaxLevel": 0.0,
+          "GameplayCueTags": [
+            "GameplayCue.Abilities.Perks.Constructor.Overcharge.Charged"
+          ]
+        }
+      ],
+      "InheritableOwnedTagsContainer": {
+        "CombinedTags": [
+          "Abilities.Constructor.Perks.Overcharge.Charged"
+        ],
+        "Added": [
+          "Abilities.Constructor.Perks.Overcharge.Charged"
+        ]
+      },
+      "RemoveGameplayEffectQuery": {
+        "EffectTagQuery": {
+          "TagDictionary": [
+            {
+              "TagName": "Abilities.Constructor.Perks.Overcharge.Idle"
+            }
+          ],
+          "QueryTokenStream": [
+            0,
+            1,
+            1,
+            1,
+            0
+          ],
+          "AutoDescription": " ANY( Abilities.Constructor.Perks.Overcharge.Idle )"
+        },
+        "EffectDefinition": {
+          "ObjectName": "BlueprintGeneratedClass'GE_Perk_H_Overcharge_Idle_C'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Overcharge/GE_Perk_H_Overcharge_Idle.1"
+        }
+      },
+      "StackingType": "EGameplayEffectStackingType::AggregateByTarget",
+      "StackLimitCount": 1,
+      "StackExpirationPolicy": "EGameplayEffectStackingExpirationPolicy::RemoveSingleStackAndRefreshDuration",
+      "GEComponents": [
+        {
+          "ObjectName": "TargetTagsGameplayEffectComponent'Default__GE_Perk_H_Overcharge_Charged_C:TargetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Overcharge/GE_Perk_H_Overcharge_Charged.3"
+        },
+        {
+          "ObjectName": "RemoveOtherGameplayEffectComponent'Default__GE_Perk_H_Overcharge_Charged_C:RemoveOtherGameplayEffectComponent_1'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Overcharge/GE_Perk_H_Overcharge_Charged.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "RemoveOtherGameplayEffectComponent",
+    "Name": "RemoveOtherGameplayEffectComponent_1",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'RemoveOtherGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Perk_H_Overcharge_Charged_C'Default__GE_Perk_H_Overcharge_Charged_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Overcharge/GE_Perk_H_Overcharge_Charged.1"
+    },
+    "Properties": {
+      "RemoveGameplayEffectQueries": [
+        {
+          "CustomMatchDelegate_BP": {
+            "Object": null,
+            "FunctionName": "None"
+          },
+          "OwningTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "EffectTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [
+              {
+                "TagName": "Abilities.Constructor.Perks.Overcharge.Idle"
+              }
+            ],
+            "QueryTokenStream": [
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "UserDescription": "",
+            "AutoDescription": " ANY( Abilities.Constructor.Perks.Overcharge.Idle )"
+          },
+          "SourceTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "SourceAggregateTagQuery": {
+            "TokenStreamVersion": 0,
+            "TagDictionary": [],
+            "QueryTokenStream": [],
+            "UserDescription": "",
+            "AutoDescription": ""
+          },
+          "ModifyingAttribute": {
+            "AttributeName": "",
+            "Attribute": {
+              "Path": [],
+              "ResolvedOwner": null
+            },
+            "AttributeOwner": null
+          },
+          "EffectSource": null,
+          "EffectDefinition": {
+            "ObjectName": "BlueprintGeneratedClass'GE_Perk_H_Overcharge_Idle_C'",
+            "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Overcharge/GE_Perk_H_Overcharge_Idle.1"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "TargetTagsGameplayEffectComponent",
+    "Name": "TargetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TargetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Perk_H_Overcharge_Charged_C'Default__GE_Perk_H_Overcharge_Charged_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/Overcharge/GE_Perk_H_Overcharge_Charged.1"
+    },
+    "Properties": {
+      "InheritableGrantedTagsContainer": {
+        "CombinedTags": [
+          "Abilities.Constructor.Perks.Overcharge.Charged"
+        ],
+        "Added": [
+          "Abilities.Constructor.Perks.Overcharge.Charged"
+        ]
+      }
+    }
+  }
+]

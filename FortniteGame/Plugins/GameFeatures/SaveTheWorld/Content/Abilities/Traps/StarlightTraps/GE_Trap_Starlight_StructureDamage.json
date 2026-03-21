@@ -1,0 +1,173 @@
+[
+  {
+    "Type": "AbilitiesGameplayEffectComponent",
+    "Name": "AbilitiesGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AbilitiesGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Trap_Starlight_StructureDamage_C'Default__GE_Trap_Starlight_StructureDamage_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Traps/StarlightTraps/GE_Trap_Starlight_StructureDamage.3"
+    },
+    "Properties": {
+      "GrantAbilityConfigs": [
+        {
+          "Ability": {
+            "ObjectName": "BlueprintGeneratedClass'GA_PlayerBuiltActive_C'",
+            "ObjectPath": "/SaveTheWorld/Missions/Primary/Starlight/Curses/S2/GA_PlayerBuiltActive.0"
+          },
+          "LevelScalableFloat": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "InputID": -1,
+          "RemovalPolicy": "EGameplayEffectGrantedAbilityRemovePolicy::CancelAbilityImmediately"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "AssetTagsGameplayEffectComponent",
+    "Name": "AssetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AssetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Trap_Starlight_StructureDamage_C'Default__GE_Trap_Starlight_StructureDamage_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Traps/StarlightTraps/GE_Trap_Starlight_StructureDamage.3"
+    },
+    "Template": {
+      "ObjectName": "AssetTagsGameplayEffectComponent'Default__GET_PeriodicPhysicalDamage_C:AssetTagsGameplayEffectComponent_0'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_PeriodicPhysicalDamage.0"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Trap_Starlight_StructureDamage_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'GET_PeriodicPhysicalDamage_C'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_PeriodicPhysicalDamage.1"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_Trap_Starlight_StructureDamage_C'Default__GE_Trap_Starlight_StructureDamage_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Traps/StarlightTraps/GE_Trap_Starlight_StructureDamage.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_Trap_Starlight_StructureDamage_C",
+    "Name": "Default__GE_Trap_Starlight_StructureDamage_C",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/Traps/StarlightTraps/GE_Trap_Starlight_StructureDamage.GE_Trap_Starlight_StructureDamage_C'",
+    "Template": {
+      "ObjectName": "GET_PeriodicPhysicalDamage_C'Default__GET_PeriodicPhysicalDamage_C'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_PeriodicPhysicalDamage.2"
+    },
+    "Properties": {
+      "DurationPolicy": "EGameplayEffectDurationType::Infinite",
+      "bExecutePeriodicEffectOnApplication": false,
+      "GameplayCues": [
+        {
+          "MagnitudeAttribute": {
+            "AttributeName": "Damage",
+            "Attribute": {
+              "Path": [
+                "Damage"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "Class'FortHealthSet'",
+                "ObjectPath": "/Script/FortniteGame"
+              }
+            },
+            "AttributeOwner": {
+              "ObjectName": "Class'FortHealthSet'",
+              "ObjectPath": "/Script/FortniteGame"
+            }
+          },
+          "MinLevel": 0.0,
+          "MaxLevel": 0.0,
+          "GameplayCueTags": [
+            "GameplayCue.Damage.Physical"
+          ]
+        },
+        {
+          "MagnitudeAttribute": {
+            "AttributeName": "",
+            "Attribute": {
+              "Path": [],
+              "ResolvedOwner": null
+            },
+            "AttributeOwner": null
+          },
+          "MinLevel": 0.0,
+          "MaxLevel": 0.0,
+          "GameplayCueTags": [
+            "GameplayCue.GameplayModifiers.OnDmg.Corrosion"
+          ]
+        }
+      ],
+      "StackingType": "EGameplayEffectStackingType::AggregateByTarget",
+      "GEComponents": [
+        {
+          "ObjectName": "AssetTagsGameplayEffectComponent'Default__GE_Trap_Starlight_StructureDamage_C:AssetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Traps/StarlightTraps/GE_Trap_Starlight_StructureDamage.1"
+        },
+        {
+          "ObjectName": "TargetTagRequirementsGameplayEffectComponent'Default__GE_Trap_Starlight_StructureDamage_C:TargetTagRequirementsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Traps/StarlightTraps/GE_Trap_Starlight_StructureDamage.4"
+        },
+        {
+          "ObjectName": "TargetTagsGameplayEffectComponent'Default__GE_Trap_Starlight_StructureDamage_C:TargetTagsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Traps/StarlightTraps/GE_Trap_Starlight_StructureDamage.5"
+        },
+        {
+          "ObjectName": "AbilitiesGameplayEffectComponent'Default__GE_Trap_Starlight_StructureDamage_C:AbilitiesGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Traps/StarlightTraps/GE_Trap_Starlight_StructureDamage.0"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "TargetTagRequirementsGameplayEffectComponent",
+    "Name": "TargetTagRequirementsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TargetTagRequirementsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Trap_Starlight_StructureDamage_C'Default__GE_Trap_Starlight_StructureDamage_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Traps/StarlightTraps/GE_Trap_Starlight_StructureDamage.3"
+    },
+    "Template": {
+      "ObjectName": "TargetTagRequirementsGameplayEffectComponent'Default__GET_PeriodicPhysicalDamage_C:TargetTagRequirementsGameplayEffectComponent_0'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_PeriodicPhysicalDamage.3"
+    }
+  },
+  {
+    "Type": "TargetTagsGameplayEffectComponent",
+    "Name": "TargetTagsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TargetTagsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Trap_Starlight_StructureDamage_C'Default__GE_Trap_Starlight_StructureDamage_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Traps/StarlightTraps/GE_Trap_Starlight_StructureDamage.3"
+    },
+    "Template": {
+      "ObjectName": "TargetTagsGameplayEffectComponent'Default__GET_PeriodicPhysicalDamage_C:TargetTagsGameplayEffectComponent_0'",
+      "ObjectPath": "/Game/GameplayEffectTemplates/GET_PeriodicPhysicalDamage.4"
+    }
+  }
+]

@@ -1,0 +1,283 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "SFX_NorthStar_Return",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'SFX_NorthStar_Return:SoundNodeModulator_1'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.3"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "AttenuationShapeExtents": {
+          "X": 1000.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 600.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'STW_WeaponRanged_Fire_3P_PSM'",
+        "ObjectPath": "/STW_Sounds/Sounds/FortSoundClassesAndModes/STW_WeaponRanged_Fire_3P_PSM.0"
+      },
+      "bOverrideConcurrency": true,
+      "bHasDelayNode": true,
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'TwoMaximum_Owner_StopOldest'",
+          "ObjectPath": "/Game/Sounds/Concurrency_Rules/TwoMaximum_Owner_StopOldest.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 5,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::PreventNew"
+      },
+      "Duration": 0.9666667,
+      "MaxDistance": 4000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Fort_GadgetActivate_Att'",
+        "ObjectPath": "/Game/Sounds/Attenuation/Fort_GadgetActivate_Att.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Outer": {
+      "ObjectName": "SoundCue'SFX_NorthStar_Return'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.0"
+    },
+    "Properties": {
+      "DelayMin": 0.3,
+      "DelayMax": 0.3,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'SFX_NorthStar_Return:SoundNodeModulator_3'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Outer": {
+      "ObjectName": "SoundCue'SFX_NorthStar_Return'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.0"
+    },
+    "Properties": {
+      "InputVolume": [
+        0.3,
+        2.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'SFX_NorthStar_Return:SoundNodeModulator_2'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.4"
+        },
+        {
+          "ObjectName": "SoundNodeDelay'SFX_NorthStar_Return:SoundNodeDelay_1'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Outer": {
+      "ObjectName": "SoundCue'SFX_NorthStar_Return'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.0"
+    },
+    "Properties": {
+      "PitchMin": 0.98,
+      "PitchMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeMixer'SFX_NorthStar_Return:SoundNodeMixer_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Outer": {
+      "ObjectName": "SoundCue'SFX_NorthStar_Return'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.0"
+    },
+    "Properties": {
+      "PitchMin": 1.5,
+      "PitchMax": 1.6,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'SFX_NorthStar_Return:SoundNodeRandom_2'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_3",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Outer": {
+      "ObjectName": "SoundCue'SFX_NorthStar_Return'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.0"
+    },
+    "Properties": {
+      "PitchMin": 0.8,
+      "PitchMax": 0.9,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'SFX_NorthStar_Return:SoundNodeRandom_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Outer": {
+      "ObjectName": "SoundCue'SFX_NorthStar_Return'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.0"
+    },
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'SFX_NorthStar_Return:SoundNodeWavePlayer_15'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.9"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'SFX_NorthStar_Return:SoundNodeWavePlayer_16'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_2",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Outer": {
+      "ObjectName": "SoundCue'SFX_NorthStar_Return'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.0"
+    },
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'SFX_NorthStar_Return:SoundNodeWavePlayer_14'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.8"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'SFX_NorthStar_Return:SoundNodeWavePlayer_17'",
+          "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_14",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Outer": {
+      "ObjectName": "SoundCue'SFX_NorthStar_Return'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.0"
+    },
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Launchers/Chiller/WPN_Chiller_Snowball_Prj_Activate_Charge_01.WPN_Chiller_Snowball_Prj_Activate_Charge_01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WPN_Chiller_Snowball_Prj_Activate_Charge_01'",
+      "ObjectPath": "/Game/Sounds/Fort_Weapons/Launchers/Chiller/WPN_Chiller_Snowball_Prj_Activate_Charge_01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_15",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Outer": {
+      "ObjectName": "SoundCue'SFX_NorthStar_Return'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.0"
+    },
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Sounds/Fort_GamePlay_Sounds/IceBreakGame/SpotFX_IceBreaker_Ice_Chip_Impact_03.SpotFX_IceBreaker_Ice_Chip_Impact_03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'SpotFX_IceBreaker_Ice_Chip_Impact_03'",
+      "ObjectPath": "/SaveTheWorld/Sounds/Fort_GamePlay_Sounds/IceBreakGame/SpotFX_IceBreaker_Ice_Chip_Impact_03.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_16",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Outer": {
+      "ObjectName": "SoundCue'SFX_NorthStar_Return'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.0"
+    },
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/SaveTheWorld/Sounds/Fort_GamePlay_Sounds/IceBreakGame/SpotFX_IceBreaker_Ice_Chip_Impact_01.SpotFX_IceBreaker_Ice_Chip_Impact_01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'SpotFX_IceBreaker_Ice_Chip_Impact_01'",
+      "ObjectPath": "/SaveTheWorld/Sounds/Fort_GamePlay_Sounds/IceBreakGame/SpotFX_IceBreaker_Ice_Chip_Impact_01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_17",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Outer": {
+      "ObjectName": "SoundCue'SFX_NorthStar_Return'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/NorthStar/SFX/SFX_NorthStar_Return.0"
+    },
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Sounds/Fort_Weapons/Launchers/Chiller/WPN_Chiller_Snowball_Prj_Activate_Charge_02.WPN_Chiller_Snowball_Prj_Activate_Charge_02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WPN_Chiller_Snowball_Prj_Activate_Charge_02'",
+      "ObjectPath": "/Game/Sounds/Fort_Weapons/Launchers/Chiller/WPN_Chiller_Snowball_Prj_Activate_Charge_02.0"
+    }
+  }
+]

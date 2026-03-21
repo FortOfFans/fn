@@ -1,0 +1,155 @@
+[
+  {
+    "Type": "AbilitiesGameplayEffectComponent",
+    "Name": "AbilitiesGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AbilitiesGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Phoenix_Escalation_Threshold_FireBurst_C'Default__GE_Phoenix_Escalation_Threshold_FireBurst_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Phoenix_Modifiers/Escalation/Fire_Burst/GE_Phoenix_Escalation_Threshold_FireBurst.3"
+    },
+    "Properties": {
+      "GrantAbilityConfigs": [
+        {
+          "Ability": {
+            "ObjectName": "BlueprintGeneratedClass'GA_Phoenix_Escalation_Trigger_FireBurst_C'",
+            "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Phoenix_Modifiers/Escalation/Fire_Burst/GA_Phoenix_Escalation_Trigger_FireBurst.0"
+          },
+          "LevelScalableFloat": {
+            "Value": 1.0,
+            "Curve": {
+              "CurveTable": null,
+              "RowName": "None"
+            },
+            "RegistryType": {
+              "Name": "None"
+            }
+          },
+          "InputID": -1,
+          "RemovalPolicy": "EGameplayEffectGrantedAbilityRemovePolicy::CancelAbilityImmediately"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "AdditionalEffectsGameplayEffectComponent",
+    "Name": "AdditionalEffectsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'AdditionalEffectsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Phoenix_Escalation_Threshold_FireBurst_C'Default__GE_Phoenix_Escalation_Threshold_FireBurst_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Phoenix_Modifiers/Escalation/Fire_Burst/GE_Phoenix_Escalation_Threshold_FireBurst.3"
+    },
+    "Properties": {
+      "OnApplicationGameplayEffects": [
+        {
+          "EffectClass": {
+            "ObjectName": "BlueprintGeneratedClass'GE_Phoenix_Escalation_Threshold_ApplyDmgBuff_C'",
+            "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Phoenix_Modifiers/Escalation/GE_Phoenix_Escalation_Threshold_ApplyDmgBuff.0"
+          },
+          "RequiredSourceTags": []
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "GE_Phoenix_Escalation_Threshold_FireBurst_C",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'GameplayEffect'",
+      "ObjectPath": "/Script/GameplayAbilities"
+    },
+    "ClassFlags": "CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "GE_Phoenix_Escalation_Threshold_FireBurst_C'Default__GE_Phoenix_Escalation_Threshold_FireBurst_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Phoenix_Modifiers/Escalation/Fire_Burst/GE_Phoenix_Escalation_Threshold_FireBurst.3"
+    },
+    "EditorTags": {
+      "BlueprintType": "BPTYPE_Normal"
+    }
+  },
+  {
+    "Type": "GE_Phoenix_Escalation_Threshold_FireBurst_C",
+    "Name": "Default__GE_Phoenix_Escalation_Threshold_FireBurst_C",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "BlueprintGeneratedClass'/SaveTheWorld/Abilities/GameplayModifiers/Phoenix_Modifiers/Escalation/Fire_Burst/GE_Phoenix_Escalation_Threshold_FireBurst.GE_Phoenix_Escalation_Threshold_FireBurst_C'",
+    "Properties": {
+      "DurationPolicy": "EGameplayEffectDurationType::HasDuration",
+      "DurationMagnitude": {
+        "ScalableFloatMagnitude": {
+          "Value": 0.25
+        }
+      },
+      "ConditionalGameplayEffects": [
+        {
+          "EffectClass": {
+            "ObjectName": "BlueprintGeneratedClass'GE_Phoenix_Escalation_Threshold_ApplyDmgBuff_C'",
+            "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Phoenix_Modifiers/Escalation/GE_Phoenix_Escalation_Threshold_ApplyDmgBuff.0"
+          },
+          "RequiredSourceTags": []
+        }
+      ],
+      "GameplayCues": [
+        {
+          "MagnitudeAttribute": {
+            "AttributeName": "",
+            "Attribute": {
+              "Path": [],
+              "ResolvedOwner": null
+            },
+            "AttributeOwner": null
+          },
+          "MinLevel": 0.0,
+          "MaxLevel": 0.0,
+          "GameplayCueTags": [
+            "GameplayCue.GameplayModifiers.Escalation.Threshold.Reached.Fire"
+          ]
+        }
+      ],
+      "ApplicationTagRequirements": {
+        "IgnoreTags": [
+          "Gameplay.Status.DBNO"
+        ]
+      },
+      "GEComponents": [
+        {
+          "ObjectName": "AbilitiesGameplayEffectComponent'Default__GE_Phoenix_Escalation_Threshold_FireBurst_C:AbilitiesGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Phoenix_Modifiers/Escalation/Fire_Burst/GE_Phoenix_Escalation_Threshold_FireBurst.0"
+        },
+        {
+          "ObjectName": "AdditionalEffectsGameplayEffectComponent'Default__GE_Phoenix_Escalation_Threshold_FireBurst_C:AdditionalEffectsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Phoenix_Modifiers/Escalation/Fire_Burst/GE_Phoenix_Escalation_Threshold_FireBurst.1"
+        },
+        {
+          "ObjectName": "TargetTagRequirementsGameplayEffectComponent'Default__GE_Phoenix_Escalation_Threshold_FireBurst_C:TargetTagRequirementsGameplayEffectComponent_0'",
+          "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Phoenix_Modifiers/Escalation/Fire_Burst/GE_Phoenix_Escalation_Threshold_FireBurst.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "TargetTagRequirementsGameplayEffectComponent",
+    "Name": "TargetTagRequirementsGameplayEffectComponent_0",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'TargetTagRequirementsGameplayEffectComponent'",
+    "Outer": {
+      "ObjectName": "GE_Phoenix_Escalation_Threshold_FireBurst_C'Default__GE_Phoenix_Escalation_Threshold_FireBurst_C'",
+      "ObjectPath": "/SaveTheWorld/Abilities/GameplayModifiers/Phoenix_Modifiers/Escalation/Fire_Burst/GE_Phoenix_Escalation_Threshold_FireBurst.3"
+    },
+    "Properties": {
+      "ApplicationTagRequirements": {
+        "IgnoreTags": [
+          "Gameplay.Status.DBNO"
+        ]
+      }
+    }
+  }
+]

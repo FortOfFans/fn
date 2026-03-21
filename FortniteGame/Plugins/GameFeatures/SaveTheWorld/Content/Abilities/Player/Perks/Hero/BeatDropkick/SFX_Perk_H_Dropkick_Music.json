@@ -1,0 +1,95 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "SFX_Perk_H_Dropkick_Music",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeWavePlayer'SFX_Perk_H_Dropkick_Music:SoundNodeWavePlayer_0'",
+        "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/BeatDropkick/SFX_Perk_H_Dropkick_Music.1"
+      },
+      "VolumeMultiplier": 2.0,
+      "AttenuationOverrides": {
+        "NonSpatializedRadiusStart": 2000.0,
+        "NonSpatializedRadiusEnd": 6000.0,
+        "NonSpatializedRadiusMode": "ENonSpatializedRadiusSpeakerMapMode::Direct2D",
+        "AttenuationShapeExtents": {
+          "X": 2000.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 6000.0
+      },
+      "bHasPlayWhenSilent": true,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'STW_Music_Gameplay'",
+        "ObjectPath": "/STW_Sounds/Sounds/FortSoundClassesAndModes/STW_Music_Gameplay.0"
+      },
+      "VirtualizationMode": "EVirtualizationMode::PlayWhenSilent",
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'OneMaximum_Stop_Oldest_HuskDance'",
+          "ObjectPath": "/STW_Sounds/Sounds/Concurrency_Rules/OneMaximum_Stop_Oldest_HuskDance.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 1,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopFarthestThenPreventNew",
+        "VoiceStealReleaseTime": 0.5
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 2800.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Fort_Emotes_HuskDanceGrenadeMusic_Att'",
+        "ObjectPath": "/STW_Sounds/Sounds/Attenuation/Fort_Emotes_HuskDanceGrenadeMusic_Att.0"
+      },
+      "SoundSubmixSends": [
+        {
+          "SendStage": "ESubmixSendStage::PostDistanceAttenuation",
+          "SendLevelControlMethod": "ESendLevelControlMethod::Manual",
+          "SoundSubmix": {
+            "ObjectName": "SoundSubmix'Fortnite_AudioAnalysis_Music'",
+            "ObjectPath": "/Game/Sounds/SubMixes/Fortnite_AudioAnalysis_Music.0"
+          },
+          "SendLevel": 1.0,
+          "DisableManualSendClamp": false,
+          "MinSendLevel": 0.0,
+          "MaxSendLevel": 1.0,
+          "MinSendDistance": 100.0,
+          "MaxSendDistance": 1000.0,
+          "CustomSendLevelCurve": {
+            "EditorCurveData": {
+              "Keys": [],
+              "DefaultValue": 3.4028235E+38,
+              "PreInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant",
+              "PostInfinityExtrap": "ERichCurveExtrapolation::RCCE_Constant"
+            },
+            "ExternalCurve": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Outer": {
+      "ObjectName": "SoundCue'SFX_Perk_H_Dropkick_Music'",
+      "ObjectPath": "/SaveTheWorld/Abilities/Player/Perks/Hero/BeatDropkick/SFX_Perk_H_Dropkick_Music.0"
+    },
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Athena/Sounds/Emotes/Emote_Warehouse_Loop.Emote_Warehouse_Loop",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Emote_Warehouse_Loop'",
+      "ObjectPath": "/Game/Athena/Sounds/Emotes/Emote_Warehouse_Loop.0"
+    }
+  }
+]
